@@ -1,3 +1,5 @@
+import CartProvider from '@/context/cart/Provider'
+import FeedbackProvider from '@/context/feedback/Provider'
 import fetchJson from '@/lib/fetchJson'
 import '@/styles/globals.css'
 import type { AppProps } from 'next/app'
@@ -12,6 +14,16 @@ const inter = localFont({
     {
       path: '../../public/fonts/Inter-Regular.ttf',
       weight: '400',
+      style: 'normal',
+    },
+    {
+      path: '../../public/fonts/Inter-Medium.ttf',
+      weight: '500',
+      style: 'normal',
+    },
+    {
+      path: '../../public/fonts/Inter-SemiBold.ttf',
+      weight: '600',
       style: 'normal',
     },
     {
@@ -61,7 +73,11 @@ export default function App({ Component, pageProps }: AppProps) {
       }}
     >
       <div className={`${inter.variable} font-sans`}>
-        <Component {...pageProps} />
+        <FeedbackProvider>
+          <CartProvider>
+            <Component {...pageProps} />
+          </CartProvider>
+        </FeedbackProvider>
       </div>
     </SWRConfig>
   )
