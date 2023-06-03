@@ -1,9 +1,11 @@
+import fetchJson from '@/lib/fetchJson'
 import '@/styles/globals.css'
 import type { AppProps } from 'next/app'
 import localFont from 'next/font/local'
 import { useRouter } from 'next/router'
 import nProgress from 'nprogress'
 import { useEffect } from 'react'
+import { SWRConfig } from 'swr'
 
 const inter = localFont({
   src: [
@@ -50,8 +52,17 @@ export default function App({ Component, pageProps }: AppProps) {
   }, [router])
 
   return (
-    <div className={`${inter.variable} font-sans`}>
-      <Component {...pageProps} />
-    </div>
+    <SWRConfig
+      value={{
+        fetcher: fetchJson,
+        onError: (err) => {
+          console.error(err)
+        },
+      }}
+    >
+      <div className={`${inter.variable} font-sans`}>
+        <Component {...pageProps} />
+      </div>
+    </SWRConfig>
   )
 }
