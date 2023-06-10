@@ -7,3 +7,14 @@ html {
 }
 
 @import 'nprogress.css';
+
+::-webkit-scrollbar {
+  width: 8px;
+  background-color: theme('colors.white');
+}
+
+::-webkit-scrollbar-thumb {
+  /* Definir a aparência do polegar (a parte que o usuário arrasta) */
+  border-radius: 4px;
+  background-color: theme('colors.custom.100');
+}

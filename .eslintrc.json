@@ -8,15 +8,17 @@
       {
         "newlinesBetween": "always",
         "groups": [
-          "/^@styles/",
           "module", 
-          "/^@lib/",
-          "/^@utils/", 
-          "/^@hooks/", 
-          "/^@contexts/", 
-          "/^@public/", 
-          "/^@components/", 
-          ["parent", "sibling", "index"]
+          ["parent", "sibling", "index"],
+          [
+            "/^@styles/",
+            "/^@components/",
+            "/^@contexts/",
+            "/^@hooks/",
+            "/^@lib/",
+            "/^@public/",
+            "/^@utils/"
+          ]
         ],
         "alphabetize": { "order": "asc", "ignoreCase": true }
       }

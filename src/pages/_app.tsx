@@ -1,3 +1,4 @@
+import Layout from '@/components/templates/Layout'
 import CartProvider from '@/context/cart/Provider'
 import FeedbackProvider from '@/context/feedback/Provider'
 import fetchJson from '@/lib/fetchJson'
@@ -75,7 +76,9 @@ export default function App({ Component, pageProps }: AppProps) {
       <div className={`${inter.variable} font-sans`}>
         <FeedbackProvider>
           <CartProvider>
-            <Component {...pageProps} />
+            <Layout>
+              <Component {...pageProps} />
+            </Layout>
           </CartProvider>
         </FeedbackProvider>
       </div>
