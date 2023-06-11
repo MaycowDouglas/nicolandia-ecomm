@@ -8,10 +8,13 @@ export default function ButtonReact({
   target,
   theme,
   title,
-  children,
   isBlock,
+  onClick,
+  children,
+  className = '',
 }: ButtonProps) {
   const style = classNames(
+    className,
     isBlock ? 'w-full' : 'w-auto',
     theme === 'primary'
       ? 'bg-custom-100 text-white hover:saturate-150'
@@ -21,11 +24,11 @@ export default function ButtonReact({
   )
 
   return href === undefined ? (
-    <button title={title} className={style}>
+    <button title={title} className={style} onClick={onClick}>
       {children}
     </button>
   ) : (
-    <Link href={href} target={target} title={title} className={style}>
+    <Link href={href} target={target} title={title} onClick={onClick} className={style}>
       {children}
     </Link>
   )

@@ -1,4 +1,4 @@
-import { HTMLAttributeAnchorTarget, ReactNode } from 'react'
+import { HTMLAttributeAnchorTarget, MouseEventHandler, ReactNode } from 'react'
 
 import ButtonPill from './ButtonPill'
 import ButtonReact from './ButtonRect'
@@ -10,7 +10,9 @@ export type ButtonProps = {
   target?: HTMLAttributeAnchorTarget
   isLink?: boolean
   isBlock?: boolean
+  onClick?: MouseEventHandler
   children: ReactNode
+  className?: string
 }
 
 type TypeOptions = {
@@ -24,16 +26,34 @@ export default function Button({
   title,
   target = '_self',
   isBlock = false,
+  onClick,
   children,
+  className = '',
 }: ButtonProps & TypeOptions) {
   const typeButtons = {
     pill: (
-      <ButtonPill theme={theme} isBlock={isBlock} href={href} title={title} target={target}>
+      <ButtonPill
+        href={href}
+        theme={theme}
+        title={title}
+        target={target}
+        isBlock={isBlock}
+        onClick={onClick}
+        className={className}
+      >
         {children}
       </ButtonPill>
     ),
     react: (
-      <ButtonReact theme={theme} isBlock={isBlock} href={href} title={title} target={target}>
+      <ButtonReact
+        href={href}
+        title={title}
+        theme={theme}
+        target={target}
+        isBlock={isBlock}
+        onClick={onClick}
+        className={className}
+      >
         {children}
       </ButtonReact>
     ),

@@ -3,7 +3,6 @@ import ComboEncantado from '@/public/images/tickets/encantado.jpg'
 import ComboEspetacular from '@/public/images/tickets/espetacular.jpg'
 import PassaporteIndividual from '@/public/images/tickets/individual.jpg'
 import ComboNamorados from '@/public/images/tickets/namorados.png'
-import { StaticImageData } from 'next/image'
 import SwiperCore, { Autoplay, Navigation } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
@@ -14,6 +13,7 @@ SwiperCore.use([Autoplay, Navigation])
 export default function Tickets() {
   const list: TicketProps[] = [
     {
+      id: 7,
       name: 'Passaporte Antecipado',
       price: 4990,
       banner: PassaporteAntecipado,
@@ -21,6 +21,7 @@ export default function Tickets() {
       reference: 6490,
     },
     {
+      id: 2,
       name: 'Passaporte Individual',
       price: 6490,
       banner: PassaporteIndividual,
@@ -28,6 +29,7 @@ export default function Tickets() {
       reference: 6490,
     },
     {
+      id: 10,
       name: 'Combo Love',
       price: 6990,
       banner: ComboNamorados,
@@ -35,6 +37,7 @@ export default function Tickets() {
       reference: 6490,
     },
     {
+      id: 3,
       name: 'Combo Encantado',
       price: 11890,
       banner: ComboEncantado,
@@ -42,6 +45,7 @@ export default function Tickets() {
       reference: 6490,
     },
     {
+      id: 4,
       name: 'Combo Espetacular',
       price: 16190,
       banner: ComboEspetacular,
@@ -71,6 +75,7 @@ export default function Tickets() {
       {list.map((item, index) => (
         <SwiperSlide key={index}>
           <Ticket
+            id={item.id}
             name={item.name}
             price={item.price}
             banner={item.banner}

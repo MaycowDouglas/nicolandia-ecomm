@@ -1,3 +1,5 @@
+import { useCart } from '@/hooks/useCart'
+import { useFeedback } from '@/hooks/useFeedback'
 import { classNames } from '@/lib/classNames'
 import BackgroundTicket from '@/public/images/tickets/ticket.png'
 import Image, { StaticImageData } from 'next/image'
@@ -6,6 +8,7 @@ import { FaPlus } from 'react-icons/fa'
 import Button from '../atoms/Button'
 
 export type TicketProps = {
+  id: number
   name: string
   price: number
   banner: string | StaticImageData
@@ -13,7 +16,10 @@ export type TicketProps = {
   reference: number
 }
 
-export default function Ticket({ banner, name, quantity, price, reference }: TicketProps) {
+export default function Ticket({ id, name, price, banner, quantity, reference }: TicketProps) {
+  const { add } = useCart()
+  const { addFeedback } = useFeedback()
+
   return (
     <div className="relative p-5 pb-5 rounded-t-2xl overflow-hidden">
       <Image className="object-cover object-bottom" fill src={BackgroundTicket} alt="" />
@@ -57,7 +63,16 @@ export default function Ticket({ banner, name, quantity, price, reference }: Tic
               </span>
             </li>
             <li className="py-5">
-              <Button type="react" isBlock>
+              <Button
+                type="react"
+                isBlock
+                onClick={() => {
+                  addFeedback({
+                    message: 'Item adicionado!',
+                  })
+                  add({ id, name, price, quantity, reference, numOfTickets: quantity })
+                }}
+              >
                 <FaPlus />
                 <span>Adicionar ao carrinho</span>
               </Button>

@@ -43,20 +43,22 @@ export default function CartProvider({ children }: { children: ReactNode }) {
         return item
       }
 
-      return item.quantity > 0 ? { ...item, quantity: item.quantity - 1 } : item
+      return item.quantity > 1 ? { ...item, quantity: item.quantity - 1 } : item
     })
 
     persist(updated)
   }
 
-  function cartTotal(formatted: boolean) {
+  function cartTotal(formatted?: boolean) {
     const total = items.reduce(
       (total: number, item: CartItem) => total + item.price * item.quantity,
       0
     )
 
     const options = { style: 'currency', currency: 'BRL' }
-    return !formatted ? total : total.toLocaleString('pt-br', options)
+    return !formatted || formatted === undefined
+      ? total
+      : (total / 100).toLocaleString('pt-br', options)
   }
 
   function clearCart() {

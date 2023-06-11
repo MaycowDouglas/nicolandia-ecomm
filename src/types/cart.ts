@@ -3,6 +3,8 @@ export type CartItem = {
   name: string
   price: number
   quantity: number
+  reference: number
+  numOfTickets: number
 }
 
 export type CartProps = {
@@ -11,6 +13,6 @@ export type CartProps = {
   destroy: (id: number) => void
   increase: (id: number) => void
   decrease: (id: number) => void
-  cartTotal: (formatted: boolean) => number | string
+  cartTotal: (formatted?: boolean) => number | string
   clearCart: () => void
 }

@@ -36,7 +36,7 @@ export default function FeedbackProvider({ children }: { children: ReactNode }) 
     <feedbackContext.Provider value={{ addFeedback }}>
       <div className="relative">
         {children}
-        <div className="fixed left-0 bottom-10 space-y-5">
+        <div className="fixed z-[999] left-0 bottom-10 space-y-5">
           {feedbacks.map((data) => (
             <Feedback key={data.id} message={data.message} type={data.type} />
           ))}
