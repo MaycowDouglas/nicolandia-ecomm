@@ -189,6 +189,16 @@ export default function CheckoutPage() {
         return
       }
 
+      if (personalData.birthday === '') {
+        addFeedback({ type: 'error', message: 'Preencha a data de nascimento!' })
+        return
+      }
+
+      if (personalData.number === '') {
+        addFeedback({ type: 'error', message: 'Preencha o número do seu endereço!' })
+        return
+      }
+
       const order: Order = {
         company: 1,
         customer: {
