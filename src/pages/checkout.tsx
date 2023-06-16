@@ -298,7 +298,7 @@ export default function CheckoutPage() {
               </div>
               <div>
                 <label htmlFor="document" className="inline-flex mb-1">
-                  Documento
+                  CPF
                 </label>
                 <InputText
                   id="document"
