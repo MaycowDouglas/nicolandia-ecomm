@@ -60,7 +60,7 @@ export default function RegisterPage() {
       }
 
       try {
-        const response = await fetchJson('/api/register', {
+        const response: object = await fetchJson('/api/register', {
           method: 'POST',
           headers: { Accept: 'application/json', 'Content-Type': 'application/json' },
           body: JSON.stringify({
@@ -74,7 +74,7 @@ export default function RegisterPage() {
           }),
         })
 
-        if (response && response?.user) {
+        if (Object.keys(response).includes('user')) {
           addFeedback({ message: 'Usuário criado com sucesso!' })
 
           setTimeout(() => {
