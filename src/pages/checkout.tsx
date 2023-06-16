@@ -9,8 +9,9 @@ import fetchJson from '@/lib/fetchJson'
 import { ViaCepAddress } from '@/types/address'
 import { Order, OrderResponse } from '@/types/order'
 import fetch from 'isomorphic-unfetch'
-import { Router, useRouter } from 'next/router'
+import { useRouter } from 'next/router'
 import { ChangeEvent, FormEvent, useCallback, useEffect, useRef, useState } from 'react'
+import { isIOS } from 'react-device-detect'
 import ReCAPTCHA from 'react-google-recaptcha'
 import { AiOutlineBarcode } from 'react-icons/ai'
 import { BsQrCodeScan } from 'react-icons/bs'
@@ -318,6 +319,7 @@ export default function CheckoutPage() {
                   name="birthday"
                   value={personalData.birthday}
                   onChange={handlePersonalDataChange}
+                  className={isIOS && personalData.birthday === '' ? 'py-5' : 'py-2'}
                   required
                 />
               </div>
