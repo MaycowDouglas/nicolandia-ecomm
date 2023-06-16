@@ -164,9 +164,9 @@ export const data: AttractionProps[] = [
     image: AtractionFerrysWheel,
     category: 'familiar',
     observation:
-      'Temos uma cabine adaptada para pessoas cadeirantes, permitindo apenas um acompanhante.',
+      'Visitantes com até 1,30M devem ser acompanhados por um responsável adulto. Temos uma cabine adaptada para pessoas cadeirantes, permitindo apenas um acompanhante. Esta atração não é recomendada para pessoas com enjôo repentino, medo de altura e claustrofobia.',
     restrictions: {
-      maxHeight: 130,
+      minHeight: 110,
     },
   },
   {
