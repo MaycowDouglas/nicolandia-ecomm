@@ -111,7 +111,7 @@ export default function CheckoutPage() {
       setPersonalData(data)
       loaded.current = true
     }
-  }, [user])
+  }, [items.length, router, user])
 
   function handleRecaptchaChange(token: string | null) {
     setRecaptcha(token)
@@ -227,7 +227,7 @@ export default function CheckoutPage() {
         clearCart()
 
         router.push({
-          pathname: `/pagamento/${paymentMethod.toLowerCase()}`,
+          pathname: `/pagamento/${paymentMethod.toLowerCase()}/${response.id}`,
           query: { order: JSON.stringify(response) },
         })
 

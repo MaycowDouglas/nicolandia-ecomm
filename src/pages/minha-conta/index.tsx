@@ -134,7 +134,9 @@ export default function MyAccount() {
                                   <button
                                     onClick={() => {
                                       router.push({
-                                        pathname: `/pagamento/${order.invoice.paymentMethod.toLowerCase()}`,
+                                        pathname: `/pagamento/${order.invoice.paymentMethod.toLowerCase()}/${
+                                          order.id
+                                        }`,
                                         query: { order: JSON.stringify(order) },
                                       })
                                     }}
