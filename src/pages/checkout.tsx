@@ -82,6 +82,10 @@ export default function CheckoutPage() {
       router.push('/')
     }
 
+    if (!user) {
+      router.push('/entrar?redir=/checkout')
+    }
+
     if (user && user.data && !loaded.current) {
       console.log(user.data)
       data = {
