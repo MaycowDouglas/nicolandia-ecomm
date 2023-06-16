@@ -149,7 +149,17 @@ export default function MyAccount() {
                               )}
                               {order.invoice.paymentMethod === 'BOLETO' && (
                                 <li className="py-2">
-                                  <button className="inline-flex items-center gap-2 whitespace-nowrap">
+                                  <button
+                                    onClick={() => {
+                                      router.push({
+                                        pathname: `/pagamento/${order.invoice.paymentMethod.toLowerCase()}/${
+                                          order.id
+                                        }`,
+                                        query: { order: JSON.stringify(order) },
+                                      })
+                                    }}
+                                    className="inline-flex items-center gap-2 whitespace-nowrap"
+                                  >
                                     <FiPrinter />
                                     Imprimir boleto
                                   </button>

@@ -14,15 +14,18 @@ export default function PaymentPixPage() {
   const orderDecoded: OrderResponse | OrderListItemResponse = order
     ? JSON.parse(decodeURIComponent(order as string))
     : ({} as OrderResponse)
-  const qrcode = `https://chart.googleapis.com/chart?cht=qr&chl=${encodeURI(
-    orderDecoded.invoice.boleto
-  )}&chs=250x250`
 
   useEffect(() => {
     if (!order) {
       router.push('/')
     }
   }, [order, router])
+
+  const qrcode = orderDecoded.invoice
+    ? `https://chart.googleapis.com/chart?cht=qr&chl=${encodeURI(
+        orderDecoded.invoice.boleto
+      )}&chs=250x250`
+    : ''
 
   const handleCopyText = (text: string) => {
     navigator.clipboard.writeText(text)
