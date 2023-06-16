@@ -9,8 +9,8 @@ type SlideImageProps = {
 }
 
 export default function SlideImage({
-  desktop,
-  mobile,
+  desktop = '',
+  mobile = '',
   alt = '',
   priority = false,
 }: SlideImageProps) {

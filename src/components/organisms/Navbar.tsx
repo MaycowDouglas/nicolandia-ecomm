@@ -15,7 +15,7 @@ export default function Navbar() {
           <GiTicket />
           <span className="hidden md:inline text-sm">Passaportes</span>
         </NavbarLink>
-        <NavbarLink to="/faq">
+        <NavbarLink to="/duvidas-frequentes">
           <FiInfo />
           <span className="hidden md:inline text-sm">Dúvidas frequentes</span>
         </NavbarLink>

@@ -1,10 +1,11 @@
 import { useCart } from '@/hooks/useCart'
 import useUser from '@/hooks/useUser'
+import { classNames } from '@/lib/classNames'
 import Logo from '@/public/images/brands/nicolandia-red.svg'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
-import { FiShoppingCart, FiUser } from 'react-icons/fi'
+import { FiShoppingBag, FiShoppingCart, FiUser } from 'react-icons/fi'
 
 import Cart from './Cart'
 import Navbar from './Navbar'
@@ -28,8 +29,8 @@ export default function Header() {
 
   return (
     <>
-      <header className={`w-full ${isVisible ? 'static' : 'fixed z-30'}`}>
-        <div className="py-2 shadow-lg bg-white">
+      <header className={`w-full fixed z-30`}>
+        <div className="py-2 shadow-lg bg-white ">
           <div className="container flex justify-between items-center">
             <Link href="/">
               <Image src={Logo} className="w-20 h-auto" alt="Nicolândia" />
@@ -39,23 +40,39 @@ export default function Header() {
               <button
                 title="Carrinho de compras"
                 onClick={() => setShowCart(true)}
-                className="group relative inline-flex p-5 rounded-full bg-slate-100 text-2xl hover:bg-custom-100 hover:text-white transition-all"
+                className={classNames(
+                  'group relative inline-flex p-5 rounded-full bg-slate-100 text-2xl transition-all',
+                  'hover:bg-custom-100 hover:text-white'
+                )}
               >
-                <span className="absolute top-0 right-0 w-5 h-5 inline-flex justify-center items-center bg-custom-100 text-sm text-white rounded-full group-hover:bg-white group-hover:text-custom-100 transition-all">
+                <span
+                  className={classNames(
+                    'absolute top-0 right-0 w-5 h-5 inline-flex justify-center items-center bg-custom-100 rounded-full text-sm text-white  transition-all',
+                    'group-hover:bg-white group-hover:text-custom-100'
+                  )}
+                >
                   {items.length}
                 </span>
                 <FiShoppingCart />
               </button>
               <Link
-                href={user?.isLogged ? '/minha-conta' : '/login'}
+                href={user?.isLogged ? '/minha-conta' : '/entrar'}
                 title={user?.isLogged ? 'Minha conta' : 'Entrar ou cadastrar-se'}
                 className="group flex items-center gap-5"
               >
-                <span className="inline-flex p-5 rounded-full bg-slate-100 text-2xl group-hover:bg-custom-100 group-hover:text-white transition-all">
-                  <FiUser />
+                <span
+                  className={classNames(
+                    'p-5 inline-flex rounded-full bg-slate-100 text-2xl transition-all',
+                    'group-hover:bg-custom-100 group-hover:text-white'
+                  )}
+                >
+                  {user?.isLogged ? <FiShoppingBag /> : <FiUser />}
                 </span>
                 {user?.isLogged ? (
-                  <span className="hidden md:inline-flex text-left">Olá, {user.data?.name}</span>
+                  <span className="hidden md:inline-flex text-left">
+                    Olá, {user.data?.name} <br />
+                    Clique aqui e veja suas compras
+                  </span>
                 ) : (
                   <span className="hidden md:inline-flex text-left">
                     Olá, entre ou cadastre-se <br />
@@ -68,6 +85,7 @@ export default function Header() {
         </div>
         <Navbar />
       </header>
+      <div className="pt-32"></div>
       {showCart && <Cart onClick={() => setShowCart(false)} />}
     </>
   )

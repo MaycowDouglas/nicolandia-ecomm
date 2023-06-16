@@ -3,7 +3,7 @@ import { FeedbackProps } from '@/types/feedback'
 import { useEffect, useRef } from 'react'
 import { BsCheckCircle, BsExclamationCircle } from 'react-icons/bs'
 
-export default function Feedback({ message, type = 'success' }: FeedbackProps) {
+export default function Feedback({ message, type = 'success', text }: FeedbackProps) {
   const toast = useRef<HTMLDivElement>(null)
 
   const typeTheme = {
@@ -33,18 +33,15 @@ export default function Feedback({ message, type = 'success' }: FeedbackProps) {
   }, [message])
 
   return (
-    <div ref={toast} className="px-5 transition-all -translate-x-full duration-500">
-      <p
-        className={classNames(
-          typeTheme[type].customStyle,
-          'p-5 rounded-lg shadow-3 text-white font-medium'
-        )}
+    <div ref={toast} className="px-5 text-white transition-all -translate-x-full duration-500">
+      <div
+        className={classNames(typeTheme[type].customStyle, 'p-5 rounded-lg shadow-3 font-medium')}
       >
-        <span className="inline-flex items-center gap-3">
+        <p className="inline-flex items-center gap-3">
           {typeTheme[type].icon}
           {message}
-        </span>
-      </p>
+        </p>
+      </div>
     </div>
   )
 }

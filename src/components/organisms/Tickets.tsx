@@ -11,49 +11,8 @@ import Ticket, { TicketProps } from '../molecules/Ticket'
 SwiperCore.use([Autoplay, Navigation])
 
 export default function Tickets() {
-  const list: TicketProps[] = [
-    {
-      id: 7,
-      name: 'Passaporte Antecipado',
-      price: 4990,
-      banner: PassaporteAntecipado,
-      quantity: 1,
-      reference: 6490,
-    },
-    {
-      id: 2,
-      name: 'Passaporte Individual',
-      price: 6490,
-      banner: PassaporteIndividual,
-      quantity: 1,
-      reference: 6490,
-    },
-    {
-      id: 10,
-      name: 'Combo Love',
-      price: 6990,
-      banner: ComboNamorados,
-      quantity: 2,
-      reference: 6490,
-    },
-    {
-      id: 3,
-      name: 'Combo Encantado',
-      price: 11890,
-      banner: ComboEncantado,
-      quantity: 2,
-      reference: 6490,
-    },
-    {
-      id: 4,
-      name: 'Combo Espetacular',
-      price: 16190,
-      banner: ComboEspetacular,
-      quantity: 3,
-      reference: 6490,
-    },
-  ]
-
+  const now = new Date()
+  const nowSP = new Date(now.toLocaleString('en-US', { timeZone: 'America/Sao_Paulo' }))
   return (
     <Swiper
       breakpoints={{
@@ -72,18 +31,58 @@ export default function Tickets() {
       slidesPerView={1}
       spaceBetween={30}
     >
-      {list.map((item, index) => (
-        <SwiperSlide key={index}>
+      <SwiperSlide>
+        {(nowSP.getDay() >= 1 && nowSP.getDay() <= 4) ||
+        (nowSP.getDay() === 0 && nowSP.getHours() >= 20) ? (
           <Ticket
-            id={item.id}
-            name={item.name}
-            price={item.price}
-            banner={item.banner}
-            quantity={item.quantity}
-            reference={item.reference}
+            id={7}
+            name="Passaporte Antecipado"
+            price={4990}
+            banner={PassaporteAntecipado}
+            quantity={1}
+            reference={6490}
           />
-        </SwiperSlide>
-      ))}
+        ) : (
+          <Ticket
+            id={2}
+            name="Passaporte Individual"
+            price={6490}
+            banner={PassaporteIndividual}
+            quantity={1}
+            reference={6490}
+          />
+        )}
+      </SwiperSlide>
+      <SwiperSlide>
+        <Ticket
+          id={10}
+          name="Combo Love"
+          price={6990}
+          banner={ComboNamorados}
+          quantity={2}
+          reference={6490}
+        />
+      </SwiperSlide>
+      {/* <SwiperSlide>
+        <Ticket
+          id={3}
+          name="Combo Encantado"
+          price={11890}
+          banner={ComboEncantado}
+          quantity={2}
+          reference={6490}
+        />
+      </SwiperSlide> */}
+      <SwiperSlide>
+        <Ticket
+          id={4}
+          name="Combo Espetacular"
+          price={16190}
+          banner={ComboEspetacular}
+          quantity={3}
+          reference={6490}
+        />
+      </SwiperSlide>
     </Swiper>
   )
 }

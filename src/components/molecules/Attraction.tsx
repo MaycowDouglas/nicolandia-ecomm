@@ -24,7 +24,7 @@ export default function Attraction({
     childish: CategoryChildish,
   }
   return (
-    <article className="relative text-center rounded-lg bg-custom-200 p-5 pb-8 shadow-xl">
+    <article className="relative text-center rounded-lg bg-slate-100 text-black p-5 pb-8 shadow-xl">
       <span
         className={classNames(
           'z-10 absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2',
@@ -36,7 +36,7 @@ export default function Attraction({
       <header className="relative h-56">
         <Image className="object-center object-cover rounded-lg" src={image} alt={name} fill />
       </header>
-      <section className="text-white">
+      <section>
         <h3 className="mt-4 text-lg font-bold uppercase">{name}</h3>
         <div className={hideDetails ? 'hidden' : ''}>
           {restrictions && (
@@ -46,7 +46,7 @@ export default function Attraction({
                 <p className="">Altura mínima: {restrictions.minHeight / 100} metros</p>
               )}
               {restrictions.maxHeight && (
-                <p className="">Altura mínima: {restrictions.maxHeight / 100} metros</p>
+                <p className="">Altura máxima: {restrictions.maxHeight / 100} metros</p>
               )}
               {restrictions.allowCompanion && <p>Permite acompanhante adulto</p>}
             </div>
@@ -59,7 +59,7 @@ export default function Attraction({
             </div>
           )}
 
-          {alert && <p className="mt-4 font-bold text-custom-100">{alert}</p>}
+          {alert && <p className="mt-4 font-bold text-red-500">{alert}</p>}
         </div>
       </section>
     </article>

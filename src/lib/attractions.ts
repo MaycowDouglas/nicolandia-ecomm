@@ -44,6 +44,16 @@ export type AttractionProps = {
 
 export const data: AttractionProps[] = [
   {
+    name: 'Kabum',
+    image: AtractionKabum,
+    category: 'radical',
+    observation:
+      'Está atração não é permitida para quem possui mobilidade reduzida. Não recomendada para pessoas com problemas na coluna vertebral.',
+    restrictions: {
+      minHeight: 140,
+    },
+  },
+  {
     name: 'Super frisbee',
     image: AtractionSuperFrisbee,
     category: 'radical',

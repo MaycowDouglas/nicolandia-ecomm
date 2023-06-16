@@ -9,4 +9,18 @@ type AddressProps = {
   complementary?: string
 }
 
+export type ViaCepAddress = {
+  uf?: string
+  cep?: string
+  gia?: string
+  ddd?: string
+  ibge?: string
+  siafi?: string
+  bairro?: string
+  logradouro?: string
+  complemento?: string
+  localidade?: string
+  erro?: boolean
+}
+
 export default AddressProps

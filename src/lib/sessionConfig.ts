@@ -3,6 +3,7 @@ import type SessionProps from '@/types/session'
 import type { IronSessionOptions } from 'iron-session'
 
 export const sessionOptions: IronSessionOptions = {
+  ttl: 900,
   password: process.env.SECRET_COOKIE_PASSWORD as string,
   cookieName: 'Nicolandia@Authentication',
   // secure: true should be used in production (HTTPS) but can't be used in development (HTTP)

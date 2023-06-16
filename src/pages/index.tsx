@@ -70,7 +70,8 @@ export default function HomePage() {
         </Swiper>
       </section>
 
-      <section className="flex bg-slate-100 py-8 text-center lg:text-left">
+      <section className="relative flex bg-slate-100 py-8 text-center lg:text-left">
+        <div id="app" className="absolute -top-44"></div>
         <div className="container flex flex-col lg:flex-row items-center justify-center gap-10 lg:gap-10 xl:gap-14">
           <Image src={NicoAppDark} alt="Nico App" />
           <div>
@@ -95,7 +96,6 @@ export default function HomePage() {
           <h2 className="mb-5 lg:mb-10 font-bold text-center md:text-start text-4xl md:text-4xl lg:text-5xl text-white">
             Passaportes
           </h2>
-          <h3></h3>
           <Tickets />
         </div>
         <svg
