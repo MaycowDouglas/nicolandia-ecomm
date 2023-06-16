@@ -80,7 +80,7 @@ export default function LoginPage() {
     <div className="min-h-[581px] grid place-content-center py-10 bg-neutral-200">
       <form
         onSubmit={handleSubmit}
-        className="px-20 py-10 flex flex-col gap-3 rounded-lg bg-white shadow-xl"
+        className="p-10 flex flex-col gap-3 rounded-lg bg-white shadow-xl"
       >
         <h1 className="mb-5 text-center text-3xl font-bold">Entrar</h1>
         <div className="">
@@ -117,9 +117,9 @@ export default function LoginPage() {
 
         <Button>Entrar</Button>
 
-        {/* <Link href="/cadastrar" className="text-center">
+        <Link href="/cadastrar" className="text-center">
           Não possui uma conta? <span className="text-custom-200">Criar agora.</span>
-        </Link> */}
+        </Link>
       </form>
     </div>
   )

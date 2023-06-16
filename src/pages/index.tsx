@@ -6,8 +6,8 @@ import SlideImage from '@/components/atoms/SlideImage'
 import SlideVideo from '@/components/atoms/SlideVideo'
 import Attractions from '@/components/organisms/Attractions'
 import Tickets from '@/components/organisms/Tickets'
-import BannerOneMobile from '@/public/images/banners/namorados-mobile.png'
-import BannerOneWeb from '@/public/images/banners/namorados-web.png'
+import BannerOneMobile from '@/public/images/banners/one-mobile.png'
+import BannerOneWeb from '@/public/images/banners/one-web.png'
 import NicoAppDark from '@/public/images/brands/nicoapp-dark.svg'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -44,14 +44,14 @@ export default function HomePage() {
             nextEl: '.main-swiper-next',
           }}
         >
-          {/* <SwiperSlide>
+          <SwiperSlide>
             <SlideImage
               alt="Diversão para toda a Família!"
               mobile={BannerOneMobile}
               desktop={BannerOneWeb}
               priority
             />
-          </SwiperSlide> */}
+          </SwiperSlide>
           <SwiperSlide>
             <SlideVideo
               mobile="/videos/kabum-mobile.mp4"

@@ -1,11 +1,16 @@
 import Button from '@/components/atoms/Button'
+import { useFeedback } from '@/hooks/useFeedback'
 import useUser from '@/hooks/useUser'
+import fetchJson from '@/lib/fetchJson'
 import { SignUpProps } from '@/types/signup'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 import { ChangeEvent, FormEvent, useCallback, useState } from 'react'
 import ReCAPTCHA from 'react-google-recaptcha'
 
 export default function RegisterPage() {
+  const router = useRouter()
+  const { addFeedback } = useFeedback()
   const { user } = useUser({
     redirectIfFound: true,
     redirectTo: '/minha-conta',
@@ -35,15 +40,59 @@ export default function RegisterPage() {
     [register]
   )
 
-  const handleSubmit = (e: FormEvent) => {
-    e.preventDefault()
-  }
+  const handleSubmit = useCallback(
+    async (e: FormEvent) => {
+      e.preventDefault()
+
+      if (
+        register.name === '' ||
+        register.email === '' ||
+        register.password === '' ||
+        register.recaptcha === ''
+      ) {
+        addFeedback({ type: 'error', message: 'Preencha todos os campos!' })
+        return
+      }
+
+      if (register.password.length < 6) {
+        addFeedback({ type: 'error', message: 'A senha deve possuir no minimo 6 caracteres.' })
+        return
+      }
+
+      try {
+        const response = await fetchJson('/api/register', {
+          method: 'POST',
+          headers: { Accept: 'application/json', 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            name: register.name,
+            email: register.email,
+            recaptcha: register.recaptcha,
+            password: {
+              first: register.password,
+              second: register.password,
+            },
+          }),
+        })
+
+        if (response && response?.user) {
+          addFeedback({ message: 'Usuário criado com sucesso!' })
+
+          setTimeout(() => {
+            router.push('/entrar')
+          }, 2000)
+        }
+      } catch (error) {
+        addFeedback({ type: 'error', message: 'Já existe uma conta com esse email!' })
+      }
+    },
+    [addFeedback, register, router]
+  )
 
   return (
     <div className="min-h-[581px] grid place-content-center py-10 bg-neutral-200">
       <form
         onSubmit={handleSubmit}
-        className="p-20 flex flex-col gap-3 rounded-lg bg-white shadow-xl"
+        className="p-10 flex flex-col gap-3 rounded-lg bg-white shadow-xl"
       >
         <h1 className="mb-5 text-center text-3xl font-bold">Cadastrar</h1>
         <div className="">
@@ -56,6 +105,7 @@ export default function RegisterPage() {
             onChange={handleChange}
             placeholder="Pessoa Exemplo"
             className="w-full mt-1 px-2 py-1 border-2 border-dark-10 rounded"
+            required
           />
         </div>
 
@@ -69,6 +119,7 @@ export default function RegisterPage() {
             onChange={handleChange}
             placeholder="exemplo@exemplo.com"
             className="w-full mt-1 px-2 py-1 border-2 border-dark-10 rounded"
+            required
           />
         </div>
 
@@ -81,6 +132,7 @@ export default function RegisterPage() {
             value={register.password}
             onChange={handleChange}
             className="w-full mt-1 px-2 py-1 border-2 border-dark-10 rounded"
+            required
           />
         </div>
 

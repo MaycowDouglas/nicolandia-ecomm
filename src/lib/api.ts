@@ -1,5 +1,6 @@
 import { LoginProps } from '@/types/login'
 import { Order } from '@/types/order'
+import { RegisterProps } from '@/types/register'
 import { HTTP_METHOD } from 'next/dist/server/web/http'
 
 import fetchJson, { FetchError } from './fetchJson'
@@ -39,6 +40,7 @@ const api = {
   },
   Security: {
     login: async (data: LoginProps) => await request('POST', '/login', JSON.stringify(data)),
+    register: async (data: RegisterProps) => await request('POST', '/signup', JSON.stringify(data)),
   },
 }
 
