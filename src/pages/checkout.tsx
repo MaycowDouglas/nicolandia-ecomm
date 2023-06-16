@@ -111,7 +111,7 @@ export default function CheckoutPage() {
       setPersonalData(data)
       loaded.current = true
     }
-  }, [items.length, router, user])
+  }, [user])
 
   function handleRecaptchaChange(token: string | null) {
     setRecaptcha(token)
