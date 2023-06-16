@@ -44,14 +44,14 @@ export default function HomePage() {
             nextEl: '.main-swiper-next',
           }}
         >
-          <SwiperSlide>
+          {/* <SwiperSlide>
             <SlideImage
               alt="Diversão para toda a Família!"
               mobile={BannerOneMobile}
               desktop={BannerOneWeb}
               priority
             />
-          </SwiperSlide>
+          </SwiperSlide> */}
           <SwiperSlide>
             <SlideVideo
               mobile="/videos/kabum-mobile.mp4"
