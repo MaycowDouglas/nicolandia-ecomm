@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import Button from '@/components/atoms/Button'
 import Dropdown from '@/components/atoms/Dropdown'
 import Overlay from '@/components/atoms/Overlay'
 import useOrders from '@/hooks/useOrders'
@@ -15,8 +16,6 @@ export default function MyAccount() {
   const router = useRouter()
   const [pix, setPix] = useState('')
   const [isPixVisible, setPixVisible] = useState(false)
-
-  console.log(list)
 
   const paymentStatus = {
     PAID: { label: 'pago', style: 'bg-green-400' },
@@ -67,7 +66,7 @@ export default function MyAccount() {
           </div>
         </>
       )}
-      <section className="py-10">
+      <section className="py-10 min-h-screen">
         <div className="container">
           <h1 className="text-4xl text-center lg:text-start text-gray-500 font-bold">
             Minhas compras
@@ -78,100 +77,115 @@ export default function MyAccount() {
           {list.data && (
             <table className="w-full">
               <thead>
-                <th>Status</th>
-                <th className="hidden md:table-cell">Pagamento</th>
-                <th className="hidden md:table-cell">Valor</th>
-                <th>Data compra</th>
-                <th>Data uso</th>
-                <th>Ações</th>
+                <tr>
+                  <th>Status</th>
+                  <th className="hidden md:table-cell">Pagamento</th>
+                  <th className="hidden md:table-cell">Valor</th>
+                  <th>Data compra</th>
+                  <th>Data uso</th>
+                  <th>Ações</th>
+                </tr>
               </thead>
               <tbody className="text-center">
-                {list.data.map((order, index) => (
-                  <tr key={index}>
-                    <td className="p-1">
-                      <span
-                        className={classNames(
-                          'py-1 px-2 inline-flex justify-center rounded-full font-medium text-sm',
-                          paymentStatus[order.invoice.status].style
-                        )}
-                      >
-                        {paymentStatus[order.invoice.status].label}
+                {list.data.length < 1 ? (
+                  <tr className="bg-slate-200">
+                    <td colSpan={6} className="py-20">
+                      <span className="flex flex-col items-center">
+                        <span className="text-2xl mb-3">Você não possui nenhuma compra</span>
+                        <Button href="/passaportes">Veja nossos passaportes</Button>
                       </span>
                     </td>
-                    <td className="hidden md:table-cell">
-                      {paymentMethod[order.invoice.paymentMethod]}
-                    </td>
-                    <td className="hidden md:table-cell">
-                      {(
-                        order.items.reduce((total, current) => total + current.total, 0) / 100
-                      ).toLocaleString('pt-BR', {
-                        style: 'currency',
-                        currency: 'BRL',
-                      })}
-                    </td>
-                    <td>{new Date(order.createdAt.date).toLocaleDateString()}</td>
-                    <td>
-                      {order.usedOn ? new Date(order.usedOn.date).toLocaleDateString() : '---'}
-                    </td>
-                    <td>
-                      <Dropdown label={<FiMoreVertical />}>
-                        <ul className="text-left divide-y-2">
-                          {order.invoice.status === 'PAID' && (
-                            <li className="py-2">
-                              <button
-                                onClick={() => showCode(order.code)}
-                                className="inline-flex items-center gap-2 whitespace-nowrap"
-                              >
-                                <BsQrCodeScan />
-                                Ver código
-                              </button>
-                            </li>
-                          )}
-                          {order.invoice.status === 'WAITING_PAYMENT' && (
-                            <>
-                              {order.invoice.paymentMethod === 'PIX' && (
-                                <li className="py-2">
-                                  <button
-                                    onClick={() => {
-                                      router.push({
-                                        pathname: `/pagamento/${order.invoice.paymentMethod.toLowerCase()}/${
-                                          order.id
-                                        }`,
-                                        query: { order: JSON.stringify(order) },
-                                      })
-                                    }}
-                                    className="inline-flex items-center gap-2 whitespace-nowrap"
-                                  >
-                                    <BsWallet2 />
-                                    Pagar Pix
-                                  </button>
-                                </li>
-                              )}
-                              {order.invoice.paymentMethod === 'BOLETO' && (
-                                <li className="py-2">
-                                  <button
-                                    onClick={() => {
-                                      router.push({
-                                        pathname: `/pagamento/${order.invoice.paymentMethod.toLowerCase()}/${
-                                          order.id
-                                        }`,
-                                        query: { order: JSON.stringify(order) },
-                                      })
-                                    }}
-                                    className="inline-flex items-center gap-2 whitespace-nowrap"
-                                  >
-                                    <FiPrinter />
-                                    Imprimir boleto
-                                  </button>
-                                </li>
-                              )}
-                            </>
-                          )}
-                        </ul>
-                      </Dropdown>
-                    </td>
                   </tr>
-                ))}
+                ) : (
+                  <>
+                    {list.data.map((order, index) => (
+                      <tr key={index}>
+                        <td className="p-1">
+                          <span
+                            className={classNames(
+                              'py-1 px-2 inline-flex justify-center rounded-full font-medium text-sm',
+                              paymentStatus[order.invoice.status].style
+                            )}
+                          >
+                            {paymentStatus[order.invoice.status].label}
+                          </span>
+                        </td>
+                        <td className="hidden md:table-cell">
+                          {paymentMethod[order.invoice.paymentMethod]}
+                        </td>
+                        <td className="hidden md:table-cell">
+                          {(
+                            order.items.reduce((total, current) => total + current.total, 0) / 100
+                          ).toLocaleString('pt-BR', {
+                            style: 'currency',
+                            currency: 'BRL',
+                          })}
+                        </td>
+                        <td>{new Date(order.createdAt.date).toLocaleDateString()}</td>
+                        <td>
+                          {order.usedOn ? new Date(order.usedOn.date).toLocaleDateString() : '---'}
+                        </td>
+                        <td>
+                          <Dropdown label={<FiMoreVertical />}>
+                            <ul className="text-left divide-y-2">
+                              {order.invoice.status === 'PAID' && (
+                                <li className="py-2">
+                                  <button
+                                    onClick={() => showCode(order.code)}
+                                    className="inline-flex items-center gap-2 whitespace-nowrap"
+                                  >
+                                    <BsQrCodeScan />
+                                    Ver código
+                                  </button>
+                                </li>
+                              )}
+                              {order.invoice.status === 'WAITING_PAYMENT' && (
+                                <>
+                                  {order.invoice.paymentMethod === 'PIX' && (
+                                    <li className="py-2">
+                                      <button
+                                        onClick={() => {
+                                          router.push({
+                                            pathname: `/pagamento/${order.invoice.paymentMethod.toLowerCase()}/${
+                                              order.id
+                                            }`,
+                                            query: { order: JSON.stringify(order) },
+                                          })
+                                        }}
+                                        className="inline-flex items-center gap-2 whitespace-nowrap"
+                                      >
+                                        <BsWallet2 />
+                                        Pagar Pix
+                                      </button>
+                                    </li>
+                                  )}
+                                  {order.invoice.paymentMethod === 'BOLETO' && (
+                                    <li className="py-2">
+                                      <button
+                                        onClick={() => {
+                                          router.push({
+                                            pathname: `/pagamento/${order.invoice.paymentMethod.toLowerCase()}/${
+                                              order.id
+                                            }`,
+                                            query: { order: JSON.stringify(order) },
+                                          })
+                                        }}
+                                        className="inline-flex items-center gap-2 whitespace-nowrap"
+                                      >
+                                        <FiPrinter />
+                                        Imprimir boleto
+                                      </button>
+                                    </li>
+                                  )}
+                                </>
+                              )}
+                            </ul>
+                          </Dropdown>
+                        </td>
+                      </tr>
+                    ))}
+                  </>
+                )}
               </tbody>
             </table>
           )}

@@ -11,10 +11,17 @@ import ReCAPTCHA from 'react-google-recaptcha'
 export default function RegisterPage() {
   const router = useRouter()
   const { addFeedback } = useFeedback()
-  const { user } = useUser({
-    redirectIfFound: true,
-    redirectTo: '/minha-conta',
-  })
+  const redirectOptions = router.query.redir
+    ? {
+        redirectIfFound: true,
+        redirectTo: router.query.redir as string,
+      }
+    : {
+        redirectIfFound: true,
+        redirectTo: '/minha-conta',
+      }
+
+  const { mutateUser, user } = useUser(redirectOptions)
 
   const [register, setRegister] = useState<SignUpProps>({
     name: '',
@@ -74,18 +81,22 @@ export default function RegisterPage() {
           }),
         })
 
-        if (Object.keys(response).includes('user')) {
-          addFeedback({ message: 'Usuário criado com sucesso!' })
-
-          setTimeout(() => {
-            router.push('/entrar')
-          }, 2000)
-        }
+        mutateUser(
+          await fetchJson('/api/login?mobile=true', {
+            method: 'POST',
+            headers: { Accept: 'application/json', 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              username: register.email,
+              password: register.password,
+            }),
+          })
+        )
       } catch (error) {
+        console.error(error)
         addFeedback({ type: 'error', message: 'Já existe uma conta com esse email!' })
       }
     },
-    [addFeedback, register, router]
+    [addFeedback, register, mutateUser]
   )
 
   return (
@@ -145,7 +156,10 @@ export default function RegisterPage() {
 
         <Button>Cadastrar</Button>
 
-        <Link href="/entrar" className="text-center">
+        <Link
+          href={router.query.redir ? `/entrar=?redir=${router.query.redir}` : '/entrar'}
+          className="text-center"
+        >
           Já possui uma conta? <span className="text-custom-200">Ir para Login.</span>
         </Link>
       </form>

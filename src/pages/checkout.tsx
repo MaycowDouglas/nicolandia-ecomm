@@ -38,7 +38,6 @@ export default function CheckoutPage() {
   const { items, clearCart, cartTotal } = useCart()
   const loaded = useRef(false)
 
-  const [invoice, setInvoice] = useState(null)
   const [isCepConfirmed, setCepConfirmation] = useState(false)
   const [recaptcha, setRecaptcha] = useState<string | null>(null)
   const [personalData, setPersonalData] = useState<PersonalDataProps>({
@@ -80,15 +79,11 @@ export default function CheckoutPage() {
     }
 
     if (items.length === 0) {
-      router.push('/')
-    }
-
-    if (!user) {
-      router.push('/entrar?redir=/checkout')
+      router.push('/passaportes')
+      return
     }
 
     if (user && user.data && !loaded.current) {
-      console.log(user.data)
       data = {
         ...data,
         name: user.data.name,
@@ -116,6 +111,7 @@ export default function CheckoutPage() {
       setPersonalData(data)
       loaded.current = true
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [user])
 
   function handleRecaptchaChange(token: string | null) {

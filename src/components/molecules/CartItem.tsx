@@ -42,6 +42,7 @@ export default function CartItem({
           <input
             type="number"
             value={quantity}
+            onChange={() => {}}
             className="w-full bg-transparent text-center outline-none"
           />
           <button onClick={increase}>

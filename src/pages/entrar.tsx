@@ -1,4 +1,5 @@
 import Button from '@/components/atoms/Button'
+import { useFeedback } from '@/hooks/useFeedback'
 import useUser from '@/hooks/useUser'
 import fetchJson, { FetchError } from '@/lib/fetchJson'
 import { LoginProps } from '@/types/login'
@@ -9,6 +10,7 @@ import ReCAPTCHA from 'react-google-recaptcha'
 
 export default function LoginPage() {
   const router = useRouter()
+  const { addFeedback } = useFeedback()
 
   const redirectOptions = router.query.redir
     ? {
@@ -59,19 +61,14 @@ export default function LoginPage() {
           }),
         })
       )
-
-      console.log(user)
     } catch (error) {
       if (error instanceof FetchError) {
         if (error.response.status === 400) {
-          console.log('Ops! Usuário ou senha inválido!')
+          addFeedback({ type: 'error', message: 'Ops! Usuário ou senha inválido!' })
           return
         }
-        console.log(String(error.response.status))
       } else {
-        console.error({
-          'An unexpected error happened': error,
-        })
+        addFeedback({ type: 'error', message: 'Aconteceu um erro inesperado! Contate o suporte.' })
       }
     }
   }
@@ -117,7 +114,10 @@ export default function LoginPage() {
 
         <Button>Entrar</Button>
 
-        <Link href="/cadastrar" className="text-center">
+        <Link
+          href={router.query.redir ? `/cadastrar?redir=${router.query.redir}` : '/cadastrar'}
+          className="text-center"
+        >
           Não possui uma conta? <span className="text-custom-200">Criar agora.</span>
         </Link>
       </form>
