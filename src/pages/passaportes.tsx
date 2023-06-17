@@ -4,6 +4,7 @@ import ComboEncantado from '@/public/images/tickets/encantado.jpg'
 import ComboEspetacular from '@/public/images/tickets/espetacular.jpg'
 import PassaporteIndividual from '@/public/images/tickets/individual.jpg'
 import ComboNamorados from '@/public/images/tickets/namorados.png'
+import Head from 'next/head'
 import { GoAlert } from 'react-icons/go'
 
 export default function PassaportsPage() {
@@ -11,6 +12,13 @@ export default function PassaportsPage() {
   const nowSP = new Date(now.toLocaleString('en-US', { timeZone: 'America/Sao_Paulo' }))
   return (
     <>
+      <Head>
+        <title>Nicolândia | Passaportes</title>
+        <meta
+          name="description"
+          content="Passaportes individuais, Combos, diversão e muito mais. A Nova Nicolândia é referência em levar alegria e diversão para todo o Distrito Federal e traz benefícios exclusivos para advogados e conveniados da OAB-DF e CAA-DF. Venha e apaixone-se!"
+        />
+      </Head>
       <section className="py-10 bg-custom-300">
         <div className="container">
           <h1 className="text-custom-600 font-black text-center text-3xl md:text-4xl xl:text-5xl leading-tight mb-12">

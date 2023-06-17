@@ -1,4 +1,5 @@
 import FaqItem from '@/components/molecules/FaqItem'
+import Head from 'next/head'
 import { useState } from 'react'
 
 export default function FaqPage() {
@@ -78,23 +79,28 @@ export default function FaqPage() {
     },
   ]
   return (
-    <section className="py-10">
-      <div className="container">
-        <h1 className="text-custom-600 font-black text-center text-3xl md:text-4xl xl:text-5xl leading-tight mb-10">
-          Qual sua dúvida <br className="hidden md:block" />
-          sobre nosso parque?
-        </h1>
+    <>
+      <Head>
+        <title>Nicolândia | Dúvidas frequentes</title>
+      </Head>
+      <section className="py-10">
+        <div className="container">
+          <h1 className="text-custom-600 font-black text-center text-3xl md:text-4xl xl:text-5xl leading-tight mb-10">
+            Qual sua dúvida <br className="hidden md:block" />
+            sobre nosso parque?
+          </h1>
 
-        {items.map((item, index) => (
-          <FaqItem
-            key={index}
-            show={selectedQuestion === index}
-            awnser={item.awnser}
-            question={item.question}
-            onClick={() => setSelectedQuestion(index)}
-          />
-        ))}
-      </div>
-    </section>
+          {items.map((item, index) => (
+            <FaqItem
+              key={index}
+              show={selectedQuestion === index}
+              awnser={item.awnser}
+              question={item.question}
+              onClick={() => setSelectedQuestion(index)}
+            />
+          ))}
+        </div>
+      </section>
+    </>
   )
 }

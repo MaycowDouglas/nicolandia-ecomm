@@ -9,6 +9,7 @@ import fetchJson from '@/lib/fetchJson'
 import { ViaCepAddress } from '@/types/address'
 import { Order, OrderResponse } from '@/types/order'
 import fetch from 'isomorphic-unfetch'
+import Head from 'next/head'
 import { useRouter } from 'next/router'
 import { ChangeEvent, FormEvent, useCallback, useEffect, useRef, useState } from 'react'
 import { isIOS } from 'react-device-detect'
@@ -271,264 +272,271 @@ export default function CheckoutPage() {
   )
 
   return user && user.data ? (
-    <section className="py-10">
-      <form className="container" onSubmit={handleSubmit}>
-        <h1 className="text-5xl text-center lg:text-start text-gray-500 font-bold">Checkout</h1>
+    <>
+      <Head>
+        <title>Nicolândia | Checkout</title>
+      </Head>
+      <section className="py-10">
+        <form className="container" onSubmit={handleSubmit}>
+          <h1 className="text-5xl text-center lg:text-start text-gray-500 font-bold">Checkout</h1>
 
-        <div className="mt-2 mb-10 border-2 border-neutral-100"></div>
+          <div className="mt-2 mb-10 border-2 border-neutral-100"></div>
 
-        <div className="flex flex-wrap lg:flex-nowrap items-start gap-20">
-          <div className="w-full lg:w-2/3">
-            <h2 className="mb-3 text-2xl text-center lg:text-start font-bold">Dados do pessoais</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              <div>
-                <label htmlFor="name" className="inline-flex mb-1">
-                  Nome
-                </label>
-                <InputText
-                  id="name"
-                  name="name"
-                  value={personalData?.name}
-                  onChange={handlePersonalDataChange}
-                  required
-                />
+          <div className="flex flex-wrap lg:flex-nowrap items-start gap-20">
+            <div className="w-full lg:w-2/3">
+              <h2 className="mb-3 text-2xl text-center lg:text-start font-bold">
+                Dados do pessoais
+              </h2>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div>
+                  <label htmlFor="name" className="inline-flex mb-1">
+                    Nome
+                  </label>
+                  <InputText
+                    id="name"
+                    name="name"
+                    value={personalData?.name}
+                    onChange={handlePersonalDataChange}
+                    required
+                  />
+                </div>
+                <div>
+                  <label htmlFor="document" className="inline-flex mb-1">
+                    CPF
+                  </label>
+                  <InputText
+                    id="document"
+                    name="document"
+                    mask="cpf"
+                    value={masks.cpf(personalData?.document)}
+                    onChange={handlePersonalDataChange}
+                    required
+                  />
+                </div>
+                <div>
+                  <label htmlFor="" className="inline-flex mb-1">
+                    Nascimento
+                  </label>
+                  <InputDate
+                    id="birthday"
+                    name="birthday"
+                    value={personalData.birthday}
+                    onChange={handlePersonalDataChange}
+                    className={isIOS && personalData.birthday === '' ? 'py-5' : 'py-2'}
+                    required
+                  />
+                </div>
+                <div>
+                  <label htmlFor="phone" className="inline-flex mb-1">
+                    Telefone
+                  </label>
+                  <InputText
+                    id="phone"
+                    name="phone"
+                    mask="phone"
+                    value={masks.phone(String(personalData?.phone))}
+                    onChange={handlePersonalDataChange}
+                    required
+                  />
+                </div>
+                {isCepConfirmed && (
+                  <>
+                    <div>
+                      <label htmlFor="street" className="inline-flex mb-1">
+                        Endereço
+                      </label>
+                      <InputText
+                        id="street"
+                        name="street"
+                        value={personalData.street}
+                        onChange={handlePersonalDataChange}
+                        disabled
+                        required
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="number" className="inline-flex mb-1">
+                        Número
+                      </label>
+                      <InputText
+                        id="number"
+                        name="number"
+                        value={personalData.number}
+                        onChange={handlePersonalDataChange}
+                        required
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="neighborhood" className="inline-flex mb-1">
+                        Bairro
+                      </label>
+                      <InputText
+                        id="neighborhood"
+                        name="neighborhood"
+                        value={personalData.neighborhood}
+                        onChange={handlePersonalDataChange}
+                        disabled
+                        required
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="city" className="inline-flex mb-1">
+                        Cidade
+                      </label>
+                      <InputText
+                        id="city"
+                        name="city"
+                        value={personalData.city}
+                        onChange={handlePersonalDataChange}
+                        disabled
+                        required
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="state" className="inline-flex mb-1">
+                        Estado
+                      </label>
+                      <InputText
+                        id="state"
+                        name="state"
+                        value={personalData.state}
+                        onChange={handlePersonalDataChange}
+                        disabled
+                        required
+                      />
+                    </div>
+                  </>
+                )}
+
+                <div>
+                  <div className="flex items-center justify-between">
+                    <label htmlFor="zipcode" className="inline-flex mb-1">
+                      Cep
+                    </label>
+                    {isCepConfirmed && (
+                      <button
+                        onClick={() => {
+                          setCepConfirmation(false)
+                          setPersonalData({ ...personalData, zipcode: '' })
+                        }}
+                        className="flex items-center gap-1 text-sm text-custom-200"
+                      >
+                        <FiEdit /> Alterar
+                      </button>
+                    )}
+                  </div>
+                  <InputText
+                    id="zipcode"
+                    name="zipcode"
+                    value={masks.cep(personalData.zipcode)}
+                    onChange={handlePersonalDataChange}
+                    onInput={handleZipcodeConfirmation}
+                    disabled={isCepConfirmed}
+                    required
+                  />
+                </div>
               </div>
-              <div>
-                <label htmlFor="document" className="inline-flex mb-1">
-                  CPF
-                </label>
-                <InputText
-                  id="document"
-                  name="document"
-                  mask="cpf"
-                  value={masks.cpf(personalData?.document)}
-                  onChange={handlePersonalDataChange}
-                  required
-                />
-              </div>
-              <div>
-                <label htmlFor="" className="inline-flex mb-1">
-                  Nascimento
-                </label>
-                <InputDate
-                  id="birthday"
-                  name="birthday"
-                  value={personalData.birthday}
-                  onChange={handlePersonalDataChange}
-                  className={isIOS && personalData.birthday === '' ? 'py-5' : 'py-2'}
-                  required
-                />
-              </div>
-              <div>
-                <label htmlFor="phone" className="inline-flex mb-1">
-                  Telefone
-                </label>
-                <InputText
-                  id="phone"
-                  name="phone"
-                  mask="phone"
-                  value={masks.phone(String(personalData?.phone))}
-                  onChange={handlePersonalDataChange}
-                  required
-                />
-              </div>
+
               {isCepConfirmed && (
                 <>
-                  <div>
-                    <label htmlFor="street" className="inline-flex mb-1">
-                      Endereço
-                    </label>
-                    <InputText
-                      id="street"
-                      name="street"
-                      value={personalData.street}
-                      onChange={handlePersonalDataChange}
-                      disabled
-                      required
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="number" className="inline-flex mb-1">
-                      Número
-                    </label>
-                    <InputText
-                      id="number"
-                      name="number"
-                      value={personalData.number}
-                      onChange={handlePersonalDataChange}
-                      required
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="neighborhood" className="inline-flex mb-1">
-                      Bairro
-                    </label>
-                    <InputText
-                      id="neighborhood"
-                      name="neighborhood"
-                      value={personalData.neighborhood}
-                      onChange={handlePersonalDataChange}
-                      disabled
-                      required
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="city" className="inline-flex mb-1">
-                      Cidade
-                    </label>
-                    <InputText
-                      id="city"
-                      name="city"
-                      value={personalData.city}
-                      onChange={handlePersonalDataChange}
-                      disabled
-                      required
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="state" className="inline-flex mb-1">
-                      Estado
-                    </label>
-                    <InputText
-                      id="state"
-                      name="state"
-                      value={personalData.state}
-                      onChange={handlePersonalDataChange}
-                      disabled
-                      required
-                    />
+                  <h2 className="mt-10 mb-3 text-2xl text-center md:text-start font-bold">
+                    Forma de pagamento
+                  </h2>
+
+                  <div className="text-lg space-y-2">
+                    <div>
+                      <input
+                        type="radio"
+                        id="method-pix"
+                        name="payment-method"
+                        className="peer hidden"
+                        value="PIX"
+                        checked={paymentMethod === 'PIX'}
+                        onChange={handlePaymentMethodChange}
+                      />
+                      <label
+                        htmlFor="method-pix"
+                        className={classNames(
+                          'peer-checked:bg-custom-200 peer-checked:text-white peer-checked:border-2',
+                          'px-5 py-3 flex items-center justify-between border-[1px] border-neutral-200 shadow cursor-pointer'
+                        )}
+                      >
+                        <span className="flex items-center gap-3">
+                          <BsQrCodeScan />
+                          <span>Pix</span>
+                        </span>
+                        <FiChevronRight />
+                      </label>
+                    </div>
+                    <div>
+                      <input
+                        type="radio"
+                        id="method-boleto"
+                        name="payment-method"
+                        className="peer hidden"
+                        value="BOLETO"
+                        checked={paymentMethod === 'BOLETO'}
+                        onChange={handlePaymentMethodChange}
+                      />
+                      <label
+                        htmlFor="method-boleto"
+                        className={classNames(
+                          'peer-checked:bg-custom-200 peer-checked:text-white peer-checked:border-2',
+                          'px-5 py-3 flex items-center justify-between border-[1px] border-neutral-200 shadow cursor-pointer'
+                        )}
+                      >
+                        <span className="flex items-center gap-3">
+                          <AiOutlineBarcode />
+                          <span>Boleto</span>
+                        </span>
+                        <FiChevronRight />
+                      </label>
+                    </div>
                   </div>
                 </>
               )}
+            </div>
 
-              <div>
-                <div className="flex items-center justify-between">
-                  <label htmlFor="zipcode" className="inline-flex mb-1">
-                    Cep
-                  </label>
-                  {isCepConfirmed && (
-                    <button
-                      onClick={() => {
-                        setCepConfirmation(false)
-                        setPersonalData({ ...personalData, zipcode: '' })
-                      }}
-                      className="flex items-center gap-1 text-sm text-custom-200"
-                    >
-                      <FiEdit /> Alterar
-                    </button>
-                  )}
-                </div>
-                <InputText
-                  id="zipcode"
-                  name="zipcode"
-                  value={masks.cep(personalData.zipcode)}
-                  onChange={handlePersonalDataChange}
-                  onInput={handleZipcodeConfirmation}
-                  disabled={isCepConfirmed}
-                  required
+            <div className="w-full lg:w-1/3">
+              <h2 className="mb-3 text-2xl text-center md:text-start font-bold">Passaportes</h2>
+              <div className="p-10 border-2 border-neutral-200">
+                <ul className="space-y-2">
+                  {items.map((item, index) => (
+                    <li key={index} className="flex items-center justify-between">
+                      <span>
+                        {item.quantity} x {item.name}
+                      </span>
+                      <span>
+                        {((item.price * item.quantity) / 100).toLocaleString('pt-br', {
+                          style: 'currency',
+                          currency: 'BRL',
+                        })}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+
+                <div className="border-t-2 border-neutral-200 my-5"></div>
+
+                <p className="flex items-center justify-between">
+                  <strong>Total:</strong>
+                  <span>{cartTotal(true)}</span>
+                </p>
+              </div>
+
+              <div className="flex justify-center my-5">
+                <ReCAPTCHA
+                  sitekey="6LebOY8cAAAAAFdnKMqg-iWkvaSi2VXpTIKMGIWZ"
+                  onChange={handleRecaptchaChange}
                 />
               </div>
+
+              {!paymentMethod === false && <Button isBlock>Finalizar Compra</Button>}
             </div>
-
-            {isCepConfirmed && (
-              <>
-                <h2 className="mt-10 mb-3 text-2xl text-center md:text-start font-bold">
-                  Forma de pagamento
-                </h2>
-
-                <div className="text-lg space-y-2">
-                  <div>
-                    <input
-                      type="radio"
-                      id="method-pix"
-                      name="payment-method"
-                      className="peer hidden"
-                      value="PIX"
-                      checked={paymentMethod === 'PIX'}
-                      onChange={handlePaymentMethodChange}
-                    />
-                    <label
-                      htmlFor="method-pix"
-                      className={classNames(
-                        'peer-checked:bg-custom-200 peer-checked:text-white peer-checked:border-2',
-                        'px-5 py-3 flex items-center justify-between border-[1px] border-neutral-200 shadow cursor-pointer'
-                      )}
-                    >
-                      <span className="flex items-center gap-3">
-                        <BsQrCodeScan />
-                        <span>Pix</span>
-                      </span>
-                      <FiChevronRight />
-                    </label>
-                  </div>
-                  <div>
-                    <input
-                      type="radio"
-                      id="method-boleto"
-                      name="payment-method"
-                      className="peer hidden"
-                      value="BOLETO"
-                      checked={paymentMethod === 'BOLETO'}
-                      onChange={handlePaymentMethodChange}
-                    />
-                    <label
-                      htmlFor="method-boleto"
-                      className={classNames(
-                        'peer-checked:bg-custom-200 peer-checked:text-white peer-checked:border-2',
-                        'px-5 py-3 flex items-center justify-between border-[1px] border-neutral-200 shadow cursor-pointer'
-                      )}
-                    >
-                      <span className="flex items-center gap-3">
-                        <AiOutlineBarcode />
-                        <span>Boleto</span>
-                      </span>
-                      <FiChevronRight />
-                    </label>
-                  </div>
-                </div>
-              </>
-            )}
           </div>
-
-          <div className="w-full lg:w-1/3">
-            <h2 className="mb-3 text-2xl text-center md:text-start font-bold">Passaportes</h2>
-            <div className="p-10 border-2 border-neutral-200">
-              <ul className="space-y-2">
-                {items.map((item, index) => (
-                  <li key={index} className="flex items-center justify-between">
-                    <span>
-                      {item.quantity} x {item.name}
-                    </span>
-                    <span>
-                      {((item.price * item.quantity) / 100).toLocaleString('pt-br', {
-                        style: 'currency',
-                        currency: 'BRL',
-                      })}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-
-              <div className="border-t-2 border-neutral-200 my-5"></div>
-
-              <p className="flex items-center justify-between">
-                <strong>Total:</strong>
-                <span>{cartTotal(true)}</span>
-              </p>
-            </div>
-
-            <div className="flex justify-center my-5">
-              <ReCAPTCHA
-                sitekey="6LebOY8cAAAAAFdnKMqg-iWkvaSi2VXpTIKMGIWZ"
-                onChange={handleRecaptchaChange}
-              />
-            </div>
-
-            {!paymentMethod === false && <Button isBlock>Finalizar Compra</Button>}
-          </div>
-        </div>
-      </form>
-    </section>
+        </form>
+      </section>
+    </>
   ) : (
     <></>
   )

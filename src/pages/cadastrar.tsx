@@ -3,6 +3,7 @@ import { useFeedback } from '@/hooks/useFeedback'
 import useUser from '@/hooks/useUser'
 import fetchJson from '@/lib/fetchJson'
 import { SignUpProps } from '@/types/signup'
+import Head from 'next/head'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { ChangeEvent, FormEvent, useCallback, useState } from 'react'
@@ -100,69 +101,74 @@ export default function RegisterPage() {
   )
 
   return (
-    <div className="min-h-[581px] grid place-content-center py-10 bg-neutral-200">
-      <form
-        onSubmit={handleSubmit}
-        className="p-10 flex flex-col gap-3 rounded-lg bg-white shadow-xl"
-      >
-        <h1 className="mb-5 text-center text-3xl font-bold">Cadastrar</h1>
-        <div className="">
-          <label htmlFor="name">Nome completo:</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            value={register.name}
-            onChange={handleChange}
-            placeholder="Pessoa Exemplo"
-            className="w-full mt-1 px-2 py-1 border-2 border-dark-10 rounded"
-            required
-          />
-        </div>
-
-        <div className="">
-          <label htmlFor="email">Email:</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            value={register.email}
-            onChange={handleChange}
-            placeholder="exemplo@exemplo.com"
-            className="w-full mt-1 px-2 py-1 border-2 border-dark-10 rounded"
-            required
-          />
-        </div>
-
-        <div>
-          <label htmlFor="password">Senha:</label>
-          <input
-            type="password"
-            id="password"
-            name="password"
-            value={register.password}
-            onChange={handleChange}
-            className="w-full mt-1 px-2 py-1 border-2 border-dark-10 rounded"
-            required
-          />
-        </div>
-
-        <div className="flex justify-center my-5">
-          <ReCAPTCHA
-            sitekey="6LebOY8cAAAAAFdnKMqg-iWkvaSi2VXpTIKMGIWZ"
-            onChange={handleRecaptchaChange}
-          />
-        </div>
-
-        <Button>Cadastrar</Button>
-
-        <Link
-          href={router.query.redir ? `/entrar=?redir=${router.query.redir}` : '/entrar'}
-          className="text-center"
+    <>
+      <Head>
+        <title>Nicolândia | Cadastro</title>
+      </Head>
+      <div className="min-h-[581px] grid place-content-center py-10 bg-neutral-200">
+        <form
+          onSubmit={handleSubmit}
+          className="p-10 flex flex-col gap-3 rounded-lg bg-white shadow-xl"
         >
-          Já possui uma conta? <span className="text-custom-200">Ir para Login.</span>
-        </Link>
-      </form>
-    </div>
+          <h1 className="mb-5 text-center text-3xl font-bold">Cadastrar</h1>
+          <div className="">
+            <label htmlFor="name">Nome completo:</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              value={register.name}
+              onChange={handleChange}
+              placeholder="Pessoa Exemplo"
+              className="w-full mt-1 px-2 py-1 border-2 border-dark-10 rounded"
+              required
+            />
+          </div>
+
+          <div className="">
+            <label htmlFor="email">Email:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              value={register.email}
+              onChange={handleChange}
+              placeholder="exemplo@exemplo.com"
+              className="w-full mt-1 px-2 py-1 border-2 border-dark-10 rounded"
+              required
+            />
+          </div>
+
+          <div>
+            <label htmlFor="password">Senha:</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              value={register.password}
+              onChange={handleChange}
+              className="w-full mt-1 px-2 py-1 border-2 border-dark-10 rounded"
+              required
+            />
+          </div>
+
+          <div className="flex justify-center my-5">
+            <ReCAPTCHA
+              sitekey="6LebOY8cAAAAAFdnKMqg-iWkvaSi2VXpTIKMGIWZ"
+              onChange={handleRecaptchaChange}
+            />
+          </div>
+
+          <Button>Cadastrar</Button>
+
+          <Link
+            href={router.query.redir ? `/entrar=?redir=${router.query.redir}` : '/entrar'}
+            className="text-center"
+          >
+            Já possui uma conta? <span className="text-custom-200">Ir para Login.</span>
+          </Link>
+        </form>
+      </div>
+    </>
   )
 }

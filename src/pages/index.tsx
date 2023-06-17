@@ -9,6 +9,7 @@ import Tickets from '@/components/organisms/Tickets'
 import BannerOneMobile from '@/public/images/banners/one-mobile.png'
 import BannerOneWeb from '@/public/images/banners/one-web.png'
 import NicoAppDark from '@/public/images/brands/nicoapp-dark.svg'
+import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useRef } from 'react'
@@ -34,6 +35,13 @@ export default function HomePage() {
   }
   return (
     <>
+      <Head>
+        <title>Seu lugar de diversão</title>
+        <meta
+          name="description"
+          content="A Nova Nicolândia é um parque de diversões urbano e fechado, garantindo assim a segurança dos visitantes. O mundo da diversão não poderia estar em outro lugar, senão no coração de Brasília. Conheça o nosso parque e apaixone-se!"
+        />
+      </Head>
       <section>
         <Swiper
           ref={swiperRef}
