@@ -60,14 +60,14 @@ export default function HomePage() {
               priority
             />
           </SwiperSlide>
-          <SwiperSlide>
+          {/* <SwiperSlide>
             <SlideVideo
               mobile="/videos/kabum-mobile.mp4"
               desktop="/videos/kabum-web.mp4"
               onPlay={stopSlideTransition}
               onPause={startSlideTransition}
             />
-          </SwiperSlide>
+          </SwiperSlide> */}
 
           <div className="main-swiper-prev z-50 absolute top-0 bottom-0 left-0 px-2 flex items-center bg-black bg-opacity-30 text-white text-2xl md:text-5xl">
             <FaChevronLeft />
