@@ -254,7 +254,7 @@ export default function CheckoutPage() {
       } catch (error) {
         addFeedback({
           type: 'error',
-          message: 'Este CPF já está sendo usado.',
+          message: 'Este CPF já está sendo usado por outra conta.',
         })
       }
     },
