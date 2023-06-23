@@ -175,81 +175,88 @@ export default function CheckoutPage() {
 
   const handleSubmit = useCallback(
     async (e: FormEvent) => {
-      e.preventDefault()
+      try {
+        e.preventDefault()
 
-      if (!paymentMethod) {
-        addFeedback({ type: 'error', message: 'Selecione um método de pagamento' })
-        return
-      }
+        if (!paymentMethod) {
+          addFeedback({ type: 'error', message: 'Selecione um método de pagamento' })
+          return
+        }
 
-      if (!recaptcha) {
-        addFeedback({ type: 'error', message: 'Marque o recaptcha!' })
-        return
-      }
+        if (!recaptcha) {
+          addFeedback({ type: 'error', message: 'Marque o recaptcha!' })
+          return
+        }
 
-      if (personalData.birthday === '') {
-        addFeedback({ type: 'error', message: 'Preencha a data de nascimento!' })
-        return
-      }
+        if (personalData.birthday === '') {
+          addFeedback({ type: 'error', message: 'Preencha a data de nascimento!' })
+          return
+        }
 
-      if (personalData.number === '') {
-        addFeedback({ type: 'error', message: 'Preencha o número do seu endereço!' })
-        return
-      }
+        if (personalData.number === '') {
+          addFeedback({ type: 'error', message: 'Preencha o número do seu endereço!' })
+          return
+        }
 
-      const order: Order = {
-        company: 1,
-        customer: {
-          name: personalData.name,
-          birthday: new Date(personalData.birthday).toLocaleDateString('pt-BR'),
-          document: personalData.document.replace(/\D/g, ''),
-          phones: [
-            {
-              ddd: personalData.phone.split(' ')[0].replace(/\D/g, ''),
-              number: personalData.phone.split(' ')[1].replace(/\D/g, ''),
+        const order: Order = {
+          company: 1,
+          customer: {
+            name: personalData.name,
+            birthday: new Date(personalData.birthday).toLocaleDateString('pt-BR'),
+            document: personalData.document.replace(/\D/g, ''),
+            phones: [
+              {
+                ddd: personalData.phone.split(' ')[0].replace(/\D/g, ''),
+                number: personalData.phone.split(' ')[1].replace(/\D/g, ''),
+              },
+            ],
+            address: {
+              city: personalData.city,
+              state: personalData.state,
+              number: personalData.number,
+              street: personalData.street,
+              zipcode: personalData.zipcode,
+              neighborhood: personalData.neighborhood,
             },
-          ],
-          address: {
-            city: personalData.city,
-            state: personalData.state,
-            number: personalData.number,
-            street: personalData.street,
-            zipcode: personalData.zipcode,
-            neighborhood: personalData.neighborhood,
           },
-        },
-        recaptcha: recaptcha,
-        invoice: {
-          creditCard: '',
-          installments: 1,
-          paymentMethod: paymentMethod,
-        },
-        items: items.map((item) => {
-          return { amount: item.quantity, product: item.id }
-        }),
-      }
+          recaptcha: recaptcha,
+          invoice: {
+            creditCard: '',
+            installments: 1,
+            paymentMethod: paymentMethod,
+          },
+          items: items.map((item) => {
+            return { amount: item.quantity, product: item.id }
+          }),
+        }
 
-      const response: OrderResponse = await fetchJson('/api/orders/create', {
-        method: 'POST',
-        headers: { Accept: 'application/json', 'Content-Type': 'application/json' },
-        body: JSON.stringify(order),
-      })
-
-      if (response && response?.code) {
-        clearCart()
-
-        router.push({
-          pathname: `/pagamento/${paymentMethod.toLowerCase()}/${response.id}`,
-          query: { order: JSON.stringify(response) },
+        const response: OrderResponse = await fetchJson('/api/orders/create', {
+          method: 'POST',
+          headers: { Accept: 'application/json', 'Content-Type': 'application/json' },
+          body: JSON.stringify(order),
         })
 
-        return
-      }
+        if (response && response?.code) {
+          clearCart()
 
-      addFeedback({
-        type: 'error',
-        message: 'Erro de autenticação!',
-      })
+          router.push({
+            pathname: `/pagamento/${paymentMethod.toLowerCase()}/${response.id}`,
+            query: { order: JSON.stringify(response) },
+          })
+
+          return
+        }
+
+        addFeedback({
+          type: 'error',
+          message: 'Erro de autenticação!',
+        })
+      } catch (error) {
+        addFeedback({
+          type: 'error',
+          message: 'Este CPF já está sendo usado.',
+        })
+      }
     },
     [
       router,
