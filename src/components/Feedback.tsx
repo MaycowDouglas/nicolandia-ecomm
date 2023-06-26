@@ -3,7 +3,7 @@ import { FeedbackProps } from '@/types/feedback'
 import { useEffect, useRef } from 'react'
 import { BsCheckCircle, BsExclamationCircle } from 'react-icons/bs'
 
-export default function Feedback({ message, type = 'success', text }: FeedbackProps) {
+export default function Feedback({ message, type = 'success' }: FeedbackProps) {
   const toast = useRef<HTMLDivElement>(null)
 
   const typeTheme = {
