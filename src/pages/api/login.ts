@@ -28,7 +28,6 @@ async function loginRoute(req: NextApiRequest, res: NextApiResponse<SessionProps
 
     res.json(user)
   } catch (error) {
-    console.log(error)
     res.status(401).json(error)
   }
 }

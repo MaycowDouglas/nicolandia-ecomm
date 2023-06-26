@@ -40,6 +40,9 @@ const api = {
   },
   Security: {
     login: async (data: LoginProps) => await request('POST', '/login', JSON.stringify(data)),
+    retrieve: (email: string) => {
+      return request('POST', `/auth/retrieve/${email}`)
+    },
     loginWithRecaptcha: async (data: { username: string; password: string }) =>
       await request('POST', '/login?mobile=true', JSON.stringify(data)),
     register: async (data: RegisterProps) => await request('POST', '/signup', JSON.stringify(data)),

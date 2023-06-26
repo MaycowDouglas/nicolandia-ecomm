@@ -11,7 +11,7 @@ type FeedbacksProps = FeedbackProps & {
 export default function FeedbackProvider({ children }: { children: ReactNode }) {
   const [feedbacks, setFeedbacks] = useState<FeedbacksProps[]>([])
 
-  function addFeedback({ message, type = 'success' }: FeedbackProps) {
+  function addFeedback({ message, type = 'success', duration = 3000 }: FeedbackProps) {
     const id = new Date().toTimeString()
 
     setFeedbacks((old) => [
@@ -25,7 +25,7 @@ export default function FeedbackProvider({ children }: { children: ReactNode }) 
 
     setTimeout(() => {
       removeFeedback(id)
-    }, 3000)
+    }, duration)
   }
 
   function removeFeedback(id: string) {

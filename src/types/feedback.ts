@@ -5,5 +5,5 @@ export type FeedbackContext = {
 export type FeedbackProps = {
   type?: 'success' | 'error'
   message: string
-  text?: string
+  duration?: number
 }

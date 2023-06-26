@@ -8,6 +8,7 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { ChangeEvent, FormEvent, useCallback, useState } from 'react'
 import ReCAPTCHA from 'react-google-recaptcha'
+import { FiRepeat, FiUserPlus } from 'react-icons/fi'
 
 export default function LoginPage() {
   const router = useRouter()
@@ -50,34 +51,28 @@ export default function LoginPage() {
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault()
-    try {
-      mutateUser(
-        await fetchJson('/api/login', {
-          method: 'POST',
-          headers: { Accept: 'application/json', 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            username: login.username,
-            password: login.password,
-            recaptcha: login.recaptcha,
-          }),
-        })
-      )
-    } catch (error) {
-      if (error instanceof FetchError) {
-        if (error.response.status === 400) {
-          addFeedback({ type: 'error', message: 'Ops! Usuário ou senha inválido!' })
-          return
-        }
-      } else {
-        addFeedback({ type: 'error', message: 'Aconteceu um erro inesperado! Contate o suporte.' })
-      }
+    const response: any = await fetch('/api/login', {
+      method: 'POST',
+      headers: { Accept: 'application/json', 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        username: login.username,
+        password: login.password,
+        recaptcha: login.recaptcha,
+      }),
+    })
+
+    if (response.ok) {
+      const data: any = await response.json()
+      mutateUser(data)
+    } else {
+      addFeedback({ type: 'error', message: 'Usuário ou senha inválido!', duration: 4000 })
     }
   }
 
   return (
     <>
       <Head>
-        <title>Nicolândia | Checkout</title>
+        <title>Nicolândia | Entrar</title>
       </Head>
       <div className="min-h-[581px] grid place-content-center py-10 bg-neutral-200">
         <form
@@ -119,12 +114,21 @@ export default function LoginPage() {
 
           <Button>Entrar</Button>
 
-          <Link
-            href={router.query.redir ? `/cadastrar?redir=${router.query.redir}` : '/cadastrar'}
-            className="text-center"
-          >
-            Não possui uma conta? <span className="text-custom-200">Criar agora.</span>
-          </Link>
+          <div className="flex items-center justify-between mt-3">
+            <Link
+              href={router.query.redir ? `/cadastrar?redir=${router.query.redir}` : '/cadastrar'}
+              className="hover:text-custom-200"
+            >
+              Criar conta
+            </Link>
+
+            <Link
+              href="/recuperar-senha"
+              className="inline-flex items-center gap-2 hover:text-custom-200"
+            >
+              Recuperar Senha
+            </Link>
+          </div>
         </form>
       </div>
     </>
