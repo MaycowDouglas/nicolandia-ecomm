@@ -83,7 +83,7 @@ export default function FaqPage() {
       <Head>
         <title>Nicolândia | Dúvidas frequentes</title>
       </Head>
-      <section className="py-10">
+      <section className="pb-10 pt-20">
         <div className="container">
           <h1 className="text-custom-600 font-black text-center text-3xl md:text-4xl xl:text-5xl leading-tight mb-10">
             Qual sua dúvida <br className="hidden md:block" />

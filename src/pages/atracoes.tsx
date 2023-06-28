@@ -12,7 +12,7 @@ export default function AttractionPage() {
           content="Conheça nossas atrações! São diversos brinquedos para todas as idades, com muita diversão e segurança para você e sua família!"
         />
       </Head>
-      <section className="relative py-10">
+      <section className="relative pb-10 pt-20">
         <div className="relative container z-20">
           <h1 className="text-custom-600 font-black text-center text-3xl md:text-4xl xl:text-5xl leading-tight mb-10">
             Na <span className="text-red-500">Nicolândia</span>, você{' '}

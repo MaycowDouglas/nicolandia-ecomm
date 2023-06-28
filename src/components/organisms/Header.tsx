@@ -30,6 +30,17 @@ export default function Header() {
   return (
     <>
       <header className={`w-full fixed z-30`}>
+        <div
+          className={classNames(
+            isVisible ? 'h-auto py-1' : 'h-0 p-0',
+            'bg-slate-100 overflow-hidden transition-all'
+          )}
+        >
+          <p className="text-center text-custom-600">
+            <strong>Horário de funcionamento:</strong> sexta de 15h15 às 21h, Sábados, Domingos e
+            Feriados de 11h às 20h.
+          </p>
+        </div>
         <div className="py-2 shadow-lg bg-white ">
           <div className="container flex justify-between items-center">
             <Link href="/">

@@ -283,7 +283,7 @@ export default function CheckoutPage() {
       <Head>
         <title>Nicolândia | Checkout</title>
       </Head>
-      <section className="py-10">
+      <section className="pb-10 pt-20">
         <form className="container" onSubmit={handleSubmit}>
           <h1 className="text-5xl text-center lg:text-start text-gray-500 font-bold">Checkout</h1>
 

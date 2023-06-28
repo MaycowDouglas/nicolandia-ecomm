@@ -74,7 +74,7 @@ export default function LoginPage() {
       <Head>
         <title>Nicolândia | Entrar</title>
       </Head>
-      <div className="min-h-[581px] grid place-content-center py-10 bg-neutral-200">
+      <div className="min-h-[581px] grid place-content-center pb-10 pt-20 bg-neutral-200">
         <form
           onSubmit={handleSubmit}
           className="p-10 flex flex-col gap-3 rounded-lg bg-white shadow-xl"

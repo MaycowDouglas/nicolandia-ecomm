@@ -1,10 +1,14 @@
 import Ticket from '@/components/molecules/Ticket'
+import Assof from '@/public/images/brands/assof.png'
+import Caadf from '@/public/images/brands/caadf.png'
+import Oabdf from '@/public/images/brands/oabdf.png'
 import PassaporteAntecipado from '@/public/images/tickets/antecipado.jpg'
 import ComboEncantado from '@/public/images/tickets/encantado.jpg'
 import ComboEspetacular from '@/public/images/tickets/espetacular.jpg'
 import PassaporteIndividual from '@/public/images/tickets/individual.jpg'
 import ComboNamorados from '@/public/images/tickets/namorados.png'
 import Head from 'next/head'
+import Image from 'next/image'
 import { GoAlert } from 'react-icons/go'
 
 export default function PassaportsPage() {
@@ -19,7 +23,7 @@ export default function PassaportsPage() {
           content="Passaportes individuais, Combos, diversão e muito mais. A Nova Nicolândia é referência em levar alegria e diversão para todo o Distrito Federal e traz benefícios exclusivos para advogados e conveniados da OAB-DF e CAA-DF. Venha e apaixone-se!"
         />
       </Head>
-      <section className="py-10 bg-custom-300">
+      <section className="pt-20 pb-10 bg-custom-300">
         <div className="container">
           <h1 className="text-custom-600 font-black text-center text-3xl md:text-4xl xl:text-5xl leading-tight mb-12">
             Compre seus passaportes <br className="hidden md:block" /> com mais praticidade!
@@ -78,10 +82,10 @@ export default function PassaportsPage() {
         </div>
       </section>
       <section>
-        <h2 className="py-5 flex items-center justify-center gap-4 bg-red-500 text-custom-300 text-4xl md:text-5xl font-black">
+        <h2 className="py-5 mb-10 flex items-center justify-center gap-4 bg-red-500 text-custom-300 text-4xl md:text-5xl font-black">
           <GoAlert className="mb-2" /> ATENÇÃO <GoAlert className="mb-2" />
         </h2>
-        <div className="container grid grid-cols-1 md:grid-cols-2 text-center lg:text-left gap-10 py-8">
+        <div className="container grid grid-cols-1 md:grid-cols-2 text-center lg:text-left gap-10">
           <div>
             <h3 className="text-3xl text-custom-600 font-black mb-5" id="pagamento-com-boleto">
               Pagamento com boleto
@@ -124,7 +128,7 @@ export default function PassaportsPage() {
               className="text-3xl text-custom-600 font-black mb-5"
               id="passaportes-bilheteria-do-parque"
             >
-              Passaportes bilheteria do parque
+              Passaportes na bilheteria do parque
             </h3>
 
             <div className="grid grid-cols-2">
@@ -141,7 +145,67 @@ export default function PassaportsPage() {
             </div>
           </div>
         </div>
+        <div className="container my-10">
+          <div className="border-t-2 border-slate-200"></div>
+        </div>
+        <div className="container pb-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-3 gap-10 text-center xl:text-left xl:gap-0">
+          <div>
+            <h3 className="mb-5 text-3xl text-custom-600 font-black">Convênios</h3>
+
+            <div className="xl:text-lg">
+              <p>A compra deverá ser feita pelo titular.</p>
+              <p>Passaporte por apenas R$ 50,00 cada.</p>
+              <p>Permitido apenas 5 passaportes por carteirinha.</p>
+              <p>Benefício válido dentro do calendário operacional do parque.</p>
+            </div>
+          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 xl:col-span-2 text-center">
+            <div>
+              <div className="flex justify-center items-end gap-3">
+                <Image src={Oabdf} className="w-28 h-auto" alt="" />
+                <Image src={Caadf} className="w-28 h-auto" alt="" />
+              </div>
+              <p className="p-3 leading-5">
+                Compra disponível na bilheteria mediante apresentação da carteira da OAB-DF ou
+                CAA-DF
+              </p>
+            </div>
+            <div>
+              <div className="flex justify-center items-end gap-3">
+                <Image src={Assof} className="w-44 h-auto" alt="" />
+              </div>
+              <div className="p-3 leading-5 space-y-2">
+                <p>
+                  Compra disponível na bilheteria mediante apresentação da Declaração de Sócio,
+                  emitido pela ASOF, com validade de 30 dias e Carteira Funcional.
+                </p>
+                <p className="font-bold">
+                  É proibido o ingresso e a permanência com armas de fogo dentro das dependências do
+                  parque.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
+      {/* <section>
+        <div className="my-10">
+          <Image
+            src={Convenios}
+            className="w-full h-60 2xl:h-80 object-cover object-right"
+            alt=""
+          />
+        </div>
+        <div className="container">
+          <h2 className="mt-10 mb-5 text-5xl text-custom-600 font-black">Convênios</h2>
+
+          <div className="text-lg">
+            <p>Passaporte por apenas R$ 50,00 cada.</p>
+            <p>Permitido apenas 5 passaportes por carteirinha.</p>
+            <p>Benefício válido dentro do calendário operacional do parque.</p>
+          </div>
+        </div>
+      </section> */}
     </>
   )
 }

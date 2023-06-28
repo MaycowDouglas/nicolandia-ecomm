@@ -6,7 +6,7 @@ export default function PrivacyPolicyPage() {
       <Head>
         <title>Nicolândia | Política de privacidade</title>
       </Head>
-      <section className="py-8">
+      <section className="pb-10 pt-20">
         <div className="container">
           <h1 className="mb-8 text-center text-3xl font-bold">POLÍTICA DE PRIVACIDADE</h1>
 
