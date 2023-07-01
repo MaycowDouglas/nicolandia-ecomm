@@ -2,11 +2,10 @@ import Ticket from '@/components/molecules/Ticket'
 import Assof from '@/public/images/brands/assof.png'
 import Caadf from '@/public/images/brands/caadf.png'
 import Oabdf from '@/public/images/brands/oabdf.png'
-import PassaporteAntecipado from '@/public/images/tickets/antecipado.jpg'
-import ComboEncantado from '@/public/images/tickets/encantado.jpg'
-import ComboEspetacular from '@/public/images/tickets/espetacular.jpg'
-import PassaporteIndividual from '@/public/images/tickets/individual.jpg'
-import ComboNamorados from '@/public/images/tickets/namorados.png'
+import PassaporteAntecipado from '@/public/images/tickets/antecipado.png'
+import ComboEncantado from '@/public/images/tickets/encantado.png'
+import ComboEspetacular from '@/public/images/tickets/espetacular.png'
+import PassaporteIndividual from '@/public/images/tickets/individual.png'
 import Head from 'next/head'
 import Image from 'next/image'
 import { GoAlert } from 'react-icons/go'
@@ -35,36 +34,36 @@ export default function PassaportsPage() {
               <Ticket
                 id={7}
                 name="Passaporte Antecipado"
-                price={4390}
+                price={5497}
                 banner={PassaporteAntecipado}
                 quantity={1}
-                reference={6490}
+                reference={7697}
               />
             ) : (
               <Ticket
                 id={2}
                 name="Passaporte Individual"
-                price={6490}
+                price={7697}
                 banner={PassaporteIndividual}
                 quantity={1}
-                reference={6490}
+                reference={7697}
               />
             )}
             <Ticket
-              id={10}
-              name="Combo Love"
-              price={6990}
-              banner={ComboNamorados}
+              id={3}
+              name="Combo Encantado"
+              price={14297}
+              banner={ComboEncantado}
               quantity={2}
-              reference={6490}
+              reference={7697}
             />
             <Ticket
               id={4}
               name="Combo Espetacular"
-              price={16190}
+              price={19797}
               banner={ComboEspetacular}
               quantity={3}
-              reference={6490}
+              reference={7697}
             />
           </div>
 
