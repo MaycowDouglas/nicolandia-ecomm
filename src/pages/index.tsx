@@ -78,7 +78,7 @@ export default function HomePage() {
         </Swiper>
       </section>
 
-      <section className="relative flex bg-slate-100 py-8 text-center lg:text-left">
+      {/* <section className="relative flex bg-slate-100 py-8 text-center lg:text-left">
         <div id="app" className="absolute -top-44"></div>
         <div className="container flex flex-col lg:flex-row items-center justify-center gap-10 lg:gap-10 xl:gap-14">
           <Image src={NicoAppDark} alt="Nico App" />
@@ -97,7 +97,7 @@ export default function HomePage() {
             Baixe o Nicoapp
           </Button>
         </div>
-      </section>
+      </section> */}
 
       <section className="relative py-20 bg-custom-300">
         <div className="container relative z-20">

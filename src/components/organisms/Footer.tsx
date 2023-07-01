@@ -34,7 +34,7 @@ export default function Footer() {
               </div>
             </div>
 
-            <div className="space-y-4">
+            {/* <div className="space-y-4">
               <h3 className="text-lg font-semibold">Baixe o APP:</h3>
               <ul className="flex flex-col gap-1">
                 <li>
@@ -48,7 +48,7 @@ export default function Footer() {
                   </Link>
                 </li>
               </ul>
-            </div>
+            </div> */}
           </div>
         </div>
 
