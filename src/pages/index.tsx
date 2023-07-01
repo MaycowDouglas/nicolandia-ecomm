@@ -112,32 +112,52 @@ export default function HomePage() {
             Adicione mais sabor à sua diversão
           </h2>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-            <Ticket
-              id={7}
-              name="Combo Kabum"
-              price={2997}
-              banner={PassaporteAntecipado}
-              quantity={1}
-              reference={3800}
-              description={
-                <p className="mt-2 text-sm">1 Hambúrger, 1 Batata frita pequena e 1 Fanta lata</p>
-              }
-            />
-            <Ticket
-              id={7}
-              name="Combo Família"
-              price={7997}
-              banner={PassaporteAntecipado}
-              quantity={1}
-              reference={10000}
-              description={
-                <p className="mt-2 text-sm">
-                  3 Hambúrger, 1 Batata frita grande e 1 Fanta 2 litros
-                </p>
-              }
-            />
-          </div>
+          <Swiper
+            breakpoints={{
+              768: {
+                slidesPerView: 2,
+              },
+              1024: {
+                slidesPerView: 3,
+              },
+              1280: {
+                slidesPerView: 4,
+              },
+            }}
+            autoplay={{ delay: 4000 }}
+            className="w-full"
+            slidesPerView={1}
+            spaceBetween={30}
+          >
+            <SwiperSlide>
+              <Ticket
+                id={7}
+                name="Combo Kabum"
+                price={2997}
+                banner={PassaporteAntecipado}
+                quantity={1}
+                reference={3800}
+                description={
+                  <p className="mt-2 text-sm">1 Hambúrger, 1 Batata frita pequena e 1 Fanta lata</p>
+                }
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Ticket
+                id={7}
+                name="Combo Família"
+                price={7997}
+                banner={PassaporteAntecipado}
+                quantity={1}
+                reference={10000}
+                description={
+                  <p className="mt-2 text-sm">
+                    3 Hambúrger, 1 Batata frita grande e 1 Fanta 2 litros
+                  </p>
+                }
+              />
+            </SwiperSlide>
+          </Swiper>
         </div>
         <svg
           className="absolute z-10 top-0 left-0 w-full"
