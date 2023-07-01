@@ -4,11 +4,13 @@ import 'swiper/css/navigation'
 import Button from '@/components/atoms/Button'
 import SlideImage from '@/components/atoms/SlideImage'
 import SlideVideo from '@/components/atoms/SlideVideo'
+import Ticket from '@/components/molecules/Ticket'
 import Attractions from '@/components/organisms/Attractions'
 import Tickets from '@/components/organisms/Tickets'
 import BannerOneMobile from '@/public/images/banners/ferias-mobile.png'
 import BannerOneWeb from '@/public/images/banners/ferias-web.png'
 import NicoAppDark from '@/public/images/brands/nicoapp-dark.svg'
+import PassaporteAntecipado from '@/public/images/tickets/antecipado.png'
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -105,6 +107,37 @@ export default function HomePage() {
             Passaportes
           </h2>
           <Tickets />
+
+          <h2 className="mt-10 lg:mt-16 mb-5 lg:mb-10 font-bold text-center md:text-start text-4xl md:text-4xl lg:text-5xl text-white">
+            Adicione mais sabor à sua diversão
+          </h2>
+
+          <div className="grid grid-cols-4 gap-8">
+            <Ticket
+              id={7}
+              name="Combo Kabum"
+              price={2997}
+              banner={PassaporteAntecipado}
+              quantity={1}
+              reference={3800}
+              description={
+                <p className="mt-2 text-sm">1 Hambúrger, 1 Batata frita pequena e 1 Fanta lata</p>
+              }
+            />
+            <Ticket
+              id={7}
+              name="Combo Família"
+              price={7997}
+              banner={PassaporteAntecipado}
+              quantity={1}
+              reference={10000}
+              description={
+                <p className="mt-2 text-sm">
+                  3 Hambúrger, 1 Batata frita grande e 1 Fanta 2 litros
+                </p>
+              }
+            />
+          </div>
         </div>
         <svg
           className="absolute z-10 top-0 left-0 w-full"
