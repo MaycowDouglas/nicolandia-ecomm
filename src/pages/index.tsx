@@ -10,7 +10,8 @@ import Tickets from '@/components/organisms/Tickets'
 import BannerOneMobile from '@/public/images/banners/ferias-mobile.png'
 import BannerOneWeb from '@/public/images/banners/ferias-web.png'
 import NicoAppDark from '@/public/images/brands/nicoapp-dark.svg'
-import PassaporteAntecipado from '@/public/images/tickets/antecipado.png'
+import ComboFamilia from '@/public/images/combos/combo-familia.jpeg'
+import ComboKabum from '@/public/images/combos/combo-kabum.jpeg'
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -134,7 +135,7 @@ export default function HomePage() {
                 id={7}
                 name="Combo Kabum"
                 price={2997}
-                banner={PassaporteAntecipado}
+                banner={ComboKabum}
                 quantity={1}
                 reference={3800}
                 description={
@@ -147,12 +148,12 @@ export default function HomePage() {
                 id={7}
                 name="Combo Família"
                 price={7997}
-                banner={PassaporteAntecipado}
+                banner={ComboFamilia}
                 quantity={1}
                 reference={10000}
                 description={
                   <p className="mt-2 text-sm">
-                    3 Hambúrger, 1 Batata frita grande e 1 Fanta 2 litros
+                    3 Hambúrgueres, 1 Batata frita grande e 1 Fanta 2 litros
                   </p>
                 }
               />
