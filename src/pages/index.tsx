@@ -139,7 +139,9 @@ export default function HomePage() {
                 quantity={1}
                 reference={3800}
                 description={
-                  <p className="mt-2 text-sm">1 Hambúrger, 1 Batata frita pequena e 1 Fanta lata</p>
+                  <p className="mt-2 text-sm">
+                    1 Hambúrger, 1 Porção de batatas fritas pequena e 1 Fanta lata
+                  </p>
                 }
               />
             </SwiperSlide>
@@ -153,7 +155,7 @@ export default function HomePage() {
                 reference={10000}
                 description={
                   <p className="mt-2 text-sm">
-                    3 Hambúrgueres, 1 Batata frita grande e 1 Fanta 2 litros
+                    3 Hambúrgueres, 1 Porção de batatas fritas grande e 1 Fanta 2 litros
                   </p>
                 }
               />

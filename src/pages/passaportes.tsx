@@ -47,6 +47,7 @@ export default function PassaportsPage() {
                 banner={PassaporteAntecipado}
                 quantity={1}
                 reference={7697}
+                isPassport
               />
             ) : (
               <Ticket
@@ -56,6 +57,7 @@ export default function PassaportsPage() {
                 banner={PassaporteIndividual}
                 quantity={1}
                 reference={7697}
+                isPassport
               />
             )}
             <Ticket
@@ -65,6 +67,7 @@ export default function PassaportsPage() {
               banner={ComboEncantado}
               quantity={2}
               reference={7697}
+              isPassport
             />
             <Ticket
               id={4}
@@ -73,6 +76,7 @@ export default function PassaportsPage() {
               banner={ComboEspetacular}
               quantity={3}
               reference={7697}
+              isPassport
             />
           </div>
 
@@ -106,7 +110,9 @@ export default function PassaportsPage() {
                 quantity={1}
                 reference={3800}
                 description={
-                  <p className="mt-2 text-sm">1 Hambúrger, 1 Batata frita pequena e 1 Fanta lata</p>
+                  <p className="mt-2 text-sm">
+                    1 Hambúrger, 1 Porção de batatas fritas pequena e 1 Fanta lata
+                  </p>
                 }
               />
             </SwiperSlide>
@@ -120,7 +126,7 @@ export default function PassaportsPage() {
                 reference={10000}
                 description={
                   <p className="mt-2 text-sm">
-                    3 Hambúrgueres, 1 Batata frita grande e 1 Fanta 2 litros
+                    3 Hambúrgueres, 1 Porção de batatas fritas grande e 1 Fanta 2 litros
                   </p>
                 }
               />

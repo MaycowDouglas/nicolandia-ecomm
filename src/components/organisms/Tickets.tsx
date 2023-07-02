@@ -40,6 +40,7 @@ export default function Tickets() {
             banner={PassaporteAntecipado}
             quantity={1}
             reference={7697}
+            isPassport
           />
         ) : (
           <Ticket
@@ -49,6 +50,7 @@ export default function Tickets() {
             banner={PassaporteIndividual}
             quantity={1}
             reference={7697}
+            isPassport
           />
         )}
       </SwiperSlide>
@@ -60,6 +62,7 @@ export default function Tickets() {
           banner={ComboEncantado}
           quantity={2}
           reference={7697}
+          isPassport
         />
       </SwiperSlide>
       <SwiperSlide>
@@ -70,6 +73,7 @@ export default function Tickets() {
           banner={ComboEspetacular}
           quantity={3}
           reference={7697}
+          isPassport
         />
       </SwiperSlide>
     </Swiper>
