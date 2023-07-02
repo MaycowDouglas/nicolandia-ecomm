@@ -132,7 +132,7 @@ export default function HomePage() {
           >
             <SwiperSlide>
               <Ticket
-                id={7}
+                id={11}
                 name="Combo Kabum"
                 price={2997}
                 banner={ComboKabum}
@@ -145,7 +145,7 @@ export default function HomePage() {
             </SwiperSlide>
             <SwiperSlide>
               <Ticket
-                id={7}
+                id={12}
                 name="Combo Família"
                 price={7997}
                 banner={ComboFamilia}
