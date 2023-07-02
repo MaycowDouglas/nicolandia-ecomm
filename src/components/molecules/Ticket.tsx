@@ -3,6 +3,7 @@ import { useFeedback } from '@/hooks/useFeedback'
 import { classNames } from '@/lib/classNames'
 import BackgroundTicket from '@/public/images/tickets/ticket.png'
 import Image, { StaticImageData } from 'next/image'
+import { ReactNode } from 'react'
 import { FaPlus } from 'react-icons/fa'
 
 import Button from '../atoms/Button'
@@ -14,9 +15,20 @@ export type TicketProps = {
   banner: string | StaticImageData
   quantity: number
   reference: number
+  isPassport?: boolean
+  description?: ReactNode
 }
 
-export default function Ticket({ id, name, price, banner, quantity, reference }: TicketProps) {
+export default function Ticket({
+  id,
+  name,
+  price,
+  banner,
+  quantity,
+  reference,
+  isPassport,
+  description,
+}: TicketProps) {
   const { add } = useCart()
   const { addFeedback } = useFeedback()
 
@@ -38,13 +50,14 @@ export default function Ticket({ id, name, price, banner, quantity, reference }:
             <li className="py-2">
               <ul className="space-y-2">
                 <li className="font-bold">Válido somente para compra online</li>
-                <li>Válido de sexta à domingo ou feriados</li>
-                <li>
+                {/* <li>Válido de sexta à domingo ou feriados</li> */}
+                <li className={isPassport ? '' : 'hidden'}>
                   {`${quantity} ${
                     quantity > 1 ? 'passaportes válidos' : 'passaporte válido '
                   } durante 30 dias, dentro do calendário operacional do parque`}
                 </li>
               </ul>
+              {description}
             </li>
             <li className="flex flex-col py-2">
               <span
@@ -52,7 +65,7 @@ export default function Ticket({ id, name, price, banner, quantity, reference }:
                   price === reference ? 'invisible' : 'line-through text-custom-600'
                 )}
               >
-                De:{' '}
+                De:
                 {((reference * quantity) / 100).toLocaleString('pt-BR', {
                   style: 'currency',
                   currency: 'BRL',

@@ -1,8 +1,7 @@
-import PassaporteAntecipado from '@/public/images/tickets/antecipado.jpg'
-import ComboEncantado from '@/public/images/tickets/encantado.jpg'
-import ComboEspetacular from '@/public/images/tickets/espetacular.jpg'
-import PassaporteIndividual from '@/public/images/tickets/individual.jpg'
-import ComboNamorados from '@/public/images/tickets/namorados.png'
+import PassaporteAntecipado from '@/public/images/tickets/antecipado.png'
+import ComboEncantado from '@/public/images/tickets/encantado.png'
+import ComboEspetacular from '@/public/images/tickets/espetacular.png'
+import PassaporteIndividual from '@/public/images/tickets/individual.png'
 import SwiperCore, { Autoplay, Navigation } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
@@ -37,50 +36,40 @@ export default function Tickets() {
           <Ticket
             id={7}
             name="Passaporte Antecipado"
-            price={4390}
+            price={5497}
             banner={PassaporteAntecipado}
             quantity={1}
-            reference={6490}
+            reference={7697}
           />
         ) : (
           <Ticket
             id={2}
             name="Passaporte Individual"
-            price={6490}
+            price={7697}
             banner={PassaporteIndividual}
             quantity={1}
-            reference={6490}
+            reference={7697}
           />
         )}
       </SwiperSlide>
       <SwiperSlide>
         <Ticket
-          id={10}
-          name="Combo Love"
-          price={6990}
-          banner={ComboNamorados}
-          quantity={2}
-          reference={6490}
-        />
-      </SwiperSlide>
-      {/* <SwiperSlide>
-        <Ticket
           id={3}
           name="Combo Encantado"
-          price={11890}
+          price={14297}
           banner={ComboEncantado}
           quantity={2}
-          reference={6490}
+          reference={7697}
         />
-      </SwiperSlide> */}
+      </SwiperSlide>
       <SwiperSlide>
         <Ticket
           id={4}
           name="Combo Espetacular"
-          price={16190}
+          price={19797}
           banner={ComboEspetacular}
           quantity={3}
-          reference={6490}
+          reference={7697}
         />
       </SwiperSlide>
     </Swiper>
