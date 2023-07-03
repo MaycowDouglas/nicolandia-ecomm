@@ -104,14 +104,14 @@ export default function PassaportsPage() {
             <SwiperSlide>
               <Ticket
                 id={11}
-                name="Combo Kabum"
+                name="Combo Lanche Kabum"
                 price={2997}
                 banner={ComboKabum}
                 quantity={1}
                 reference={3800}
                 description={
                   <p className="mt-2 text-sm">
-                    1 Hambúrger, 1 Porção de batatas fritas pequena e 1 Fanta lata
+                    1 Hambúrguer, 1 Porção de batatas fritas pequena e 1 Fanta lata
                   </p>
                 }
               />
@@ -119,7 +119,7 @@ export default function PassaportsPage() {
             <SwiperSlide>
               <Ticket
                 id={12}
-                name="Combo Família"
+                name="Combo Lanche Família"
                 price={7997}
                 banner={ComboFamilia}
                 quantity={1}
