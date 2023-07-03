@@ -121,7 +121,7 @@ export const data: AttractionProps[] = [
     },
   },
   {
-    name: 'Minhocão',
+    name: 'Centopéia',
     image: AtractionMinhocao,
     category: 'radical',
     restrictions: {
@@ -201,7 +201,7 @@ export const data: AttractionProps[] = [
     observation: 'Essa atração não faz parte do passaporte. Compra presencialmente no parque',
   },
   {
-    name: 'Carrousel',
+    name: 'Carrossel',
     image: AtractionCarrossel,
     category: 'childish',
     restrictions: {
@@ -227,15 +227,6 @@ export const data: AttractionProps[] = [
   {
     name: 'Trem Cavalaria',
     image: AtractionTremCavalaria,
-    category: 'childish',
-    restrictions: {
-      minHeight: 80,
-      maxHeight: 130,
-    },
-  },
-  {
-    name: 'Trenzinho Circus',
-    image: AtractionTrenzinhoCircus,
     category: 'childish',
     restrictions: {
       minHeight: 80,
