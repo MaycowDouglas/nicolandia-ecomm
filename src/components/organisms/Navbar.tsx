@@ -19,9 +19,9 @@ export default function Navbar() {
           <FiInfo />
           <span className="hidden md:inline text-sm">Dúvidas frequentes</span>
         </NavbarLink>
-        {/* <NavbarLink to="/#app">
+        <NavbarLink to="/#app">
           <FiDownload /> <span className="hidden md:inline text-sm">Baixe o APP</span>
-        </NavbarLink> */}
+        </NavbarLink>
         <button className="hidden md-block relative group py-1 bg-custom-100 hover:saturate-[.75]">
           <span className="inline-flex items-center gap-2">
             <BsClock /> Horário de funcionamento
