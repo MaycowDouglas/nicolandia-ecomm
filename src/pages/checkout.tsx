@@ -539,6 +539,32 @@ export default function CheckoutPage() {
               </div>
 
               {!paymentMethod === false && <Button isBlock>Finalizar Compra</Button>}
+
+              <ul className="space-y-3 text-xs">
+                <li>
+                  * É de total responsabilidade do visitante fazer uso de todos os passaportes. A
+                  Nicolândia não entrega pulseiras avulsas no momento da troca, ou seja, se não
+                  houver o número de pessoas correspondente ao combo, não haverá a opção de
+                  substituição ou voucher.
+                </li>
+                <li>
+                  *{' '}
+                  {items.length > 1 || (items.length === 1 && items[0].quantity > 1)
+                    ? 'Estes passaportes não são válidos'
+                    : 'Este passaporte não é válido'}{' '}
+                  para outras promoções do parque como: aniversariante da semana, eventos familiares
+                  e pacotes escolares.
+                </li>
+                <li>
+                  * É obrigatória a apresentação do documento de RG ou CNH do titular do cartão e
+                  cartão de crédito.
+                </li>
+                <li className="font-bold">
+                  NÃO SERÃO ACEITOS RECIBOS OU COMPROVANTES DE PAGAMENTOS PARA RETIRADA DO
+                  PASSAPORTE, LIBERAÇÃO APENAS MEDIANTE APRESENTAÇÃO DO CÓDIGO ENVIADO POR E-MAIL
+                  (YUUPE) OU ACESSANDO PELO SITE.
+                </li>
+              </ul>
             </div>
           </div>
         </form>
