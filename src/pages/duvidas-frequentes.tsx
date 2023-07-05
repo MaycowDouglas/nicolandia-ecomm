@@ -62,7 +62,7 @@ export default function FaqPage() {
     {
       question: 'Posso entrar e sair do parque com o mesmo passaporte?',
       awnser:
-        'O Visitante que adquiriu o passaporte do parque (pulseira) poderá fazer sua saída de no máximo 30 minutos caso precise se ausentar do estabelecimento, ou ir até o estacionamento. Nestes casos, terá direito a uma tolerância máxima de 30 minutos, passando desse tempo, deverá adquirir novamente o acesso as atrações.',
+        'O Visitante que adquiriu o passaporte do parque (pulseira) poderá fazer sua saída de no máximo 1 hora caso precise se ausentar do estabelecimento, ou ir até o estacionamento. Nestes casos, terá direito a uma tolerância máxima de 1 hora, passando desse tempo, deverá adquirir novamente o acesso as atrações.',
     },
     {
       question: 'Atenção com as crianças',
