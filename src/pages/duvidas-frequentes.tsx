@@ -77,6 +77,10 @@ export default function FaqPage() {
         'Em casos de restrição alimentar, mediante apresentação de laudo médico, deve-se apresentar diretamente na portaria do parque.',
       ],
     },
+    {
+      question: 'Até que horas posso retirar um Combo Lanche?',
+      awnser: ['Você pode retirar o seu pedido até as 19h.'],
+    },
   ]
   return (
     <>

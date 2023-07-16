@@ -140,6 +140,7 @@ export default function HomePage() {
                 reference={3800}
                 description={
                   <>
+                    <p className="mt-2 text-sm font-bold">Redirada do pedido até às 19h</p>
                     <p className="mt-2 text-sm">Não válido como passaporte</p>
                     <p className="mt-2 text-sm">
                       1 Hambúrguer, 1 Porção de batatas fritas pequena e 1 Fanta lata
@@ -158,6 +159,7 @@ export default function HomePage() {
                 reference={10000}
                 description={
                   <>
+                    <p className="mt-2 text-sm font-bold">Redirada do pedido até às 19h</p>
                     <p className="mt-2 text-sm">Não válido como passaporte</p>
                     <p className="mt-2 text-sm">
                       3 Hambúrgueres, 1 Porção de batatas fritas grande e 1 Fanta 2 litros
