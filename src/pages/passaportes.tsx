@@ -7,6 +7,7 @@ import Caadf from '@/public/images/brands/caadf.png'
 import Oabdf from '@/public/images/brands/oabdf.png'
 import ComboFamilia from '@/public/images/combos/combo-familia.jpeg'
 import ComboKabum from '@/public/images/combos/combo-kabum.jpeg'
+import ComboPipoca from '@/public/images/combos/combo-pipoca.png'
 import PassaporteAntecipado from '@/public/images/tickets/antecipado.png'
 import ComboEncantado from '@/public/images/tickets/encantado.png'
 import ComboEspetacular from '@/public/images/tickets/espetacular.png'
@@ -135,6 +136,23 @@ export default function PassaportsPage() {
                     <p className="mt-2 text-sm">
                       3 Hambúrgueres, 1 Porção de batatas fritas grande e 1 Fanta 2 litros
                     </p>
+                  </>
+                }
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Ticket
+                id={13}
+                name="Combo Lanche Pipoca"
+                price={2497}
+                banner={ComboPipoca}
+                quantity={1}
+                reference={2800}
+                description={
+                  <>
+                    <p className="mt-2 text-sm font-bold">Redirada do pedido até às 19h</p>
+                    <p className="mt-2 text-sm">Não válido como passaporte</p>
+                    <p className="mt-2 text-sm">1 Pipoca grande e 1 Fanta 600ml</p>
                   </>
                 }
               />
