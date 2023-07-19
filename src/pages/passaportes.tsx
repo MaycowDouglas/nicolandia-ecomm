@@ -5,7 +5,7 @@ import Ticket from '@/components/molecules/Ticket'
 import Assof from '@/public/images/brands/assof.png'
 import Caadf from '@/public/images/brands/caadf.png'
 import Oabdf from '@/public/images/brands/oabdf.png'
-import ComboFamilia from '@/public/images/combos/combo-familia.jpeg'
+import ComboFamilia from '@/public/images/combos/combo-familia.png'
 import ComboKabum from '@/public/images/combos/combo-kabum.jpeg'
 import ComboPipoca from '@/public/images/combos/combo-pipoca.png'
 import PassaporteAntecipado from '@/public/images/tickets/antecipado.png'
@@ -125,7 +125,7 @@ export default function PassaportsPage() {
               <Ticket
                 id={12}
                 name="Combo Lanche Família"
-                price={7997}
+                price={8997}
                 banner={ComboFamilia}
                 quantity={1}
                 reference={10000}

@@ -10,7 +10,7 @@ import Tickets from '@/components/organisms/Tickets'
 import BannerOneMobile from '@/public/images/banners/ferias-mobile.png'
 import BannerOneWeb from '@/public/images/banners/ferias-web.png'
 import NicoAppDark from '@/public/images/brands/nicoapp-dark.svg'
-import ComboFamilia from '@/public/images/combos/combo-familia.jpeg'
+import ComboFamilia from '@/public/images/combos/combo-familia.png'
 import ComboKabum from '@/public/images/combos/combo-kabum.jpeg'
 import ComboPipoca from '@/public/images/combos/combo-pipoca.png'
 import Head from 'next/head'
@@ -154,7 +154,7 @@ export default function HomePage() {
               <Ticket
                 id={12}
                 name="Combo Lanche Família"
-                price={7997}
+                price={8997}
                 banner={ComboFamilia}
                 quantity={1}
                 reference={10000}
