@@ -4,7 +4,7 @@ import AtractionColossusLoop from '@/public/images/atractions/colossus-loop.jpeg
 import AtractionCrazyDance from '@/public/images/atractions/crazy-dance.jpeg'
 import AtractionDisko from '@/public/images/atractions/disko.jpg'
 import AtractionFerrysWheel from '@/public/images/atractions/ferrys-wheel.jpg'
-import AtractionGrandPrix from '@/public/images/atractions/grand-prix.jpg'
+import AtractionGrandPrix from '@/public/images/atractions/grand-prix.png'
 import AtractionKabum from '@/public/images/atractions/kabum.png'
 import AtractionMagicCup from '@/public/images/atractions/magic-cup.jpg'
 import AtractionMinhocao from '@/public/images/atractions/minhocao.jpeg'

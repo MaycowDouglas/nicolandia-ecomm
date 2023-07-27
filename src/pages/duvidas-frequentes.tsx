@@ -72,9 +72,9 @@ export default function FaqPage() {
     {
       question: 'Alimentos e bebidas no parque',
       awnser: [
-        'Levar o próprio lanche de casa é um direito seu. O parque permite a entrada de alimentos e bebidas por grupo de visitantes ou famílias. Não sendo permitido a entrada de caixas de isopor, coolers ou mochilas, contendo os seguintes itens:',
-        'Garrafas de vidro, bebidas alcoólicas, alimentos perecíveis tipo almoços, sendo permitido somente lanches como sanduíches de qualquer espécie, condicionando o acesso somente uma (1) única vez pelo responsável pelo grupo de passeio.',
-        'Em casos de restrição alimentar, mediante apresentação de laudo médico, deve-se apresentar diretamente na portaria do parque.',
+        'Levar o próprio lanche de casa é um direito seu. O parque permite a entrada de alimentos e bebidas por grupo de visitantes ou famílias. No entanto, a entrada com alimentos está condicionada ao primeiro acesso ao parque.',
+        'É proibida a entrada de bebidas alcoólicas, garrafas de vidro e alimentos perecíveis, com exceção de lanches como sanduíches.',
+        'Por questões de segurança e organização, não permitimos a entrada de bolsas e caixas térmicas de qualquer tipo, exceto para pessoas que possuem restrição alimentar. Nesses casos, é necessário apresentar um laudo médico na recepção, para que possamos fazer as devidas concessões.',
       ],
     },
     {
