@@ -44,7 +44,7 @@ export default function PassaportsPage() {
               <Ticket
                 id={7}
                 name="Passaporte Antecipado"
-                price={5497}
+                price={4997}
                 banner={PassaporteAntecipado}
                 quantity={1}
                 reference={7697}
