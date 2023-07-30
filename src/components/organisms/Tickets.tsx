@@ -39,17 +39,17 @@ export default function Tickets() {
             price={4997}
             banner={PassaporteAntecipado}
             quantity={1}
-            reference={5997}
+            reference={7697}
             isPassport
           />
         ) : (
           <Ticket
             id={2}
             name="Passaporte Individual"
-            price={5997}
+            price={7697}
             banner={PassaporteIndividual}
             quantity={1}
-            reference={5997}
+            reference={7697}
             isPassport
           />
         )}
@@ -61,7 +61,7 @@ export default function Tickets() {
           price={14297}
           banner={ComboEncantado}
           quantity={2}
-          reference={5997}
+          reference={7697}
           isPassport
         />
       </SwiperSlide>
@@ -72,7 +72,7 @@ export default function Tickets() {
           price={19797}
           banner={ComboEspetacular}
           quantity={3}
-          reference={5997}
+          reference={7697}
           isPassport
         />
       </SwiperSlide>
