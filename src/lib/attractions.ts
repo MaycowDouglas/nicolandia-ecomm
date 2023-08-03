@@ -136,7 +136,8 @@ export const data: AttractionProps[] = [
     restrictions: {
       minHeight: 80,
     },
-    observation: 'Visitantes com estatura entre 0,80M e 1,10M somente acompanhado por um adulto responsável. Visitantes com altura superior a 1,95m e/ou peso superir a 120kg não devem usufruir desta atração.'
+    observation:
+      'Visitantes com estatura entre 0,80M e 1,10M somente acompanhado por um adulto responsável. Visitantes com altura superior a 1,95m e/ou peso superir a 120kg não devem usufruir desta atração.'
   },
   {
     name: 'Pirate Ship',
