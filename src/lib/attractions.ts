@@ -8,6 +8,7 @@ import AtractionGrandPrix from '@/public/images/atractions/grand-prix.png'
 import AtractionKabum from '@/public/images/atractions/kabum.png'
 import AtractionMagicCup from '@/public/images/atractions/magic-cup.jpg'
 import AtractionMinhocao from '@/public/images/atractions/minhocao.jpeg'
+import AtractionMiniRoda from '@/public/images/atractions/mini-roda.jpeg'
 import AtractionPescaria from '@/public/images/atractions/pescaria.jpeg'
 import AtractionPirateShip from '@/public/images/atractions/pirate-ship.jpeg'
 import AtractionReinoEncantado from '@/public/images/atractions/reino-encantado.jpg'
@@ -127,6 +128,15 @@ export const data: AttractionProps[] = [
     restrictions: {
       minHeight: 130,
     },
+  },
+  {
+    name: 'Mini Roda',
+    image: AtractionMiniRoda,
+    category: 'familiar',
+    restrictions: {
+      minHeight: 80,
+    },
+    observation: 'Visitantes com estatura entre 0,80M e 1,10M somente acompanhado por um adulto responsável. Visitantes com altura superior a 1,95m e/ou peso superir a 120kg não devem usufruir desta atração.'
   },
   {
     name: 'Pirate Ship',
