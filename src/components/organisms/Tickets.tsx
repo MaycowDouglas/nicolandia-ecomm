@@ -32,7 +32,7 @@ export default function Tickets() {
     >
       <SwiperSlide>
         {(nowSP.getDay() >= 1 && nowSP.getDay() <= 4) ||
-          (nowSP.getDay() === 0 && nowSP.getHours() >= 20) ? (
+        (nowSP.getDay() === 0 && nowSP.getHours() >= 20) ? (
           <Ticket
             id={7}
             name="Passaporte Antecipado"
