@@ -32,36 +32,36 @@ export default function Tickets() {
     >
       <SwiperSlide>
         {(nowSP.getDay() >= 1 && nowSP.getDay() <= 4) ||
-        (nowSP.getDay() === 0 && nowSP.getHours() >= 20) ? (
+          (nowSP.getDay() === 0 && nowSP.getHours() >= 20) ? (
           <Ticket
             id={7}
             name="Passaporte Antecipado"
             price={4997}
             banner={PassaporteAntecipado}
             quantity={1}
-            reference={7697}
+            reference={5997}
             isPassport
           />
         ) : (
           <Ticket
             id={2}
             name="Passaporte Individual"
-            price={7697}
+            price={5997}
             banner={PassaporteIndividual}
             quantity={1}
-            reference={7697}
+            reference={5997}
             isPassport
           />
         )}
       </SwiperSlide>
-      <SwiperSlide>
+      {/* <SwiperSlide>
         <Ticket
           id={3}
           name="Combo Encantado"
           price={14297}
           banner={ComboEncantado}
           quantity={2}
-          reference={7697}
+          reference={5997}
           isPassport
         />
       </SwiperSlide>
@@ -72,10 +72,10 @@ export default function Tickets() {
           price={19797}
           banner={ComboEspetacular}
           quantity={3}
-          reference={7697}
+          reference={5997}
           isPassport
         />
-      </SwiperSlide>
+      </SwiperSlide> */}
     </Swiper>
   )
 }
