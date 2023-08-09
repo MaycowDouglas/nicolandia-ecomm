@@ -21,7 +21,7 @@ export default function LoginPage() {
       }
     : {
         redirectIfFound: true,
-        redirectTo: '/minha-conta',
+        redirectTo: '/painel',
       }
 
   const { mutateUser, user } = useUser(redirectOptions)

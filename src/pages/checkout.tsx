@@ -357,7 +357,6 @@ export default function CheckoutPage() {
                         name="street"
                         value={personalData.street}
                         onChange={handlePersonalDataChange}
-                        disabled
                         required
                       />
                     </div>
@@ -382,7 +381,6 @@ export default function CheckoutPage() {
                         name="neighborhood"
                         value={personalData.neighborhood}
                         onChange={handlePersonalDataChange}
-                        disabled
                         required
                       />
                     </div>
@@ -395,7 +393,6 @@ export default function CheckoutPage() {
                         name="city"
                         value={personalData.city}
                         onChange={handlePersonalDataChange}
-                        disabled
                         required
                       />
                     </div>
@@ -408,7 +405,6 @@ export default function CheckoutPage() {
                         name="state"
                         value={personalData.state}
                         onChange={handlePersonalDataChange}
-                        disabled
                         required
                       />
                     </div>
@@ -538,7 +534,9 @@ export default function CheckoutPage() {
                 />
               </div>
 
-              {!paymentMethod === false && <Button isBlock>Finalizar Compra</Button>}
+              <div className="mb-5">
+                {!paymentMethod === false && <Button isBlock>Finalizar Compra</Button>}
+              </div>
 
               <ul className="space-y-3 text-xs">
                 <li>

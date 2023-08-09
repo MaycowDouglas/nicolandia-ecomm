@@ -6,7 +6,7 @@ import useOrders from '@/hooks/useOrders'
 import useUser from '@/hooks/useUser'
 import { classNames } from '@/lib/classNames'
 import { useRouter } from 'next/router'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { BsQrCodeScan, BsWallet2 } from 'react-icons/bs'
 import { FiMoreVertical, FiPrinter, FiX } from 'react-icons/fi'
 
@@ -44,19 +44,6 @@ export default function MyAccount() {
     setPix(`https://chart.googleapis.com/chart?cht=qr&chl=${encodeURI(code)}&chs=250x250`)
     setPixVisible(true)
   }
-
-  useEffect(() => {
-    if (user && user.data) {
-      switch (user.data.email) {
-        case String(process.env.OPERATIONAL_MANAGER):
-          router.push('/operacional')
-          break
-
-        default:
-          break
-      }
-    }
-  }, [router, user])
 
   return (
     <>

@@ -67,7 +67,7 @@ export default function Header() {
                 <FiShoppingCart />
               </button>
               <Link
-                href={user?.isLogged ? '/minha-conta' : '/entrar'}
+                href={user?.isLogged ? '/painel' : '/entrar'}
                 title={user?.isLogged ? 'Minha conta' : 'Entrar ou cadastrar-se'}
                 className="group flex items-center gap-5"
               >

@@ -1,0 +1,358 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model address {
+  id            Int           @id
+  zipcode       String        @db.VarChar(25)
+  street        String        @db.VarChar(255)
+  number        String        @db.VarChar(50)
+  complementary String?       @db.VarChar(255)
+  neighborhood  String        @db.VarChar(255)
+  city          String        @db.VarChar(255)
+  state         String        @db.VarChar(2)
+  company       company?
+  user_profile  user_profile?
+}
+
+model bank_account {
+  id              Int    @id
+  holder          String @db.VarChar(50)
+  document_number String @db.VarChar(20)
+  code            String @db.VarChar(4)
+  agency          String @db.VarChar(10)
+  agencia_dv      String @db.VarChar(3)
+  account         String @db.VarChar(10)
+  account_dv      String @db.VarChar(3)
+  type            String @db.VarChar(20)
+}
+
+model banner {
+  id  Int    @id
+  url String @db.VarChar(255)
+}
+
+model category {
+  id      Int       @id
+  name    String    @unique(map: "uniq_64c19c15e237e06") @db.VarChar(50)
+  company company[]
+}
+
+model charge {
+  id              Int       @id
+  company_id      Int
+  name            String    @db.VarChar(255)
+  price           Int
+  maxinstallments String    @db.VarChar(255)
+  status          Boolean?
+  created_at      DateTime? @db.Timestamp(0)
+  company         company   @relation(fields: [company_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "fk_556ba434979b1ad6")
+  item            item[]
+
+  @@index([company_id], map: "idx_556ba434979b1ad6")
+}
+
+model company {
+  id              Int              @id
+  logo_id         Int?             @unique(map: "uniq_4fbf094ff98f144a")
+  category_id     Int?
+  owner_id        Int?             @unique(map: "uniq_4fbf094f7e3c61f9")
+  address_id      Int?             @unique(map: "uniq_4fbf094ff5b7af75")
+  name            String           @db.VarChar(100)
+  social_name     String?          @db.VarChar(255)
+  document        String?          @db.VarChar(25)
+  person_type     String           @db.VarChar(20)
+  description     String?
+  status          Boolean
+  commission      Decimal          @db.Decimal(4, 2)
+  created_at      DateTime         @db.Date
+  charge          charge[]
+  category        category?        @relation(fields: [category_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "fk_4fbf094f12469de2")
+  user_profile    user_profile?    @relation(fields: [owner_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "fk_4fbf094f7e3c61f9")
+  address         address?         @relation(fields: [address_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "fk_4fbf094ff5b7af75")
+  media           media?           @relation(fields: [logo_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "fk_4fbf094ff98f144a")
+  company_phones  company_phones[]
+  gateway_account gateway_account?
+  ordered         ordered[]
+  product         product[]
+
+  @@index([category_id], map: "idx_4fbf094f12469de2")
+}
+
+model company_phones {
+  company_id Int
+  phone_id   Int
+  phone      phone   @relation(fields: [phone_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "fk_deb74a803b7323cb")
+  company    company @relation(fields: [company_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "fk_deb74a80979b1ad6")
+
+  @@id([company_id, phone_id])
+  @@index([phone_id], map: "idx_deb74a803b7323cb")
+  @@index([company_id], map: "idx_deb74a80979b1ad6")
+}
+
+model credit_card {
+  id                Int          @id
+  owner_id          Int
+  name              String       @db.VarChar(50)
+  active            Boolean
+  verification_code String?      @db.VarChar(5)
+  gateway_id        String       @db.VarChar(50)
+  transaction_id    String?      @db.VarChar(255)
+  created_at        DateTime     @db.Date
+  holder            String?      @db.VarChar(30)
+  brand             String?      @db.VarChar(14)
+  digits            String?      @db.VarChar(5)
+  user_profile      user_profile @relation(fields: [owner_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "fk_11d627ee7e3c61f9")
+  invoice           invoice[]
+
+  @@index([owner_id], map: "idx_11d627ee7e3c61f9")
+}
+
+model device_token {
+  id           Int          @id
+  owner_id     Int
+  token        String       @db.VarChar(255)
+  created_at   DateTime     @db.Timestamp(0)
+  user_profile user_profile @relation(fields: [owner_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "fk_99b2415c7e3c61f9")
+
+  @@index([owner_id], map: "idx_99b2415c7e3c61f9")
+}
+
+model discount_product {
+  discount_id     Int
+  product_id      Int
+  product         product         @relation(fields: [product_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "fk_654269bc4584665a")
+  discount_ticket discount_ticket @relation(fields: [discount_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "fk_654269bc4c7c611f")
+
+  @@id([discount_id, product_id])
+  @@index([product_id], map: "idx_654269bc4584665a")
+  @@index([discount_id], map: "idx_654269bc4c7c611f")
+}
+
+model discount_ticket {
+  id               Int                @id
+  value            Int
+  code             String             @unique(map: "uniq_f9e0819c77153098") @db.VarChar(255)
+  status           Boolean
+  validat          DateTime           @db.Timestamp(0)
+  createdat        DateTime           @db.Timestamp(0)
+  discount_product discount_product[]
+  ordered          ordered[]
+}
+
+model gateway_account {
+  id           Int      @id
+  company_id   Int?     @unique(map: "uniq_ce21f4b979b1ad6")
+  account_id   String   @db.VarChar(32)
+  profit       Float
+  access_token String?  @unique(map: "uniq_ce21f4bb6a2dd68") @db.VarChar(64)
+  company      company? @relation(fields: [company_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "fk_ce21f4b979b1ad6")
+}
+
+model group_option {
+  id              Int              @id
+  title           String           @db.VarChar(100)
+  description     String?
+  price           Int
+  item            item[]
+  product_options product_options?
+}
+
+model invoice {
+  id             Int          @id
+  payor_id       Int?
+  invoice        String?      @unique(map: "uniq_9065174490651744") @db.VarChar(64)
+  payment_method String       @db.VarChar(20)
+  installments   Int
+  discount       Int?
+  boleto         String?      @db.VarChar(255)
+  status         String       @db.VarChar(30)
+  credit_card_id Int?
+  credit_card    credit_card? @relation(fields: [credit_card_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "fk_906517447048fd0f")
+  payor          payor?       @relation(fields: [payor_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "fk_906517448bcac108")
+  ordered        ordered[]
+
+  @@index([credit_card_id], map: "idx_906517447048fd0f")
+  @@index([payor_id], map: "idx_906517448bcac108")
+}
+
+model item {
+  id           Int           @id
+  order_id     Int
+  product_id   Int?
+  charge_id    Int?
+  option_id    Int?
+  amount       Int
+  total        Int?
+  product_name String?       @db.VarChar(50)
+  product      product?      @relation(fields: [product_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "fk_1f1b251e4584665a")
+  charge       charge?       @relation(fields: [charge_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "fk_1f1b251e55284914")
+  ordered      ordered       @relation(fields: [order_id], references: [id], onDelete: Cascade, onUpdate: NoAction, map: "fk_1f1b251e8d9f6d38")
+  group_option group_option? @relation(fields: [option_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "fk_1f1b251ea7c41d6f")
+
+  @@index([product_id], map: "idx_1f1b251e4584665a")
+  @@index([charge_id], map: "idx_1f1b251e55284914")
+  @@index([order_id], map: "idx_1f1b251e8d9f6d38")
+  @@index([option_id], map: "idx_1f1b251ea7c41d6f")
+}
+
+model media {
+  id                                        Int             @id
+  user_id                                   Int?
+  name                                      String          @db.VarChar(255)
+  type                                      String          @db.VarChar(20)
+  path                                      String?         @db.VarChar(255)
+  created_at                                DateTime?       @db.Date
+  company                                   company?
+  user_profile_media_user_idTouser_profile  user_profile?   @relation("media_user_idTouser_profile", fields: [user_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "fk_6a2ca10ca76ed395")
+  product                                   product[]
+  product_photos                            product_photos?
+  user_profile_user_profile_photo_idTomedia user_profile[]  @relation("user_profile_photo_idTomedia")
+
+  @@index([user_id], map: "idx_6a2ca10ca76ed395")
+}
+
+model notification {
+  id         Int       @id
+  receiver   String    @db.VarChar(255)
+  title      String    @db.VarChar(255)
+  message    String?
+  status     Boolean?
+  created_at DateTime? @db.Timestamp(0)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model ordered {
+  id              Int              @id
+  customer        Int
+  company_id      Int
+  invoice_id      Int?
+  ticket          Int?
+  code            String           @db.VarChar(15)
+  status          Boolean
+  users           String?
+  gateway_id      String?          @db.VarChar(255)
+  used_on         DateTime?        @db.Timestamp(0)
+  created_at      DateTime         @db.Timestamp(0)
+  item            item[]
+  invoice         invoice?         @relation(fields: [invoice_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "fk_c3121f992989f1fd")
+  user_profile    user_profile     @relation(fields: [customer], references: [id], onDelete: Cascade, onUpdate: NoAction, map: "fk_c3121f9981398e09")
+  company         company          @relation(fields: [company_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "fk_c3121f99979b1ad6")
+  discount_ticket discount_ticket? @relation(fields: [ticket], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "fk_c3121f9997a0ada3")
+
+  @@index([invoice_id], map: "idx_c3121f992989f1fd")
+  @@index([customer], map: "idx_c3121f9981398e09")
+  @@index([company_id], map: "idx_c3121f99979b1ad6")
+  @@index([ticket], map: "idx_c3121f9997a0ada3")
+}
+
+model payor {
+  id       Int       @id
+  name     String    @db.VarChar(100)
+  document String    @unique(map: "uniq_bb24b313d8698a76") @db.VarChar(25)
+  birthday DateTime  @db.Date
+  invoice  invoice[]
+}
+
+model phone {
+  id             Int              @id
+  ddd            String           @db.VarChar(2)
+  number         String           @db.VarChar(12)
+  main           Boolean?
+  company_phones company_phones[]
+  user_phones    user_phones[]
+}
+
+model product {
+  id               Int                @id
+  cover            Int?
+  company_id       Int?
+  name             String             @db.VarChar(255)
+  price            Int
+  status           Boolean
+  expirationdate   DateTime?          @db.Timestamp(0)
+  position         Int
+  description      String
+  amount           Int?
+  created_at       DateTime?          @db.Timestamp(0)
+  discount_product discount_product[]
+  item             item[]
+  media            media?             @relation(fields: [cover], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "fk_d34a04ad8d0886c5")
+  company          company?           @relation(fields: [company_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "fk_d34a04ad979b1ad6")
+  product_options  product_options[]
+  product_photos   product_photos[]
+
+  @@index([cover], map: "idx_d34a04ad8d0886c5")
+  @@index([company_id], map: "idx_d34a04ad979b1ad6")
+}
+
+model product_options {
+  product_id      Int
+  group_option_id Int          @unique(map: "uniq_1ece1376777418e")
+  product         product      @relation(fields: [product_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "fk_1ece1374584665a")
+  group_option    group_option @relation(fields: [group_option_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "fk_1ece1376777418e")
+
+  @@id([product_id, group_option_id])
+  @@index([product_id], map: "idx_1ece1374584665a")
+}
+
+model product_photos {
+  product_id Int
+  photo_id   Int     @unique(map: "uniq_6a0aa17d7e9e4c8c")
+  product    product @relation(fields: [product_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "fk_6a0aa17d4584665a")
+  media      media   @relation(fields: [photo_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "fk_6a0aa17d7e9e4c8c")
+
+  @@id([product_id, photo_id])
+  @@index([product_id], map: "idx_6a0aa17d4584665a")
+}
+
+model user_phones {
+  user_id      Int
+  phone_id     Int
+  phone        phone        @relation(fields: [phone_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "fk_867a35c83b7323cb")
+  user_profile user_profile @relation(fields: [user_id], references: [id], onDelete: Cascade, onUpdate: NoAction, map: "fk_867a35c8a76ed395")
+
+  @@id([user_id, phone_id])
+  @@index([phone_id], map: "idx_867a35c83b7323cb")
+  @@index([user_id], map: "idx_867a35c8a76ed395")
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model user_profile {
+  id                                 Int            @id
+  photo_id                           Int?
+  address_id                         Int?           @unique(map: "uniq_d95ab405f5b7af75")
+  name                               String         @db.VarChar(50)
+  email                              String         @unique(map: "uniq_d95ab405e7927c74") @db.VarChar(180)
+  document                           String?        @unique(map: "uniq_d95ab405d8698a76") @db.VarChar(25)
+  birthday                           DateTime?      @db.Date
+  roles                              String
+  password                           String         @db.VarChar(255)
+  active                             Boolean
+  confirmation_token                 String?        @unique(map: "uniq_d95ab405c05fb297") @db.VarChar(210)
+  api_token                          String         @unique(map: "uniq_d95ab4057ba2f5eb") @db.VarChar(210)
+  gateway_id                         String?        @unique(map: "uniq_d95ab405577f8e00") @db.VarChar(32)
+  created_at                         DateTime?      @db.Date
+  company                            company?
+  credit_card                        credit_card[]
+  device_token                       device_token[]
+  media_media_user_idTouser_profile  media[]        @relation("media_user_idTouser_profile")
+  ordered                            ordered[]
+  user_phones                        user_phones[]
+  media_user_profile_photo_idTomedia media?         @relation("user_profile_photo_idTomedia", fields: [photo_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "fk_d95ab4057e9e4c8c")
+  address                            address?       @relation(fields: [address_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "fk_d95ab405f5b7af75")
+
+  @@index([photo_id], map: "idx_d95ab4057e9e4c8c")
+}
+
+model withdraw {
+  id        Int      @id
+  value     String   @db.VarChar(15)
+  status    Boolean?
+  createdat DateTime @db.Timestamp(0)
+}

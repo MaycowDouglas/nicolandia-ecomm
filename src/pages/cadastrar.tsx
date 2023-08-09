@@ -19,7 +19,7 @@ export default function RegisterPage() {
       }
     : {
         redirectIfFound: true,
-        redirectTo: '/minha-conta',
+        redirectTo: '/painel',
       }
 
   const { mutateUser, user } = useUser(redirectOptions)

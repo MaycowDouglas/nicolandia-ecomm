@@ -8,10 +8,10 @@ type UserProps = {
   roles: string[]
   photo: string | null
   active: boolean
-  document: string
   phones: PhoneProps[]
-  birthday: string
   address: AddressProps
+  document: string
+  birthday: string
   createdAt: number
 }
 
