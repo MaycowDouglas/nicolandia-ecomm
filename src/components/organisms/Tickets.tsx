@@ -69,7 +69,7 @@ export default function Tickets() {
         <Ticket
           id={4}
           name="Combo Espetacular"
-          price={16997}
+          price={15997}
           banner={ComboEspetacular}
           quantity={3}
           reference={6997}
