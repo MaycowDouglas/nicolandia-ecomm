@@ -7,8 +7,10 @@ import SlideVideo from '@/components/atoms/SlideVideo'
 import Ticket from '@/components/molecules/Ticket'
 import Attractions from '@/components/organisms/Attractions'
 import Tickets from '@/components/organisms/Tickets'
-import BannerOneMobile from '@/public/images/banners/one-mobile.png'
+import BannerComboPipocaWeb from '@/public/images/banners/combo-pipoca-desktop.png'
+import BannerComboPipocaMobile from '@/public/images/banners/combo-pipoca-mobile.png'
 import BannerOneWeb from '@/public/images/banners/one-desktop.png'
+import BannerOneMobile from '@/public/images/banners/one-mobile.png'
 import NicoAppDark from '@/public/images/brands/nicoapp-dark.svg'
 import ComboFamilia from '@/public/images/combos/combo-familia.png'
 import ComboKabum from '@/public/images/combos/combo-kabum.jpeg'
@@ -61,6 +63,14 @@ export default function HomePage() {
               alt="Diversão para toda a Família!"
               mobile={BannerOneMobile}
               desktop={BannerOneWeb}
+              priority
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <SlideImage
+              alt="Diversão para toda a Família!"
+              mobile={BannerComboPipocaMobile}
+              desktop={BannerComboPipocaWeb}
               priority
             />
           </SwiperSlide>

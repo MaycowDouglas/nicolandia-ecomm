@@ -39,7 +39,7 @@ export default function PassaportsPage() {
           </h1>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-            {(nowSP.getDay() >= 1 && nowSP.getDay() <= 4) ||
+            {(nowSP.getDay() >= 1 && nowSP.getDay() <= 3) ||
             (nowSP.getDay() === 0 && nowSP.getHours() >= 20) ? (
               <Ticket
                 id={7}
@@ -47,38 +47,38 @@ export default function PassaportsPage() {
                 price={4997}
                 banner={PassaporteAntecipado}
                 quantity={1}
-                reference={5997}
+                reference={6997}
                 isPassport
               />
             ) : (
               <Ticket
                 id={2}
                 name="Passaporte Individual"
-                price={5997}
+                price={6997}
                 banner={PassaporteIndividual}
                 quantity={1}
-                reference={5997}
+                reference={6997}
                 isPassport
               />
             )}
-            {/* <Ticket
+            <Ticket
               id={3}
               name="Combo Encantado"
-              price={14297}
+              price={12997}
               banner={ComboEncantado}
               quantity={2}
-              reference={5997}
+              reference={6997}
               isPassport
             />
             <Ticket
               id={4}
               name="Combo Espetacular"
-              price={19797}
+              price={15997}
               banner={ComboEspetacular}
               quantity={3}
-              reference={5997}
+              reference={6997}
               isPassport
-            /> */}
+            />
           </div>
 
           <h2 className="mt-10 lg:mt-16 mb-5 lg:mb-10 font-bold text-center md:text-start text-4xl md:text-4xl lg:text-5xl text-white">
