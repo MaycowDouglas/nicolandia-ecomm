@@ -54,7 +54,7 @@ export default function Tickets() {
           />
         )}
       </SwiperSlide>
-      {/* <SwiperSlide>
+      <SwiperSlide>
         <Ticket
           id={3}
           name="Combo Encantado"
@@ -75,7 +75,7 @@ export default function Tickets() {
           reference={6997}
           isPassport
         />
-      </SwiperSlide> */}
+      </SwiperSlide>
     </Swiper>
   )
 }
