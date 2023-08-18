@@ -7,8 +7,14 @@ import SlideVideo from '@/components/atoms/SlideVideo'
 import Ticket from '@/components/molecules/Ticket'
 import Attractions from '@/components/organisms/Attractions'
 import Tickets from '@/components/organisms/Tickets'
+import BannerAntecipadoWeb from '@/public/images/banners/antecipado-desktop.png'
+import BannerAntecipadoMobile from '@/public/images/banners/antecipado-mobile.png'
 import BannerComboPipocaWeb from '@/public/images/banners/combo-pipoca-desktop.png'
 import BannerComboPipocaMobile from '@/public/images/banners/combo-pipoca-mobile.png'
+import BannerFamilySwingWeb from '@/public/images/banners/family-swing-desktop.png'
+import BannerFamilySwingMobile from '@/public/images/banners/family-swing-mobile.png'
+import BannerKidsWeb from '@/public/images/banners/kids-desktop.png'
+import BannerKidsMobile from '@/public/images/banners/kids-mobile.png'
 import BannerOneWeb from '@/public/images/banners/one-desktop.png'
 import BannerOneMobile from '@/public/images/banners/one-mobile.png'
 import NicoAppDark from '@/public/images/brands/nicoapp-dark.svg'
@@ -48,7 +54,7 @@ export default function HomePage() {
           content="A Nova Nicolândia é um parque de diversões urbano e fechado, garantindo assim a segurança dos visitantes. O mundo da diversão não poderia estar em outro lugar, senão no coração de Brasília. Conheça o nosso parque e apaixone-se!"
         />
       </Head>
-      <section>
+      <section className="mt-20 md:mt-8">
         <Swiper
           ref={swiperRef}
           autoplay={{ delay: 4000 }}
@@ -61,6 +67,14 @@ export default function HomePage() {
           <SwiperSlide>
             <SlideImage
               alt="Diversão para toda a Família!"
+              mobile={BannerFamilySwingMobile}
+              desktop={BannerFamilySwingWeb}
+              priority
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <SlideImage
+              alt="Diversão para toda a Família!"
               mobile={BannerOneMobile}
               desktop={BannerOneWeb}
               priority
@@ -69,19 +83,25 @@ export default function HomePage() {
           <SwiperSlide>
             <SlideImage
               alt="Diversão para toda a Família!"
-              mobile={BannerComboPipocaMobile}
-              desktop={BannerComboPipocaWeb}
-              priority
+              mobile={BannerAntecipadoMobile}
+              desktop={BannerAntecipadoWeb}
             />
           </SwiperSlide>
-          {/* <SwiperSlide>
-            <SlideVideo
-              mobile="/videos/ferias-mobile.mp4"
-              desktop="/videos/ferias-web.mp4"
-              onPlay={stopSlideTransition}
-              onPause={startSlideTransition}
+
+          <SwiperSlide>
+            <SlideImage
+              alt="Diversão para toda a Família!"
+              mobile={BannerKidsMobile}
+              desktop={BannerKidsWeb}
             />
-          </SwiperSlide> */}
+          </SwiperSlide>
+          <SwiperSlide>
+            <SlideImage
+              alt="Diversão para toda a Família!"
+              mobile={BannerComboPipocaMobile}
+              desktop={BannerComboPipocaWeb}
+            />
+          </SwiperSlide>
 
           <div className="main-swiper-prev z-50 absolute top-0 bottom-0 left-0 px-2 flex items-center bg-black bg-opacity-30 text-white text-2xl md:text-5xl">
             <FaChevronLeft />

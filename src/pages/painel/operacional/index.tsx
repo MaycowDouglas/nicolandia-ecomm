@@ -1,12 +1,14 @@
+import 'react-loading-skeleton/dist/skeleton.css'
+
 import { masks } from '@/components/atoms/Input/InputText'
+import Spin from '@/components/atoms/Spin'
 import useUser from '@/hooks/useUser'
 import { classNames } from '@/lib/classNames'
 import fetchJson from '@/lib/fetchJson'
-import { prisma } from '@/lib/prisma'
-import { spawn } from 'child_process'
 import { useRouter } from 'next/router'
 import React, { useCallback, useEffect, useState } from 'react'
 import { HiMagnifyingGlass } from 'react-icons/hi2'
+import Skeleton from 'react-loading-skeleton'
 
 type PaymentStatus =
   | 'paid'
@@ -30,9 +32,11 @@ type ClientProps = {
   email: string
   ordered: [
     {
+      id: string
       code: string
       used_on: string | null
       created_at: string
+      gateway_id: string
       invoice: {
         payment_method: string
         status: PaymentStatus
@@ -51,6 +55,8 @@ type ClientProps = {
 
 export default function DashboardOperational() {
   const router = useRouter()
+  const [isLoading, setLoading] = useState(false)
+  const [actionLoading, setActionLoading] = useState('')
   const [client, setClient] = useState<ClientProps>(null)
   const { user } = useUser({ redirectTo: '/entrar?redir=/painel' })
 
@@ -79,6 +85,7 @@ export default function DashboardOperational() {
 
   const handleSubmit = useCallback(async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
+    setLoading(true)
 
     const searchParam = e.currentTarget.search.value
 
@@ -88,12 +95,34 @@ export default function DashboardOperational() {
         searchParam,
       }),
     })
+
     setClient(result)
+    setLoading(false)
   }, [])
+
+  const reversePurchase = async (id: string) => {
+    setActionLoading(`reverse_${id}`)
+
+    const result = await fetchJson(`/api/orders/${id}/reverse`, { method: 'POST' })
+
+    setActionLoading('')
+  }
+
+  const tickerUse = async (id: string) => {
+    setActionLoading(`use_${id}`)
+
+    try {
+      const result = await fetchJson(`/api/orders/${id}/use`, { method: 'POST' })
+    } catch (error) {
+      console.log(error)
+    }
+
+    setActionLoading('')
+  }
 
   return (
     <section className="pt-32 pb-20 lg:pt-24">
-      <div className={classNames(!client ? 'h-80' : 'h-auto', 'container')}>
+      <div className={'min-h-screen container'}>
         <form
           onSubmit={handleSubmit}
           className="mb-10 gap-3 flex flex-col md:flex-row justify-between items-center"
@@ -205,10 +234,15 @@ export default function DashboardOperational() {
 
                       {order.invoice.status.toLowerCase() === 'paid' && (
                         <span className="gap-2 grid grid-cols-2 mt-5">
-                          <button className="w-full py-2 rounded-lg border-2 border-custom-100 bg-custom-100 font-semibold text-white">
+                          <button
+                            className="w-full flex justify-center items-center py-2 rounded-lg border-2 border-custom-100 bg-custom-100 font-semibold text-white"
+                            onClick={() => tickerUse(order.id)}
+                          >
+                            {actionLoading === `use_${order.gateway_id}` && <Spin />}
                             Dar baixa
                           </button>
-                          <button className="w-full py-2 rounded-lg border-2 border-custom-100 text-custom-100 font-semibold">
+                          <button className="w-full flex justify-center items-center py-2 rounded-lg border-2 border-custom-100 text-custom-100 font-semibold">
+                            {actionLoading === `reverse_${order.gateway_id}` && <Spin red />}
                             Estornar
                           </button>
                         </span>
@@ -222,7 +256,74 @@ export default function DashboardOperational() {
             )}
           </div>
         ) : (
-          <span></span>
+          <>
+            {isLoading ? (
+              <div className="relative p-5 rounded-lg border-2 border-gray-200 text-center">
+                <div className="absolute top-0 right-1/2 translate-x-1/2 -translate-y-1/2 h-8">
+                  <Skeleton width={200} height={25} />
+                </div>
+
+                <div className="pt-5">
+                  <Skeleton width={400} height={40} />
+                  <Skeleton width={300} height={20} />
+                  <Skeleton width={300} height={20} />
+                </div>
+
+                <div className="mt-10">
+                  <Skeleton width={400} height={35} />
+
+                  <ul className="mt-10 gap-10 lg:gap-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 text-sm">
+                    <li className="relative p-5 border-2 border-gray-300 text-left rounded">
+                      <span className="absolute top-0 right-3 -translate-y-1/2">
+                        <span
+                          className={classNames(
+                            'inline-block w-28 capitalize text-center rounded-full font-medium'
+                          )}
+                        >
+                          <Skeleton />
+                        </span>
+                      </span>
+                    </li>
+                    <li className="relative p-5 border-2 border-gray-300 text-left rounded">
+                      <span className="absolute top-0 right-3 -translate-y-1/2">
+                        <span
+                          className={classNames(
+                            'inline-block w-28 capitalize text-center rounded-full font-medium'
+                          )}
+                        >
+                          <Skeleton />
+                        </span>
+                      </span>
+                    </li>
+                    <li className="relative p-5 border-2 border-gray-300 text-left rounded">
+                      <span className="absolute top-0 right-3 -translate-y-1/2">
+                        <span
+                          className={classNames(
+                            'inline-block w-28 capitalize text-center rounded-full font-medium'
+                          )}
+                        >
+                          <Skeleton />
+                        </span>
+                      </span>
+                    </li>
+                    <li className="relative p-5 border-2 border-gray-300 text-left rounded">
+                      <span className="absolute top-0 right-3 -translate-y-1/2">
+                        <span
+                          className={classNames(
+                            'inline-block w-28 capitalize text-center rounded-full font-medium'
+                          )}
+                        >
+                          <Skeleton />
+                        </span>
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            ) : (
+              <></>
+            )}
+          </>
         )}
       </div>
     </section>

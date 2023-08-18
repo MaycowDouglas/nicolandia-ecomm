@@ -39,7 +39,7 @@ export default function SlideImage({
         width={imageSize.width}
         height={imageSize.height}
         priority={priority}
-        className="w-full h-screen object-cover object-center"
+        className="w-full object-cover object-center"
       />
     </div>
   )

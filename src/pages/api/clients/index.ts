@@ -37,11 +37,16 @@ export default withSessionRoute(async function GetClientRoute(
         email: true,
         ordered: {
           select: {
+            id: true,
             code: true,
             used_on: true,
             created_at: true,
+            gateway_id: true,
             invoice: { select: { payment_method: true, status: true } },
             item: { select: { amount: true, product: { select: { name: true } } } },
+          },
+          orderBy: {
+            created_at: 'desc',
           },
           take: 4,
         },
