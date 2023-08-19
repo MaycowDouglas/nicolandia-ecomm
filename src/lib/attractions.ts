@@ -152,8 +152,10 @@ export const data: AttractionProps[] = [
     image: AtractionSpook,
     category: 'familiar',
     restrictions: {
-      minHeight: 140,
+      minHeight: 80,
+      maxHeight: 130,
     },
+    observation: 'Permite um acompanhante adulto',
   },
   {
     name: 'Wave Blaster',
