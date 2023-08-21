@@ -30,9 +30,9 @@ export default function Tickets() {
       slidesPerView={1}
       spaceBetween={30}
     >
-      <SwiperSlide>
-        {(nowSP.getDay() >= 1 && nowSP.getDay() <= 3) ||
-        (nowSP.getDay() === 0 && nowSP.getHours() >= 20) ? (
+      {(nowSP.getDay() >= 1 && nowSP.getDay() <= 3) ||
+      (nowSP.getDay() === 0 && nowSP.getHours() >= 20) ? (
+        <SwiperSlide>
           <Ticket
             id={7}
             name="Passaporte Antecipado"
@@ -42,40 +42,44 @@ export default function Tickets() {
             reference={6997}
             isPassport
           />
-        ) : (
-          <Ticket
-            id={2}
-            name="Passaporte Individual"
-            price={6997}
-            banner={PassaporteIndividual}
-            quantity={1}
-            reference={6997}
-            isPassport
-          />
-        )}
-      </SwiperSlide>
-      <SwiperSlide>
-        <Ticket
-          id={3}
-          name="Combo Encantado"
-          price={12997}
-          banner={ComboEncantado}
-          quantity={2}
-          reference={6997}
-          isPassport
-        />
-      </SwiperSlide>
-      <SwiperSlide>
-        <Ticket
-          id={4}
-          name="Combo Espetacular"
-          price={15997}
-          banner={ComboEspetacular}
-          quantity={3}
-          reference={6997}
-          isPassport
-        />
-      </SwiperSlide>
+        </SwiperSlide>
+      ) : (
+        <>
+          <SwiperSlide>
+            <Ticket
+              id={2}
+              name="Passaporte Individual"
+              price={6997}
+              banner={PassaporteIndividual}
+              quantity={1}
+              reference={6997}
+              isPassport
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Ticket
+              id={3}
+              name="Combo Encantado"
+              price={12997}
+              banner={ComboEncantado}
+              quantity={2}
+              reference={6997}
+              isPassport
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Ticket
+              id={4}
+              name="Combo Espetacular"
+              price={15997}
+              banner={ComboEspetacular}
+              quantity={3}
+              reference={6997}
+              isPassport
+            />
+          </SwiperSlide>
+        </>
+      )}
     </Swiper>
   )
 }
