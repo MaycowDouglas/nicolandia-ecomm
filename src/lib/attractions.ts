@@ -9,7 +9,7 @@ import AtractionFerrysWheel from '@/public/images/atractions/ferrys-wheel.jpg'
 import AtractionGrandPrix from '@/public/images/atractions/grand-prix.png'
 import AtractionKabum from '@/public/images/atractions/kabum.png'
 import AtractionMagicCup from '@/public/images/atractions/magic-cup.jpg'
-import AtractionMinhocao from '@/public/images/atractions/minhocao.jpeg'
+import AtractionMinhocao from '@/public/images/atractions/minhocao.png'
 import AtractionMiniRoda from '@/public/images/atractions/mini-roda.png'
 import AtractionMiniTorre from '@/public/images/atractions/mini-torre.png'
 import AtractionPescaria from '@/public/images/atractions/pescaria.jpeg'
@@ -59,14 +59,6 @@ export const data: AttractionProps[] = [
     },
   },
   {
-    name: 'Super frisbee',
-    image: AtractionSuperFrisbee,
-    category: 'radical',
-    restrictions: {
-      minHeight: 140,
-    },
-  },
-  {
     name: 'Rock & Roll',
     image: AtractionRockRoll,
     category: 'radical',
@@ -83,6 +75,14 @@ export const data: AttractionProps[] = [
     observation: 'Funcionamento nas sextas. Sábados, domingos e feriados à partir de 14h30',
     restrictions: {
       minHeight: 120,
+    },
+  },
+  {
+    name: 'Super frisbee',
+    image: AtractionSuperFrisbee,
+    category: 'radical',
+    restrictions: {
+      minHeight: 140,
     },
   },
   {
@@ -128,7 +128,7 @@ export const data: AttractionProps[] = [
   {
     name: 'Centopéia',
     image: AtractionMinhocao,
-    category: 'radical',
+    category: 'familiar',
     restrictions: {
       minHeight: 130,
     },
@@ -140,6 +140,13 @@ export const data: AttractionProps[] = [
     restrictions: {
       minHeight: 120,
     },
+  },
+
+  {
+    name: 'Wave Blaster',
+    image: AtractionWaveBlaster,
+    category: 'familiar',
+    observation: 'Crianças de 1.20 metros até 1.30 metros tem direito a acompanhante',
   },
   {
     name: 'Mini Roda',
@@ -170,12 +177,6 @@ export const data: AttractionProps[] = [
     },
     observation:
       'Visitantes com estatura entre 0,80M e 1,30M é permitido um acompanhante. Carga máxima por carro: 120Kg.',
-  },
-  {
-    name: 'Wave Blaster',
-    image: AtractionWaveBlaster,
-    category: 'familiar',
-    observation: 'Crianças de 1.20 metros até 1.30 metros tem direito a acompanhante',
   },
   {
     name: 'Reino Encantado',
