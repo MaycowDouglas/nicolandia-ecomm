@@ -53,7 +53,7 @@ export const data: AttractionProps[] = [
     image: AtractionKabum,
     category: 'radical',
     observation:
-      'Está atração não é permitida para quem possui mobilidade reduzida. Não recomendada para pessoas com problemas na coluna vertebral.',
+      'Está atração não é permitida para quem possui mobilidade reduzida. Não recomendada para pessoas com problemas na coluna vertebral. Funcionamento nos sábados, domingos e feriados: 11H às 12H. Retorno às 15H.',
     restrictions: {
       minHeight: 140,
     },
@@ -158,6 +158,7 @@ export const data: AttractionProps[] = [
     restrictions: {
       minHeight: 110,
     },
+    observation: 'Visitantes com estatura entre 1,10M e 1,20M é permitido um acompanhante',
   },
   {
     name: 'Spook',
@@ -167,7 +168,8 @@ export const data: AttractionProps[] = [
       minHeight: 80,
       maxHeight: 130,
     },
-    observation: 'Permite um acompanhante adulto',
+    observation:
+      'Visitantes com estatura entre 0,80M e 1,30M é permitido um acompanhante. Carga máxima por carro: 120Kg.',
   },
   {
     name: 'Wave Blaster',
@@ -210,7 +212,7 @@ export const data: AttractionProps[] = [
   },
   {
     name: 'Trenzinho Tour',
-    alert: 'R$ 20,00 por pessoa',
+    alert: 'R$ 10,00 por pessoa',
     image: AtractionTrenzinhoTour,
     category: 'familiar',
     observation: 'Essa atração não faz parte do passaporte. Compra presencialmente no parque',
