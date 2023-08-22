@@ -5,6 +5,7 @@ import Ticket from '@/components/molecules/Ticket'
 import Assof from '@/public/images/brands/assof.png'
 import Caadf from '@/public/images/brands/caadf.png'
 import Oabdf from '@/public/images/brands/oabdf.png'
+import ComboAntecipado from '@/public/images/combos/combo-antecipado.png'
 import ComboFamilia from '@/public/images/combos/combo-familia.png'
 import ComboKabum from '@/public/images/combos/combo-kabum.jpeg'
 import ComboPipoca from '@/public/images/combos/combo-pipoca.png'
@@ -41,15 +42,26 @@ export default function PassaportsPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
             {(nowSP.getDay() >= 1 && nowSP.getDay() <= 3) ||
             (nowSP.getDay() === 0 && nowSP.getHours() >= 20) ? (
-              <Ticket
-                id={7}
-                name="Passaporte Antecipado"
-                price={4997}
-                banner={PassaporteAntecipado}
-                quantity={1}
-                reference={6997}
-                isPassport
-              />
+              <>
+                <Ticket
+                  id={7}
+                  name="Passaporte Antecipado"
+                  price={4997}
+                  banner={PassaporteAntecipado}
+                  quantity={1}
+                  reference={6997}
+                  isPassport
+                />
+                <Ticket
+                  id={14}
+                  name="Combo Antecipado"
+                  price={8597}
+                  banner={ComboAntecipado}
+                  quantity={2}
+                  reference={6997}
+                  isPassport
+                />
+              </>
             ) : (
               <>
                 <Ticket
