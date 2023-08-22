@@ -229,10 +229,9 @@ export const data: AttractionProps[] = [
   },
   {
     name: 'Brinquedão',
-    alert: 'R$ 20,00 por pessoa',
     image: AtractionBrinquedao,
     category: 'childish',
-    observation: 'Essa atração não faz parte do passaporte. Compra presencialmente no parque',
+    observation: 'Crianças com até 4 anos, o uso de fralda descartável é obrigatório.',
   },
   {
     name: 'Trenzinho Mini Bruc',
