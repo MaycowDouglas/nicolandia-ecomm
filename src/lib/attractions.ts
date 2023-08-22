@@ -1,14 +1,17 @@
 import AtractionArenaElastica from '@/public/images/atractions/arena-elastica.jpeg'
+import AtractionBrinquedao from '@/public/images/atractions/brinquedao.png'
 import AtractionCarrossel from '@/public/images/atractions/carrossel.jpg'
 import AtractionColossusLoop from '@/public/images/atractions/colossus-loop.jpeg'
 import AtractionCrazyDance from '@/public/images/atractions/crazy-dance.jpeg'
 import AtractionDisko from '@/public/images/atractions/disko.jpg'
+import AtractionFamilySwing from '@/public/images/atractions/family-swing.png'
 import AtractionFerrysWheel from '@/public/images/atractions/ferrys-wheel.jpg'
 import AtractionGrandPrix from '@/public/images/atractions/grand-prix.png'
 import AtractionKabum from '@/public/images/atractions/kabum.png'
 import AtractionMagicCup from '@/public/images/atractions/magic-cup.jpg'
 import AtractionMinhocao from '@/public/images/atractions/minhocao.jpeg'
 import AtractionMiniRoda from '@/public/images/atractions/mini-roda.png'
+import AtractionMiniTorre from '@/public/images/atractions/mini-torre.png'
 import AtractionPescaria from '@/public/images/atractions/pescaria.jpeg'
 import AtractionPirateShip from '@/public/images/atractions/pirate-ship.jpeg'
 import AtractionReinoEncantado from '@/public/images/atractions/reino-encantado.jpg'
@@ -24,6 +27,7 @@ import AtractionTremCavalaria from '@/public/images/atractions/trem-cavalaria.jp
 import AtractionTrenzinhoCircus from '@/public/images/atractions/trenzinho-circus.jpeg'
 // import AtractionTrenzinhoEncantado from '@/public/images/atractions/trenzinho-encantado.jpeg'
 import AtractionTrenzinhoFazenda from '@/public/images/atractions/trenzinho-fazenda.jpeg'
+import AtractionTrenzinhoMiniBruc from '@/public/images/atractions/trenzinho-mini-bruc.png'
 import AtractionTrenzinhoTour from '@/public/images/atractions/trenzinho-tour.jpeg'
 import AtractionWaveBlaster from '@/public/images/atractions/wave-blaster.jpeg'
 import AtractionZipZap from '@/public/images/atractions/zip-zap.jpg'
@@ -130,6 +134,14 @@ export const data: AttractionProps[] = [
     },
   },
   {
+    name: 'Family Swing',
+    image: AtractionFamilySwing,
+    category: 'familiar',
+    restrictions: {
+      minHeight: 120,
+    },
+  },
+  {
     name: 'Mini Roda',
     image: AtractionMiniRoda,
     category: 'familiar',
@@ -212,6 +224,31 @@ export const data: AttractionProps[] = [
     image: AtractionPescaria,
     category: 'childish',
     observation: 'Essa atração não faz parte do passaporte. Compra presencialmente no parque',
+  },
+  {
+    name: 'Brinquedão',
+    alert: 'R$ 20,00 por pessoa',
+    image: AtractionBrinquedao,
+    category: 'childish',
+    observation: 'Essa atração não faz parte do passaporte. Compra presencialmente no parque',
+  },
+  {
+    name: 'Trenzinho Mini Bruc',
+    image: AtractionTrenzinhoMiniBruc,
+    category: 'childish',
+    restrictions: {
+      minHeight: 80,
+      maxHeight: 130,
+    },
+  },
+  {
+    name: 'Mini Torre',
+    image: AtractionMiniTorre,
+    category: 'childish',
+    restrictions: {
+      minHeight: 80,
+      maxHeight: 140,
+    },
   },
   {
     name: 'Carrossel',
