@@ -5,6 +5,7 @@ import Ticket from '@/components/molecules/Ticket'
 import Assof from '@/public/images/brands/assof.png'
 import Caadf from '@/public/images/brands/caadf.png'
 import Oabdf from '@/public/images/brands/oabdf.png'
+import Sinprfdf from '@/public/images/brands/sinprfdf.png'
 import ComboAntecipado from '@/public/images/combos/combo-antecipado.png'
 import ComboFamilia from '@/public/images/combos/combo-familia.png'
 import ComboKabum from '@/public/images/combos/combo-kabum.jpeg'
@@ -254,42 +255,53 @@ export default function PassaportsPage() {
         <div className="container my-10">
           <div className="border-t-2 border-slate-200"></div>
         </div>
-        <div className="container pb-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-3 gap-10 text-center xl:text-left xl:gap-0">
-          <div>
-            <h3 className="mb-5 text-3xl text-custom-600 font-black">Convênios</h3>
+        <div className="container flex flex-col justify-center items-center pb-10">
+          <div className="mb-10 text-center">
+            <h3 className="mb-5 text-3xl md:text-4xl xl:text-5xl text-custom-600 font-black">
+              Convênios
+            </h3>
 
             <div className="xl:text-lg">
               <p>A compra deverá ser feita pelo titular.</p>
               <p>Passaporte por apenas R$ 50,00 cada.</p>
               <p>Permitido apenas 5 passaportes por carteirinha.</p>
               <p>Benefício válido dentro do calendário operacional do parque.</p>
+              <p>
+                <strong>
+                  É proibido o ingresso e a permanência com armas de fogo dentro das dependências do
+                  parque.
+                </strong>
+              </p>
             </div>
           </div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 xl:col-span-2 text-center">
-            <div>
-              <div className="flex justify-center items-end gap-3">
-                <Image src={Oabdf} className="w-28 h-auto" alt="" />
-                <Image src={Caadf} className="w-28 h-auto" alt="" />
+          <div className="flex justify-center flex-wrap gap-5">
+            <div className="w-[320px] flex flex-col items-center text-center">
+              <div className="flex min-w-fit">
+                <Image src={Oabdf} className="h-20 w-auto" alt="" />
+                <Image src={Caadf} className="h-20 w-auto" alt="" />
               </div>
-              <p className="p-3 leading-5">
+              <p className="p-3 text-lg">
                 Compra disponível na bilheteria mediante apresentação da carteira da OAB-DF ou
                 CAA-DF
               </p>
             </div>
-            <div>
-              <div className="flex justify-center items-end gap-3">
-                <Image src={Assof} className="w-44 h-auto" alt="" />
+            <div className="w-[320px] flex flex-col items-center text-center">
+              <div className="flex min-w-fit">
+                <Image src={Sinprfdf} className="h-20 w-auto" alt="" />
               </div>
-              <div className="p-3 leading-5 space-y-2">
-                <p>
-                  Compra disponível na bilheteria mediante apresentação da Declaração de Sócio,
-                  emitido pela ASOF, com validade de 30 dias e Carteira Funcional.
-                </p>
-                <p className="font-bold">
-                  É proibido o ingresso e a permanência com armas de fogo dentro das dependências do
-                  parque.
-                </p>
+              <p className="p-3 text-lg">
+                Compra disponível na bilheteria mediante apresentação da carteira SINPRF-DF Válido
+                para todos os associados de todos os estados.
+              </p>
+            </div>
+            <div className="w-[320px] flex flex-col items-center text-center">
+              <div className="flex min-w-fit">
+                <Image src={Assof} className="h-20 w-auto" alt="" />
               </div>
+              <p className="p-3 text-lg">
+                Compra disponível na bilheteria mediante apresentação da Declaração de Sócio,
+                emitido pela ASOF, com validade de 30 dias e Carteira Funcional.
+              </p>
             </div>
           </div>
         </div>
