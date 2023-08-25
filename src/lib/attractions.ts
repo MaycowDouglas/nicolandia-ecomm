@@ -230,10 +230,10 @@ export const data: AttractionProps[] = [
   },
   {
     name: 'Brinquedão',
+    alert: 'Crianças com até 4 anos, o uso de fralda descartável é obrigatório.',
     image: AtractionBrinquedao,
     category: 'childish',
-    observation:
-      'Crianças com até 4 anos, o uso de fralda descartável é obrigatório. Essa atração não faz parte do passaporte. Compra presencialmente no parque',
+    observation: 'Essa atração não faz parte do passaporte. Compra presencialmente no parque.',
   },
   {
     name: 'Trenzinho Mini Bruc',
