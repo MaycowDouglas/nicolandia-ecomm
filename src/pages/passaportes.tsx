@@ -14,6 +14,7 @@ import PassaporteAntecipado from '@/public/images/tickets/antecipado.png'
 import ComboEncantado from '@/public/images/tickets/encantado.png'
 import ComboEspetacular from '@/public/images/tickets/espetacular.png'
 import PassaporteIndividual from '@/public/images/tickets/individual.png'
+import PassaporteSuperSegunda from '@/public/images/tickets/super-segunda.png'
 import Head from 'next/head'
 import Image from 'next/image'
 import { GoAlert } from 'react-icons/go'
@@ -45,6 +46,15 @@ export default function PassaportsPage() {
             (nowSP.getDay() === 0 && nowSP.getHours() >= 20) ? (
               <>
                 <Ticket
+                  id={15}
+                  name="Passaporte Super Segunda"
+                  price={3997}
+                  banner={PassaporteSuperSegunda}
+                  quantity={1}
+                  reference={6997}
+                  isPassport
+                />
+                {/* <Ticket
                   id={7}
                   name="Passaporte Antecipado"
                   price={4997}
@@ -61,7 +71,7 @@ export default function PassaportsPage() {
                   quantity={2}
                   reference={6997}
                   isPassport
-                />
+                /> */}
               </>
             ) : (
               <>
