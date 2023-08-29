@@ -42,10 +42,10 @@ export default function PassaportsPage() {
           </h1>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
-            {(nowSP.getDay() >= 1 && nowSP.getDay() <= 3) ||
+            {(nowSP.getDay() >= 1 && nowSP.getDay() <= 4) ||
             (nowSP.getDay() === 0 && nowSP.getHours() >= 20) ? (
               <>
-                <Ticket
+                {/* <Ticket
                   id={15}
                   name="Passaporte Super Segunda"
                   price={3997}
@@ -53,8 +53,8 @@ export default function PassaportsPage() {
                   quantity={1}
                   reference={6997}
                   isPassport
-                />
-                {/* <Ticket
+                /> */}
+                <Ticket
                   id={7}
                   name="Passaporte Antecipado"
                   price={4997}
@@ -71,7 +71,7 @@ export default function PassaportsPage() {
                   quantity={2}
                   reference={6997}
                   isPassport
-                /> */}
+                />
               </>
             ) : (
               <>
