@@ -9,6 +9,8 @@ import Attractions from '@/components/organisms/Attractions'
 import Tickets from '@/components/organisms/Tickets'
 import BannerAntecipadoWeb from '@/public/images/banners/antecipado-desktop.png'
 import BannerAntecipadoMobile from '@/public/images/banners/antecipado-mobile.png'
+import BannerBrinquedosWeb from '@/public/images/banners/brinquedos-desktop.png'
+import BannerBrinquedosMobile from '@/public/images/banners/brinquedos-mobile.png'
 import BannerComboPipocaWeb from '@/public/images/banners/combo-pipoca-desktop.png'
 import BannerComboPipocaMobile from '@/public/images/banners/combo-pipoca-mobile.png'
 import BannerFamilySwingWeb from '@/public/images/banners/family-swing-desktop.png'
@@ -70,6 +72,13 @@ export default function HomePage() {
               mobile={BannerFamilySwingMobile}
               desktop={BannerFamilySwingWeb}
               priority
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <SlideImage
+              alt="Diversão para toda a Família!"
+              mobile={BannerBrinquedosMobile}
+              desktop={BannerBrinquedosWeb}
             />
           </SwiperSlide>
           <SwiperSlide>

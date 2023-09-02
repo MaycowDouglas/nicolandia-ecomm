@@ -130,7 +130,7 @@ export const data: AttractionProps[] = [
     image: AtractionMinhocao,
     category: 'familiar',
     restrictions: {
-      minHeight: 130,
+      minHeight: 80,
     },
   },
   {
