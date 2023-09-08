@@ -81,14 +81,7 @@ export default function HomePage() {
               desktop={BannerBrinquedosWeb}
             />
           </SwiperSlide>
-          <SwiperSlide>
-            <SlideImage
-              alt="Diversão para toda a Família!"
-              mobile={BannerOneMobile}
-              desktop={BannerOneWeb}
-              priority
-            />
-          </SwiperSlide>
+
           <SwiperSlide>
             <SlideImage
               alt="Diversão para toda a Família!"
@@ -97,13 +90,6 @@ export default function HomePage() {
             />
           </SwiperSlide>
 
-          <SwiperSlide>
-            <SlideImage
-              alt="Diversão para toda a Família!"
-              mobile={BannerKidsMobile}
-              desktop={BannerKidsWeb}
-            />
-          </SwiperSlide>
           <SwiperSlide>
             <SlideImage
               alt="Diversão para toda a Família!"
