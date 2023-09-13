@@ -7,8 +7,8 @@ import SlideVideo from '@/components/atoms/SlideVideo'
 import Ticket from '@/components/molecules/Ticket'
 import Attractions from '@/components/organisms/Attractions'
 import Tickets from '@/components/organisms/Tickets'
-import BannerAntecipadoWeb from '@/public/images/banners/antecipado-desktop.png'
-import BannerAntecipadoMobile from '@/public/images/banners/antecipado-mobile.png'
+import BannerAntecipadoWeb from '@/public/images/banners/antecipado-desktop-promo.png'
+import BannerAntecipadoMobile from '@/public/images/banners/antecipado-mobile-promo.png'
 import BannerBrinquedosWeb from '@/public/images/banners/brinquedos-desktop.png'
 import BannerBrinquedosMobile from '@/public/images/banners/brinquedos-mobile.png'
 import BannerComboPipocaWeb from '@/public/images/banners/combo-pipoca-desktop.png'
@@ -69,6 +69,14 @@ export default function HomePage() {
           <SwiperSlide>
             <SlideImage
               alt="Diversão para toda a Família!"
+              mobile={BannerAntecipadoMobile}
+              desktop={BannerAntecipadoWeb}
+            />
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <SlideImage
+              alt="Diversão para toda a Família!"
               mobile={BannerFamilySwingMobile}
               desktop={BannerFamilySwingWeb}
               priority
@@ -79,14 +87,6 @@ export default function HomePage() {
               alt="Diversão para toda a Família!"
               mobile={BannerBrinquedosMobile}
               desktop={BannerBrinquedosWeb}
-            />
-          </SwiperSlide>
-
-          <SwiperSlide>
-            <SlideImage
-              alt="Diversão para toda a Família!"
-              mobile={BannerAntecipadoMobile}
-              desktop={BannerAntecipadoWeb}
             />
           </SwiperSlide>
 
