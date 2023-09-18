@@ -69,14 +69,6 @@ export default function HomePage() {
           <SwiperSlide>
             <SlideImage
               alt="Diversão para toda a Família!"
-              mobile={BannerAntecipadoMobile}
-              desktop={BannerAntecipadoWeb}
-            />
-          </SwiperSlide>
-
-          <SwiperSlide>
-            <SlideImage
-              alt="Diversão para toda a Família!"
               mobile={BannerFamilySwingMobile}
               desktop={BannerFamilySwingWeb}
               priority

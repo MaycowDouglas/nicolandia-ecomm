@@ -17,7 +17,7 @@ import AtractionPirateShip from '@/public/images/atractions/pirate-ship.jpeg'
 import AtractionReinoEncantado from '@/public/images/atractions/reino-encantado.jpg'
 import AtractionRockRoll from '@/public/images/atractions/rock-roll.jpg'
 import AtractionRollerCoaster from '@/public/images/atractions/roller-coaster.jpeg'
-import AtractionSkyFlyer from '@/public/images/atractions/sky-flyer.jpg'
+// import AtractionSkyFlyer from '@/public/images/atractions/sky-flyer.jpg'
 import AtractionSpook from '@/public/images/atractions/spook.jpeg'
 import AtractionSuperFrisbee from '@/public/images/atractions/super-frisbee.jpeg'
 import AtractionTrex from '@/public/images/atractions/t-rex.jpeg'
@@ -109,14 +109,14 @@ export const data: AttractionProps[] = [
       minHeight: 130,
     },
   },
-  {
-    name: 'Sky flyer',
-    image: AtractionSkyFlyer,
-    category: 'radical',
-    restrictions: {
-      minHeight: 130,
-    },
-  },
+  // {
+  //   name: 'Sky flyer',
+  //   image: AtractionSkyFlyer,
+  //   category: 'radical',
+  //   restrictions: {
+  //     minHeight: 130,
+  //   },
+  // },
   {
     name: 'Roller Coaster',
     image: AtractionRollerCoaster,
