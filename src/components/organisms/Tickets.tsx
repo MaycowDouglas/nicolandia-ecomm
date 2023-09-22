@@ -32,7 +32,7 @@ export default function Tickets() {
       slidesPerView={1}
       spaceBetween={30}
     >
-      {(nowSP.getDay() >= 1 && nowSP.getDay() <= 5) ||
+      {(nowSP.getDay() >= 1 && nowSP.getDay() <= 4) ||
       (nowSP.getDay() === 0 && nowSP.getHours() >= 20) ? (
         <>
           {/* <SwiperSlide>
