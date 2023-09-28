@@ -10,7 +10,7 @@ import ComboAntecipado from '@/public/images/combos/combo-antecipado.png'
 import ComboFamilia from '@/public/images/combos/combo-familia.png'
 import ComboKabum from '@/public/images/combos/combo-kabum.jpeg'
 import ComboPipoca from '@/public/images/combos/combo-pipoca.png'
-import PassaporteAntecipado from '@/public/images/tickets/antecipado.png'
+import PassaporteAntecipado from '@/public/images/tickets/antecipado-promocional.png'
 import ComboEncantado from '@/public/images/tickets/encantado.png'
 import ComboEspetacular from '@/public/images/tickets/espetacular.png'
 import PassaporteIndividual from '@/public/images/tickets/individual.png'
@@ -45,7 +45,7 @@ export default function PassaportsPage() {
             {(nowSP.getDay() >= 1 && nowSP.getDay() <= 4) ||
             (nowSP.getDay() === 0 && nowSP.getHours() >= 20) ? (
               <>
-                <Ticket
+                {/* <Ticket
                   id={15}
                   name="Passaporte Super Segunda"
                   price={3997}
@@ -53,17 +53,17 @@ export default function PassaportsPage() {
                   quantity={1}
                   reference={6997}
                   isPassport
-                />
-                {/* <Ticket
+                /> */}
+                <Ticket
                   id={7}
-                  name="Passaporte Antecipado"
-                  price={4997}
+                  name="Passaporte Antecipado Promocional"
+                  price={3997}
                   banner={PassaporteAntecipado}
                   quantity={1}
                   reference={6997}
                   isPassport
                 />
-                <Ticket
+                {/* <Ticket
                   id={14}
                   name="Combo Antecipado"
                   price={8597}
