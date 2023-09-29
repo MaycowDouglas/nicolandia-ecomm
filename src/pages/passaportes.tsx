@@ -42,7 +42,7 @@ export default function PassaportsPage() {
           </h1>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
-            {(nowSP.getDay() >= 1 && nowSP.getDay() <= 4) ||
+            {(nowSP.getDay() >= 1 && nowSP.getDay() <= 5) ||
             (nowSP.getDay() === 0 && nowSP.getHours() >= 20) ? (
               <>
                 {/* <Ticket
