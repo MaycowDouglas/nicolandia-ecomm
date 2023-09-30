@@ -10,7 +10,7 @@ import ComboAntecipado from '@/public/images/combos/combo-antecipado.png'
 import ComboFamilia from '@/public/images/combos/combo-familia.png'
 import ComboKabum from '@/public/images/combos/combo-kabum.jpeg'
 import ComboPipoca from '@/public/images/combos/combo-pipoca.png'
-import PassaporteAntecipado from '@/public/images/tickets/antecipado-promocional.png'
+import PassaporteAntecipado from '@/public/images/tickets/antecipado.png'
 import ComboEncantado from '@/public/images/tickets/encantado.png'
 import ComboEspetacular from '@/public/images/tickets/espetacular.png'
 import PassaporteIndividual from '@/public/images/tickets/individual.png'
@@ -42,7 +42,7 @@ export default function PassaportsPage() {
           </h1>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
-            {(nowSP.getDay() >= 1 && nowSP.getDay() <= 5) ||
+            {(nowSP.getDay() >= 1 && nowSP.getDay() <= 4) ||
             (nowSP.getDay() === 0 && nowSP.getHours() >= 20) ? (
               <>
                 {/* <Ticket
@@ -57,13 +57,13 @@ export default function PassaportsPage() {
                 <Ticket
                   id={7}
                   name="Passaporte Antecipado Promocional"
-                  price={3997}
+                  price={4997}
                   banner={PassaporteAntecipado}
                   quantity={1}
                   reference={6997}
                   isPassport
                 />
-                {/* <Ticket
+                <Ticket
                   id={14}
                   name="Combo Antecipado"
                   price={8597}
@@ -71,11 +71,11 @@ export default function PassaportsPage() {
                   quantity={2}
                   reference={6997}
                   isPassport
-                /> */}
+                />
               </>
             ) : (
               <>
-                <Ticket
+                {/* <Ticket
                   id={2}
                   name="Passaporte Individual"
                   price={6997}
@@ -99,6 +99,24 @@ export default function PassaportsPage() {
                   price={15997}
                   banner={ComboEspetacular}
                   quantity={3}
+                  reference={6997}
+                  isPassport
+                /> */}
+                <Ticket
+                  id={7}
+                  name="Passaporte Antecipado Promocional"
+                  price={4997}
+                  banner={PassaporteAntecipado}
+                  quantity={1}
+                  reference={6997}
+                  isPassport
+                />
+                <Ticket
+                  id={14}
+                  name="Combo Antecipado"
+                  price={8597}
+                  banner={ComboAntecipado}
+                  quantity={2}
                   reference={6997}
                   isPassport
                 />

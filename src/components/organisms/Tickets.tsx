@@ -1,5 +1,5 @@
 import ComboAntecipado from '@/public/images/combos/combo-antecipado.png'
-import PassaporteAntecipado from '@/public/images/tickets/antecipado-promocional.png'
+import PassaporteAntecipado from '@/public/images/tickets/antecipado.png'
 import ComboEncantado from '@/public/images/tickets/encantado.png'
 import ComboEspetacular from '@/public/images/tickets/espetacular.png'
 import PassaporteIndividual from '@/public/images/tickets/individual.png'
@@ -32,7 +32,7 @@ export default function Tickets() {
       slidesPerView={1}
       spaceBetween={30}
     >
-      {(nowSP.getDay() >= 1 && nowSP.getDay() <= 5) ||
+      {(nowSP.getDay() >= 1 && nowSP.getDay() <= 4) ||
       (nowSP.getDay() === 0 && nowSP.getHours() >= 20) ? (
         <>
           {/* <SwiperSlide>
@@ -58,7 +58,7 @@ export default function Tickets() {
             />
           </SwiperSlide>
 
-          {/* <SwiperSlide>
+          <SwiperSlide>
             <Ticket
               id={14}
               name="Combo Antecipado"
@@ -68,11 +68,11 @@ export default function Tickets() {
               reference={6997}
               isPassport
             />
-          </SwiperSlide> */}
+          </SwiperSlide>
         </>
       ) : (
         <>
-          <SwiperSlide>
+          {/* <SwiperSlide>
             <Ticket
               id={2}
               name="Passaporte Individual"
@@ -101,6 +101,29 @@ export default function Tickets() {
               price={15997}
               banner={ComboEspetacular}
               quantity={3}
+              reference={6997}
+              isPassport
+            />
+          </SwiperSlide> */}
+          <SwiperSlide>
+            <Ticket
+              id={7}
+              name="Passaporte Antecipado Promocional"
+              price={4997}
+              banner={PassaporteAntecipado}
+              quantity={1}
+              reference={6997}
+              isPassport
+            />
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <Ticket
+              id={14}
+              name="Combo Antecipado"
+              price={8597}
+              banner={ComboAntecipado}
+              quantity={2}
               reference={6997}
               isPassport
             />
