@@ -108,7 +108,7 @@ export default function Tickets() {
           <SwiperSlide>
             <Ticket
               id={7}
-              name="Passaporte Antecipado Promocional"
+              name="Passaporte Antecipado"
               price={4997}
               banner={PassaporteAntecipado}
               quantity={1}
