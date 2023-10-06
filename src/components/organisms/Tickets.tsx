@@ -72,14 +72,14 @@ export default function Tickets() {
         </>
       ) : (
         <>
-          {/* <SwiperSlide>
+          <SwiperSlide>
             <Ticket
               id={2}
               name="Passaporte Individual"
-              price={6997}
+              price={5997}
               banner={PassaporteIndividual}
               quantity={1}
-              reference={6997}
+              reference={5997}
               isPassport
             />
           </SwiperSlide>
@@ -87,10 +87,10 @@ export default function Tickets() {
             <Ticket
               id={3}
               name="Combo Encantado"
-              price={12997}
+              price={10997}
               banner={ComboEncantado}
               quantity={2}
-              reference={6997}
+              reference={5997}
               isPassport
             />
           </SwiperSlide>
@@ -98,33 +98,10 @@ export default function Tickets() {
             <Ticket
               id={4}
               name="Combo Espetacular"
-              price={15997}
+              price={13997}
               banner={ComboEspetacular}
               quantity={3}
-              reference={6997}
-              isPassport
-            />
-          </SwiperSlide> */}
-          <SwiperSlide>
-            <Ticket
-              id={7}
-              name="Passaporte Antecipado"
-              price={4997}
-              banner={PassaporteAntecipado}
-              quantity={1}
-              reference={6997}
-              isPassport
-            />
-          </SwiperSlide>
-
-          <SwiperSlide>
-            <Ticket
-              id={14}
-              name="Combo Antecipado"
-              price={8597}
-              banner={ComboAntecipado}
-              quantity={2}
-              reference={6997}
+              reference={5997}
               isPassport
             />
           </SwiperSlide>
