@@ -3,7 +3,7 @@ import PassaporteAntecipado from '@/public/images/tickets/antecipado.png'
 import ComboEncantado from '@/public/images/tickets/encantado.png'
 import ComboEspetacular from '@/public/images/tickets/espetacular.png'
 import PassaporteIndividual from '@/public/images/tickets/individual.png'
-// import PassaporteSuperSegunda from '@/public/images/tickets/super-segunda.png'
+import PassaporteSuperSegunda from '@/public/images/tickets/super-segunda.png'
 import SwiperCore, { Autoplay, Navigation } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
@@ -35,7 +35,7 @@ export default function Tickets() {
       {(nowSP.getDay() >= 1 && nowSP.getDay() <= 4) ||
       (nowSP.getDay() === 0 && nowSP.getHours() >= 20) ? (
         <>
-          {/* <SwiperSlide>
+          <SwiperSlide>
             <Ticket
               id={15}
               name="Passaporte Super Segunda"
@@ -45,8 +45,8 @@ export default function Tickets() {
               reference={6997}
               isPassport
             />
-          </SwiperSlide> */}
-          <SwiperSlide>
+          </SwiperSlide>
+          {/* <SwiperSlide>
             <Ticket
               id={7}
               name="Passaporte Antecipado"
@@ -68,7 +68,7 @@ export default function Tickets() {
               reference={6997}
               isPassport
             />
-          </SwiperSlide>
+          </SwiperSlide> */}
         </>
       ) : (
         <>
