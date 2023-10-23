@@ -58,7 +58,7 @@ export default function Ticket({
                     quantity > 1 ? 'passaportes válidos' : 'passaporte válido '
                   } durante 30 dias, ${
                     isSuperSegunda
-                      ? 'Sextas, sábados, domingos e feriados.'
+                      ? 'para utilização nas sextas, sábados, domingos e feriados.'
                       : 'dentro do calendário operacional do parque.'
                   }`}
                 </li>
