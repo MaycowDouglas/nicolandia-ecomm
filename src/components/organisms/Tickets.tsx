@@ -44,6 +44,7 @@ export default function Tickets() {
               quantity={1}
               reference={6997}
               isPassport
+              isSuperSegunda
             />
           </SwiperSlide>
           {/* <SwiperSlide>

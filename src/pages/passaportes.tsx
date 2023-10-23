@@ -53,6 +53,7 @@ export default function PassaportsPage() {
                   quantity={1}
                   reference={6997}
                   isPassport
+                  isSuperSegunda
                 />
                 {/* <Ticket
                   id={7}

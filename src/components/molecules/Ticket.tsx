@@ -17,6 +17,7 @@ export type TicketProps = {
   reference: number
   isPassport?: boolean
   description?: ReactNode
+  isSuperSegunda?: boolean
 }
 
 export default function Ticket({
@@ -28,6 +29,7 @@ export default function Ticket({
   reference,
   isPassport,
   description,
+  isSuperSegunda,
 }: TicketProps) {
   const { add } = useCart()
   const { addFeedback } = useFeedback()
@@ -49,7 +51,11 @@ export default function Ticket({
           <ul className="divide-y-2 text-sm">
             <li className="py-2">
               <ul className="space-y-2">
-                <li className="font-bold">Válido somente para compra online</li>
+                <li className="font-bold">
+                  {isSuperSegunda
+                    ? 'Sextas, sábados, domingos e feriados'
+                    : 'Válido somente para compra online'}
+                </li>
                 {/* <li>Válido de sexta à domingo ou feriados</li> */}
                 <li className={isPassport ? '' : 'hidden'}>
                   {`${quantity} ${
