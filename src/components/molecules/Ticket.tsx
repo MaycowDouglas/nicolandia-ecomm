@@ -51,16 +51,16 @@ export default function Ticket({
           <ul className="divide-y-2 text-sm">
             <li className="py-2">
               <ul className="space-y-2">
-                <li className="font-bold">
-                  {isSuperSegunda
-                    ? 'Sextas, sábados, domingos e feriados'
-                    : 'Válido somente para compra online'}
-                </li>
+                <li className="font-bold">Válido somente para compra online</li>
                 {/* <li>Válido de sexta à domingo ou feriados</li> */}
                 <li className={isPassport ? '' : 'hidden'}>
                   {`${quantity} ${
                     quantity > 1 ? 'passaportes válidos' : 'passaporte válido '
-                  } durante 30 dias, dentro do calendário operacional do parque`}
+                  } durante 30 dias, ${
+                    isSuperSegunda
+                      ? 'Sextas, sábados, domingos e feriados.'
+                      : 'dentro do calendário operacional do parque.'
+                  }`}
                 </li>
               </ul>
               {description}
