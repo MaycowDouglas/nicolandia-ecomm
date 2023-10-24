@@ -42,8 +42,9 @@ export default function PassaportsPage() {
       </Head>
       <section className="pt-20 pb-10 bg-custom-300">
         <div className="container">
-          <h1 className="text-custom-600 font-black text-center text-3xl md:text-4xl xl:text-5xl leading-tight mb-12">
-            Compre seus passaportes <br className="hidden md:block" /> com mais praticidade!
+          <h1 className="mt-10 lg:mt-0 text-custom-600 font-black text-center text-3xl md:text-4xl xl:text-5xl leading-tight mb-12">
+            Temos um presente especial <br className="hidden md:block" /> reservado para nosso
+            visitante mais ilustre.
           </h1>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
