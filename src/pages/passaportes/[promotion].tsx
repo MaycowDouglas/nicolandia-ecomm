@@ -19,6 +19,7 @@ import PassaporteSuperSegunda from '@/public/images/tickets/super-segunda.png'
 import Head from 'next/head'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
+import { useEffect } from 'react'
 import { GoAlert } from 'react-icons/go'
 import SwiperCore, { Autoplay, Navigation } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
@@ -60,7 +61,7 @@ export default function PassaportsPage() {
               />
             )}
 
-            {((nowSP.getDay() === 0 && nowSP.getHours() >= 20) || nowSP.getDay() === 1) && (
+            {/* {((nowSP.getDay() === 0 && nowSP.getHours() >= 20) || nowSP.getDay() === 1) && (
               <Ticket
                 id={15}
                 name="Passaporte Super Segunda"
@@ -126,7 +127,7 @@ export default function PassaportsPage() {
                   isPassport
                 />
               </>
-            )}
+            )} */}
           </div>
 
           <h2 className="mt-10 lg:mt-16 mb-5 lg:mb-10 font-bold text-center md:text-start text-4xl md:text-4xl lg:text-5xl text-white">
