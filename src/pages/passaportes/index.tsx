@@ -26,6 +26,7 @@ SwiperCore.use([Autoplay, Navigation])
 export default function PassaportsPage() {
   const now = new Date()
   const nowSP = new Date(now.toLocaleString('en-US', { timeZone: 'America/Sao_Paulo' }))
+
   return (
     <>
       <Head>
@@ -42,19 +43,21 @@ export default function PassaportsPage() {
           </h1>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
-            {(nowSP.getDay() >= 1 && nowSP.getDay() <= 4) ||
-            (nowSP.getDay() === 0 && nowSP.getHours() >= 20) ? (
+            {((nowSP.getDay() === 0 && nowSP.getHours() >= 20) || nowSP.getDay() === 1) && (
+              <Ticket
+                id={15}
+                name="Passaporte Super Segunda"
+                price={3997}
+                banner={PassaporteSuperSegunda}
+                quantity={1}
+                reference={6997}
+                isPassport
+                isSuperSegunda
+              />
+            )}
+
+            {nowSP.getDay() >= 1 && nowSP.getDay() <= 4 && (
               <>
-                {/* <Ticket
-                  id={15}
-                  name="Passaporte Super Segunda"
-                  price={3997}
-                  banner={PassaporteSuperSegunda}
-                  quantity={1}
-                  reference={6997}
-                  isPassport
-                  isSuperSegunda
-                /> */}
                 <Ticket
                   id={7}
                   name="Passaporte Antecipado"
@@ -74,7 +77,9 @@ export default function PassaportsPage() {
                   isPassport
                 />
               </>
-            ) : (
+            )}
+
+            {(nowSP.getDay() >= 5 || (nowSP.getDay() === 0 && nowSP.getHours() < 20)) && (
               <>
                 <Ticket
                   id={2}

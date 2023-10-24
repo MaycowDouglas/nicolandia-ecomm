@@ -32,21 +32,23 @@ export default function Tickets() {
       slidesPerView={1}
       spaceBetween={30}
     >
-      {(nowSP.getDay() >= 1 && nowSP.getDay() <= 4) ||
-      (nowSP.getDay() === 0 && nowSP.getHours() >= 20) ? (
+      {((nowSP.getDay() === 0 && nowSP.getHours() >= 20) || nowSP.getDay() === 1) && (
+        <SwiperSlide>
+          <Ticket
+            id={15}
+            name="Passaporte Super Segunda"
+            price={3997}
+            banner={PassaporteSuperSegunda}
+            quantity={1}
+            reference={6997}
+            isPassport
+            isSuperSegunda
+          />
+        </SwiperSlide>
+      )}
+
+      {nowSP.getDay() >= 1 && nowSP.getDay() <= 4 && (
         <>
-          {/* <SwiperSlide>
-            <Ticket
-              id={15}
-              name="Passaporte Super Segunda"
-              price={3997}
-              banner={PassaporteSuperSegunda}
-              quantity={1}
-              reference={6997}
-              isPassport
-              isSuperSegunda
-            />
-          </SwiperSlide> */}
           <SwiperSlide>
             <Ticket
               id={7}
@@ -71,7 +73,9 @@ export default function Tickets() {
             />
           </SwiperSlide>
         </>
-      ) : (
+      )}
+
+      {(nowSP.getDay() >= 5 || (nowSP.getDay() === 0 && nowSP.getHours() < 20)) && (
         <>
           <SwiperSlide>
             <Ticket
