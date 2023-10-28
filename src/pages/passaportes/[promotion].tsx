@@ -32,6 +32,10 @@ export default function PassaportsPage() {
   const router = useRouter()
   const { promotion } = router.query
 
+  useEffect(() => {
+    router.push('/passaportes/')
+  }, [])
+
   return (
     <>
       <Head>
@@ -49,7 +53,7 @@ export default function PassaportsPage() {
           </h1>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
-            {promotion === 'fidelidade' && (
+            {promotion === 'disabled' && (
               <Ticket
                 id={16}
                 name="Passaporte Fidelidade"
