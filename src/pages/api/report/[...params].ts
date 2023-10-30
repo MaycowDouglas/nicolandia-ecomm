@@ -40,17 +40,18 @@ export default withSessionRoute(async function GetSalesRoute(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  const user = req.session.user
-  if (
-    !user ||
-    user.isLogged === false ||
-    user.data?.email !== String(process.env.NEXT_PUBLIC_ADMINISTRATIVE_MANAGER)
-  ) {
-    res.status(401).end()
-    return
-  }
-
   try {
+    const user = req.session.user
+
+    if (
+      !user ||
+      user.isLogged === false ||
+      user.data?.email !== String(process.env.NEXT_PUBLIC_ADMINISTRATIVE_MANAGER)
+    ) {
+      res.status(401).end()
+      return
+    }
+
     const params = req.query.params
 
     if (Array.isArray(params)) {
@@ -176,6 +177,7 @@ export default withSessionRoute(async function GetSalesRoute(
       throw new Error('Parâmetros inválidos')
     }
   } catch (error) {
-    res.status(400).json({})
+    console.log(error)
+    res.status(400).json(error)
   }
 })
