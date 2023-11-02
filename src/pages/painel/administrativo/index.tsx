@@ -50,57 +50,57 @@ export default function DashboardOperational() {
     }
   }, [user, router])
 
-  useEffect(() => {
-    async function getData() {
-      try {
-        const date = new Date()
-        const formatDate = date.toLocaleDateString().split('/')
-        selectDate(`${formatDate[2]}-${formatDate[1]}-${formatDate[0]}`)
+  // useEffect(() => {
+  //   async function getData() {
+  //     try {
+  //       const date = new Date()
+  //       const formatDate = date.toLocaleDateString().split('/')
+  //       selectDate(`${formatDate[2]}-${formatDate[1]}-${formatDate[0]}`)
 
-        const res = await fetch(`/api/report/${date.toLocaleDateString()}`)
-        const data: Response = await res.json()
+  //       const res = await fetch(`/api/report/${date.toLocaleDateString()}`)
+  //       const data: Response = await res.json()
 
-        setReport(data)
-      } catch (error) {
-        console.log(error)
-      }
-    }
+  //       setReport(data)
+  //     } catch (error) {
+  //       console.log(error)
+  //     }
+  //   }
 
-    if (firstAccess.current) {
-      getData()
-      firstAccess.current = false
-    }
-  }, [])
+  //   if (firstAccess.current) {
+  //     getData()
+  //     firstAccess.current = false
+  //   }
+  // }, [])
 
-  const handleDataChange = useCallback(async (e: ChangeEvent<HTMLInputElement>) => {
-    const value = e.target.value
-    const valuePieces = value.split('-')
+  // const handleDataChange = useCallback(async (e: ChangeEvent<HTMLInputElement>) => {
+  //   const value = e.target.value
+  //   const valuePieces = value.split('-')
 
-    const currentDate = new Date().toISOString().slice(5, 7)
+  //   const currentDate = new Date().toISOString().slice(5, 7)
 
-    const formatedDate = `${valuePieces[2]}/${currentDate}/${valuePieces[0]}`
+  //   const formatedDate = `${valuePieces[2]}/${currentDate}/${valuePieces[0]}`
 
-    console.log(`${valuePieces[0]}-${currentDate}-${valuePieces[2]}`)
-    selectDate(`${valuePieces[0]}-${currentDate}-${valuePieces[2]}`)
+  //   console.log(`${valuePieces[0]}-${currentDate}-${valuePieces[2]}`)
+  //   selectDate(`${valuePieces[0]}-${currentDate}-${valuePieces[2]}`)
 
-    const res = await fetch(`/api/report/${formatedDate}`)
-    const data = await res.json()
+  //   const res = await fetch(`/api/report/${formatedDate}`)
+  //   const data = await res.json()
 
-    setReport(data)
-  }, [])
+  //   setReport(data)
+  // }, [])
 
   return (
     <>
       <section className="pt-32 pb-20 lg:pt-24">
         <div className="container">
-          <input
+          {/* <input
             type="date"
             onChange={handleDataChange}
             value={selectedDate}
             className="border-2 border-zinc-300 px-3 py-1 rounded mx-auto md:mr-0 block"
-          />
+          /> */}
 
-          <div className="grid grid-cols-1 xl:grid-cols-2 gap-5">
+          {/* <div className="grid grid-cols-1 xl:grid-cols-2 gap-5">
             <div className="mt-10">
               <h2 className="mb-5 text-center font-bold text-lg md:text-xl xl:text-2xl">
                 Vendas do mês
@@ -162,7 +162,7 @@ export default function DashboardOperational() {
                 )}
               </table>
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
     </>

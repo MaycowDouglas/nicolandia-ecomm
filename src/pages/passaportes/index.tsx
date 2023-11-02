@@ -112,7 +112,7 @@ export default function PassaportsPage() {
             )}
           </div>
 
-          <h2 className="mt-10 lg:mt-16 mb-5 lg:mb-10 font-bold text-center md:text-start text-4xl md:text-4xl lg:text-5xl text-white">
+          {/* <h2 className="mt-10 lg:mt-16 mb-5 lg:mb-10 font-bold text-center md:text-start text-4xl md:text-4xl lg:text-5xl text-white">
             Adicione mais sabor à sua diversão
           </h2>
 
@@ -189,7 +189,7 @@ export default function PassaportsPage() {
                 }
               />
             </SwiperSlide>
-          </Swiper>
+          </Swiper> */}
 
           <div className="text-center md:w-1/2 mt-10 mx-auto" id="passaporte-vip">
             <h2 className="text-custom-600 font-black text-center text-3xl md:text-4xl xl:text-5xl leading-tight mb-5">

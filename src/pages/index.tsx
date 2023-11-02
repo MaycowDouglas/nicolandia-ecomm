@@ -66,13 +66,13 @@ export default function HomePage() {
             nextEl: '.main-swiper-next',
           }}
         >
-          <SwiperSlide>
+          {/* <SwiperSlide>
             <SlideImage
               alt="Diversão para toda a Família!"
               mobile={BannerDiaDasCriancasMobile}
               desktop={BannerDiaDasCriancasWeb}
             />
-          </SwiperSlide>
+          </SwiperSlide> */}
 
           <SwiperSlide>
             <SlideImage
@@ -127,11 +127,11 @@ export default function HomePage() {
           </h2>
           <Tickets />
 
-          <h2 className="mt-10 lg:mt-16 mb-5 lg:mb-10 font-bold text-center md:text-start text-4xl md:text-4xl lg:text-5xl text-white">
+          {/* <h2 className="mt-10 lg:mt-16 mb-5 lg:mb-10 font-bold text-center md:text-start text-4xl md:text-4xl lg:text-5xl text-white">
             Adicione mais sabor à sua diversão
-          </h2>
+          </h2> */}
 
-          <Swiper
+          {/* <Swiper
             breakpoints={{
               768: {
                 slidesPerView: 2,
@@ -204,7 +204,7 @@ export default function HomePage() {
                 }
               />
             </SwiperSlide>
-          </Swiper>
+          </Swiper> */}
         </div>
         <svg
           className="absolute z-10 top-0 left-0 w-full"
