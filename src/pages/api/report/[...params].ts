@@ -66,20 +66,14 @@ export default withSessionRoute(async function GetSalesRoute(
         month = parseInt(m, 10),
         year = parseInt(y, 10)
 
-      const d1 = new Date(`${year}-${month}-${day}`)
-      d1.setHours(d1.getHours() + 3)
-
-      const d2 = new Date(d1.getTime())
-      d2.setDate(d2.getDate() + 1)
-
       const daySales = await prisma.item.aggregate({
         _sum: { total: true },
         _count: { id: true },
         where: {
           ordered: {
             created_at: {
-              gt: new Date(2023, 8, 27, 0, 0, 0),
-              lt: new Date(2023, 8, 27, 23, 59, 0),
+              gt: new Date(year, month - 1, day, 0, 0, 0),
+              lt: new Date(year, month - 1, day, 23, 59, 59),
             },
             invoice: {
               status: 'PAID',
@@ -88,21 +82,17 @@ export default withSessionRoute(async function GetSalesRoute(
         },
       })
 
-      // const monthSales = await prisma.item.aggregate({
-      //   _sum: { total: true },
-      //   _count: { id: true },
-      //   where: {
-      //     ordered: {
-      //       created_at: {
-      //         gt: new Date(year, month - 1, 1, 0, 0, 0),
-      //         lt: new Date(year, month, 0, 23, 59, 59),
-      //       },
-      //       invoice: {
-      //         status: 'PAID',
-      //       },
-      //     },
-      //   },
-      // })
+      const dayValidated = await prisma.item.aggregate({
+        _count: { id: true },
+        where: {
+          ordered: {
+            used_on: {
+              gt: new Date(year, month - 1, day, 0, 0, 0),
+              lt: new Date(year, month - 1, day, 23, 59, 59),
+            },
+          },
+        },
+      })
 
       const daySalesByTicket = await prisma.item.groupBy({
         by: ['product_name'],
@@ -122,7 +112,7 @@ export default withSessionRoute(async function GetSalesRoute(
         orderBy: { _sum: { total: 'asc' } },
       })
 
-      const ticketsUsed = await prisma.item.groupBy({
+      const dayValidatedByTicket = await prisma.item.groupBy({
         by: ['product_name'],
         _count: { order_id: true },
         where: {
@@ -133,7 +123,7 @@ export default withSessionRoute(async function GetSalesRoute(
             },
           },
         },
-        orderBy: { _count: { order_id: 'asc' } },
+        orderBy: { _sum: { total: 'asc' } },
       })
 
       res.json({
@@ -144,13 +134,12 @@ export default withSessionRoute(async function GetSalesRoute(
           })),
           total: toMoney(daySales._sum.total),
         },
-        validated: ticketsUsed.map((item) => ({
-          name: item.product_name ? item.product_name : '',
-          total: item._count.order_id ? item._count.order_id : '',
-        })),
-        data: {
-          d1,
-          d2,
+        validated: {
+          byTicket: dayValidatedByTicket.map((item) => ({
+            name: item.product_name ? item.product_name : '',
+            total: item._count.order_id ? item._count.order_id : '',
+          })),
+          total: dayValidated._count.id,
         },
       })
     } else {

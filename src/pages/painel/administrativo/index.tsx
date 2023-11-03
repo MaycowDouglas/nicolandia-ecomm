@@ -4,35 +4,22 @@ import React, { ChangeEvent, useCallback, useEffect, useRef, useState } from 're
 
 type Response = {
   sales: {
-    day: {
-      total: string | null
-      byTickets:
-        | {
-            name: string
-            total: string
-          }[]
-        | null
-    }
-    month: {
-      currentYear: {
-        total: string | null
-        byTickets:
-          | {
-              name: string
-              total: string
-            }[]
-          | null
-      }
-      previousYear: {
-        total: string | null
-        byTickets:
-          | {
-              name: string
-              total: string
-            }[]
-          | null
-      }
-    }
+    total: string | null
+    byTicket:
+      | {
+          name: string
+          total: string
+        }[]
+      | null
+  }
+  validated: {
+    total: string | null
+    byTicket:
+      | {
+          name: string
+          total: string
+        }[]
+      | null
   }
 }
 
@@ -50,60 +37,59 @@ export default function DashboardOperational() {
     }
   }, [user, router])
 
-  // useEffect(() => {
-  //   async function getData() {
-  //     try {
-  //       const date = new Date()
-  //       const formatDate = date.toLocaleDateString().split('/')
-  //       selectDate(`${formatDate[2]}-${formatDate[1]}-${formatDate[0]}`)
+  useEffect(() => {
+    async function getData() {
+      try {
+        const date = new Date()
+        const formatDate = date.toLocaleDateString().split('/')
+        selectDate(`${formatDate[2]}-${formatDate[1]}-${formatDate[0]}`)
 
-  //       const res = await fetch(`/api/report/${date.toLocaleDateString()}`)
-  //       const data: Response = await res.json()
+        const res = await fetch(`/api/report/${date.toLocaleDateString()}`)
+        const data: Response = await res.json()
 
-  //       setReport(data)
-  //     } catch (error) {
-  //       console.log(error)
-  //     }
-  //   }
+        setReport(data)
+      } catch (error) {
+        console.log(error)
+      }
+    }
 
-  //   if (firstAccess.current) {
-  //     getData()
-  //     firstAccess.current = false
-  //   }
-  // }, [])
+    if (firstAccess.current) {
+      getData()
+      firstAccess.current = false
+    }
+  }, [])
 
-  // const handleDataChange = useCallback(async (e: ChangeEvent<HTMLInputElement>) => {
-  //   const value = e.target.value
-  //   const valuePieces = value.split('-')
+  const handleDataChange = useCallback(async (e: ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value
+    const valuePieces = value.split('-')
 
-  //   const currentDate = new Date().toISOString().slice(5, 7)
+    const currentDate = new Date().toISOString().slice(5, 7)
 
-  //   const formatedDate = `${valuePieces[2]}/${currentDate}/${valuePieces[0]}`
+    const formatedDate = `${valuePieces[2]}/${valuePieces[1]}/${valuePieces[0]}`
 
-  //   console.log(`${valuePieces[0]}-${currentDate}-${valuePieces[2]}`)
-  //   selectDate(`${valuePieces[0]}-${currentDate}-${valuePieces[2]}`)
+    selectDate(value)
 
-  //   const res = await fetch(`/api/report/${formatedDate}`)
-  //   const data = await res.json()
+    const res = await fetch(`/api/report/${formatedDate}`)
+    const data = await res.json()
 
-  //   setReport(data)
-  // }, [])
+    setReport(data)
+  }, [])
 
   return (
     <>
       <section className="pt-32 pb-20 lg:pt-24">
         <div className="container">
-          {/* <input
+          <input
             type="date"
             onChange={handleDataChange}
             value={selectedDate}
             className="border-2 border-zinc-300 px-3 py-1 rounded mx-auto md:mr-0 block"
-          /> */}
+          />
 
-          {/* <div className="grid grid-cols-1 xl:grid-cols-2 gap-5">
+          <div className="grid grid-cols-1 xl:grid-cols-2 gap-5">
             <div className="mt-10">
               <h2 className="mb-5 text-center font-bold text-lg md:text-xl xl:text-2xl">
-                Vendas do mês
+                Baixas do dia
               </h2>
               <table className="border w-full">
                 <thead>
@@ -115,7 +101,7 @@ export default function DashboardOperational() {
 
                 {report.sales && (
                   <tbody>
-                    {report.sales.month.currentYear.byTickets?.map((item, index) => (
+                    {report.validated.byTicket?.map((item, index) => (
                       <tr key={index}>
                         <td>{item.name}</td>
                         <td>{item.total}</td>
@@ -125,13 +111,12 @@ export default function DashboardOperational() {
                       <td>
                         <strong>Total</strong>
                       </td>
-                      <td>{report.sales.month.currentYear.total}</td>
+                      <td>{report.validated.total}</td>
                     </tr>
                   </tbody>
                 )}
               </table>
             </div>
-
             <div className="mt-10">
               <h2 className="mb-5 text-center font-bold text-lg md:text-xl xl:text-2xl">
                 Vendas do dia
@@ -146,7 +131,7 @@ export default function DashboardOperational() {
 
                 {report.sales && (
                   <tbody>
-                    {report.sales.day.byTickets?.map((item, index) => (
+                    {report.sales.byTicket?.map((item, index) => (
                       <tr key={index}>
                         <td>{item.name}</td>
                         <td>{item.total}</td>
@@ -156,13 +141,13 @@ export default function DashboardOperational() {
                       <td>
                         <strong>Total</strong>
                       </td>
-                      <td>{report.sales.day.total}</td>
+                      <td>{report.sales.total}</td>
                     </tr>
                   </tbody>
                 )}
               </table>
             </div>
-          </div> */}
+          </div>
         </div>
       </section>
     </>
