@@ -67,7 +67,7 @@ export default withSessionRoute(async function GetSalesRoute(
         year = parseInt(y, 10)
 
       const d1 = new Date(year, month - 1, day)
-      d1.setHours(d1.getHours())
+      d1.setHours(d1.getHours() + 3)
       const d2 = new Date(d1.getTime())
       d2.setDate(d2.getDate() + 1)
 
