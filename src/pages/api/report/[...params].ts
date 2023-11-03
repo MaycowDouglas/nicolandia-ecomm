@@ -66,14 +66,19 @@ export default withSessionRoute(async function GetSalesRoute(
         month = parseInt(m, 10),
         year = parseInt(y, 10)
 
+      const d1 = new Date(year, month - 1, day)
+      d1.setHours(d1.getHours())
+      const d2 = new Date(d1.getTime())
+      d2.setDate(d2.getDate() + 1)
+
       const daySales = await prisma.item.aggregate({
         _sum: { total: true },
         _count: { id: true },
         where: {
           ordered: {
             created_at: {
-              gt: new Date(year, month - 1, day, 0, 0, 0),
-              lt: new Date(year, month - 1, day, 23, 59, 59),
+              gt: d1,
+              lt: d2,
             },
             invoice: {
               status: 'PAID',
@@ -87,8 +92,8 @@ export default withSessionRoute(async function GetSalesRoute(
         where: {
           ordered: {
             used_on: {
-              gt: new Date(year, month - 1, day, 0, 0, 0),
-              lt: new Date(year, month - 1, day, 23, 59, 59),
+              gt: d1,
+              lt: d2,
             },
           },
         },
@@ -101,8 +106,8 @@ export default withSessionRoute(async function GetSalesRoute(
         where: {
           ordered: {
             created_at: {
-              gt: new Date(year, month - 1, day, 0, 0, 0),
-              lt: new Date(year, month - 1, day, 23, 59, 59),
+              gt: d1,
+              lt: d2,
             },
             invoice: {
               status: 'PAID',
@@ -118,8 +123,8 @@ export default withSessionRoute(async function GetSalesRoute(
         where: {
           ordered: {
             used_on: {
-              gt: new Date(year, month - 1, day, 0, 0, 0),
-              lt: new Date(year, month - 1, day, 23, 59, 59),
+              gt: d1,
+              lt: d2,
             },
           },
         },
