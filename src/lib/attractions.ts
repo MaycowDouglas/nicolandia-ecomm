@@ -101,14 +101,14 @@ export const data: AttractionProps[] = [
       minHeight: 130,
     },
   },
-  {
-    name: 'Disko',
-    image: AtractionDisko,
-    category: 'radical',
-    restrictions: {
-      minHeight: 130,
-    },
-  },
+  // {
+  //   name: 'Disko',
+  //   image: AtractionDisko,
+  //   category: 'radical',
+  //   restrictions: {
+  //     minHeight: 130,
+  //   },
+  // },
   // {
   //   name: 'Sky flyer',
   //   image: AtractionSkyFlyer,
@@ -148,16 +148,16 @@ export const data: AttractionProps[] = [
     category: 'familiar',
     observation: 'Crianças de 1.20 metros até 1.30 metros tem direito a acompanhante',
   },
-  {
-    name: 'Mini Roda',
-    image: AtractionMiniRoda,
-    category: 'familiar',
-    restrictions: {
-      minHeight: 80,
-    },
-    observation:
-      'Visitantes com estatura entre 0,80M e 1,10M somente acompanhado por um adulto responsável. Visitantes com altura superior a 1,95m e/ou peso superir a 120kg não devem usufruir desta atração.',
-  },
+  // {
+  //   name: 'Mini Roda',
+  //   image: AtractionMiniRoda,
+  //   category: 'familiar',
+  //   restrictions: {
+  //     minHeight: 80,
+  //   },
+  //   observation:
+  //     'Visitantes com estatura entre 0,80M e 1,10M somente acompanhado por um adulto responsável. Visitantes com altura superior a 1,95m e/ou peso superir a 120kg não devem usufruir desta atração.',
+  // },
   {
     name: 'Pirate Ship',
     image: AtractionPirateShip,
