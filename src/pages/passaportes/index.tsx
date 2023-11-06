@@ -56,7 +56,7 @@ export default function PassaportsPage() {
               />
             )}
 
-            {nowSP.getDay() >= 1 && nowSP.getDay() <= 4 && (
+            {nowSP.getDay() >= 2 && nowSP.getDay() <= 4 && (
               <>
                 <Ticket
                   id={7}
