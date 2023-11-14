@@ -202,7 +202,7 @@ export const data: AttractionProps[] = [
     image: AtractionGrandPrix,
     category: 'familiar',
     observation:
-      'Crianças com altura de 0.80cm até 1.30 metros, tem direito a acompanhante. Para participar desta atração, você precisa ter mais flexibilidade na parte inferior, por ser um brinquedo que sofre impactos. Lembrando que será necessário um acompanhante para estar pressionando o pedal de aceleração.',
+      'Crianças com altura de 0.80cm até 1.20 metros, tem direito a acompanhante. Para participar desta atração, você precisa ter mais flexibilidade na parte inferior, por ser um brinquedo que sofre impactos. Lembrando que será necessário um acompanhante para estar pressionando o pedal de aceleração.',
   },
   {
     name: 'Tiro',
