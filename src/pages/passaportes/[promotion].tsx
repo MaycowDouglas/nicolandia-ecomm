@@ -32,9 +32,9 @@ export default function PassaportsPage() {
   const router = useRouter()
   const { promotion } = router.query
 
-  // useEffect(() => {
-  //   router.push('/passaportes/')
-  // }, [router])
+  useEffect(() => {
+    router.push('/passaportes/')
+  }, [router])
 
   return (
     <>

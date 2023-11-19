@@ -47,7 +47,7 @@ export default function PassaportsPage() {
               <Ticket
                 id={15}
                 name="Passaporte Super Segunda"
-                price={3997}
+                price={3297}
                 banner={PassaporteSuperSegunda}
                 quantity={1}
                 reference={6997}
@@ -61,19 +61,19 @@ export default function PassaportsPage() {
                 <Ticket
                   id={7}
                   name="Passaporte Antecipado"
-                  price={4997}
+                  price={4197}
                   banner={PassaporteAntecipado}
                   quantity={1}
-                  reference={5997}
+                  reference={4997}
                   isPassport
                 />
                 <Ticket
                   id={14}
                   name="Combo Antecipado"
-                  price={8597}
+                  price={7097}
                   banner={ComboAntecipado}
                   quantity={2}
-                  reference={5997}
+                  reference={4997}
                   isPassport
                 />
               </>
@@ -84,28 +84,28 @@ export default function PassaportsPage() {
                 <Ticket
                   id={2}
                   name="Passaporte Individual"
-                  price={5997}
+                  price={4997}
                   banner={PassaporteIndividual}
                   quantity={1}
-                  reference={5997}
+                  reference={4997}
                   isPassport
                 />
                 <Ticket
                   id={3}
                   name="Combo Encantado"
-                  price={10997}
+                  price={9097}
                   banner={ComboEncantado}
                   quantity={2}
-                  reference={5997}
+                  reference={4997}
                   isPassport
                 />
                 <Ticket
                   id={4}
                   name="Combo Espetacular"
-                  price={13997}
+                  price={11497}
                   banner={ComboEspetacular}
                   quantity={3}
-                  reference={5997}
+                  reference={4997}
                   isPassport
                 />
               </>

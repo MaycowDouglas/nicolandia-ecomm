@@ -7,12 +7,12 @@ import SlideVideo from '@/components/atoms/SlideVideo'
 import Ticket from '@/components/molecules/Ticket'
 import Attractions from '@/components/organisms/Attractions'
 import Tickets from '@/components/organisms/Tickets'
+import BannerBlackFridayWeb from '@/public/images/banners/black-friday-desktop.png'
+import BannerBlackFridayMobile from '@/public/images/banners/black-friday-mobile.png'
 import BannerBrinquedosWeb from '@/public/images/banners/brinquedos-desktop.png'
 import BannerBrinquedosMobile from '@/public/images/banners/brinquedos-mobile.png'
 import BannerComboPipocaWeb from '@/public/images/banners/combo-pipoca-desktop.png'
 import BannerComboPipocaMobile from '@/public/images/banners/combo-pipoca-mobile.png'
-import BannerDiaDasCriancasWeb from '@/public/images/banners/dia-das-criancas-desktop.png'
-import BannerDiaDasCriancasMobile from '@/public/images/banners/dia-das-criancas-mobile.png'
 import BannerFamilySwingWeb from '@/public/images/banners/family-swing-desktop.png'
 import BannerFamilySwingMobile from '@/public/images/banners/family-swing-mobile.png'
 import BannerKidsWeb from '@/public/images/banners/kids-desktop.png'
@@ -66,13 +66,13 @@ export default function HomePage() {
             nextEl: '.main-swiper-next',
           }}
         >
-          {/* <SwiperSlide>
+          <SwiperSlide>
             <SlideImage
               alt="Diversão para toda a Família!"
-              mobile={BannerDiaDasCriancasMobile}
-              desktop={BannerDiaDasCriancasWeb}
+              mobile={BannerBlackFridayMobile}
+              desktop={BannerBlackFridayWeb}
             />
-          </SwiperSlide> */}
+          </SwiperSlide>
 
           <SwiperSlide>
             <SlideImage
