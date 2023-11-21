@@ -40,7 +40,7 @@ export default function Tickets() {
             price={3297}
             banner={PassaporteSuperSegunda}
             quantity={1}
-            reference={6997}
+            reference={5997}
             isPassport
             isSuperSegunda
           />
@@ -56,7 +56,7 @@ export default function Tickets() {
               price={4197}
               banner={PassaporteAntecipado}
               quantity={1}
-              reference={6997}
+              reference={5997}
               isPassport
             />
           </SwiperSlide>
@@ -68,7 +68,7 @@ export default function Tickets() {
               price={7097}
               banner={ComboAntecipado}
               quantity={2}
-              reference={6997}
+              reference={5997}
               isPassport
             />
           </SwiperSlide>
@@ -84,7 +84,7 @@ export default function Tickets() {
               price={4997}
               banner={PassaporteIndividual}
               quantity={1}
-              reference={4997}
+              reference={5997}
               isPassport
             />
           </SwiperSlide>
@@ -95,7 +95,7 @@ export default function Tickets() {
               price={9097}
               banner={ComboEncantado}
               quantity={2}
-              reference={4997}
+              reference={5997}
               isPassport
             />
           </SwiperSlide>
@@ -106,7 +106,7 @@ export default function Tickets() {
               price={11497}
               banner={ComboEspetacular}
               quantity={3}
-              reference={4997}
+              reference={5997}
               isPassport
             />
           </SwiperSlide>
