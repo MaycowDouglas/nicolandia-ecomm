@@ -7,6 +7,8 @@ import SlideVideo from '@/components/atoms/SlideVideo'
 import Ticket from '@/components/molecules/Ticket'
 import Attractions from '@/components/organisms/Attractions'
 import Tickets from '@/components/organisms/Tickets'
+import Banner360Web from '@/public/images/banners/360-desktop.png'
+import Banner360Mobile from '@/public/images/banners/360-mobile.png'
 import BannerBlackFridayWeb from '@/public/images/banners/black-friday-desktop.png'
 import BannerBlackFridayMobile from '@/public/images/banners/black-friday-mobile.png'
 import BannerBrinquedosWeb from '@/public/images/banners/brinquedos-desktop.png'
@@ -71,6 +73,14 @@ export default function HomePage() {
               alt="Diversão para toda a Família!"
               mobile={BannerBlackFridayMobile}
               desktop={BannerBlackFridayWeb}
+            />
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <SlideImage
+              alt="Diversão para toda a Família!"
+              mobile={Banner360Mobile}
+              desktop={Banner360Web}
             />
           </SwiperSlide>
 

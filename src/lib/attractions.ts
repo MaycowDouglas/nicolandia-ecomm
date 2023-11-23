@@ -1,6 +1,7 @@
+import Atraction360 from '@/public/images/atractions/360.png'
 import AtractionArenaElastica from '@/public/images/atractions/arena-elastica.jpeg'
 import AtractionBrinquedao from '@/public/images/atractions/brinquedao.png'
-import AtractionCarrossel from '@/public/images/atractions/carrossel.jpg'
+// import AtractionCarrossel from '@/public/images/atractions/carrossel.jpg'
 import AtractionColossusLoop from '@/public/images/atractions/colossus-loop.jpeg'
 import AtractionCrazyDance from '@/public/images/atractions/crazy-dance.jpg'
 import AtractionDisko from '@/public/images/atractions/disko.jpg'
@@ -48,6 +49,16 @@ export type AttractionProps = {
 }
 
 export const data: AttractionProps[] = [
+  {
+    name: '360',
+    image: Atraction360,
+    category: 'radical',
+    observation:
+      'Esta atração não é aconselhável para pessoas com problemas de saúde como labirintite, epilepsia. E também para portadores de disfunção motora e mental.',
+    restrictions: {
+      minHeight: 140,
+    },
+  },
   {
     name: 'Kabum',
     image: AtractionKabum,
@@ -253,14 +264,14 @@ export const data: AttractionProps[] = [
       maxHeight: 140,
     },
   },
-  {
-    name: 'Carrossel',
-    image: AtractionCarrossel,
-    category: 'childish',
-    restrictions: {
-      maxHeight: 140,
-    },
-  },
+  // {
+  //   name: 'Carrossel',
+  //   image: AtractionCarrossel,
+  //   category: 'childish',
+  //   restrictions: {
+  //     maxHeight: 140,
+  //   },
+  // },
   {
     name: 'T-rex',
     image: AtractionTrex,
