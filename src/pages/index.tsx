@@ -92,14 +92,6 @@ export default function HomePage() {
             />
           </SwiperSlide>
 
-          <SwiperSlide>
-            <SlideImage
-              alt="Diversão para toda a Família!"
-              mobile={BannerComboPipocaMobile}
-              desktop={BannerComboPipocaWeb}
-            />
-          </SwiperSlide>
-
           <div className="main-swiper-prev z-50 absolute top-0 bottom-0 left-0 px-2 flex items-center bg-black bg-opacity-30 text-white text-2xl md:text-5xl">
             <FaChevronLeft />
           </div>
