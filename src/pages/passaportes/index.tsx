@@ -11,6 +11,7 @@ import ComboFamilia from '@/public/images/combos/combo-familia.png'
 import ComboKabum from '@/public/images/combos/combo-kabum.jpeg'
 import ComboPipoca from '@/public/images/combos/combo-pipoca.png'
 import PassaporteAntecipado from '@/public/images/tickets/antecipado.png'
+import PassaporteBlackFriday from '@/public/images/tickets/black-friday.jpg'
 import ComboEncantado from '@/public/images/tickets/encantado.png'
 import ComboEspetacular from '@/public/images/tickets/espetacular.png'
 import PassaporteIndividual from '@/public/images/tickets/individual.png'
@@ -81,6 +82,15 @@ export default function PassaportsPage() {
 
             {(nowSP.getDay() >= 5 || (nowSP.getDay() === 0 && nowSP.getHours() < 20)) && (
               <>
+                <Ticket
+                  id={6}
+                  name="Passaporte Black Friday"
+                  price={3197}
+                  banner={PassaporteBlackFriday}
+                  quantity={1}
+                  reference={5997}
+                  isPassport
+                />
                 <Ticket
                   id={2}
                   name="Passaporte Individual"

@@ -1,5 +1,6 @@
 import ComboAntecipado from '@/public/images/combos/combo-antecipado.png'
 import PassaporteAntecipado from '@/public/images/tickets/antecipado.png'
+import PassaporteBlackFriday from '@/public/images/tickets/black-friday.jpg'
 import ComboEncantado from '@/public/images/tickets/encantado.png'
 import ComboEspetacular from '@/public/images/tickets/espetacular.png'
 import PassaporteIndividual from '@/public/images/tickets/individual.png'
@@ -79,6 +80,17 @@ export default function Tickets() {
         <>
           <SwiperSlide>
             <Ticket
+              id={6}
+              name="Passaporte Black Friday"
+              price={3197}
+              banner={PassaporteBlackFriday}
+              quantity={1}
+              reference={5997}
+              isPassport
+            />
+          </SwiperSlide>
+          {/* <SwiperSlide>
+            <Ticket
               id={2}
               name="Passaporte Individual"
               price={4997}
@@ -109,7 +121,7 @@ export default function Tickets() {
               reference={5997}
               isPassport
             />
-          </SwiperSlide>
+          </SwiperSlide> */}
         </>
       )}
     </Swiper>
