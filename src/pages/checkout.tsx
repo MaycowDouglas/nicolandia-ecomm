@@ -198,6 +198,11 @@ export default function CheckoutPage() {
           return
         }
 
+        if (personalData.state.length > 2) {
+          addFeedback({ type: 'error', message: 'Insira a sigla (2 letras) do seu estado!' })
+          return
+        }
+
         const order: Order = {
           company: 1,
           customer: {
@@ -212,7 +217,7 @@ export default function CheckoutPage() {
             ],
             address: {
               city: personalData.city,
-              state: personalData.state,
+              state: personalData.state.toUpperCase(),
               number: personalData.number,
               street: personalData.street,
               zipcode: personalData.zipcode,
