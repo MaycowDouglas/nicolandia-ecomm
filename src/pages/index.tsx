@@ -68,13 +68,13 @@ export default function HomePage() {
             nextEl: '.main-swiper-next',
           }}
         >
-          <SwiperSlide>
+          {/* <SwiperSlide>
             <SlideImage
               alt="Diversão para toda a Família!"
               mobile={BannerBlackFridayMobile}
               desktop={BannerBlackFridayWeb}
             />
-          </SwiperSlide>
+          </SwiperSlide> */}
 
           <SwiperSlide>
             <SlideImage
