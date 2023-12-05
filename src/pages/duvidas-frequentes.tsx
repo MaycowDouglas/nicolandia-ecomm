@@ -57,7 +57,7 @@ export default function FaqPage() {
     {
       question: 'Se começar a chover enquanto estou no parque, o que acontece?',
       awnser:
-        'Entendemos que é muito chato estar no nosso parque se divertindo e de repente começar a chover. Por isso, em caso de interrupção total das atrações devido à chuva, a Nova Nicolândia oferece uma cortesia aos visitantes que estão no parque há menos de 2 horas, terão seu passaporte revalidado gratuitamente pelo parque. Ou seja, você poderá voltar outro dia para se divertir aqui à vontade!',
+        'Entendemos que a chuva pode interferir na sua diversão no nosso parque. Por isso, se as atrações forem interrompidas devido ao mau tempo e você estiver no parque há menos de 2 horas, oferecemos o Seguro Chuva. Seu passaporte será revalidado gratuitamente para que possa usar em outro dia, permitindo que você retorne e aproveite as atrações. É importante que o visitante revalide o passaporte no mesmo dia para receber o Seguro Chuva. Este voucher permitirá que você retorne em outro momento e continue se divertindo conosco! Aproveite ao máximo sua experiência na Nova Nicolândia!',
     },
     {
       question: 'Posso entrar e sair do parque com o mesmo passaporte?',
