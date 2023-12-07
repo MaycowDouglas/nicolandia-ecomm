@@ -7,7 +7,7 @@ export default function CartProvider({ children }: { children: ReactNode }) {
   const [items, setItems] = useState<CartItem[]>([])
 
   useEffect(() => {
-    const storedCart = localStorage.getItem('Nicolandia@Cart')
+    const storedCart = localStorage.getItem('Nicolandia@Cart122023')
     if (storedCart) {
       setItems(JSON.parse(storedCart))
     }
@@ -15,7 +15,7 @@ export default function CartProvider({ children }: { children: ReactNode }) {
 
   function persist(items: CartItem[]) {
     setItems(items)
-    localStorage.setItem('Nicolandia@Cart', JSON.stringify(items))
+    localStorage.setItem('Nicolandia@Cart122023', JSON.stringify(items))
   }
 
   function add(item: CartItem) {

@@ -1,10 +1,9 @@
 import ComboAntecipado from '@/public/images/combos/combo-antecipado.png'
-import PassaporteAntecipado from '@/public/images/tickets/antecipado.png'
-import PassaporteBlackFriday from '@/public/images/tickets/black-friday.jpg'
-import ComboEncantado from '@/public/images/tickets/encantado.png'
-import ComboEspetacular from '@/public/images/tickets/espetacular.png'
-import PassaporteIndividual from '@/public/images/tickets/individual.png'
-import PassaporteSuperSegunda from '@/public/images/tickets/super-segunda.png'
+import ComboEncantado from '@/public/images/tickets/combo-encantado.png'
+import ComboEspetacular from '@/public/images/tickets/combo-espetacular.png'
+import PassaporteAntecipado from '@/public/images/tickets/passaporte-antecipado.png'
+import PassaporteIndividual from '@/public/images/tickets/passaporte-individual.png'
+import PassaporteSuperSegunda from '@/public/images/tickets/passaporte-super-segunda.png'
 import SwiperCore, { Autoplay, Navigation } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
@@ -78,17 +77,6 @@ export default function Tickets() {
 
       {(nowSP.getDay() >= 4 || (nowSP.getDay() === 0 && nowSP.getHours() < 20)) && (
         <>
-          {/* <SwiperSlide>
-            <Ticket
-              id={6}
-              name="Passaporte Black Friday"
-              price={3197}
-              banner={PassaporteBlackFriday}
-              quantity={1}
-              reference={5997}
-              isPassport
-            />
-          </SwiperSlide> */}
           <SwiperSlide>
             <Ticket
               id={2}

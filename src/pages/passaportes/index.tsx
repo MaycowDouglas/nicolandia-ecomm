@@ -10,17 +10,15 @@ import ComboAntecipado from '@/public/images/combos/combo-antecipado.png'
 import ComboFamilia from '@/public/images/combos/combo-familia.png'
 import ComboKabum from '@/public/images/combos/combo-kabum.jpeg'
 import ComboPipoca from '@/public/images/combos/combo-pipoca.png'
-import PassaporteAntecipado from '@/public/images/tickets/antecipado.png'
-import PassaporteBlackFriday from '@/public/images/tickets/black-friday.jpg'
-import ComboEncantado from '@/public/images/tickets/encantado.png'
-import ComboEspetacular from '@/public/images/tickets/espetacular.png'
-import PassaporteIndividual from '@/public/images/tickets/individual.png'
-import PassaporteSuperSegunda from '@/public/images/tickets/super-segunda.png'
+import ComboEncantado from '@/public/images/tickets/combo-encantado.png'
+import ComboEspetacular from '@/public/images/tickets/combo-espetacular.png'
+import PassaporteAntecipado from '@/public/images/tickets/passaporte-antecipado.png'
+import PassaporteIndividual from '@/public/images/tickets/passaporte-individual.png'
+import PassaporteSuperSegunda from '@/public/images/tickets/passaporte-super-segunda.png'
 import Head from 'next/head'
 import Image from 'next/image'
 import { GoAlert } from 'react-icons/go'
 import SwiperCore, { Autoplay, Navigation } from 'swiper'
-import { Swiper, SwiperSlide } from 'swiper/react'
 
 SwiperCore.use([Autoplay, Navigation])
 
@@ -82,15 +80,6 @@ export default function PassaportsPage() {
 
             {(nowSP.getDay() >= 4 || (nowSP.getDay() === 0 && nowSP.getHours() < 20)) && (
               <>
-                {/* <Ticket
-                  id={6}
-                  name="Passaporte Black Friday"
-                  price={3197}
-                  banner={PassaporteBlackFriday}
-                  quantity={1}
-                  reference={5997}
-                  isPassport
-                /> */}
                 <Ticket
                   id={2}
                   name="Passaporte Individual"
@@ -332,24 +321,6 @@ export default function PassaportsPage() {
           </div>
         </div>
       </section>
-      {/* <section>
-        <div className="my-10">
-          <Image
-            src={Convenios}
-            className="w-full h-60 2xl:h-80 object-cover object-right"
-            alt=""
-          />
-        </div>
-        <div className="container">
-          <h2 className="mt-10 mb-5 text-5xl text-custom-600 font-black">Convênios</h2>
-
-          <div className="text-lg">
-            <p>Passaporte por apenas R$ 50,00 cada.</p>
-            <p>Permitido apenas 5 passaportes por carteirinha.</p>
-            <p>Benefício válido dentro do calendário operacional do parque.</p>
-          </div>
-        </div>
-      </section> */}
     </>
   )
 }
