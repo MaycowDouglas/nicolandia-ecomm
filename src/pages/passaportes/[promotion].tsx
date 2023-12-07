@@ -6,23 +6,13 @@ import Assof from '@/public/images/brands/assof.png'
 import Caadf from '@/public/images/brands/caadf.png'
 import Oabdf from '@/public/images/brands/oabdf.png'
 import Sinprfdf from '@/public/images/brands/sinprfdf.png'
-import ComboAntecipado from '@/public/images/combos/combo-antecipado.png'
-import ComboFamilia from '@/public/images/combos/combo-familia.png'
-import ComboKabum from '@/public/images/combos/combo-kabum.jpeg'
-import ComboPipoca from '@/public/images/combos/combo-pipoca.png'
-import PassaporteAntecipado from '@/public/images/tickets/antecipado.png'
-import ComboEncantado from '@/public/images/tickets/encantado.png'
-import ComboEspetacular from '@/public/images/tickets/espetacular.png'
-import PassaporteFidelidade from '@/public/images/tickets/fidelidade.png'
-import PassaporteIndividual from '@/public/images/tickets/individual.png'
-import PassaporteSuperSegunda from '@/public/images/tickets/super-segunda.png'
+import PassaporteAntecipado from '@/public/images/tickets/passaporte-antecipado.png'
 import Head from 'next/head'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
 import { useEffect } from 'react'
 import { GoAlert } from 'react-icons/go'
 import SwiperCore, { Autoplay, Navigation } from 'swiper'
-import { Swiper, SwiperSlide } from 'swiper/react'
 
 SwiperCore.use([Autoplay, Navigation])
 
@@ -53,7 +43,7 @@ export default function PassaportsPage() {
           </h1>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
-            {promotion === 'antecipado' && (
+            {promotion === 'disable' && (
               <Ticket
                 id={7}
                 name="Passaporte Antecipado"
@@ -64,154 +54,7 @@ export default function PassaportsPage() {
                 isPassport
               />
             )}
-
-            {/* {((nowSP.getDay() === 0 && nowSP.getHours() >= 20) || nowSP.getDay() === 1) && (
-              <Ticket
-                id={15}
-                name="Passaporte Super Segunda"
-                price={3997}
-                banner={PassaporteSuperSegunda}
-                quantity={1}
-                reference={6997}
-                isPassport
-                isSuperSegunda
-              />
-            )}
-
-            {nowSP.getDay() >= 1 && nowSP.getDay() <= 4 && (
-              <>
-                <Ticket
-                  id={7}
-                  name="Passaporte Antecipado"
-                  price={4997}
-                  banner={PassaporteAntecipado}
-                  quantity={1}
-                  reference={5997}
-                  isPassport
-                />
-                <Ticket
-                  id={14}
-                  name="Combo Antecipado"
-                  price={8597}
-                  banner={ComboAntecipado}
-                  quantity={2}
-                  reference={5997}
-                  isPassport
-                />
-              </>
-            )}
-
-            {(nowSP.getDay() >= 5 || (nowSP.getDay() === 0 && nowSP.getHours() < 20)) && (
-              <>
-                <Ticket
-                  id={2}
-                  name="Passaporte Individual"
-                  price={5997}
-                  banner={PassaporteIndividual}
-                  quantity={1}
-                  reference={5997}
-                  isPassport
-                />
-                <Ticket
-                  id={3}
-                  name="Combo Encantado"
-                  price={10997}
-                  banner={ComboEncantado}
-                  quantity={2}
-                  reference={5997}
-                  isPassport
-                />
-                <Ticket
-                  id={4}
-                  name="Combo Espetacular"
-                  price={13997}
-                  banner={ComboEspetacular}
-                  quantity={3}
-                  reference={5997}
-                  isPassport
-                />
-              </>
-            )} */}
           </div>
-
-          <h2 className="mt-10 lg:mt-16 mb-5 lg:mb-10 font-bold text-center md:text-start text-4xl md:text-4xl lg:text-5xl text-white">
-            Adicione mais sabor à sua diversão
-          </h2>
-
-          <Swiper
-            breakpoints={{
-              768: {
-                slidesPerView: 2,
-              },
-              1024: {
-                slidesPerView: 3,
-              },
-              1280: {
-                slidesPerView: 4,
-              },
-            }}
-            autoplay={{ delay: 4000 }}
-            className="w-full"
-            slidesPerView={1}
-            spaceBetween={30}
-          >
-            <SwiperSlide>
-              <Ticket
-                id={11}
-                name="Combo Lanche Kabum"
-                price={2997}
-                banner={ComboKabum}
-                quantity={1}
-                reference={3800}
-                description={
-                  <>
-                    <p className="mt-2 text-sm font-bold">Redirada do pedido até às 19h</p>
-                    <p className="mt-2 text-sm">Não válido como passaporte</p>
-                    <p className="mt-2 text-sm">
-                      1 Hambúrguer, 1 Porção de batatas fritas pequena e 1 Fanta lata
-                    </p>
-                  </>
-                }
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <Ticket
-                id={12}
-                name="Combo Lanche Família"
-                price={8997}
-                banner={ComboFamilia}
-                quantity={1}
-                reference={10000}
-                description={
-                  <>
-                    <p className="mt-2 text-sm font-bold">Redirada do pedido até às 19h</p>
-                    <p className="mt-2 text-sm">Não válido como passaporte</p>
-                    <p className="mt-2 text-sm">
-                      3 Hambúrgueres Crazy Dance X-Salada, 1 Porção de batatas fritas grande e 1
-                      Fanta 2 litros
-                    </p>
-                  </>
-                }
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <Ticket
-                id={13}
-                name="Combo Lanche Pipoca"
-                price={2497}
-                banner={ComboPipoca}
-                quantity={1}
-                reference={2800}
-                description={
-                  <>
-                    <p className="mt-2 text-sm font-bold">Redirada do pedido até às 19h</p>
-                    <p className="mt-2 text-sm">Não válido como passaporte</p>
-                    <p className="mt-2 text-sm">1 Pipoca grande e 1 Fanta 600ml</p>
-                  </>
-                }
-              />
-            </SwiperSlide>
-          </Swiper>
 
           <div className="text-center md:w-1/2 mt-10 mx-auto" id="passaporte-vip">
             <h2 className="text-custom-600 font-black text-center text-3xl md:text-4xl xl:text-5xl leading-tight mb-5">
