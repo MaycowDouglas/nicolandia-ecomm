@@ -82,7 +82,7 @@ export default function PassaportsPage() {
 
             {(nowSP.getDay() >= 4 || (nowSP.getDay() === 0 && nowSP.getHours() < 20)) && (
               <>
-                <Ticket
+                {/* <Ticket
                   id={6}
                   name="Passaporte Black Friday"
                   price={3197}
@@ -90,34 +90,34 @@ export default function PassaportsPage() {
                   quantity={1}
                   reference={5997}
                   isPassport
-                />
-                {/* <Ticket
+                /> */}
+                <Ticket
                   id={2}
                   name="Passaporte Individual"
-                  price={4997}
+                  price={7697}
                   banner={PassaporteIndividual}
                   quantity={1}
-                  reference={5997}
+                  reference={7697}
                   isPassport
                 />
                 <Ticket
                   id={3}
                   name="Combo Encantado"
-                  price={9097}
+                  price={14297}
                   banner={ComboEncantado}
                   quantity={2}
-                  reference={5997}
+                  reference={7697}
                   isPassport
                 />
                 <Ticket
                   id={4}
                   name="Combo Espetacular"
-                  price={11497}
+                  price={19797}
                   banner={ComboEspetacular}
                   quantity={3}
-                  reference={5997}
+                  reference={7697}
                   isPassport
-                /> */}
+                />
               </>
             )}
           </div>
