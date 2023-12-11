@@ -562,6 +562,16 @@ export default function CheckoutPage() {
                   * É obrigatória a apresentação do documento de RG ou CNH do titular do cartão e
                   cartão de crédito.
                 </li>
+                <li>
+                  * Entendemos que a chuva pode interferir na sua diversão no nosso parque. Por
+                  isso, se as atrações forem interrompidas devido ao mau tempo e você estiver no
+                  parque há menos de 2 horas, oferecemos o Seguro Chuva. Seu passaporte será
+                  revalidado gratuitamente para que possa usar em outro dia, permitindo que você
+                  retorne e aproveite as atrações. É importante que o visitante revalide o
+                  passaporte no mesmo dia para receber o Seguro Chuva. Este voucher permitirá que
+                  você retorne em outro momento e continue se divertindo conosco! Aproveite ao
+                  máximo sua experiência na Nova Nicolândia!
+                </li>
                 <li className="font-bold">
                   NÃO SERÃO ACEITOS RECIBOS OU COMPROVANTES DE PAGAMENTOS PARA RETIRADA DO
                   PASSAPORTE, LIBERAÇÃO APENAS MEDIANTE APRESENTAÇÃO DO CÓDIGO ENVIADO POR E-MAIL
