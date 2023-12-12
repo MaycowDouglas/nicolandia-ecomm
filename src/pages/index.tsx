@@ -3,31 +3,17 @@ import 'swiper/css/navigation'
 
 import Button from '@/components/atoms/Button'
 import SlideImage from '@/components/atoms/SlideImage'
-import SlideVideo from '@/components/atoms/SlideVideo'
-import Ticket from '@/components/molecules/Ticket'
 import Attractions from '@/components/organisms/Attractions'
 import Tickets from '@/components/organisms/Tickets'
 import Banner360Web from '@/public/images/banners/360-desktop.png'
 import Banner360Mobile from '@/public/images/banners/360-mobile.png'
-import BannerBlackFridayWeb from '@/public/images/banners/black-friday-desktop.png'
-import BannerBlackFridayMobile from '@/public/images/banners/black-friday-mobile.png'
 import BannerBrinquedosWeb from '@/public/images/banners/brinquedos-desktop.png'
 import BannerBrinquedosMobile from '@/public/images/banners/brinquedos-mobile.png'
-import BannerComboPipocaWeb from '@/public/images/banners/combo-pipoca-desktop.png'
-import BannerComboPipocaMobile from '@/public/images/banners/combo-pipoca-mobile.png'
-import BannerFamilySwingWeb from '@/public/images/banners/family-swing-desktop.png'
-import BannerFamilySwingMobile from '@/public/images/banners/family-swing-mobile.png'
-import BannerKidsWeb from '@/public/images/banners/kids-desktop.png'
-import BannerKidsMobile from '@/public/images/banners/kids-mobile.png'
-import BannerOneWeb from '@/public/images/banners/one-desktop.png'
-import BannerOneMobile from '@/public/images/banners/one-mobile.png'
+import BannerFeriasWeb from '@/public/images/banners/ferias-desktop.png'
+import BannerFeriasMobile from '@/public/images/banners/ferias-mobile.png'
 import NicoAppDark from '@/public/images/brands/nicoapp-dark.svg'
-import ComboFamilia from '@/public/images/combos/combo-familia.png'
-import ComboKabum from '@/public/images/combos/combo-kabum.jpeg'
-import ComboPipoca from '@/public/images/combos/combo-pipoca.png'
 import Head from 'next/head'
 import Image from 'next/image'
-import Link from 'next/link'
 import { useRef } from 'react'
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa'
 import SwiperCore, { Autoplay, Navigation } from 'swiper'
@@ -68,13 +54,13 @@ export default function HomePage() {
             nextEl: '.main-swiper-next',
           }}
         >
-          {/* <SwiperSlide>
+          <SwiperSlide>
             <SlideImage
               alt="Diversão para toda a Família!"
-              mobile={BannerBlackFridayMobile}
-              desktop={BannerBlackFridayWeb}
+              mobile={BannerFeriasMobile}
+              desktop={BannerFeriasWeb}
             />
-          </SwiperSlide> */}
+          </SwiperSlide>
 
           <SwiperSlide>
             <SlideImage
