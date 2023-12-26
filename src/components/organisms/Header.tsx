@@ -38,7 +38,7 @@ export default function Header() {
         >
           <p className="text-center text-custom-600">
             <strong>Horário de funcionamento:</strong> Terça a Sexta de 14h15 às 20h e Sábados,
-            Domingos e Feriados de 11h às 20h.
+            Domingos e Feriados de 11h às 20h. Dia 02/01 parque fechado.
           </p>
         </div>
         <div className="py-2 shadow-lg bg-white ">
