@@ -11,6 +11,8 @@ import BannerBrinquedosWeb from '@/public/images/banners/brinquedos-desktop.png'
 import BannerBrinquedosMobile from '@/public/images/banners/brinquedos-mobile.png'
 import BannerFeriasWeb from '@/public/images/banners/ferias-desktop.png'
 import BannerFeriasMobile from '@/public/images/banners/ferias-mobile.png'
+import BannerHorarioWeb from '@/public/images/banners/horario-desktop.png'
+import BannerHorarioMobile from '@/public/images/banners/horario-mobile.png'
 import NicoAppDark from '@/public/images/brands/nicoapp-dark.svg'
 import Head from 'next/head'
 import Image from 'next/image'
@@ -54,6 +56,13 @@ export default function HomePage() {
             nextEl: '.main-swiper-next',
           }}
         >
+          <SwiperSlide>
+            <SlideImage
+              alt="Diversão para toda a Família!"
+              mobile={BannerHorarioMobile}
+              desktop={BannerHorarioWeb}
+            />
+          </SwiperSlide>
           <SwiperSlide>
             <SlideImage
               alt="Diversão para toda a Família!"
