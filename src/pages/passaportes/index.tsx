@@ -2,6 +2,7 @@ import 'swiper/css'
 import 'swiper/css/navigation'
 
 import Ticket from '@/components/molecules/Ticket'
+import Asmpf from '@/public/images/brands/asmpf.png'
 import Assof from '@/public/images/brands/assof.png'
 import Caadf from '@/public/images/brands/caadf.png'
 import Oabdf from '@/public/images/brands/oabdf.png'
@@ -316,6 +317,14 @@ export default function PassaportsPage() {
               <p className="p-3 text-lg">
                 Compra disponível na bilheteria mediante apresentação da Declaração de Sócio,
                 emitido pela ASOF, com validade de 30 dias e Carteira Funcional.
+              </p>
+            </div>
+            <div className="w-[320px] flex flex-col items-center text-center">
+              <div className="flex min-w-fit">
+                <Image src={Asmpf} className="h-20 w-auto" alt="" />
+              </div>
+              <p className="p-3 text-lg">
+                Compra disponível na bilheteria mediante apresentação da carteira da ASMPF.
               </p>
             </div>
           </div>

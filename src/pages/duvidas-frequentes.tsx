@@ -78,8 +78,10 @@ export default function FaqPage() {
       ],
     },
     {
-      question: 'Até que horas posso retirar um Combo Lanche?',
-      awnser: ['Você pode retirar o seu pedido até as 19h.'],
+      question: 'Qual o horário da fila das atrações?',
+      awnser: [
+        'O parque encerra suas atividades às 20h. A partir das 19h, será iniciado o controle de filas das atrações. Desta forma, as filas podem ser fechadas a qualquer momento, a depender do fluxo.',
+      ],
     },
   ]
   return (
