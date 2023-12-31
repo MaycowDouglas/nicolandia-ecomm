@@ -13,6 +13,8 @@ import BannerFeriasWeb from '@/public/images/banners/ferias-desktop.png'
 import BannerFeriasMobile from '@/public/images/banners/ferias-mobile.png'
 import BannerHorarioWeb from '@/public/images/banners/horario-desktop.png'
 import BannerHorarioMobile from '@/public/images/banners/horario-mobile.png'
+import NicoCardsWeb from '@/public/images/banners/nicocards-desktop.png'
+import NicoCardsMobile from '@/public/images/banners/nicocards-mobile.png'
 import NicoAppDark from '@/public/images/brands/nicoapp-dark.svg'
 import Head from 'next/head'
 import Image from 'next/image'
@@ -61,6 +63,13 @@ export default function HomePage() {
               alt="Diversão para toda a Família!"
               mobile={BannerHorarioMobile}
               desktop={BannerHorarioWeb}
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <SlideImage
+              alt="Diversão para toda a Família!"
+              mobile={NicoCardsMobile}
+              desktop={NicoCardsWeb}
             />
           </SwiperSlide>
           {/* <SwiperSlide>
