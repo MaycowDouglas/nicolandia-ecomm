@@ -83,6 +83,18 @@ export default function FaqPage() {
         'O parque encerra suas atividades às 20h. A partir das 19h, será iniciado o controle de filas das atrações. Desta forma, as filas podem ser fechadas a qualquer momento, a depender do fluxo.',
       ],
     },
+    {
+      question: 'Como funciona os NicoCards?',
+      awnser: [
+        'Objetivando sempre a melhor experiência de nossos visitantes e adequando nossas atrações continuamente as melhores práticas tecnológicas do mercado, você agora terá a sua visita ao parque, utilizando os cartões no lugar do passaporte tradicional, para o seu melhor aproveitamento das atrações, seguem algumas informações acerca dessa mudança:',
+        '- O cartão irá substituir a tradicional pulseira nas compras on-line.',
+        '- Para compras presenciais avulsas por categoria, o visitante precisa adquirir o cartão e recarregar de acordo com sua preferência, pela atração que deseja.',
+        '- Em caso de chuva o crédito permanece no cartão, podendo ser utilizado em um outro momento.',
+        '- Os clientes VIPS, além do cartão, continuarão acompanhados da pulseira.',
+        '- A responsabilidade pela perda do cartão é do visitante, o uso é pessoal e intransferível.',
+        '- Para seu maior conforto os operadores das atrações que validam seu cartão no passeio.',
+      ],
+    },
   ]
   return (
     <>

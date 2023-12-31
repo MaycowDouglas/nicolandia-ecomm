@@ -2,6 +2,8 @@ import 'swiper/css'
 import 'swiper/css/navigation'
 
 import Ticket from '@/components/molecules/Ticket'
+import NicoCardsWeb from '@/public/images/banners/nicocards-desktop.png'
+import NicoCardsMobile from '@/public/images/banners/nicocards-mobile.png'
 import Asmpf from '@/public/images/brands/asmpf.png'
 import Assof from '@/public/images/brands/assof.png'
 import Caadf from '@/public/images/brands/caadf.png'
@@ -205,6 +207,10 @@ export default function PassaportsPage() {
         </div>
       </section>
       <section>
+        <Image className="w-full h-auto hidden md:block" src={NicoCardsWeb} alt="" />
+        <Image className="w-full h-auto md:hidden" src={NicoCardsMobile} alt="" />
+      </section>
+      <section>
         <h2 className="py-5 mb-10 flex items-center justify-center gap-4 bg-red-500 text-custom-300 text-4xl md:text-5xl font-black">
           <GoAlert className="mb-2" /> ATENÇÃO <GoAlert className="mb-2" />
         </h2>
@@ -268,6 +274,7 @@ export default function PassaportsPage() {
             </div>
           </div>
         </div>
+
         <div className="container my-10">
           <div className="border-t-2 border-slate-200"></div>
         </div>
