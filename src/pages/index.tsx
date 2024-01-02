@@ -61,24 +61,18 @@ export default function HomePage() {
           <SwiperSlide>
             <SlideImage
               alt="Diversão para toda a Família!"
-              mobile={BannerHorarioMobile}
-              desktop={BannerHorarioWeb}
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <SlideImage
-              alt="Diversão para toda a Família!"
               mobile={NicoCardsMobile}
               desktop={NicoCardsWeb}
             />
           </SwiperSlide>
-          {/* <SwiperSlide>
+
+          <SwiperSlide>
             <SlideImage
               alt="Diversão para toda a Família!"
               mobile={BannerFeriasMobile}
               desktop={BannerFeriasWeb}
             />
-          </SwiperSlide> */}
+          </SwiperSlide>
 
           <SwiperSlide>
             <SlideImage
