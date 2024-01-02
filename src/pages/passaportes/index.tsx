@@ -266,11 +266,6 @@ export default function PassaportsPage() {
                 <p>Inteira R$ 200,00</p>
                 <p>Meia R$ 100,00</p>
               </div>
-
-              <div>
-                <h4 className="text-xl text-custom-600 font-bold mb-1">Combo Espetacular</h4>
-                <p>3 pessoas R$ 210,00</p>
-              </div>
             </div>
           </div>
         </div>
