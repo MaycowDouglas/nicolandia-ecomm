@@ -280,14 +280,14 @@ export const data: AttractionProps[] = [
       minHeight: 80,
     },
   },
-  {
-    name: 'Arena Elástica',
-    image: AtractionArenaElastica,
-    category: 'childish',
-    restrictions: {
-      maxHeight: 140,
-    },
-  },
+  // {
+  //   name: 'Arena Elástica',
+  //   image: AtractionArenaElastica,
+  //   category: 'childish',
+  //   restrictions: {
+  //     maxHeight: 140,
+  //   },
+  // },
   {
     name: 'Trem Cavalaria',
     image: AtractionTremCavalaria,
