@@ -6,28 +6,23 @@ export default withSessionRoute(async function GetClientRoute(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  const user = req.session.user
-  const { id } = req.query
-
-  if (!user || user.isLogged === false) {
-    res.status(401).end()
-    return
-  }
-
   try {
+    const { authorization } = req.headers
+
     const transaction = await prisma.$transaction(async (tx) => {
       const today = new Date()
-
-      const user = await tx.user_profile.findUnique({ where: { id: parseInt(String(id), 10) } })
+      const user = await tx.user_profile.findUnique({
+        where: { api_token: String(authorization).replace('Bearer ', '') },
+      })
 
       if (!user) throw new Error('User not found.')
 
       const updated = await tx.user_profile.update({
-        where: { id: parseInt(String(id), 10) },
+        where: { api_token: String(authorization).replace('Bearer ', '') },
         data: { email: `${user.email}.${today.getTime()}`, document: null },
       })
 
-      return true
+      return updated
     })
 
     res.status(200).json({ transaction })
