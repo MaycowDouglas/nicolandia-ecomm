@@ -33,6 +33,6 @@ export default withSessionRoute(async function GetClientRoute(
     res.status(200).json({ transaction })
   } catch (error) {
     console.error(error)
-    res.status(400).json({})
+    res.status(400).json({ error })
   }
 })
