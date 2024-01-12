@@ -6,6 +6,7 @@ export default withSessionRoute(async function GetClientRoute(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
+  const today = new Date()
   const { authorization } = req.headers
 
   const authorizationPayload = String(authorization).split('.')[1]
@@ -14,23 +15,18 @@ export default withSessionRoute(async function GetClientRoute(
     .replaceAll('"', '')
 
   try {
-    const transaction = await prisma.$transaction(async (tx) => {
-      const today = new Date()
-      const user = await tx.user_profile.findUnique({
-        where: { api_token: decodedToken },
-      })
-
-      if (!user) throw new Error('User not found.')
-
-      const updated = await tx.user_profile.update({
-        where: { api_token: decodedToken },
-        data: { email: `${user.email}.${today.getTime()}`, document: null },
-      })
-
-      return updated
+    const user = await prisma.user_profile.findUnique({
+      where: { api_token: decodedToken },
     })
 
-    res.status(200).json({ transaction })
+    if (!user) throw new Error('User not found.')
+
+    const updated = await prisma.user_profile.update({
+      where: { api_token: decodedToken },
+      data: { email: `${user.email}.${today.getTime()}`, document: null },
+    })
+
+    res.status(200).json({ updated })
   } catch (error) {
     console.error(error)
     res.status(400).json({ error, decodedToken })
