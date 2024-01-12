@@ -6,14 +6,14 @@ export default withSessionRoute(async function GetClientRoute(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
+  const { authorization } = req.headers
+
+  const authorizationPayload = String(authorization).split('.')[1]
+  const decodedToken = Buffer.from(authorizationPayload, 'base64')
+    .toString('utf-8')
+    .replaceAll('"', '')
+
   try {
-    const { authorization } = req.headers
-
-    const authorizationPayload = String(authorization).split('.')[1]
-    const decodedToken = Buffer.from(authorizationPayload, 'base64')
-      .toString('utf-8')
-      .replaceAll('"', '')
-
     const transaction = await prisma.$transaction(async (tx) => {
       const today = new Date()
       const user = await tx.user_profile.findUnique({
@@ -33,6 +33,6 @@ export default withSessionRoute(async function GetClientRoute(
     res.status(200).json({ transaction })
   } catch (error) {
     console.error(error)
-    res.status(400).json({ error })
+    res.status(400).json({ error, decodedToken })
   }
 })
