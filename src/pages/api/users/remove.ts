@@ -9,7 +9,9 @@ export default withSessionRoute(async function GetClientRoute(
   try {
     const { authorization } = req.headers
 
+    console.log(authorization)
     const authorizationPayload = String(authorization).split('.')[1]
+    console.log(authorizationPayload)
     const decodedToken = Buffer.from(authorizationPayload, 'base64')
       .toString('utf-8')
       .replaceAll('"', '')
