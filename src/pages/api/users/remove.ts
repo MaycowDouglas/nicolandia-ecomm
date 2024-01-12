@@ -2,10 +2,7 @@ import { prisma } from '@/lib/prisma'
 import { withSessionRoute } from '@/lib/withSession'
 import { NextApiRequest, NextApiResponse } from 'next'
 
-export default withSessionRoute(async function GetClientRoute(
-  req: NextApiRequest,
-  res: NextApiResponse
-) {
+async function removeUserRoute(req: NextApiRequest, res: NextApiResponse) {
   const today = new Date()
   const { authorization } = req.headers
 
@@ -31,4 +28,6 @@ export default withSessionRoute(async function GetClientRoute(
     console.error(error)
     res.status(400).json({ error, decodedToken })
   }
-})
+}
+
+export default withSessionRoute(removeUserRoute)
