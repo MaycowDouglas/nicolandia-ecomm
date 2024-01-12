@@ -2,8 +2,9 @@ import { prisma } from '@/lib/prisma'
 import { withSessionRoute } from '@/lib/withSession'
 import { NextApiRequest, NextApiResponse } from 'next'
 
-async function removeUserRoute(req: NextApiRequest, res: NextApiResponse) {
+export default async function removeUserRoute(req: NextApiRequest, res: NextApiResponse) {
   const today = new Date()
+
   const { authorization } = req.headers
   const authorizationPayload = String(authorization).split('.')[1]
   const decodedToken = Buffer.from(authorizationPayload, 'base64')
@@ -30,5 +31,3 @@ async function removeUserRoute(req: NextApiRequest, res: NextApiResponse) {
   //   res.status(400).json({ error, decodedToken })
   // }
 }
-
-export default withSessionRoute(removeUserRoute)
