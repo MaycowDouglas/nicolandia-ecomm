@@ -9,6 +9,7 @@ export default withSessionRoute(async function GetClientRoute(
   try {
     const { authorization } = req.headers
 
+    console.log(req.headers)
     console.log(authorization)
     const authorizationPayload = String(authorization).split('.')[1]
     console.log(authorizationPayload)
