@@ -1,4 +1,5 @@
 import { classNames } from '@/lib/classNames'
+import AppleStore from '@/public/images/applestore.png'
 import Adibra from '@/public/images/brands/adibra.png'
 import Cadastur from '@/public/images/brands/cadastur.png'
 import Iaapa from '@/public/images/brands/iaapa.webp'
@@ -36,7 +37,7 @@ export default function Footer() {
 
             <div className="space-y-4">
               <h3 className="text-lg font-semibold">Baixe o APP:</h3>
-              <ul className="flex flex-col gap-1">
+              <ul className="flex gap-1">
                 <li>
                   <Link
                     target="_blank"
@@ -44,7 +45,25 @@ export default function Footer() {
                     href="https://play.google.com/store/apps/details?id=com.nicolandia"
                     title="Disponível na Google Play"
                   >
-                    <Image src={GooglePlay} className="w-auto h-12" alt="" />
+                    <Image
+                      src={GooglePlay}
+                      className="w-auto h-12"
+                      alt="Disponível no Google Play"
+                    />
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    target="_blank"
+                    className="inline-flex"
+                    href="https://apps.apple.com/us/app/nicolândia/id6450012072"
+                    title="Disponível na Apple Store"
+                  >
+                    <Image
+                      className="w-auto h-12"
+                      src={AppleStore}
+                      alt="Disponível na Apple Store"
+                    />
                   </Link>
                 </li>
               </ul>

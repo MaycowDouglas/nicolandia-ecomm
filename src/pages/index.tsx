@@ -5,17 +5,17 @@ import Button from '@/components/atoms/Button'
 import SlideImage from '@/components/atoms/SlideImage'
 import Attractions from '@/components/organisms/Attractions'
 import Tickets from '@/components/organisms/Tickets'
+import AppleStore from '@/public/images/applestore.png'
 import Banner360Web from '@/public/images/banners/360-desktop.png'
 import Banner360Mobile from '@/public/images/banners/360-mobile.png'
 import BannerBrinquedosWeb from '@/public/images/banners/brinquedos-desktop.png'
 import BannerBrinquedosMobile from '@/public/images/banners/brinquedos-mobile.png'
 import BannerFeriasWeb from '@/public/images/banners/ferias-desktop.png'
 import BannerFeriasMobile from '@/public/images/banners/ferias-mobile.png'
-import BannerHorarioWeb from '@/public/images/banners/horario-desktop.png'
-import BannerHorarioMobile from '@/public/images/banners/horario-mobile.png'
 import NicoCardsWeb from '@/public/images/banners/nicocards-desktop.png'
 import NicoCardsMobile from '@/public/images/banners/nicocards-mobile.png'
 import NicoAppDark from '@/public/images/brands/nicoapp-dark.svg'
+import GooglePlay from '@/public/images/googleplay.png'
 import Head from 'next/head'
 import Image from 'next/image'
 import { useRef } from 'react'
@@ -110,13 +110,22 @@ export default function HomePage() {
             <p className="text-gray">Garanta descontos exclusivos no nosso app</p>
           </div>
 
-          <Button
-            target="_blank"
-            title="Baixe o Nicoapp"
-            href="https://play.google.com/store/apps/details?id=com.nicolandia"
-          >
-            Baixe o Nicoapp
-          </Button>
+          <div className="flex flex-col gap-2">
+            <a
+              className="inline-flex"
+              href="https://play.google.com/store/apps/details?id=com.nicolandia"
+              target="_blank"
+            >
+              <Image className="w-56 h-auto" src={GooglePlay} alt="Disponível no Google Play" />
+            </a>
+            <a
+              className="inline-flex"
+              href="https://apps.apple.com/us/app/nicolândia/id6450012072"
+              target="_blank"
+            >
+              <Image className="w-56 h-auto" src={AppleStore} alt="Disponível na Apple Store" />
+            </a>
+          </div>
         </div>
       </section>
 

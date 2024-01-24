@@ -53,19 +53,19 @@ export default function PaymentPixPage() {
                   theme="secondary"
                   onClick={() => handleCopyText(orderDecoded.invoice.boleto)}
                 >
-                  Copiar <FiCopy />{' '}
+                  Copiar <FiCopy />
                 </Button>
               </div>
               <div className="mt-5 space-y-1">
                 <p>
-                  <strong>Total à pagar:</strong>{' '}
+                  <strong>Total à pagar:</strong>
                   {(orderDecoded.total / 100).toLocaleString('pt-br', {
                     style: 'currency',
                     currency: 'BRL',
                   })}
                 </p>
                 <p>
-                  <strong>Data da compra:</strong>{' '}
+                  <strong>Data da compra:</strong>
                   {new Date(orderDecoded.createdAt * 1000).toLocaleDateString()}
                 </p>
                 <p>

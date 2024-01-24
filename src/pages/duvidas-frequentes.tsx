@@ -17,6 +17,11 @@ export default function FaqPage() {
         'Você brinca quantas vezes quiser em todas as atrações, durante a abertura até o fechamento do parque, com exceção das seguintes atrações: tiro ao alvo, pescaria, trenzinho encantado, brinquedos de fichas, games e praça de alimentação. Na compra de dois ou mais passaportes em um único código, todos os visitantes devem estar presentes para a entrega das pulseiras. Não será permitida a entrega de pulseiras depois da validação do código na bilheteria do parque.',
     },
     {
+      question: 'Como posso solicitar o estorno da minha compra?',
+      awnser:
+        'O estorno pode ser solicitado em até 7 dias após a confirmação do pagamento pelo e-mail do suporte (suporte@yuupe.com).',
+    },
+    {
       question: 'Criança a partir de quantos anos pagam?',
       awnser:
         'Criança de até 04 (quatro) anos acompanhada de 01 (um) responsável adulto pagante, tem direito à entrada gratuita. Observando as restrições de cada atração infantil do nosso parque. OBS.: Obrigatório a apresentação de documento de identificação (RG ou certidão de nascimento) da criança na entrada do parque.',
