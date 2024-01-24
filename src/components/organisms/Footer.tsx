@@ -56,7 +56,7 @@ export default function Footer() {
                   <Link
                     target="_blank"
                     className="inline-flex"
-                    href="https://apps.apple.com/us/app/nicolândia/id6450012072"
+                    href="https://apps.apple.com/br/app/nicolândia/id6450012072"
                     title="Disponível na Apple Store"
                   >
                     <Image
