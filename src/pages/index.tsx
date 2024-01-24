@@ -120,7 +120,7 @@ export default function HomePage() {
             </a>
             <a
               className="inline-flex"
-              href="https://apps.apple.com/us/app/nicolândia/id6450012072"
+              href="https://apps.apple.com/br/app/nicolândia/id6450012072"
               target="_blank"
             >
               <Image className="w-56 h-auto" src={AppleStore} alt="Disponível na Apple Store" />
