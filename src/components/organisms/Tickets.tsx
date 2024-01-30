@@ -50,13 +50,22 @@ export default function Tickets() {
       {nowSP.getDay() >= 2 && nowSP.getDay() <= 4 && (
         <>
           <SwiperSlide>
-            <Ticket
+            {/* <Ticket
               id={7}
               name="Passaporte Antecipado"
               price={4997}
               banner={PassaporteAntecipado}
               quantity={1}
               reference={7697}
+              isPassport
+            /> */}
+            <Ticket
+              id={2}
+              name="Passaporte Individual"
+              price={4997}
+              banner={PassaporteIndividual}
+              quantity={1}
+              reference={4997}
               isPassport
             />
           </SwiperSlide>
@@ -81,10 +90,10 @@ export default function Tickets() {
             <Ticket
               id={2}
               name="Passaporte Individual"
-              price={7697}
+              price={4997}
               banner={PassaporteIndividual}
               quantity={1}
-              reference={7697}
+              reference={4997}
               isPassport
             />
           </SwiperSlide>
