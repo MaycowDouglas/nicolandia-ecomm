@@ -72,7 +72,7 @@ export default function FaqPage() {
     {
       question: 'Atenção com as crianças',
       awnser:
-        'Queridos visitantes da Nova Nicolândia, informamos que, para que as crianças não se percam no nosso espaço, pedimos que coloquem o número de telefone do responsável na pulseira da mesma, pois caso ocorra, a assistência do parque ligará para o responsável. Agradecemos a colaboração e desejamos muita diversão!',
+        'Queridos visitantes da Nova Nicolândia, informamos que, para que as crianças não se percam no nosso espaço, pedimos que coloquem o número de telefone do responsável na pulseira da mesma, pois caso ocorra, a assistência do parque ligará para o responsável. Pedimos aos pais e/ou responsáveis para que as crianças não fiquem descalças em nosso parque. Agradecemos a colaboração e desejamos muita diversão!',
     },
     {
       question: 'Alimentos e bebidas no parque',

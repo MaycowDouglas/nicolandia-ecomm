@@ -4,7 +4,7 @@ import AtractionBrinquedao from '@/public/images/atractions/brinquedao.png'
 // import AtractionCarrossel from '@/public/images/atractions/carrossel.jpg'
 import AtractionColossusLoop from '@/public/images/atractions/colossus-loop.jpeg'
 import AtractionCrazyDance from '@/public/images/atractions/crazy-dance.jpg'
-import AtractionDisko from '@/public/images/atractions/disko.jpg'
+// import AtractionDisko from '@/public/images/atractions/disko.jpg'
 import AtractionFamilySwing from '@/public/images/atractions/family-swing.png'
 import AtractionFerrysWheel from '@/public/images/atractions/ferrys-wheel.jpg'
 import AtractionGrandPrix from '@/public/images/atractions/grand-prix.png'
@@ -26,7 +26,7 @@ import AtractionTiro from '@/public/images/atractions/tiro.jpeg'
 import AtractionToboga from '@/public/images/atractions/toboga.jpg'
 import AtractionTremCavalaria from '@/public/images/atractions/trem-cavalaria.jpg'
 import AtractionTrenzinhoCircus from '@/public/images/atractions/trenzinho-circus.jpeg'
-// import AtractionTrenzinhoEncantado from '@/public/images/atractions/trenzinho-encantado.jpeg'
+import AtractionTrenzinhoEncantado from '@/public/images/atractions/trenzinho-encantado.jpeg'
 import AtractionTrenzinhoFazenda from '@/public/images/atractions/trenzinho-fazenda.jpeg'
 import AtractionTrenzinhoMiniBruc from '@/public/images/atractions/trenzinho-mini-bruc.png'
 import AtractionTrenzinhoTour from '@/public/images/atractions/trenzinho-tour.jpeg'
@@ -159,16 +159,16 @@ export const data: AttractionProps[] = [
     category: 'familiar',
     observation: 'Crianças de 1.20 metros até 1.30 metros tem direito a acompanhante',
   },
-  // {
-  //   name: 'Mini Roda',
-  //   image: AtractionMiniRoda,
-  //   category: 'familiar',
-  //   restrictions: {
-  //     minHeight: 80,
-  //   },
-  //   observation:
-  //     'Visitantes com estatura entre 0,80M e 1,10M somente acompanhado por um adulto responsável. Visitantes com altura superior a 1,95m e/ou peso superir a 120kg não devem usufruir desta atração.',
-  // },
+  {
+    name: 'Mini Roda',
+    image: AtractionMiniRoda,
+    category: 'familiar',
+    restrictions: {
+      minHeight: 80,
+    },
+    observation:
+      'Visitantes com estatura entre 0,80M e 1,10M somente acompanhado por um adulto responsável. Visitantes com altura superior a 1,95m e/ou peso superir a 120kg não devem usufruir desta atração.',
+  },
   {
     name: 'Pirate Ship',
     image: AtractionPirateShip,
@@ -297,15 +297,15 @@ export const data: AttractionProps[] = [
       maxHeight: 130,
     },
   },
-  // {
-  //   name: 'Trenzinho Encantado',
-  //   image: AtractionTrenzinhoEncantado,
-  //   category: 'radical',
-  //   restrictions: {
-  //     minHeight: 80,
-  //     maxHeight: 130,
-  //   },
-  // },
+  {
+    name: 'Trenzinho Encantado',
+    image: AtractionTrenzinhoEncantado,
+    category: 'radical',
+    restrictions: {
+      minHeight: 80,
+      maxHeight: 130,
+    },
+  },
   {
     name: 'Trenzinho Fazenda',
     image: AtractionTrenzinhoFazenda,

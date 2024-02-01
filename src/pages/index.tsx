@@ -134,6 +134,7 @@ export default function HomePage() {
           <h2 className="mb-5 lg:mb-10 font-bold text-center md:text-start text-4xl md:text-4xl lg:text-5xl text-white">
             Passaportes
           </h2>
+
           <Tickets />
 
           {/* <h2 className="mt-10 lg:mt-16 mb-5 lg:mb-10 font-bold text-center md:text-start text-4xl md:text-4xl lg:text-5xl text-white">
