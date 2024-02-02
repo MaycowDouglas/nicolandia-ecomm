@@ -101,7 +101,7 @@ export default function PassaportsPage() {
                   reference={4997}
                   isPassport
                 />
-                <Ticket
+                {/* <Ticket
                   id={3}
                   name="Combo Encantado"
                   price={14297}
@@ -118,7 +118,7 @@ export default function PassaportsPage() {
                   quantity={3}
                   reference={7697}
                   isPassport
-                />
+                /> */}
               </>
             )}
           </div>
