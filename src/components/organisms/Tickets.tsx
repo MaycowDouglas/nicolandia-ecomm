@@ -37,10 +37,10 @@ export default function Tickets() {
           <Ticket
             id={15}
             name="Passaporte Super Segunda"
-            price={3997}
+            price={4297}
             banner={PassaporteSuperSegunda}
             quantity={1}
-            reference={4997}
+            reference={4297}
             isPassport
             isSuperSegunda
           />
