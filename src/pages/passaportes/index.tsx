@@ -18,6 +18,7 @@ import ComboEspetacular from '@/public/images/tickets/combo-espetacular.png'
 import PassaporteAntecipado from '@/public/images/tickets/passaporte-antecipado.png'
 import PassaporteIndividual from '@/public/images/tickets/passaporte-individual.png'
 import PassaporteSuperSegunda from '@/public/images/tickets/passaporte-super-segunda.png'
+import SuperAntecipado from '@/public/images/tickets/super-antecipado.png'
 import Head from 'next/head'
 import Image from 'next/image'
 import { GoAlert } from 'react-icons/go'
@@ -84,7 +85,7 @@ export default function PassaportsPage() {
                   id={17}
                   name="Super Antecipado"
                   price={12897}
-                  banner={ComboAntecipado}
+                  banner={SuperAntecipado}
                   quantity={3}
                   reference={6297}
                   isPassport
