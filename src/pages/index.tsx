@@ -10,6 +10,8 @@ import Banner360Web from '@/public/images/banners/360-desktop.png'
 import Banner360Mobile from '@/public/images/banners/360-mobile.png'
 import BannerBrinquedosWeb from '@/public/images/banners/brinquedos-desktop.png'
 import BannerBrinquedosMobile from '@/public/images/banners/brinquedos-mobile.png'
+import CarnavalWeb from '@/public/images/banners/carnaval-desktop.png'
+import CarnavalMobile from '@/public/images/banners/carnaval-mobile.png'
 import BannerFeriasWeb from '@/public/images/banners/ferias-desktop.png'
 import BannerFeriasMobile from '@/public/images/banners/ferias-mobile.png'
 import NicoCardsWeb from '@/public/images/banners/nicocards-desktop.png'
@@ -69,8 +71,8 @@ export default function HomePage() {
           <SwiperSlide>
             <SlideImage
               alt="Diversão para toda a Família!"
-              mobile={BannerFeriasMobile}
-              desktop={BannerFeriasWeb}
+              mobile={CarnavalMobile}
+              desktop={CarnavalWeb}
             />
           </SwiperSlide>
 

@@ -52,7 +52,15 @@ export default function Ticket({
             <li className="py-2">
               <ul className="space-y-2">
                 <li className="font-bold">Válido somente para compra online</li>
-                {/* <li>Válido de sexta à domingo ou feriados</li> */}
+                {quantity > 1 && (
+                  <li className="font-bold">
+                    Valor unitário R${' '}
+                    {(price / 100 / quantity).toLocaleString('pt-BR', {
+                      style: 'currency',
+                      currency: 'BRL',
+                    })}
+                  </li>
+                )}
                 <li className={isPassport ? '' : 'hidden'}>
                   {`${quantity} ${
                     quantity > 1 ? 'passaportes válidos' : 'passaporte válido '
