@@ -80,7 +80,7 @@ export default function Tickets() {
               name="Super Antecipado"
               price={12897}
               banner={SuperAntecipado}
-              quantity={4}
+              quantity={3}
               reference={6297}
               isPassport
             />

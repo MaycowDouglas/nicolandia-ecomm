@@ -85,7 +85,7 @@ export default function PassaportsPage() {
                   name="Super Antecipado"
                   price={12897}
                   banner={ComboAntecipado}
-                  quantity={4}
+                  quantity={3}
                   reference={6297}
                   isPassport
                 />
