@@ -6,7 +6,7 @@ import AtractionColossusLoop from '@/public/images/atractions/colossus-loop.jpeg
 import AtractionCrazyDance from '@/public/images/atractions/crazy-dance.jpg'
 // import AtractionDisko from '@/public/images/atractions/disko.jpg'
 import AtractionFamilySwing from '@/public/images/atractions/family-swing.png'
-import AtractionFerrysWheel from '@/public/images/atractions/ferrys-wheel.jpg'
+import AtractionFerrysWheel from '@/public/images/atractions/ferrys-wheel.png'
 import AtractionGrandPrix from '@/public/images/atractions/grand-prix.png'
 import AtractionKabum from '@/public/images/atractions/kabum.png'
 import AtractionMagicCup from '@/public/images/atractions/magic-cup.jpg'
@@ -17,20 +17,20 @@ import AtractionPescaria from '@/public/images/atractions/pescaria.jpeg'
 import AtractionPirateShip from '@/public/images/atractions/pirate-ship.jpeg'
 import AtractionReinoEncantado from '@/public/images/atractions/reino-encantado.jpg'
 import AtractionRockRoll from '@/public/images/atractions/rock-roll.jpg'
-import AtractionRollerCoaster from '@/public/images/atractions/roller-coaster.jpeg'
+import AtractionRollerCoaster from '@/public/images/atractions/roller-coaster.png'
 // import AtractionSkyFlyer from '@/public/images/atractions/sky-flyer.jpg'
 import AtractionSpook from '@/public/images/atractions/spook.jpeg'
 import AtractionSuperFrisbee from '@/public/images/atractions/super-frisbee.jpeg'
 import AtractionTrex from '@/public/images/atractions/t-rex.jpeg'
 import AtractionTiro from '@/public/images/atractions/tiro.jpeg'
 import AtractionToboga from '@/public/images/atractions/toboga.jpg'
-import AtractionTremCavalaria from '@/public/images/atractions/trem-cavalaria.jpg'
+import AtractionTremCavalaria from '@/public/images/atractions/trem-cavalaria.png'
 import AtractionTrenzinhoCircus from '@/public/images/atractions/trenzinho-circus.jpeg'
 import AtractionTrenzinhoEncantado from '@/public/images/atractions/trenzinho-encantado.jpeg'
 import AtractionTrenzinhoFazenda from '@/public/images/atractions/trenzinho-fazenda.jpeg'
 import AtractionTrenzinhoMiniBruc from '@/public/images/atractions/trenzinho-mini-bruc.png'
 import AtractionTrenzinhoTour from '@/public/images/atractions/trenzinho-tour.jpeg'
-import AtractionWaveBlaster from '@/public/images/atractions/wave-blaster.jpeg'
+import AtractionWaveBlaster from '@/public/images/atractions/wave-blaster.png'
 import AtractionZipZap from '@/public/images/atractions/zip-zap.jpg'
 import { StaticImageData } from 'next/image'
 
@@ -247,7 +247,7 @@ export const data: AttractionProps[] = [
     observation: 'Essa atração não faz parte do passaporte. Compra presencialmente no parque.',
   },
   {
-    name: 'Trenzinho Mini Bruc',
+    name: 'Trenzinho Mini Bruco',
     image: AtractionTrenzinhoMiniBruc,
     category: 'childish',
     restrictions: {
