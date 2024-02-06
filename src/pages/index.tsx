@@ -63,16 +63,16 @@ export default function HomePage() {
           <SwiperSlide>
             <SlideImage
               alt="Diversão para toda a Família!"
-              mobile={NicoCardsMobile}
-              desktop={NicoCardsWeb}
+              mobile={CarnavalMobile}
+              desktop={CarnavalWeb}
             />
           </SwiperSlide>
 
           <SwiperSlide>
             <SlideImage
               alt="Diversão para toda a Família!"
-              mobile={CarnavalMobile}
-              desktop={CarnavalWeb}
+              mobile={NicoCardsMobile}
+              desktop={NicoCardsWeb}
             />
           </SwiperSlide>
 
