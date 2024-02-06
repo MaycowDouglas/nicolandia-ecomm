@@ -60,31 +60,33 @@ export default function PassaportsPage() {
 
             {nowSP.getDay() >= 2 && nowSP.getDay() <= 4 && (
               <>
-                {/* <Ticket
+                <Ticket
                   id={7}
                   name="Passaporte Antecipado"
-                  price={5497}
+                  price={5297}
                   banner={PassaporteAntecipado}
                   quantity={1}
-                  reference={7697}
+                  reference={6297}
                   isPassport
                 />
+
                 <Ticket
                   id={14}
                   name="Combo Antecipado"
-                  price={9597}
+                  price={8997}
                   banner={ComboAntecipado}
                   quantity={2}
-                  reference={7697}
+                  reference={6297}
                   isPassport
-                /> */}
+                />
+
                 <Ticket
-                  id={2}
-                  name="Passaporte Individual"
-                  price={4997}
-                  banner={PassaporteIndividual}
-                  quantity={1}
-                  reference={4997}
+                  id={17}
+                  name="Super Antecipado"
+                  price={12897}
+                  banner={ComboAntecipado}
+                  quantity={4}
+                  reference={6297}
                   isPassport
                 />
               </>

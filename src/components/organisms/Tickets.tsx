@@ -4,6 +4,7 @@ import ComboEspetacular from '@/public/images/tickets/combo-espetacular.png'
 import PassaporteAntecipado from '@/public/images/tickets/passaporte-antecipado.png'
 import PassaporteIndividual from '@/public/images/tickets/passaporte-individual.png'
 import PassaporteSuperSegunda from '@/public/images/tickets/passaporte-super-segunda.png'
+import SuperAntecipado from '@/public/images/tickets/super-antecipado.png'
 import SwiperCore, { Autoplay, Navigation } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
@@ -50,22 +51,13 @@ export default function Tickets() {
       {nowSP.getDay() >= 2 && nowSP.getDay() <= 4 && (
         <>
           <SwiperSlide>
-            {/* <Ticket
+            <Ticket
               id={7}
               name="Passaporte Antecipado"
-              price={4997}
+              price={5297}
               banner={PassaporteAntecipado}
               quantity={1}
-              reference={7697}
-              isPassport
-            /> */}
-            <Ticket
-              id={2}
-              name="Passaporte Individual"
-              price={4997}
-              banner={PassaporteIndividual}
-              quantity={1}
-              reference={4997}
+              reference={6297}
               isPassport
             />
           </SwiperSlide>
@@ -74,10 +66,22 @@ export default function Tickets() {
             <Ticket
               id={14}
               name="Combo Antecipado"
-              price={9597}
+              price={8997}
               banner={ComboAntecipado}
               quantity={2}
-              reference={7697}
+              reference={6297}
+              isPassport
+            />
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <Ticket
+              id={17}
+              name="Super Antecipado"
+              price={12897}
+              banner={SuperAntecipado}
+              quantity={4}
+              reference={6297}
               isPassport
             />
           </SwiperSlide>
