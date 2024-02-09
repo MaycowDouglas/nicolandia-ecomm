@@ -1,3 +1,4 @@
+import Combo360 from '@/public/images/combos/combo-360.png'
 import ComboAntecipado from '@/public/images/combos/combo-antecipado.png'
 import ComboEncantado from '@/public/images/tickets/combo-encantado.png'
 import ComboEspetacular from '@/public/images/tickets/combo-espetacular.png'
@@ -119,6 +120,17 @@ export default function Tickets() {
               price={15797}
               banner={ComboEspetacular}
               quantity={3}
+              reference={6297}
+              isPassport
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Ticket
+              id={18}
+              name="Combo 360"
+              price={17997}
+              banner={Combo360}
+              quantity={4}
               reference={6297}
               isPassport
             />

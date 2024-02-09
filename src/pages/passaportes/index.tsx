@@ -9,6 +9,7 @@ import Assof from '@/public/images/brands/assof.png'
 import Caadf from '@/public/images/brands/caadf.png'
 import Oabdf from '@/public/images/brands/oabdf.png'
 import Sinprfdf from '@/public/images/brands/sinprfdf.png'
+import Combo360 from '@/public/images/combos/combo-360.png'
 import ComboAntecipado from '@/public/images/combos/combo-antecipado.png'
 import ComboFamilia from '@/public/images/combos/combo-familia.png'
 import ComboKabum from '@/public/images/combos/combo-kabum.jpeg'
@@ -98,30 +99,39 @@ export default function PassaportsPage() {
                 <Ticket
                   id={2}
                   name="Passaporte Individual"
-                  price={4997}
+                  price={6297}
                   banner={PassaporteIndividual}
                   quantity={1}
-                  reference={4997}
+                  reference={6297}
                   isPassport
                 />
-                {/* <Ticket
+                <Ticket
                   id={3}
                   name="Combo Encantado"
-                  price={14297}
+                  price={11597}
                   banner={ComboEncantado}
                   quantity={2}
-                  reference={7697}
+                  reference={6297}
                   isPassport
                 />
                 <Ticket
                   id={4}
                   name="Combo Espetacular"
-                  price={19797}
+                  price={15797}
                   banner={ComboEspetacular}
                   quantity={3}
-                  reference={7697}
+                  reference={6297}
                   isPassport
-                /> */}
+                />
+                <Ticket
+                  id={18}
+                  name="Combo 360"
+                  price={17997}
+                  banner={Combo360}
+                  quantity={4}
+                  reference={6297}
+                  isPassport
+                />
               </>
             )}
           </div>
