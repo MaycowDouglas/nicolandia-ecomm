@@ -1,5 +1,5 @@
-import Combo360 from '@/public/images/combos/combo-360.png'
 import ComboAntecipado from '@/public/images/combos/combo-antecipado.png'
+import Combo360 from '@/public/images/tickets/combo-360.png'
 import ComboEncantado from '@/public/images/tickets/combo-encantado.png'
 import ComboEspetacular from '@/public/images/tickets/combo-espetacular.png'
 import PassaporteAntecipado from '@/public/images/tickets/passaporte-antecipado.png'
