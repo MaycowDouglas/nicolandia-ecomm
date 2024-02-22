@@ -1,7 +1,6 @@
 import 'swiper/css'
 import 'swiper/css/navigation'
 
-import Button from '@/components/atoms/Button'
 import SlideImage from '@/components/atoms/SlideImage'
 import Attractions from '@/components/organisms/Attractions'
 import Tickets from '@/components/organisms/Tickets'
@@ -10,12 +9,10 @@ import Banner360Web from '@/public/images/banners/360-desktop.png'
 import Banner360Mobile from '@/public/images/banners/360-mobile.png'
 import BannerBrinquedosWeb from '@/public/images/banners/brinquedos-desktop.png'
 import BannerBrinquedosMobile from '@/public/images/banners/brinquedos-mobile.png'
-import CarnavalWeb from '@/public/images/banners/carnaval-desktop.png'
-import CarnavalMobile from '@/public/images/banners/carnaval-mobile.png'
-import BannerFeriasWeb from '@/public/images/banners/ferias-desktop.png'
-import BannerFeriasMobile from '@/public/images/banners/ferias-mobile.png'
 import NicoCardsWeb from '@/public/images/banners/nicocards-desktop.png'
 import NicoCardsMobile from '@/public/images/banners/nicocards-mobile.png'
+import BannerPromoNicoWeb from '@/public/images/banners/promo-nico-desktop.png'
+import BannerPromoNicoMobile from '@/public/images/banners/promo-nico-mobile.png'
 import NicoAppDark from '@/public/images/brands/nicoapp-dark.svg'
 import GooglePlay from '@/public/images/googleplay.png'
 import Head from 'next/head'
@@ -60,6 +57,14 @@ export default function HomePage() {
             nextEl: '.main-swiper-next',
           }}
         >
+          <SwiperSlide>
+            <SlideImage
+              alt="Diversão para toda a Família!"
+              mobile={BannerPromoNicoMobile}
+              desktop={BannerPromoNicoWeb}
+            />
+          </SwiperSlide>
+
           <SwiperSlide>
             <SlideImage
               alt="Diversão para toda a Família!"
