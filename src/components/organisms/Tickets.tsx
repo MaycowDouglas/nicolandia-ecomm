@@ -2,6 +2,7 @@ import ComboAntecipado from '@/public/images/combos/combo-antecipado.png'
 import Combo360 from '@/public/images/tickets/combo-360.png'
 import ComboEncantado from '@/public/images/tickets/combo-encantado.png'
 import ComboEspetacular from '@/public/images/tickets/combo-espetacular.png'
+import ComboSuperSegunda from '@/public/images/tickets/combo-super-segunda.png'
 import PassaporteAntecipado from '@/public/images/tickets/passaporte-antecipado.png'
 import PassaporteIndividual from '@/public/images/tickets/passaporte-individual.png'
 import PassaporteSuperSegunda from '@/public/images/tickets/passaporte-super-segunda.png'
@@ -35,18 +36,32 @@ export default function Tickets() {
       spaceBetween={30}
     >
       {((nowSP.getDay() === 0 && nowSP.getHours() >= 20) || nowSP.getDay() === 1) && (
-        <SwiperSlide>
-          <Ticket
-            id={15}
-            name="Passaporte Super Segunda"
-            price={4297}
-            banner={PassaporteSuperSegunda}
-            quantity={1}
-            reference={4297}
-            isPassport
-            isSuperSegunda
-          />
-        </SwiperSlide>
+        <>
+          <SwiperSlide>
+            <Ticket
+              id={15}
+              name="Passaporte Super Segunda"
+              price={4297}
+              banner={PassaporteSuperSegunda}
+              quantity={1}
+              reference={4297}
+              isPassport
+              isSuperSegunda
+            />
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <Ticket
+              id={19}
+              name="Combo Super Segunda"
+              price={6594}
+              banner={ComboSuperSegunda}
+              quantity={2}
+              reference={4297}
+              isPassport
+            />
+          </SwiperSlide>
+        </>
       )}
 
       {nowSP.getDay() >= 2 && nowSP.getDay() <= 4 && (

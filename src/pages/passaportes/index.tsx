@@ -16,6 +16,7 @@ import ComboPipoca from '@/public/images/combos/combo-pipoca.png'
 import Combo360 from '@/public/images/tickets/combo-360.png'
 import ComboEncantado from '@/public/images/tickets/combo-encantado.png'
 import ComboEspetacular from '@/public/images/tickets/combo-espetacular.png'
+import ComboSuperSegunda from '@/public/images/tickets/combo-super-segunda.png'
 import PassaporteAntecipado from '@/public/images/tickets/passaporte-antecipado.png'
 import PassaporteIndividual from '@/public/images/tickets/passaporte-individual.png'
 import PassaporteSuperSegunda from '@/public/images/tickets/passaporte-super-segunda.png'
@@ -48,16 +49,27 @@ export default function PassaportsPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
             {((nowSP.getDay() === 0 && nowSP.getHours() >= 20) || nowSP.getDay() === 1) && (
-              <Ticket
-                id={15}
-                name="Passaporte Super Segunda"
-                price={4297}
-                banner={PassaporteSuperSegunda}
-                quantity={1}
-                reference={4297}
-                isPassport
-                isSuperSegunda
-              />
+              <>
+                <Ticket
+                  id={15}
+                  name="Passaporte Super Segunda"
+                  price={4297}
+                  banner={PassaporteSuperSegunda}
+                  quantity={1}
+                  reference={4297}
+                  isPassport
+                  isSuperSegunda
+                />
+                <Ticket
+                  id={19}
+                  name="Combo Super Segunda"
+                  price={6594}
+                  banner={ComboSuperSegunda}
+                  quantity={2}
+                  reference={4297}
+                  isPassport
+                />
+              </>
             )}
 
             {nowSP.getDay() >= 2 && nowSP.getDay() <= 4 && (
