@@ -92,6 +92,7 @@ export const data: AttractionProps[] = [
     name: 'Super frisbee',
     image: AtractionSuperFrisbee,
     category: 'radical',
+    observation: 'Temporariamente em manutenção',
     restrictions: {
       minHeight: 140,
     },
