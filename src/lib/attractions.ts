@@ -129,14 +129,14 @@ export const data: AttractionProps[] = [
   //     minHeight: 130,
   //   },
   // },
-  {
-    name: 'Roller Coaster',
-    image: AtractionRollerCoaster,
-    category: 'radical',
-    restrictions: {
-      minHeight: 130,
-    },
-  },
+  // {
+  //   name: 'Roller Coaster',
+  //   image: AtractionRollerCoaster,
+  //   category: 'radical',
+  //   restrictions: {
+  //     minHeight: 130,
+  //   },
+  // },
   {
     name: 'Centopéia',
     image: AtractionMinhocao,
