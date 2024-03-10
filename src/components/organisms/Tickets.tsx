@@ -104,7 +104,7 @@ export default function Tickets() {
         </>
       )}
 
-      {(nowSP.getDay() >= 5 || (nowSP.getDay() === 0 && nowSP.getHours() < 20)) && (
+      {(nowSP.getDay() >= 5 || (nowSP.getDay() === 0 && nowSP.getHours() < 23)) && (
         <>
           <SwiperSlide>
             <Ticket
