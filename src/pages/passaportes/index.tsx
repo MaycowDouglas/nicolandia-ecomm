@@ -56,7 +56,7 @@ export default function PassaportsPage() {
                   price={3997}
                   banner={PassaporteSuperSegunda}
                   quantity={1}
-                  reference={4297}
+                  reference={3997}
                   isPassport
                   isSuperSegunda
                 />
@@ -66,7 +66,7 @@ export default function PassaportsPage() {
                   price={6997}
                   banner={ComboSuperSegunda}
                   quantity={2}
-                  reference={4297}
+                  reference={3997}
                   isPassport
                 />
               </>
@@ -77,30 +77,30 @@ export default function PassaportsPage() {
                 <Ticket
                   id={7}
                   name="Passaporte Antecipado"
-                  price={5297}
+                  price={4997}
                   banner={PassaporteAntecipado}
                   quantity={1}
-                  reference={6297}
+                  reference={4997}
                   isPassport
                 />
 
                 <Ticket
                   id={14}
                   name="Combo Antecipado"
-                  price={8997}
+                  price={8497}
                   banner={ComboAntecipado}
                   quantity={2}
-                  reference={6297}
+                  reference={4997}
                   isPassport
                 />
 
                 <Ticket
                   id={17}
                   name="Super Antecipado"
-                  price={9891}
+                  price={11991}
                   banner={SuperAntecipado}
                   quantity={3}
-                  reference={6297}
+                  reference={4997}
                   isPassport
                 />
               </>

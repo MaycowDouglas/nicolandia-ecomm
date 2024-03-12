@@ -9,10 +9,10 @@ import Banner360Web from '@/public/images/banners/360-desktop.png'
 import Banner360Mobile from '@/public/images/banners/360-mobile.png'
 import BannerBrinquedosWeb from '@/public/images/banners/brinquedos-desktop.png'
 import BannerBrinquedosMobile from '@/public/images/banners/brinquedos-mobile.png'
+import MesDaMulherWeb from '@/public/images/banners/mes-da-mulher-desktop.png'
+import MesDaMulherMobile from '@/public/images/banners/mes-da-mulher-mobile.png'
 import NicoCardsWeb from '@/public/images/banners/nicocards-desktop.png'
 import NicoCardsMobile from '@/public/images/banners/nicocards-mobile.png'
-import BannerPromoNicoWeb from '@/public/images/banners/promo-nico-desktop.png'
-import BannerPromoNicoMobile from '@/public/images/banners/promo-nico-mobile.png'
 import NicoAppDark from '@/public/images/brands/nicoapp-dark.svg'
 import GooglePlay from '@/public/images/googleplay.png'
 import Head from 'next/head'
@@ -60,8 +60,8 @@ export default function HomePage() {
           <SwiperSlide>
             <SlideImage
               alt="Diversão para toda a Família!"
-              mobile={BannerPromoNicoMobile}
-              desktop={BannerPromoNicoWeb}
+              mobile={MesDaMulherMobile}
+              desktop={MesDaMulherWeb}
             />
           </SwiperSlide>
 
