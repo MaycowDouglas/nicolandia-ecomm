@@ -301,7 +301,7 @@ export const data: AttractionProps[] = [
   {
     name: 'Trenzinho Encantado',
     image: AtractionTrenzinhoEncantado,
-    category: 'radical',
+    category: 'childish',
     restrictions: {
       minHeight: 80,
       maxHeight: 130,
