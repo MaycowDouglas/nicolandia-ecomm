@@ -9,8 +9,8 @@ import Banner360Web from '@/public/images/banners/360-desktop.png'
 import Banner360Mobile from '@/public/images/banners/360-mobile.png'
 import BannerBrinquedosWeb from '@/public/images/banners/brinquedos-desktop.png'
 import BannerBrinquedosMobile from '@/public/images/banners/brinquedos-mobile.png'
-import MesConsumidorMobile from '@/public/images/banners/mes-consumidor--mobile.png'
 import MesConsumidorWeb from '@/public/images/banners/mes-consumidor-desktop.png'
+import MesConsumidorMobile from '@/public/images/banners/mes-consumidor-mobile.png'
 import MesDaMulherWeb from '@/public/images/banners/mes-da-mulher-desktop.png'
 import MesDaMulherMobile from '@/public/images/banners/mes-da-mulher-mobile.png'
 import NicoCardsWeb from '@/public/images/banners/nicocards-desktop.png'
@@ -59,11 +59,19 @@ export default function HomePage() {
             nextEl: '.main-swiper-next',
           }}
         >
-          <SwiperSlide>
+          {/* <SwiperSlide>
             <SlideImage
               alt="Diversão para toda a Família!"
               mobile={MesDaMulherMobile}
               desktop={MesDaMulherWeb}
+            />
+          </SwiperSlide> */}
+
+          <SwiperSlide>
+            <SlideImage
+              alt="Diversão para toda a Família!"
+              mobile={MesConsumidorMobile}
+              desktop={MesConsumidorWeb}
             />
           </SwiperSlide>
 
