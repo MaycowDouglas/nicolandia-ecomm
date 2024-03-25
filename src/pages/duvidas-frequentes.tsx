@@ -1,9 +1,22 @@
 import FaqItem from '@/components/molecules/FaqItem'
 import Head from 'next/head'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 export default function FaqPage() {
   const [selectedQuestion, setSelectedQuestion] = useState<number>(0)
+
+  useEffect(() => {
+    // Coloque seu script aqui
+    const script = document.createElement('script')
+    script.src = 'https://code.tidio.co/axnm5cdiyv9zjpudy2f31zocgc4ynbek.js'
+    script.async = true
+    document.body.appendChild(script)
+
+    return () => {
+      // Limpe o script se necessário
+      document.body.removeChild(script)
+    }
+  }, [])
 
   type itemProps = {
     question: string
@@ -14,7 +27,7 @@ export default function FaqPage() {
     {
       question: 'Como funciona o Passaporte?',
       awnser:
-        'Você brinca quantas vezes quiser em todas as atrações, durante a abertura até o fechamento do parque, com exceção das seguintes atrações: tiro ao alvo, pescaria, trenzinho encantado, brinquedos de fichas, games e praça de alimentação. Na compra de dois ou mais passaportes em um único código, todos os visitantes devem estar presentes para a entrega das pulseiras. Não será permitida a entrega de pulseiras depois da validação do código na bilheteria do parque.',
+        'Você pode desfrutar de todas as atrações quantas vezes desejar, do momento da abertura até o fechamento do parque, exceto nas seguintes atrações: tiro ao alvo, pescaria, trenzinho encantado, brinquedos operados por fichas, jogos eletrônicos e áreas de alimentação. Ao comprar dois ou mais passaportes com um único código, todos os visitantes devem estar presentes para receber as pulseiras de acesso. A entrega das pulseiras não será possível após a validação do código na bilheteria do parque. Além disso, não será permitido solicitar estornos parciais depois que alguns passaportes forem utilizados.',
     },
     {
       question: 'Como posso solicitar o estorno da minha compra?',

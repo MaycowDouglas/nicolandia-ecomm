@@ -5,6 +5,7 @@ import AtractionBrinquedao from '@/public/images/atractions/brinquedao.png'
 import AtractionColossusLoop from '@/public/images/atractions/colossus-loop.jpeg'
 import AtractionCrazyDance from '@/public/images/atractions/crazy-dance.jpg'
 // import AtractionDisko from '@/public/images/atractions/disko.jpg'
+import AtractionDropZone from '@/public/images/atractions/drop-zone.png'
 import AtractionFamilySwing from '@/public/images/atractions/family-swing.png'
 import AtractionFerrysWheel from '@/public/images/atractions/ferrys-wheel.png'
 import AtractionGrandPrix from '@/public/images/atractions/grand-prix.png'
@@ -18,7 +19,6 @@ import AtractionPirateShip from '@/public/images/atractions/pirate-ship.jpeg'
 import AtractionReinoEncantado from '@/public/images/atractions/reino-encantado.jpg'
 import AtractionRockRoll from '@/public/images/atractions/rock-roll.jpg'
 import AtractionRollerCoaster from '@/public/images/atractions/roller-coaster.png'
-// import AtractionSkyFlyer from '@/public/images/atractions/sky-flyer.jpg'
 import AtractionSpook from '@/public/images/atractions/spook.jpeg'
 import AtractionSuperFrisbee from '@/public/images/atractions/super-frisbee.jpeg'
 import AtractionTrex from '@/public/images/atractions/t-rex.jpeg'
@@ -143,6 +143,14 @@ export const data: AttractionProps[] = [
     category: 'familiar',
     restrictions: {
       minHeight: 80,
+    },
+  },
+  {
+    name: 'Drop Zone',
+    image: AtractionDropZone,
+    category: 'familiar',
+    restrictions: {
+      minHeight: 110,
     },
   },
   {
