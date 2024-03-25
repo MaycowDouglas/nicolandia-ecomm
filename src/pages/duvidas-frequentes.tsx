@@ -5,18 +5,18 @@ import { useEffect, useState } from 'react'
 export default function FaqPage() {
   const [selectedQuestion, setSelectedQuestion] = useState<number>(0)
 
-  useEffect(() => {
-    // Coloque seu script aqui
-    const script = document.createElement('script')
-    script.src = 'https://code.tidio.co/axnm5cdiyv9zjpudy2f31zocgc4ynbek.js'
-    script.async = true
-    document.body.appendChild(script)
+  // useEffect(() => {
+  //   // Coloque seu script aqui
+  //   const script = document.createElement('script')
+  //   script.src = 'https://code.tidio.co/axnm5cdiyv9zjpudy2f31zocgc4ynbek.js'
+  //   script.async = true
+  //   document.body.appendChild(script)
 
-    return () => {
-      // Limpe o script se necessário
-      document.body.removeChild(script)
-    }
-  }, [])
+  //   return () => {
+  //     // Limpe o script se necessário
+  //     document.body.removeChild(script)
+  //   }
+  // }, [])
 
   type itemProps = {
     question: string
@@ -32,7 +32,7 @@ export default function FaqPage() {
     {
       question: 'Como posso solicitar o estorno da minha compra?',
       awnser:
-        'O estorno pode ser solicitado em até 7 dias após a confirmação do pagamento pelo e-mail do suporte (suporte@yuupe.com).',
+        'Você pode solicitar o estorno dentro de um prazo de até 7 dias após a confirmação do pagamento, enviando um e-mail para nosso suporte (suporte@novanicolandia.com.br). Se o pagamento tiver sido feito por boleto, será necessário fornecer os dados bancários do titular da compra. Lembre-se de que não aceitamos dados bancários de terceiros que não sejam o titular da compra. Estamos aqui para garantir uma experiência tranquila e segura para todos os nossos clientes.',
     },
     {
       question: 'Criança a partir de quantos anos pagam?',
@@ -47,7 +47,7 @@ export default function FaqPage() {
     {
       question: 'Comprei meu passaporte pelo site, o que devo fazer?',
       awnser:
-        'Anote ou imprima seu código (Yuupe), e valide o mesmo na portaria do parque para retirar seu passaporte. O sigilo de seu código é de sua responsabilidade, o parque não se responsabiliza caso você perca seu código e outra pessoa o utilize em seu lugar.',
+        'Anote ou imprima seu código, e valide o mesmo na portaria do parque para retirar seu passaporte. O sigilo de seu código é de sua responsabilidade, o parque não se responsabiliza caso você perca seu código e outra pessoa o utilize em seu lugar.',
     },
     {
       question: 'Aniversariante paga?',
