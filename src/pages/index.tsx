@@ -7,6 +7,8 @@ import Tickets from '@/components/organisms/Tickets'
 import AppleStore from '@/public/images/applestore.png'
 import Banner360Web from '@/public/images/banners/360-desktop.png'
 import Banner360Mobile from '@/public/images/banners/360-mobile.png'
+import BannerHorariosWeb from '@/public/images/banners/banner-horarios-desktop.png'
+import BannerHorariosMobile from '@/public/images/banners/banner-horarios-mobile.png'
 import BannerBrinquedosWeb from '@/public/images/banners/brinquedos-desktop.png'
 import BannerBrinquedosMobile from '@/public/images/banners/brinquedos-mobile.png'
 import MesConsumidorWeb from '@/public/images/banners/mes-consumidor-desktop.png'
@@ -59,6 +61,14 @@ export default function HomePage() {
             nextEl: '.main-swiper-next',
           }}
         >
+          <SwiperSlide>
+            <SlideImage
+              alt="Diversão para toda a Família!"
+              mobile={BannerHorariosMobile}
+              desktop={BannerHorariosWeb}
+            />
+          </SwiperSlide>
+
           <SwiperSlide>
             <SlideImage
               alt="Diversão para toda a Família!"

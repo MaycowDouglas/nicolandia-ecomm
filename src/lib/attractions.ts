@@ -16,7 +16,7 @@ import AtractionMiniRoda from '@/public/images/atractions/mini-roda.png'
 import AtractionMiniTorre from '@/public/images/atractions/mini-torre.png'
 import AtractionPescaria from '@/public/images/atractions/pescaria.jpeg'
 import AtractionPirateShip from '@/public/images/atractions/pirate-ship.jpeg'
-import AtractionReinoEncantado from '@/public/images/atractions/reino-encantado.jpg'
+import AtractionReinoEncantado from '@/public/images/atractions/reino-encantado.png'
 import AtractionRockRoll from '@/public/images/atractions/rock-roll.jpg'
 import AtractionRollerCoaster from '@/public/images/atractions/roller-coaster.png'
 import AtractionSpook from '@/public/images/atractions/spook.jpeg'
@@ -80,15 +80,6 @@ export const data: AttractionProps[] = [
     },
   },
   {
-    name: 'Tobogã',
-    image: AtractionToboga,
-    category: 'radical',
-    observation: 'Funcionamento nas sextas. Sábados, domingos e feriados à partir de 14h30',
-    restrictions: {
-      minHeight: 120,
-    },
-  },
-  {
     name: 'Super frisbee',
     image: AtractionSuperFrisbee,
     category: 'radical',
@@ -111,6 +102,24 @@ export const data: AttractionProps[] = [
     category: 'radical',
     restrictions: {
       minHeight: 130,
+    },
+  },
+  {
+    name: 'Drop Zone',
+    image: AtractionDropZone,
+    category: 'radical',
+    observation: 'Está atração não é permitida para quem possui mobilidade reduzida.',
+    restrictions: {
+      minHeight: 120,
+    },
+  },
+  {
+    name: 'Tobogã',
+    image: AtractionToboga,
+    category: 'familiar',
+    observation: 'Sexta dia todo. Sábado, domingo e feriados: de 11h às 12h, retorno às 14h30.',
+    restrictions: {
+      minHeight: 120,
     },
   },
   // {
@@ -143,14 +152,6 @@ export const data: AttractionProps[] = [
     category: 'familiar',
     restrictions: {
       minHeight: 80,
-    },
-  },
-  {
-    name: 'Drop Zone',
-    image: AtractionDropZone,
-    category: 'familiar',
-    restrictions: {
-      minHeight: 110,
     },
   },
   {

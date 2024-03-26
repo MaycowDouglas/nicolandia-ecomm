@@ -5,19 +5,6 @@ import { useEffect, useState } from 'react'
 export default function FaqPage() {
   const [selectedQuestion, setSelectedQuestion] = useState<number>(0)
 
-  // useEffect(() => {
-  //   // Coloque seu script aqui
-  //   const script = document.createElement('script')
-  //   script.src = 'https://code.tidio.co/axnm5cdiyv9zjpudy2f31zocgc4ynbek.js'
-  //   script.async = true
-  //   document.body.appendChild(script)
-
-  //   return () => {
-  //     // Limpe o script se necessário
-  //     document.body.removeChild(script)
-  //   }
-  // }, [])
-
   type itemProps = {
     question: string
     awnser: string | string[]
@@ -136,6 +123,7 @@ export default function FaqPage() {
             />
           ))}
         </div>
+        <script src="https://code.tidio.co/axnm5cdiyv9zjpudy2f31zocgc4ynbek.js" async></script>
       </section>
     </>
   )
