@@ -105,6 +105,7 @@ export default function FaqPage() {
     <>
       <Head>
         <title>Nicolândia | Dúvidas frequentes</title>
+        <script src="https://code.tidio.co/axnm5cdiyv9zjpudy2f31zocgc4ynbek.js" async></script>
       </Head>
       <section className="pb-10 pt-20">
         <div className="container">
@@ -123,7 +124,6 @@ export default function FaqPage() {
             />
           ))}
         </div>
-        <script src="https://code.tidio.co/axnm5cdiyv9zjpudy2f31zocgc4ynbek.js" async></script>
       </section>
     </>
   )
