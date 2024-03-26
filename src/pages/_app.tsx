@@ -6,6 +6,7 @@ import '@/styles/globals.css'
 import type { AppProps } from 'next/app'
 import localFont from 'next/font/local'
 import { useRouter } from 'next/router'
+import Script from 'next/script'
 import nProgress from 'nprogress'
 import { useEffect } from 'react'
 import { SWRConfig } from 'swr'
@@ -78,6 +79,7 @@ export default function App({ Component, pageProps }: AppProps) {
           <CartProvider>
             <Layout>
               <Component {...pageProps} />
+              <Script src="https://code.tidio.co/axnm5cdiyv9zjpudy2f31zocgc4ynbek.js" async />
             </Layout>
           </CartProvider>
         </FeedbackProvider>

@@ -1,23 +1,9 @@
 import FaqItem from '@/components/molecules/FaqItem'
 import Head from 'next/head'
-import Script from 'next/script'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 
 export default function FaqPage() {
   const [selectedQuestion, setSelectedQuestion] = useState<number>(0)
-
-  // useEffect(() => {
-  //   // Coloque seu script aqui
-  //   const script = document.createElement('script')
-  //   script.src = 'https://code.tidio.co/axnm5cdiyv9zjpudy2f31zocgc4ynbek.js'
-  //   script.async = true
-  //   document.body.appendChild(script)
-
-  //   return () => {
-  //     // Limpe o script se necessário
-  //     document.body.removeChild(script)
-  //   }
-  // }, [])
 
   type itemProps = {
     question: string
@@ -137,7 +123,6 @@ export default function FaqPage() {
             />
           ))}
         </div>
-        <Script src="https://code.tidio.co/axnm5cdiyv9zjpudy2f31zocgc4ynbek.js" async />
       </section>
     </>
   )
