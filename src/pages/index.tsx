@@ -72,22 +72,6 @@ export default function HomePage() {
           <SwiperSlide>
             <SlideImage
               alt="Diversão para toda a Família!"
-              mobile={MesConsumidorMobile}
-              desktop={MesConsumidorWeb}
-            />
-          </SwiperSlide>
-
-          <SwiperSlide>
-            <SlideImage
-              alt="Diversão para toda a Família!"
-              mobile={MesDaMulherMobile}
-              desktop={MesDaMulherWeb}
-            />
-          </SwiperSlide>
-
-          <SwiperSlide>
-            <SlideImage
-              alt="Diversão para toda a Família!"
               mobile={NicoCardsMobile}
               desktop={NicoCardsWeb}
             />
