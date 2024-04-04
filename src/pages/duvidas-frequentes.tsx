@@ -75,6 +75,13 @@ export default function FaqPage() {
         'Queridos visitantes da Nova Nicolândia, informamos que, para que as crianças não se percam no nosso espaço, pedimos que coloquem o número de telefone do responsável na pulseira da mesma, pois caso ocorra, a assistência do parque ligará para o responsável. Pedimos aos pais e/ou responsáveis para que as crianças não fiquem descalças em nosso parque. Agradecemos a colaboração e desejamos muita diversão!',
     },
     {
+      question: 'PcD / Autistas têm meia entrada?',
+      awnser: [
+        'Pessoas PcD e autistas têm passe livre e acesso a pulseira vip, e é necessário estar acompanhado(a) de um responsável. O responsável deverá adquirir a pulseira por R$50,00 na bilheteria presencial do parque.',
+        'Para pessoas portadoras do espectro autista, é preciso apresentar o laudo ou RG com identificação na bilheteria presencial. Válido a partir de qualquer idade.',
+      ],
+    },
+    {
       question: 'Alimentos e bebidas no parque',
       awnser: [
         'Levar o próprio lanche de casa é um direito seu. O parque permite a entrada de alimentos e bebidas por grupo de visitantes ou famílias. No entanto, a entrada com alimentos está condicionada ao primeiro acesso ao parque.',
