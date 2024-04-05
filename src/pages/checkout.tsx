@@ -229,7 +229,7 @@ export default function CheckoutPage() {
           type: 'error',
           message: 'Erro de autenticação!',
         })
-      } catch (error) {
+      } catch (error: any) {
         if (error?.data && error.data?.number) {
           addFeedback({
             type: 'error',
