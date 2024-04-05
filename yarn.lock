@@ -53,6 +53,11 @@
   resolved "https://registry.yarnpkg.com/@eslint/js/-/js-8.42.0.tgz#484a1d638de2911e6f5a30c12f49c7e4a3270fb6"
   integrity sha512-6SWlXpWU5AvId8Ac7zjzmIOqMOba/JWY8XZ4A7q7Gn1Vlfg/SFFIlrtHXt9nPn4op9ZPAkl91Jao+QQv3r/ukw==
 
+"@hookform/resolvers@^3.3.4":
+  version "3.3.4"
+  resolved "https://registry.yarnpkg.com/@hookform/resolvers/-/resolvers-3.3.4.tgz#de9b668c2835eb06892290192de6e2a5c906229b"
+  integrity sha512-o5cgpGOuJYrd+iMKvkttOclgwRW86EsWJZZRC23prf0uU2i48Htq4PuT73AVb9ionFyZrwYEITuOFGF+BydEtQ==
+
 "@humanwhocodes/config-array@^0.11.10":
   version "0.11.10"
   resolved "https://registry.yarnpkg.com/@humanwhocodes/config-array/-/config-array-0.11.10.tgz#5a3ffe32cc9306365fb3fd572596cd602d5e12d2"
@@ -108,6 +113,11 @@
   dependencies:
     "@jridgewell/resolve-uri" "3.1.0"
     "@jridgewell/sourcemap-codec" "1.4.14"
+
+"@kurkle/color@^0.3.0":
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/@kurkle/color/-/color-0.3.2.tgz#5acd38242e8bde4f9986e7913c8fdf49d3aa199f"
+  integrity sha512-fuscdXJ9G1qb7W8VdHi+IwRqij3lBkosAm4ydQtEmbY58OzHXqQhvlxqEkoz0yssNVn38bcpRWgA9PP+OGoisw==
 
 "@next/env@13.4.4":
   version "13.4.4"
@@ -230,6 +240,54 @@
   version "2.11.8"
   resolved "https://registry.yarnpkg.com/@popperjs/core/-/core-2.11.8.tgz#6b79032e760a0899cd4204710beede972a3a185f"
   integrity sha512-P1st0aksCrn9sGZhp8GMYwBnQsbvAWsZAX44oXNNvLHGqAOcoVxmjZiohstwQ7SqKnbR47akdNi+uleWD8+g6A==
+
+"@prisma/client@5.1.1":
+  version "5.1.1"
+  resolved "https://registry.yarnpkg.com/@prisma/client/-/client-5.1.1.tgz#ea2b0c8599bdb3f86d92e8df46fba795a744db01"
+  integrity sha512-fxcCeK5pMQGcgCqCrWsi+I2rpIbk0rAhdrN+ke7f34tIrgPwA68ensrpin+9+fZvuV2OtzHmuipwduSY6HswdA==
+  dependencies:
+    "@prisma/engines-version" "5.1.1-1.6a3747c37ff169c90047725a05a6ef02e32ac97e"
+
+"@prisma/debug@5.12.1":
+  version "5.12.1"
+  resolved "https://registry.yarnpkg.com/@prisma/debug/-/debug-5.12.1.tgz#007c8ad2e466d565bcd0671b8846c27f8700c722"
+  integrity sha512-kd/wNsR0klrv79o1ITsbWxYyh4QWuBidvxsXSParPsYSu0ircUmNk3q4ojsgNc3/81b0ozg76iastOG43tbf8A==
+
+"@prisma/engines-version@5.1.1-1.6a3747c37ff169c90047725a05a6ef02e32ac97e":
+  version "5.1.1-1.6a3747c37ff169c90047725a05a6ef02e32ac97e"
+  resolved "https://registry.yarnpkg.com/@prisma/engines-version/-/engines-version-5.1.1-1.6a3747c37ff169c90047725a05a6ef02e32ac97e.tgz#2e8a1f098ec09452dbe00923b24f582f95d1747c"
+  integrity sha512-owZqbY/wucbr65bXJ/ljrHPgQU5xXTSkmcE/JcbqE1kusuAXV/TLN3/exmz21SZ5rJ7WDkyk70J2G/n68iogbQ==
+
+"@prisma/engines-version@5.12.0-21.473ed3124229e22d881cb7addf559799debae1ab":
+  version "5.12.0-21.473ed3124229e22d881cb7addf559799debae1ab"
+  resolved "https://registry.yarnpkg.com/@prisma/engines-version/-/engines-version-5.12.0-21.473ed3124229e22d881cb7addf559799debae1ab.tgz#c78d099a3fe86d446db7442e64e56987e39e7f32"
+  integrity sha512-6yvO8s80Tym61aB4QNtYZfWVmE3pwqe807jEtzm8C5VDe7nw8O1FGX3TXUaXmWV0fQTIAfRbeL2Gwrndabp/0g==
+
+"@prisma/engines@5.12.1":
+  version "5.12.1"
+  resolved "https://registry.yarnpkg.com/@prisma/engines/-/engines-5.12.1.tgz#a50649427d627a9af962a188a84c65d61c6e2b3f"
+  integrity sha512-HQDdglLw2bZR/TXD2Y+YfDMvi5Q8H+acbswqOsWyq9pPjBLYJ6gzM+ptlTU/AV6tl0XSZLU1/7F4qaWa8bqpJA==
+  dependencies:
+    "@prisma/debug" "5.12.1"
+    "@prisma/engines-version" "5.12.0-21.473ed3124229e22d881cb7addf559799debae1ab"
+    "@prisma/fetch-engine" "5.12.1"
+    "@prisma/get-platform" "5.12.1"
+
+"@prisma/fetch-engine@5.12.1":
+  version "5.12.1"
+  resolved "https://registry.yarnpkg.com/@prisma/fetch-engine/-/fetch-engine-5.12.1.tgz#c38e9fa17fdc535b4c83cbb7645569ad0a511fa9"
+  integrity sha512-qSs3KcX1HKcea1A+hlJVK/ljj0PNIUHDxAayGMvgJBqmaN32P9tCidlKz1EGv6WoRFICYnk3Dd/YFLBwnFIozA==
+  dependencies:
+    "@prisma/debug" "5.12.1"
+    "@prisma/engines-version" "5.12.0-21.473ed3124229e22d881cb7addf559799debae1ab"
+    "@prisma/get-platform" "5.12.1"
+
+"@prisma/get-platform@5.12.1":
+  version "5.12.1"
+  resolved "https://registry.yarnpkg.com/@prisma/get-platform/-/get-platform-5.12.1.tgz#33f427f6d744dee62a9e06858889691d78b50804"
+  integrity sha512-pgIR+pSvhYHiUcqXVEZS31NrFOTENC9yFUdEAcx7cdQBoZPmHVjtjN4Ss6NzVDMYPrKJJ51U14EhEoeuBlMioQ==
+  dependencies:
+    "@prisma/debug" "5.12.1"
 
 "@rushstack/eslint-patch@^1.1.3":
   version "1.3.0"
@@ -753,6 +811,13 @@ chalk@^4.0.0:
   dependencies:
     ansi-styles "^4.1.0"
     supports-color "^7.1.0"
+
+chart.js@^4.3.3:
+  version "4.4.2"
+  resolved "https://registry.yarnpkg.com/chart.js/-/chart.js-4.4.2.tgz#95962fa6430828ed325a480cc2d5f2b4e385ac31"
+  integrity sha512-6GD7iKwFpP5kbSD4MeRRRlTnQvxfQREy36uEtm1hzHzcOqwWx0YEHuspuoNlslu+nciLIB7fjjsHkUv/FzFcOg==
+  dependencies:
+    "@kurkle/color" "^0.3.0"
 
 chokidar@^3.5.3:
   version "3.5.3"
@@ -2412,6 +2477,13 @@ prettier@^2.8.8:
   resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.8.8.tgz#e8c5d7e98a4305ffe3de2e1fc4aca1a71c28b1da"
   integrity sha512-tdN8qQGvNjw4CHbY+XXk0JgCXn9QiF21a55rBe5LJAU+kDyC4WQn4+awm2Xfk2lQMk5fKup9XgzTZtGkjBdP9Q==
 
+prisma@^5.1.1:
+  version "5.12.1"
+  resolved "https://registry.yarnpkg.com/prisma/-/prisma-5.12.1.tgz#db4596253bb066afc9f08744642f200a398d8d51"
+  integrity sha512-SkMnb6wyIxTv9ACqiHBI2u9gD6y98qXRoCoLEnZsF6yee5Qg828G+ARrESN+lQHdw4maSZFFSBPPDpvSiVTo0Q==
+  dependencies:
+    "@prisma/engines" "5.12.1"
+
 prop-types@^15.5.0, prop-types@^15.7.2, prop-types@^15.8.1:
   version "15.8.1"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.8.1.tgz#67d87bf1a694f48435cf332c24af10214a3140b5"
@@ -2450,6 +2522,11 @@ react-async-script@^1.2.0:
   dependencies:
     hoist-non-react-statics "^3.3.0"
     prop-types "^15.5.0"
+
+react-chartjs-2@^5.2.0:
+  version "5.2.0"
+  resolved "https://registry.yarnpkg.com/react-chartjs-2/-/react-chartjs-2-5.2.0.tgz#43c1e3549071c00a1a083ecbd26c1ad34d385f5d"
+  integrity sha512-98iN5aguJyVSxp5U3CblRLH67J8gkfyGNbiK3c+l1QI/G4irHMPQw44aEPmjVag+YKTyQ260NcF82GTQ3bdscA==
 
 react-datepicker@^4.13.0:
   version "4.13.0"
@@ -2496,6 +2573,11 @@ react-gtm-module@^2.0.11:
   resolved "https://registry.yarnpkg.com/react-gtm-module/-/react-gtm-module-2.0.11.tgz#14484dac8257acd93614e347c32da9c5ac524206"
   integrity sha512-8gyj4TTxeP7eEyc2QKawEuQoAZdjKvMY4pgWfycGmqGByhs17fR+zEBs0JUDq4US/l+vbTl+6zvUIx27iDo/Vw==
 
+react-hook-form@^7.51.2:
+  version "7.51.2"
+  resolved "https://registry.yarnpkg.com/react-hook-form/-/react-hook-form-7.51.2.tgz#79f7f72ee217c5114ff831012d1a7ec344096e7f"
+  integrity sha512-y++lwaWjtzDt/XNnyGDQy6goHskFualmDlf+jzEZvjvz6KWDf7EboL7pUvRCzPTJd0EOPpdekYaQLEvvG6m6HA==
+
 react-icons@^4.9.0:
   version "4.9.0"
   resolved "https://registry.yarnpkg.com/react-icons/-/react-icons-4.9.0.tgz#ba44f436a053393adb1bdcafbc5c158b7b70d2a3"
@@ -2505,6 +2587,11 @@ react-is@^16.13.1, react-is@^16.7.0:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
+
+react-loading-skeleton@^3.3.1:
+  version "3.4.0"
+  resolved "https://registry.yarnpkg.com/react-loading-skeleton/-/react-loading-skeleton-3.4.0.tgz#c71a3a17259d08e4064974aa0b07f150a09dfd57"
+  integrity sha512-1oJEBc9+wn7BbkQQk7YodlYEIjgeR+GrRjD+QXkVjwZN7LGIcAFHrx4NhT7UHGBxNY1+zax3c+Fo6XQM4R7CgA==
 
 react-onclickoutside@^6.12.2:
   version "6.13.0"
@@ -3081,3 +3168,8 @@ zod@3.21.4:
   version "3.21.4"
   resolved "https://registry.yarnpkg.com/zod/-/zod-3.21.4.tgz#10882231d992519f0a10b5dd58a38c9dabbb64db"
   integrity sha512-m46AKbrzKVzOzs/DZgVnG5H55N1sv1M8qZU3A8RIKbs3mrACDNeIOeilDymVb2HdmP8uwshOCF4uJ8uM9rCqJw==
+
+zod@^3.22.4:
+  version "3.22.4"
+  resolved "https://registry.yarnpkg.com/zod/-/zod-3.22.4.tgz#f31c3a9386f61b1f228af56faa9255e845cf3fff"
+  integrity sha512-iC+8Io04lddc+mVqQ9AZ7OQ2MrUKGN+oIQyq1vemgt46jwCwLfhq7/pwnBnNXXXZb8VTVLKwp9EDkx+ryxIWmg==

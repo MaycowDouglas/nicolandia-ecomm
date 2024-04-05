@@ -130,40 +130,14 @@ export default function CheckoutPage() {
     }
   }, [])
 
-  const handlePersonalDataChange = useCallback((e: ChangeEvent<HTMLInputElement>) => {
-    let field = e.currentTarget.name,
-      value = e.currentTarget.value
+  const handlePersonalDataChange = useCallback(
+    (e: ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+      let field = e.currentTarget.name,
+        value = e.currentTarget.value
 
-    setPersonalData((prevData) => ({ ...prevData, [field]: value }))
-  }, [])
-
-  const handleZipcodeConfirmation = useCallback(
-    async (e: FormEvent<HTMLInputElement>) => {
-      const zipcode = e.currentTarget.value.replace(/\D/g, '')
-
-      if (zipcode.length === 8) {
-        const addressData: ViaCepAddress = await getAddressViaCep(parseInt(zipcode))
-
-        if (addressData.erro) {
-          addFeedback({ type: 'error', message: 'Cep inválido!' })
-          setPersonalData((prevData) => ({ ...prevData, zipcode: '' }))
-          setCepConfirmation(false)
-          return
-        }
-
-        setPersonalData((prevData) => ({
-          ...prevData,
-          city: String(addressData.localidade),
-          state: String(addressData.uf),
-          street: String(addressData.logradouro),
-          zipcode: String(addressData.cep),
-          neighborhood: String(addressData.bairro),
-        }))
-
-        setCepConfirmation(true)
-      }
+      setPersonalData((prevData) => ({ ...prevData, [field]: value }))
     },
-    [addFeedback, getAddressViaCep]
+    []
   )
 
   const handlePaymentMethodChange = useCallback((e: ChangeEvent<HTMLInputElement>) => {
@@ -251,16 +225,22 @@ export default function CheckoutPage() {
 
           return
         }
-
         addFeedback({
           type: 'error',
           message: 'Erro de autenticação!',
         })
       } catch (error) {
-        addFeedback({
-          type: 'error',
-          message: 'Este CPF já está sendo usado por outra conta.',
-        })
+        if (error?.data && error.data?.number) {
+          addFeedback({
+            type: 'error',
+            message: 'Telefone Inválido!',
+          })
+        } else {
+          addFeedback({
+            type: 'error',
+            message: 'Este CPF já está sendo usado por outra conta.',
+          })
+        }
       }
     },
     [
@@ -351,158 +331,166 @@ export default function CheckoutPage() {
                     required
                   />
                 </div>
-                {isCepConfirmed && (
-                  <>
-                    <div>
-                      <label htmlFor="street" className="inline-flex mb-1">
-                        Endereço
-                      </label>
-                      <InputText
-                        id="street"
-                        name="street"
-                        value={personalData.street}
-                        onChange={handlePersonalDataChange}
-                        required
-                      />
-                    </div>
-                    <div>
-                      <label htmlFor="number" className="inline-flex mb-1">
-                        Número
-                      </label>
-                      <InputText
-                        id="number"
-                        name="number"
-                        value={personalData.number}
-                        onChange={handlePersonalDataChange}
-                        required
-                      />
-                    </div>
-                    <div>
-                      <label htmlFor="neighborhood" className="inline-flex mb-1">
-                        Bairro
-                      </label>
-                      <InputText
-                        id="neighborhood"
-                        name="neighborhood"
-                        value={personalData.neighborhood}
-                        onChange={handlePersonalDataChange}
-                        required
-                      />
-                    </div>
-                    <div>
-                      <label htmlFor="city" className="inline-flex mb-1">
-                        Cidade
-                      </label>
-                      <InputText
-                        id="city"
-                        name="city"
-                        value={personalData.city}
-                        onChange={handlePersonalDataChange}
-                        required
-                      />
-                    </div>
-                    <div>
-                      <label htmlFor="state" className="inline-flex mb-1">
-                        Estado
-                      </label>
-                      <InputText
-                        id="state"
-                        name="state"
-                        value={personalData.state}
-                        onChange={handlePersonalDataChange}
-                        required
-                      />
-                    </div>
-                  </>
-                )}
+                <div>
+                  <label htmlFor="street" className="inline-flex mb-1">
+                    Endereço
+                  </label>
+                  <InputText
+                    id="street"
+                    name="street"
+                    value={personalData.street}
+                    onChange={handlePersonalDataChange}
+                    required
+                  />
+                </div>
+                <div>
+                  <label htmlFor="number" className="inline-flex mb-1">
+                    Número
+                  </label>
+                  <InputText
+                    id="number"
+                    name="number"
+                    value={personalData.number}
+                    onChange={handlePersonalDataChange}
+                    required
+                  />
+                </div>
+                <div>
+                  <label htmlFor="neighborhood" className="inline-flex mb-1">
+                    Bairro
+                  </label>
+                  <InputText
+                    id="neighborhood"
+                    name="neighborhood"
+                    value={personalData.neighborhood}
+                    onChange={handlePersonalDataChange}
+                    required
+                  />
+                </div>
+                <div>
+                  <label htmlFor="city" className="inline-flex mb-1">
+                    Cidade
+                  </label>
+                  <InputText
+                    id="city"
+                    name="city"
+                    value={personalData.city}
+                    onChange={handlePersonalDataChange}
+                    required
+                  />
+                </div>
+                <div>
+                  <label htmlFor="state" className="inline-flex mb-1">
+                    Estado
+                  </label>
+                  <select
+                    id="state"
+                    name="state"
+                    value={personalData.state}
+                    onChange={handlePersonalDataChange}
+                    className="w-full px-4 py-2 border-2 border-neutral-200 rounded-xl outline-none"
+                    required
+                  >
+                    <option value="AC">AC</option>
+                    <option value="AL">AL</option>
+                    <option value="AP">AP</option>
+                    <option value="AM">AM</option>
+                    <option value="BA">BA</option>
+                    <option value="CE">CE</option>
+                    <option value="DF">DF</option>
+                    <option value="ES">ES</option>
+                    <option value="GO">GO</option>
+                    <option value="MA">MA</option>
+                    <option value="MT">MT</option>
+                    <option value="MS">MS</option>
+                    <option value="MG">MG</option>
+                    <option value="PA">PA</option>
+                    <option value="PB">PB</option>
+                    <option value="PR">PR</option>
+                    <option value="PE">PE</option>
+                    <option value="PI">PI</option>
+                    <option value="RJ">RJ</option>
+                    <option value="RN">RN</option>
+                    <option value="RS">RS</option>
+                    <option value="RO">RO</option>
+                    <option value="RR">RR</option>
+                    <option value="SC">SC</option>
+                    <option value="SP">SP</option>
+                    <option value="SE">SE</option>
+                    <option value="TO">TO</option>
+                  </select>
+                </div>
 
                 <div>
                   <div className="flex items-center justify-between">
                     <label htmlFor="zipcode" className="inline-flex mb-1">
                       Cep
                     </label>
-                    {isCepConfirmed && (
-                      <button
-                        onClick={() => {
-                          setCepConfirmation(false)
-                          setPersonalData({ ...personalData, zipcode: '' })
-                        }}
-                        className="flex items-center gap-1 text-sm text-custom-200"
-                      >
-                        <FiEdit /> Alterar
-                      </button>
-                    )}
                   </div>
                   <InputText
                     id="zipcode"
                     name="zipcode"
                     value={masks.cep(personalData.zipcode)}
                     onChange={handlePersonalDataChange}
-                    onInput={handleZipcodeConfirmation}
-                    disabled={isCepConfirmed}
                     required
                   />
                 </div>
               </div>
 
-              {isCepConfirmed && (
-                <>
-                  <h2 className="mt-10 mb-3 text-2xl text-center md:text-start font-bold">
-                    Forma de pagamento
-                  </h2>
+              <h2 className="mt-10 mb-3 text-2xl text-center md:text-start font-bold">
+                Forma de pagamento
+              </h2>
 
-                  <div className="text-lg space-y-2">
-                    <div>
-                      <input
-                        type="radio"
-                        id="method-pix"
-                        name="payment-method"
-                        className="peer hidden"
-                        value="PIX"
-                        checked={paymentMethod === 'PIX'}
-                        onChange={handlePaymentMethodChange}
-                      />
-                      <label
-                        htmlFor="method-pix"
-                        className={classNames(
-                          'peer-checked:bg-custom-200 peer-checked:text-white peer-checked:border-2',
-                          'px-5 py-3 flex items-center justify-between border-[1px] border-neutral-200 shadow cursor-pointer'
-                        )}
-                      >
-                        <span className="flex items-center gap-3">
-                          <BsQrCodeScan />
-                          <span>Pix</span>
-                        </span>
-                        <FiChevronRight />
-                      </label>
-                    </div>
-                    <div>
-                      <input
-                        type="radio"
-                        id="method-boleto"
-                        name="payment-method"
-                        className="peer hidden"
-                        value="BOLETO"
-                        checked={paymentMethod === 'BOLETO'}
-                        onChange={handlePaymentMethodChange}
-                      />
-                      <label
-                        htmlFor="method-boleto"
-                        className={classNames(
-                          'peer-checked:bg-custom-200 peer-checked:text-white peer-checked:border-2',
-                          'px-5 py-3 flex items-center justify-between border-[1px] border-neutral-200 shadow cursor-pointer'
-                        )}
-                      >
-                        <span className="flex items-center gap-3">
-                          <AiOutlineBarcode />
-                          <span>Boleto</span>
-                        </span>
-                        <FiChevronRight />
-                      </label>
-                    </div>
-                  </div>
-                </>
-              )}
+              <div className="text-lg space-y-2">
+                <div>
+                  <input
+                    type="radio"
+                    id="method-pix"
+                    name="payment-method"
+                    className="peer hidden"
+                    value="PIX"
+                    checked={paymentMethod === 'PIX'}
+                    onChange={handlePaymentMethodChange}
+                  />
+                  <label
+                    htmlFor="method-pix"
+                    className={classNames(
+                      'peer-checked:bg-custom-200 peer-checked:text-white peer-checked:border-2',
+                      'px-5 py-3 flex items-center justify-between border-[1px] border-neutral-200 shadow cursor-pointer'
+                    )}
+                  >
+                    <span className="flex items-center gap-3">
+                      <BsQrCodeScan />
+                      <span>Pix</span>
+                    </span>
+                    <FiChevronRight />
+                  </label>
+                </div>
+                <div>
+                  <input
+                    type="radio"
+                    id="method-boleto"
+                    name="payment-method"
+                    className="peer hidden"
+                    value="BOLETO"
+                    checked={paymentMethod === 'BOLETO'}
+                    onChange={handlePaymentMethodChange}
+                  />
+                  <label
+                    htmlFor="method-boleto"
+                    className={classNames(
+                      'peer-checked:bg-custom-200 peer-checked:text-white peer-checked:border-2',
+                      'px-5 py-3 flex items-center justify-between border-[1px] border-neutral-200 shadow cursor-pointer'
+                    )}
+                  >
+                    <span className="flex items-center gap-3">
+                      <AiOutlineBarcode />
+                      <span>Boleto</span>
+                    </span>
+                    <FiChevronRight />
+                  </label>
+                </div>
+              </div>
             </div>
 
             <div className="w-full lg:w-1/3">
