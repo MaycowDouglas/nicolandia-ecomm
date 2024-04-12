@@ -7,10 +7,10 @@ import Tickets from '@/components/organisms/Tickets'
 import AppleStore from '@/public/images/applestore.png'
 import Banner360Web from '@/public/images/banners/360-desktop.png'
 import Banner360Mobile from '@/public/images/banners/360-mobile.png'
+import BannerAniversarioBsbWeb from '@/public/images/banners/aniversario-bsb-desktop.png'
+import BannerAniversarioBsbMobile from '@/public/images/banners/aniversario-bsb-mobile.png'
 import BannerBrinquedosWeb from '@/public/images/banners/brinquedos-desktop.png'
 import BannerBrinquedosMobile from '@/public/images/banners/brinquedos-mobile.png'
-import MesDaMulherWeb from '@/public/images/banners/mes-da-mulher-desktop.png'
-import MesDaMulherMobile from '@/public/images/banners/mes-da-mulher-mobile.png'
 import NicoCardsWeb from '@/public/images/banners/nicocards-desktop.png'
 import NicoCardsMobile from '@/public/images/banners/nicocards-mobile.png'
 import NicoAppDark from '@/public/images/brands/nicoapp-dark.svg'
@@ -57,6 +57,14 @@ export default function HomePage() {
             nextEl: '.main-swiper-next',
           }}
         >
+          <SwiperSlide>
+            <SlideImage
+              alt="Diversão para toda a Família!"
+              mobile={BannerAniversarioBsbMobile}
+              desktop={BannerAniversarioBsbWeb}
+            />
+          </SwiperSlide>
+
           <SwiperSlide>
             <SlideImage
               alt="Diversão para toda a Família!"
