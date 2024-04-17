@@ -73,13 +73,13 @@ export default function HomePage() {
             />
           </SwiperSlide>
 
-          <SwiperSlide>
+          {/* <SwiperSlide>
             <SlideImage
               alt="Diversão para toda a Família!"
               mobile={Banner360Mobile}
               desktop={Banner360Web}
             />
-          </SwiperSlide>
+          </SwiperSlide> */}
 
           <SwiperSlide>
             <SlideImage
