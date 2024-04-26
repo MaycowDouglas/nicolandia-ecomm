@@ -1,5 +1,5 @@
 import Atraction360 from '@/public/images/atractions/360.png'
-import AtractionArenaElastica from '@/public/images/atractions/arena-elastica.jpeg'
+// import AtractionArenaElastica from '@/public/images/atractions/arena-elastica.jpeg'
 import AtractionBrinquedao from '@/public/images/atractions/brinquedao.png'
 // import AtractionCarrossel from '@/public/images/atractions/carrossel.jpg'
 import AtractionColossusLoop from '@/public/images/atractions/colossus-loop.jpeg'
@@ -18,7 +18,7 @@ import AtractionPescaria from '@/public/images/atractions/pescaria.jpeg'
 import AtractionPirateShip from '@/public/images/atractions/pirate-ship.jpeg'
 import AtractionReinoEncantado from '@/public/images/atractions/reino-encantado.png'
 import AtractionRockRoll from '@/public/images/atractions/rock-roll.jpg'
-import AtractionRollerCoaster from '@/public/images/atractions/roller-coaster.png'
+// import AtractionRollerCoaster from '@/public/images/atractions/roller-coaster.png'
 import AtractionSpook from '@/public/images/atractions/spook.jpeg'
 import AtractionSuperFrisbee from '@/public/images/atractions/super-frisbee.jpeg'
 import AtractionTrex from '@/public/images/atractions/t-rex.jpeg'
@@ -29,7 +29,7 @@ import AtractionTrenzinhoCircus from '@/public/images/atractions/trenzinho-circu
 import AtractionTrenzinhoEncantado from '@/public/images/atractions/trenzinho-encantado.png'
 import AtractionTrenzinhoFazenda from '@/public/images/atractions/trenzinho-fazenda.jpeg'
 import AtractionTrenzinhoMiniBruc from '@/public/images/atractions/trenzinho-mini-bruc.png'
-import AtractionTrenzinhoTour from '@/public/images/atractions/trenzinho-tour.jpeg'
+// import AtractionTrenzinhoTour from '@/public/images/atractions/trenzinho-tour.jpeg'
 import AtractionWaveBlaster from '@/public/images/atractions/wave-blaster.png'
 import AtractionZipZap from '@/public/images/atractions/zip-zap.jpg'
 import { StaticImageData } from 'next/image'
@@ -104,15 +104,15 @@ export const data: AttractionProps[] = [
       minHeight: 130,
     },
   },
-  {
-    name: 'Drop Zone',
-    image: AtractionDropZone,
-    category: 'radical',
-    observation: 'Está atração não é permitida para quem possui mobilidade reduzida.',
-    restrictions: {
-      minHeight: 120,
-    },
-  },
+  // {
+  //   name: 'Drop Zone',
+  //   image: AtractionDropZone,
+  //   category: 'radical',
+  //   observation: 'Está atração não é permitida para quem possui mobilidade reduzida.',
+  //   restrictions: {
+  //     minHeight: 120,
+  //   },
+  // },
   {
     name: 'Tobogã',
     image: AtractionToboga,
@@ -169,16 +169,16 @@ export const data: AttractionProps[] = [
     category: 'familiar',
     observation: 'Crianças de 1.20 metros até 1.30 metros tem direito a acompanhante',
   },
-  {
-    name: 'Mini Roda',
-    image: AtractionMiniRoda,
-    category: 'familiar',
-    restrictions: {
-      minHeight: 80,
-    },
-    observation:
-      'Visitantes com estatura entre 0,80M e 1,10M somente acompanhado por um adulto responsável. Visitantes com altura superior a 1,95m e/ou peso superir a 120kg não devem usufruir desta atração.',
-  },
+  // {
+  //   name: 'Mini Roda',
+  //   image: AtractionMiniRoda,
+  //   category: 'familiar',
+  //   restrictions: {
+  //     minHeight: 80,
+  //   },
+  //   observation:
+  //     'Visitantes com estatura entre 0,80M e 1,10M somente acompanhado por um adulto responsável. Visitantes com altura superior a 1,95m e/ou peso superir a 120kg não devem usufruir desta atração.',
+  // },
   {
     name: 'Pirate Ship',
     image: AtractionPirateShip,
@@ -232,16 +232,16 @@ export const data: AttractionProps[] = [
     category: 'familiar',
     observation: 'Essa atração não faz parte do passaporte. Compra presencialmente no parque',
   },
-  {
-    name: 'Trenzinho Tour',
-    alert: 'R$ 10,00 por pessoa',
-    image: AtractionTrenzinhoTour,
-    category: 'familiar',
-    observation: 'Essa atração não faz parte do passaporte. Compra presencialmente no parque',
-    restrictions: {
-      allowCompanion: true,
-    },
-  },
+  // {
+  //   name: 'Trenzinho Tour',
+  //   alert: 'R$ 10,00 por pessoa',
+  //   image: AtractionTrenzinhoTour,
+  //   category: 'familiar',
+  //   observation: 'Essa atração não faz parte do passaporte. Compra presencialmente no parque',
+  //   restrictions: {
+  //     allowCompanion: true,
+  //   },
+  // },
   {
     name: 'Pescaria',
     alert: 'R$ 20,00 por pessoa',
