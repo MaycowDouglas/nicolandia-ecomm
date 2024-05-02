@@ -1,10 +1,10 @@
-import { useCart } from '@/hooks/useCart'
+import Link from 'next/link'
+import Image from 'next/image'
 import useUser from '@/hooks/useUser'
+import { useCart } from '@/hooks/useCart'
+import { useEffect, useState } from 'react'
 import { classNames } from '@/lib/classNames'
 import Logo from '@/public/images/brands/nicolandia-red.svg'
-import Image from 'next/image'
-import Link from 'next/link'
-import { useEffect, useState } from 'react'
 import { FiShoppingBag, FiShoppingCart, FiUser } from 'react-icons/fi'
 
 import Cart from './Cart'
@@ -37,8 +37,8 @@ export default function Header() {
           )}
         >
           <p className="text-center text-custom-600">
-            <strong>Horário de funcionamento:</strong> Sexta de 14h15 às 20h. Sábados, Domingos e
-            Feriados de 11h às 20h.
+            <strong>Horário de funcionamento:</strong>
+            Quarta a sexta de 16:00 às 22h. Sábados, Domingos e Feriados de 11h às 20h.
           </p>
         </div>
         <div className="py-2 shadow-lg bg-white ">
