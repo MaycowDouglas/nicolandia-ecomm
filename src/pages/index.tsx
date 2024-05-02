@@ -1,26 +1,25 @@
 import 'swiper/css'
 import 'swiper/css/navigation'
 
-import SlideImage from '@/components/atoms/SlideImage'
-import Attractions from '@/components/organisms/Attractions'
-import Tickets from '@/components/organisms/Tickets'
-import AppleStore from '@/public/images/applestore.png'
-import Banner360Web from '@/public/images/banners/360-desktop.png'
-import Banner360Mobile from '@/public/images/banners/360-mobile.png'
-// import BannerAniversarioBsbWeb from '@/public/images/banners/aniversario-bsb-desktop.png'
-// import BannerAniversarioBsbMobile from '@/public/images/banners/aniversario-bsb-mobile.png'
-import BannerBrinquedosWeb from '@/public/images/banners/brinquedos-desktop.png'
-import BannerBrinquedosMobile from '@/public/images/banners/brinquedos-mobile.png'
-import NicoCardsWeb from '@/public/images/banners/nicocards-desktop.png'
-import NicoCardsMobile from '@/public/images/banners/nicocards-mobile.png'
-import NicoAppDark from '@/public/images/brands/nicoapp-dark.svg'
-import GooglePlay from '@/public/images/googleplay.png'
 import Head from 'next/head'
 import Image from 'next/image'
 import { useRef } from 'react'
-import { FaChevronLeft, FaChevronRight } from 'react-icons/fa'
-import SwiperCore, { Autoplay, Navigation } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
+import Tickets from '@/components/organisms/Tickets'
+import SlideImage from '@/components/atoms/SlideImage'
+import SwiperCore, { Autoplay, Navigation } from 'swiper'
+import Attractions from '@/components/organisms/Attractions'
+import { FaChevronLeft, FaChevronRight } from 'react-icons/fa'
+
+import AppleStore from '@/public/images/applestore.png'
+import GooglePlay from '@/public/images/googleplay.png'
+import NicoAppDark from '@/public/images/brands/nicoapp-dark.svg'
+import NicoCardsWeb from '@/public/images/banners/nicocards-desktop.png'
+import BannerHorarios from '@/public/images/banners/banner_horarios.jpeg'
+import NicoCardsMobile from '@/public/images/banners/nicocards-mobile.png'
+import BannerHorariosMobile from '@/public/images/banners/banner_horarios.jpeg'
+import BannerBrinquedosWeb from '@/public/images/banners/brinquedos-desktop.png'
+import BannerBrinquedosMobile from '@/public/images/banners/brinquedos-mobile.png'
 
 SwiperCore.use([Autoplay, Navigation])
 
@@ -57,13 +56,13 @@ export default function HomePage() {
             nextEl: '.main-swiper-next',
           }}
         >
-          {/*<SwiperSlide>*/}
-          {/*  <SlideImage*/}
-          {/*    alt="Diversão para toda a Família!"*/}
-          {/*    mobile={BannerAniversarioBsbMobile}*/}
-          {/*    desktop={BannerAniversarioBsbWeb}*/}
-          {/*  />*/}
-          {/*</SwiperSlide>*/}
+          <SwiperSlide>
+            <SlideImage
+              desktop={BannerHorarios}
+              mobile={BannerHorariosMobile}
+              alt="Horário da diversão para toda sua família!"
+            />
+          </SwiperSlide>
 
           <SwiperSlide>
             <SlideImage
@@ -72,14 +71,6 @@ export default function HomePage() {
               desktop={NicoCardsWeb}
             />
           </SwiperSlide>
-
-          {/* <SwiperSlide>
-            <SlideImage
-              alt="Diversão para toda a Família!"
-              mobile={Banner360Mobile}
-              desktop={Banner360Web}
-            />
-          </SwiperSlide> */}
 
           <SwiperSlide>
             <SlideImage
