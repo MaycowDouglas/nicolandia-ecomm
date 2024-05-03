@@ -37,7 +37,8 @@ export default function Header() {
           )}
         >
           <p className="text-center text-custom-600">
-            <strong>Horário de funcionamento:</strong> Quarta a sexta de 16:00 às 22h. Sábados, Domingos e Feriados de 11h às 20h.
+            <strong>Horário de funcionamento:</strong> Quarta a sexta de 16:00 às 22h. Sábados,
+            Domingos e Feriados de 11h às 20h.
           </p>
         </div>
         <div className="py-2 shadow-lg bg-white ">
