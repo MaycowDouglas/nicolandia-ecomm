@@ -15,11 +15,11 @@ import AppleStore from '@/public/images/applestore.png'
 import GooglePlay from '@/public/images/googleplay.png'
 import NicoAppDark from '@/public/images/brands/nicoapp-dark.svg'
 import NicoCardsWeb from '@/public/images/banners/nicocards-desktop.png'
-import BannerHorarios from '@/public/images/banners/banner_horarios.jpeg'
 import NicoCardsMobile from '@/public/images/banners/nicocards-mobile.png'
 import BannerBrinquedosWeb from '@/public/images/banners/brinquedos-desktop.png'
 import BannerBrinquedosMobile from '@/public/images/banners/brinquedos-mobile.png'
-import BannerHorariosMobile from '@/public/images/banners/banner_horarios_mobile_.jpeg'
+import BannerHorarios from '@/public/images/banners/banner_horarios-min.jpeg'
+import BannerHorariosMobile from '@/public/images/banners/banner_horarios_mobile-min.jpeg'
 
 SwiperCore.use([Autoplay, Navigation])
 
