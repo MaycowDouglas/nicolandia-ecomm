@@ -5,7 +5,7 @@ import AtractionBrinquedao from '@/public/images/atractions/brinquedao.png'
 import AtractionColossusLoop from '@/public/images/atractions/colossus-loop.jpeg'
 import AtractionCrazyDance from '@/public/images/atractions/crazy-dance.jpg'
 // import AtractionDisko from '@/public/images/atractions/disko.jpg'
-import AtractionDropZone from '@/public/images/atractions/drop-zone.png'
+// import AtractionDropZone from '@/public/images/atractions/drop-zone.png'
 import AtractionFamilySwing from '@/public/images/atractions/family-swing.png'
 import AtractionFerrysWheel from '@/public/images/atractions/ferrys-wheel.png'
 import AtractionGrandPrix from '@/public/images/atractions/grand-prix.png'
@@ -29,6 +29,7 @@ import AtractionTrenzinhoCircus from '@/public/images/atractions/trenzinho-circu
 import AtractionTrenzinhoEncantado from '@/public/images/atractions/trenzinho-encantado.png'
 import AtractionTrenzinhoFazenda from '@/public/images/atractions/trenzinho-fazenda.jpeg'
 import AtractionTrenzinhoMiniBruc from '@/public/images/atractions/trenzinho-mini-bruc.png'
+import AtractionTrenzinho from '@/public/images/atractions/trenzinho.jpg'
 // import AtractionTrenzinhoTour from '@/public/images/atractions/trenzinho-tour.jpeg'
 import AtractionWaveBlaster from '@/public/images/atractions/wave-blaster.png'
 import AtractionZipZap from '@/public/images/atractions/zip-zap.jpg'
@@ -242,6 +243,13 @@ export const data: AttractionProps[] = [
   //     allowCompanion: true,
   //   },
   // },
+  {
+    name: 'Trenzinho',
+    alert: 'R$ 20,00 sendo 1 adulto e 1 criança.',
+    image: AtractionTrenzinho,
+    category: 'familiar',
+    observation: 'Essa atração não faz parte do passaporte. Compra presencialmente no parque',
+  },
   {
     name: 'Pescaria',
     alert: 'R$ 20,00 por pessoa',
