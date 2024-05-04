@@ -37,7 +37,7 @@ export default function Header() {
           )}
         >
           <p className="text-center text-custom-600">
-            <strong>Horário de funcionamento:</strong> Quarta a sexta de 16:15h às 22h. Sábados,
+            <strong>Horário de funcionamento:</strong> Quarta a sexta de 15:15h às 21h. Sábados,
             Domingos e Feriados de 11h às 20h.
           </p>
         </div>

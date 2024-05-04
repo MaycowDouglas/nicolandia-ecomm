@@ -56,13 +56,13 @@ export default function HomePage() {
             nextEl: '.main-swiper-next',
           }}
         >
-          <SwiperSlide>
-            <SlideImage
-              desktop={BannerHorarios}
-              mobile={BannerHorariosMobile}
-              alt="Horário da diversão para toda sua família!"
-            />
-          </SwiperSlide>
+          {/*<SwiperSlide>*/}
+          {/*  <SlideImage*/}
+          {/*    desktop={BannerHorarios}*/}
+          {/*    mobile={BannerHorariosMobile}*/}
+          {/*    alt="Horário da diversão para toda sua família!"*/}
+          {/*  />*/}
+          {/*</SwiperSlide>*/}
 
           <SwiperSlide>
             <SlideImage
