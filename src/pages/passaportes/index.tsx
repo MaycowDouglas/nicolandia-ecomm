@@ -15,6 +15,7 @@ import ComboKabum from '@/public/images/combos/combo-kabum.jpeg'
 import ComboPipoca from '@/public/images/combos/combo-pipoca.png'
 import Combo360 from '@/public/images/tickets/combo-360.png'
 import ComboEncantado from '@/public/images/tickets/combo-encantado.png'
+import QuartaQuintaMaluca from '@/public/images/tickets/quarta_maluca.jpg'
 import ComboEspetacular from '@/public/images/tickets/combo-espetacular.png'
 import ComboSuperSegunda from '@/public/images/tickets/combo-super-segunda.png'
 import PassaporteAntecipado from '@/public/images/tickets/passaporte-antecipado.png'
@@ -102,6 +103,15 @@ export default function PassaportsPage() {
                   quantity={3}
                   reference={4997}
                   isPassport
+                />
+                <Ticket
+                  id={20}
+                  isPassport
+                  price={3497}
+                  quantity={1}
+                  reference={3497}
+                  name="Quarta e Quinta Maluca"
+                  banner={QuartaQuintaMaluca}
                 />
               </>
             )}
