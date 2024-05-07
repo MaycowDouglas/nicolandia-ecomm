@@ -106,12 +106,16 @@ export default function PassaportsPage() {
                 />
                 <Ticket
                   id={20}
-                  isPassport
                   price={3497}
                   quantity={1}
                   reference={3497}
                   name="Quarta e Quinta Maluca"
                   banner={QuartaQuintaMaluca}
+                  description={
+                    <p className={'mt-2'}>
+                      1 passaporte válido durante 30 dias, exclusivo para utilização nas quartas e quintas-feiras, dentro do horário de funcionamento do parque."
+                    </p>
+                  }
                 />
               </>
             )}
