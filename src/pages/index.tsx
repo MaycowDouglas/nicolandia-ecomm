@@ -18,6 +18,9 @@ import { FaChevronLeft, FaChevronRight } from 'react-icons/fa'
 import SwiperCore, { Autoplay, Navigation } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
+import BannerQuartaMaluca from '@/public/images/banners/qq_maluca.jpeg'
+import BannerQuartaMalucaMobile from '@/public/images/banners/qq_maluca_mobi.jpeg'
+
 SwiperCore.use([Autoplay, Navigation])
 
 export default function HomePage() {
@@ -53,13 +56,13 @@ export default function HomePage() {
             nextEl: '.main-swiper-next',
           }}
         >
-          {/*<SwiperSlide>*/}
-          {/*  <SlideImage*/}
-          {/*    desktop={BannerHorarios}*/}
-          {/*    mobile={BannerHorariosMobile}*/}
-          {/*    alt="Horário da diversão para toda sua família!"*/}
-          {/*  />*/}
-          {/*</SwiperSlide>*/}
+          <SwiperSlide>
+            <SlideImage
+              desktop={BannerQuartaMaluca}
+              mobile={BannerQuartaMalucaMobile}
+              alt="Horário da diversão para toda sua família!"
+            />
+          </SwiperSlide>
 
           <SwiperSlide>
             <SlideImage
