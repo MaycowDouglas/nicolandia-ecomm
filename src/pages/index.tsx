@@ -11,6 +11,8 @@ import NicoCardsWeb from '@/public/images/banners/nicocards-desktop.png'
 import NicoCardsMobile from '@/public/images/banners/nicocards-mobile.png'
 import NicoAppDark from '@/public/images/brands/nicoapp-dark.svg'
 import GooglePlay from '@/public/images/googleplay.png'
+import BannerDiaDasMaes from '@/public/images/banners/banner_dia_maes.jpeg'
+import BannerDiaDasMaesMobile from '@/public/images/banners/banner_dia_maes_mobile.jpeg'
 import Head from 'next/head'
 import Image from 'next/image'
 import { useRef } from 'react'
@@ -56,6 +58,14 @@ export default function HomePage() {
             nextEl: '.main-swiper-next',
           }}
         >
+          <SwiperSlide>
+            <SlideImage
+              desktop={BannerDiaDasMaes}
+              mobile={BannerDiaDasMaesMobile}
+              alt="Dia das mãe no Nicolândia!"
+            />
+          </SwiperSlide>
+
           <SwiperSlide>
             <SlideImage
               desktop={BannerQuartaMaluca}
