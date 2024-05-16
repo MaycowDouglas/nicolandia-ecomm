@@ -7,6 +7,8 @@ import Tickets from '@/components/organisms/Tickets'
 import AppleStore from '@/public/images/applestore.png'
 import BannerBrinquedosWeb from '@/public/images/banners/brinquedos-desktop.png'
 import BannerBrinquedosMobile from '@/public/images/banners/brinquedos-mobile.png'
+import BannerHorarios from '@/public/images/banners/banner_horarios_min.jpeg'
+import BannerHorariosMobile from '@/public/images/banners/banner_horarios_mobi_min.jpeg'
 import NicoCardsWeb from '@/public/images/banners/nicocards-desktop.png'
 import NicoCardsMobile from '@/public/images/banners/nicocards-mobile.png'
 import NicoAppDark from '@/public/images/brands/nicoapp-dark.svg'
@@ -58,9 +60,17 @@ export default function HomePage() {
         >
           <SwiperSlide>
             <SlideImage
+              desktop={BannerHorarios}
+              mobile={BannerHorariosMobile}
+              alt="Horário da diversão para toda sua família!"
+            />
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <SlideImage
               desktop={BannerQuartaMaluca}
               mobile={BannerQuartaMalucaMobile}
-              alt="Horário da diversão para toda sua família!"
+              alt="Garanta seu passarporte de quarta ou quinta."
             />
           </SwiperSlide>
 
