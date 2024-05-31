@@ -236,6 +236,7 @@ export default function CheckoutPage() {
             message: 'Telefone Inválido!',
           })
         } else {
+          console.log(error)
           addFeedback({
             type: 'error',
             message: Object.values(error?.data).join('\n') || 'Falha ao finalizar compra.',
