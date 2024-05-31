@@ -237,7 +237,6 @@ export default function CheckoutPage() {
           })
         } else {
           console.log(error.data.data)
-          console.log(await error?.response.json())
           addFeedback({
             type: 'error',
             message: Object.values(error?.data?.data).join('\n') || 'Falha ao finalizar compra.',
