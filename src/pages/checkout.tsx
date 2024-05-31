@@ -238,7 +238,7 @@ export default function CheckoutPage() {
         } else {
           addFeedback({
             type: 'error',
-            message: Object.values(error.data).toString() || 'Falha ao finalizar compra.',
+            message: Object.values(error?.data).join('\n') || 'Falha ao finalizar compra.',
           })
         }
       }
