@@ -238,7 +238,7 @@ export default function CheckoutPage() {
         } else {
           addFeedback({
             type: 'error',
-            message: 'Este CPF já está sendo usado por outra conta.',
+            message: Object.values(error.data).toString() || 'Falha ao finalizar compra.',
           })
         }
       }
