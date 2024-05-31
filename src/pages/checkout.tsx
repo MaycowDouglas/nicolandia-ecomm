@@ -236,13 +236,11 @@ export default function CheckoutPage() {
             message: 'Telefone Inválido!',
           })
         } else {
-          console.log(error)
-          console.log(error.data)
-          console.log(error.shortMessage)
-          console.log(error?.response.json())
+          console.log(error.data.data)
+          console.log(await error?.response.json())
           addFeedback({
             type: 'error',
-            message: Object.values(error?.data).join('\n') || 'Falha ao finalizar compra.',
+            message: Object.values(error?.data?.data).join('\n') || 'Falha ao finalizar compra.',
           })
         }
       }
