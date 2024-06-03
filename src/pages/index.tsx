@@ -21,7 +21,7 @@ import SwiperCore, { Autoplay, Navigation } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
 import BannerQuartaMaluca from '@/public/images/banners/qq_maluca.jpeg'
-import BannerQuartaMalucaMobile from '@/public/images/banners/qq_maluca_mobi.jpeg'
+import BannerQuartaMalucaMobile from '@/public/images/banners/qq_maluca_mobile.jpeg'
 
 SwiperCore.use([Autoplay, Navigation])
 
