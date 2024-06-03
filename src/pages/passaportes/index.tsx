@@ -16,12 +16,12 @@ import ComboPipoca from '@/public/images/combos/combo-pipoca.png'
 import Combo360 from '@/public/images/tickets/combo-360.png'
 import ComboEncantado from '@/public/images/tickets/combo-encantado.png'
 import QuartaQuintaMaluca from '@/public/images/tickets/quarta_maluca.jpg'
+import SuperAntecipado from '@/public/images/tickets/super-antecipado.png'
 import ComboEspetacular from '@/public/images/tickets/combo-espetacular.png'
-import ComboSuperSegunda from '@/public/images/tickets/combo-super-segunda.png'
+import ComboSuperSegunda from '@/public/images/tickets/combo-super-segunda.jpeg'
 import PassaporteAntecipado from '@/public/images/tickets/passaporte-antecipado.png'
 import PassaporteIndividual from '@/public/images/tickets/passaporte-individual.png'
-import PassaporteSuperSegunda from '@/public/images/tickets/passaporte-super-segunda.png'
-import SuperAntecipado from '@/public/images/tickets/super-antecipado.png'
+import PassaporteSuperSegunda from '@/public/images/tickets/passaporte-super-segunda.jpeg'
 import Head from 'next/head'
 import Image from 'next/image'
 import { GoAlert } from 'react-icons/go'
@@ -54,21 +54,21 @@ export default function PassaportsPage() {
                 <Ticket
                   id={15}
                   name="Passaporte Super Segunda"
-                  price={3997}
+                  price={4597}
                   banner={PassaporteSuperSegunda}
                   quantity={1}
-                  reference={3997}
+                  reference={4597}
                   isPassport
                   isSuperSegunda
                 />
                 <Ticket
                   id={19}
-                  name="Combo Super Segunda"
-                  price={6997}
-                  banner={ComboSuperSegunda}
+                  isPassport
+                  price={8047}
                   quantity={2}
                   reference={3997}
-                  isPassport
+                  name="Combo Super Segunda"
+                  banner={ComboSuperSegunda}
                 />
               </>
             )}
