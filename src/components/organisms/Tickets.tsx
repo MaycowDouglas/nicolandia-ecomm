@@ -1,12 +1,12 @@
-import ComboAntecipado from '@/public/images/combos/combo-antecipado.png'
-import Combo360 from '@/public/images/tickets/combo-360.png'
-import ComboEncantado from '@/public/images/tickets/combo-encantado.png'
-import ComboEspetacular from '@/public/images/tickets/combo-espetacular.png'
-import ComboSuperSegunda from '@/public/images/tickets/combo-super-segunda.png'
-import PassaporteAntecipado from '@/public/images/tickets/passaporte-antecipado.png'
-import PassaporteIndividual from '@/public/images/tickets/passaporte-individual.png'
-import PassaporteSuperSegunda from '@/public/images/tickets/passaporte-super-segunda.png'
-import SuperAntecipado from '@/public/images/tickets/super-antecipado.png'
+import Combo360 from '@/public/images/tickets/combo-360.jpg'
+import ComboEncantado from '@/public/images/tickets/combo-encantado.jpg'
+import ComboAntecipado from '@/public/images/combos/combo-antecipado.jpg'
+import SuperAntecipado from '@/public/images/tickets/super-antecipado.jpg'
+import ComboEspetacular from '@/public/images/tickets/combo-espetacular.jpg'
+import ComboSuperSegunda from '@/public/images/tickets/combo-super-segunda.jpeg'
+import PassaporteAntecipado from '@/public/images/tickets/passaporte-antecipado.jpg'
+import PassaporteIndividual from '@/public/images/tickets/passaporte-individual.jpg'
+import PassaporteSuperSegunda from '@/public/images/tickets/passaporte-super-segunda.jpeg'
 import SwiperCore, { Autoplay, Navigation } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
@@ -41,10 +41,10 @@ export default function Tickets() {
             <Ticket
               id={15}
               name="Passaporte Super Segunda"
-              price={3997}
+              price={4597}
               banner={PassaporteSuperSegunda}
               quantity={1}
-              reference={3997}
+              reference={4597}
               isPassport
               isSuperSegunda
             />
@@ -53,12 +53,12 @@ export default function Tickets() {
           <SwiperSlide>
             <Ticket
               id={19}
-              name="Combo Super Segunda"
-              price={6997}
-              banner={ComboSuperSegunda}
-              quantity={2}
-              reference={3997}
               isPassport
+              price={8047}
+              quantity={2}
+              reference={4597}
+              name="Combo Super Segunda"
+              banner={ComboSuperSegunda}
             />
           </SwiperSlide>
         </>
@@ -69,36 +69,36 @@ export default function Tickets() {
           <SwiperSlide>
             <Ticket
               id={7}
-              name="Passaporte Antecipado"
-              price={4997}
-              banner={PassaporteAntecipado}
-              quantity={1}
-              reference={4997}
               isPassport
+              price={5747}
+              quantity={1}
+              reference={5747}
+              name="Passaporte Antecipado"
+              banner={PassaporteAntecipado}
             />
           </SwiperSlide>
 
           <SwiperSlide>
             <Ticket
               id={14}
-              name="Combo Antecipado"
-              price={8497}
-              banner={ComboAntecipado}
-              quantity={2}
-              reference={4997}
               isPassport
+              price={9772}
+              quantity={2}
+              reference={5747}
+              name="Combo Antecipado"
+              banner={ComboAntecipado}
             />
           </SwiperSlide>
 
           <SwiperSlide>
             <Ticket
               id={17}
-              name="Super Antecipado"
-              price={11991}
-              banner={SuperAntecipado}
-              quantity={3}
-              reference={4997}
               isPassport
+              quantity={3}
+              price={13790}
+              reference={5747}
+              name="Super Antecipado"
+              banner={SuperAntecipado}
             />
           </SwiperSlide>
         </>
@@ -109,12 +109,12 @@ export default function Tickets() {
           <SwiperSlide>
             <Ticket
               id={2}
-              name="Passaporte Individual"
-              price={5797}
-              banner={PassaporteIndividual}
-              quantity={1}
-              reference={5797}
               isPassport
+              quantity={1}
+              price={6667}
+              reference={6667}
+              name="Passaporte Individual"
+              banner={PassaporteIndividual}
             />
           </SwiperSlide>
           <SwiperSlide>
@@ -131,23 +131,23 @@ export default function Tickets() {
           <SwiperSlide>
             <Ticket
               id={4}
-              name="Combo Espetacular"
-              price={15297}
-              banner={ComboEspetacular}
-              quantity={3}
-              reference={5797}
               isPassport
+              quantity={3}
+              price={17592}
+              reference={6667}
+              name="Combo Espetacular"
+              banner={ComboEspetacular}
             />
           </SwiperSlide>
           <SwiperSlide>
             <Ticket
               id={18}
-              name="Combo 360"
-              price={16994}
-              banner={Combo360}
-              quantity={4}
-              reference={5797}
               isPassport
+              quantity={4}
+              price={19543}
+              reference={6667}
+              name="Combo 360"
+              banner={Combo360}
             />
           </SwiperSlide>
         </>
