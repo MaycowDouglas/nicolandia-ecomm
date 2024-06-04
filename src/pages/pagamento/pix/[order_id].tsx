@@ -24,9 +24,7 @@ export default function PaymentPixPage() {
   }, [order, router])
 
   const qrcode = orderDecoded.invoice
-    ? `https://chart.googleapis.com/chart?cht=qr&chl=${encodeURI(
-        orderDecoded.invoice.boleto
-      )}&chs=250x250`
+    ? `https://quickchart.io/qr?text=${encodeURI(orderDecoded.invoice.boleto)}&size=250`
     : ''
 
   const handleCopyText = (text: string) => {
