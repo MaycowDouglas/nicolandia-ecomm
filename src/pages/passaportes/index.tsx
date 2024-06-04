@@ -9,18 +9,18 @@ import Assof from '@/public/images/brands/assof.png'
 import Caadf from '@/public/images/brands/caadf.png'
 import Oabdf from '@/public/images/brands/oabdf.png'
 import Sinprfdf from '@/public/images/brands/sinprfdf.png'
-import ComboAntecipado from '@/public/images/combos/combo-antecipado.png'
-import ComboFamilia from '@/public/images/combos/combo-familia.png'
+import Combo360 from '@/public/images/tickets/combo-360.jpg'
 import ComboKabum from '@/public/images/combos/combo-kabum.jpeg'
 import ComboPipoca from '@/public/images/combos/combo-pipoca.png'
-import Combo360 from '@/public/images/tickets/combo-360.png'
-import ComboEncantado from '@/public/images/tickets/combo-encantado.png'
-import QuartaQuintaMaluca from '@/public/images/tickets/quarta_maluca.jpg'
-import SuperAntecipado from '@/public/images/tickets/super-antecipado.png'
-import ComboEspetacular from '@/public/images/tickets/combo-espetacular.png'
+import ComboFamilia from '@/public/images/combos/combo-familia.png'
+import ComboEncantado from '@/public/images/tickets/combo-encantado.jpg'
+import ComboAntecipado from '@/public/images/combos/combo-antecipado.jpg'
+import SuperAntecipado from '@/public/images/tickets/super-antecipado.jpg'
+import ComboEspetacular from '@/public/images/tickets/combo-espetacular.jpg'
 import ComboSuperSegunda from '@/public/images/tickets/combo-super-segunda.jpeg'
-import PassaporteAntecipado from '@/public/images/tickets/passaporte-antecipado.png'
-import PassaporteIndividual from '@/public/images/tickets/passaporte-individual.png'
+import QuartaQuintaMaluca from '@/public/images/tickets/quarta-quinta-maluca.jpg'
+import PassaporteAntecipado from '@/public/images/tickets/passaporte-antecipado.jpg'
+import PassaporteIndividual from '@/public/images/tickets/passaporte-individual.jpg'
 import PassaporteSuperSegunda from '@/public/images/tickets/passaporte-super-segunda.jpeg'
 import Head from 'next/head'
 import Image from 'next/image'
@@ -66,7 +66,7 @@ export default function PassaportsPage() {
                   isPassport
                   price={8047}
                   quantity={2}
-                  reference={3997}
+                  reference={4597}
                   name="Combo Super Segunda"
                   banner={ComboSuperSegunda}
                 />
@@ -77,40 +77,40 @@ export default function PassaportsPage() {
               <>
                 <Ticket
                   id={7}
-                  name="Passaporte Antecipado"
-                  price={4997}
-                  banner={PassaporteAntecipado}
-                  quantity={1}
-                  reference={4997}
                   isPassport
+                  price={5747}
+                  quantity={1}
+                  reference={5747}
+                  name="Passaporte Antecipado"
+                  banner={PassaporteAntecipado}
                 />
 
                 <Ticket
                   id={14}
-                  name="Combo Antecipado"
-                  price={8497}
-                  banner={ComboAntecipado}
-                  quantity={2}
-                  reference={4997}
                   isPassport
+                  price={9772}
+                  quantity={2}
+                  reference={5747}
+                  name="Combo Antecipado"
+                  banner={ComboAntecipado}
                 />
 
                 <Ticket
                   id={17}
-                  name="Super Antecipado"
-                  price={11991}
-                  banner={SuperAntecipado}
-                  quantity={3}
-                  reference={4997}
                   isPassport
+                  quantity={3}
+                  price={13790}
+                  reference={5747}
+                  name="Super Antecipado"
+                  banner={SuperAntecipado}
                 />
                 <Ticket
                   id={20}
-                  price={3497}
+                  price={4022}
                   quantity={1}
-                  reference={3497}
-                  name="Quarta e Quinta Maluca"
+                  reference={4022}
                   banner={QuartaQuintaMaluca}
+                  name="Quarta e Quinta Maluca"
                   description={
                     <p className={'mt-2'}>
                       1 passaporte válido durante 30 dias, exclusivo para utilização nas quartas e
@@ -125,39 +125,39 @@ export default function PassaportsPage() {
               <>
                 <Ticket
                   id={2}
-                  name="Passaporte Individual"
-                  price={5797}
-                  banner={PassaporteIndividual}
-                  quantity={1}
-                  reference={5797}
                   isPassport
+                  quantity={1}
+                  price={6667}
+                  reference={6667}
+                  name="Passaporte Individual"
+                  banner={PassaporteIndividual}
                 />
                 <Ticket
                   id={3}
-                  name="Combo Encantado"
-                  price={11097}
-                  banner={ComboEncantado}
-                  quantity={2}
-                  reference={5797}
                   isPassport
+                  quantity={2}
+                  price={12762}
+                  reference={6667}
+                  name="Combo Encantado"
+                  banner={ComboEncantado}
                 />
                 <Ticket
                   id={4}
-                  name="Combo Espetacular"
-                  price={15297}
-                  banner={ComboEspetacular}
-                  quantity={3}
-                  reference={5797}
                   isPassport
+                  quantity={3}
+                  price={17592}
+                  reference={6667}
+                  name="Combo Espetacular"
+                  banner={ComboEspetacular}
                 />
                 <Ticket
                   id={18}
-                  name="Combo 360"
-                  price={16994}
-                  banner={Combo360}
-                  quantity={4}
-                  reference={5797}
                   isPassport
+                  quantity={4}
+                  price={19543}
+                  reference={6667}
+                  name="Combo 360"
+                  banner={Combo360}
                 />
               </>
             )}
