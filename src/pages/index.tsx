@@ -9,6 +9,8 @@ import BannerBrinquedosWeb from '@/public/images/banners/brinquedos-desktop.png'
 import BannerBrinquedosMobile from '@/public/images/banners/brinquedos-mobile.png'
 import BannerHorarios from '@/public/images/banners/banner_horarios_min.jpeg'
 import BannerHorariosMobile from '@/public/images/banners/banner_horarios_mobi_min.jpeg'
+import BannerDiaNamorados from '@/public/images/banners/banner-namorados.jpeg'
+import BannerDiaNamoradosMobile from '@/public/images/banners/banner-namorados-mobile.jpeg'
 import NicoCardsWeb from '@/public/images/banners/nicocards-desktop.png'
 import NicoCardsMobile from '@/public/images/banners/nicocards-mobile.png'
 import NicoAppDark from '@/public/images/brands/nicoapp-dark.svg'
@@ -58,6 +60,14 @@ export default function HomePage() {
             nextEl: '.main-swiper-next',
           }}
         >
+          <SwiperSlide>
+            <SlideImage
+              desktop={BannerDiaNamorados}
+              mobile={BannerDiaNamoradosMobile}
+              alt="Apaixonáticos, o amor está no ar."
+            />
+          </SwiperSlide>
+
           <SwiperSlide>
             <SlideImage
               desktop={BannerHorarios}
