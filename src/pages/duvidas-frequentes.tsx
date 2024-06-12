@@ -65,7 +65,10 @@ export default function FaqPage() {
     },
     {
       question: 'O que não é permitido no parque?',
-      awnser: 'É proibida a entrada de animais.',
+      awnser: [
+        'É proibida a entrada de animais.',
+        'É proibido guardar lugar nas filas das atrações do parque.',
+      ],
     },
     {
       question: 'Se começar a chover enquanto estou no parque, o que acontece?',
