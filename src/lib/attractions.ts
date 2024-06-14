@@ -55,6 +55,7 @@ export const data: AttractionProps[] = [
     name: '360',
     image: Atraction360,
     category: 'radical',
+    shortDesc: 'O único da América Latina',
     observation:
       'Esta atração não é aconselhável para pessoas com problemas de saúde como labirintite, epilepsia. E também para portadores de disfunção motora e mental.',
     restrictions: {
