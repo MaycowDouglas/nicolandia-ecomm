@@ -22,8 +22,8 @@ import { FaChevronLeft, FaChevronRight } from 'react-icons/fa'
 import SwiperCore, { Autoplay, Navigation } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
-import BannerQuartaMaluca from '@/public/images/banners/qq_maluca.jpeg'
-import BannerQuartaMalucaMobile from '@/public/images/banners/qq_maluca_mobile.jpeg'
+import BannerQuartaMaluca from '@/public/images/banners/qq-maluca.jpeg'
+import BannerQuartaMalucaMobile from '@/public/images/banners/qq-maluca-mobile.jpeg'
 
 SwiperCore.use([Autoplay, Navigation])
 
