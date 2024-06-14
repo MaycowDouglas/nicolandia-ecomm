@@ -38,6 +38,7 @@ import { StaticImageData } from 'next/image'
 export type AttractionProps = {
   name: string
   alert?: string
+  shortDesc?: string
   image: StaticImageData
   category: 'radical' | 'familiar' | 'childish'
   observation?: string
@@ -62,8 +63,9 @@ export const data: AttractionProps[] = [
   },
   {
     name: 'Kabum',
-    image: AtractionKabum,
     category: 'radical',
+    image: AtractionKabum,
+    shortDesc: 'Queda Livre de 30 metros',
     observation:
       'Está atração não é permitida para quem possui mobilidade reduzida. Não recomendada para pessoas com problemas na coluna vertebral. Funcionamento nos sábados, domingos e feriados: 11H às 12H. Retorno às 15H.',
     restrictions: {
@@ -211,6 +213,7 @@ export const data: AttractionProps[] = [
   },
   {
     name: 'Ferris Wheel',
+    shortDesc: '40 metros de altura',
     image: AtractionFerrysWheel,
     category: 'familiar',
     observation:

@@ -28,8 +28,9 @@ export default function AttractionPage() {
                 key={index}
                 name={attraction.name}
                 image={attraction.image}
-                category={attraction.category}
                 alert={attraction.alert}
+                category={attraction.category}
+                shortDesc={attraction.shortDesc}
                 observation={attraction.observation}
                 restrictions={attraction.restrictions}
               />

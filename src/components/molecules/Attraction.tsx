@@ -14,6 +14,7 @@ export default function Attraction({
   alert,
   image,
   category,
+  shortDesc,
   hideDetails = false,
   observation,
   restrictions,
@@ -38,6 +39,7 @@ export default function Attraction({
       </header>
       <section>
         <h3 className="mt-4 text-lg font-bold uppercase">{name}</h3>
+        {shortDesc && <h4 className="text-sm uppercase">{shortDesc}</h4>}
         <div className={hideDetails ? 'hidden' : ''}>
           {restrictions && (
             <div className="mt-4">
