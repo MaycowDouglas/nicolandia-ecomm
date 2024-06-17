@@ -50,15 +50,6 @@ export default function PassaportsPage() {
           </h1>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
-            <Ticket
-              id={9}
-              isPassport
-              quantity={2}
-              price={6994}
-              reference={4597}
-              name="Combo Love"
-              banner={ComboLove}
-            />
             {((nowSP.getDay() === 0 && nowSP.getHours() >= 23) || nowSP.getDay() === 1) && (
               <>
                 <Ticket

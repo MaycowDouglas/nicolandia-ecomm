@@ -36,17 +36,6 @@ export default function Tickets() {
       slidesPerView={1}
       spaceBetween={30}
     >
-      <SwiperSlide>
-        <Ticket
-          id={9}
-          isPassport
-          quantity={2}
-          price={6994}
-          reference={4597}
-          name="Combo Love"
-          banner={ComboLove}
-        />
-      </SwiperSlide>
       {((nowSP.getDay() === 0 && nowSP.getHours() >= 23) || nowSP.getDay() === 1) && (
         <>
           <SwiperSlide>
