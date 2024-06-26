@@ -5,8 +5,8 @@ import SlideImage from '@/components/atoms/SlideImage'
 import Attractions from '@/components/organisms/Attractions'
 import Tickets from '@/components/organisms/Tickets'
 import AppleStore from '@/public/images/applestore.png'
-import BannerBrinquedosWeb from '@/public/images/banners/brinquedos-desktop.png'
-import BannerBrinquedosMobile from '@/public/images/banners/brinquedos-mobile.png'
+import BannerFeriasWeb from '@/public/images/banners/banner_ferias.jpeg'
+import BannerFeriasMobile from '@/public/images/banners/banner_ferias_mobile.jpeg'
 import BannerHorarios from '@/public/images/banners/banner_horarios_min.jpeg'
 import BannerHorariosMobile from '@/public/images/banners/banner_horarios_mobi_min.jpeg'
 import NicoCardsWeb from '@/public/images/banners/nicocards-desktop.png'
@@ -82,9 +82,9 @@ export default function HomePage() {
 
           <SwiperSlide>
             <SlideImage
-              alt="Diversão para toda a Família!"
-              mobile={BannerBrinquedosMobile}
-              desktop={BannerBrinquedosWeb}
+              alt="As férias chegaram!"
+              desktop={BannerFeriasWeb}
+              mobile={BannerFeriasMobile}
             />
           </SwiperSlide>
 
