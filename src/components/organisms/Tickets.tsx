@@ -43,9 +43,9 @@ export default function Tickets() {
               id={15}
               isPassport
               quantity={1}
-              price={4597}
+              price={4797}
               isSuperSegunda
-              reference={4597}
+              reference={4797}
               name="Passaporte Super Segunda"
               banner={PassaporteSuperSegunda}
             />
@@ -55,9 +55,9 @@ export default function Tickets() {
             <Ticket
               id={19}
               isPassport
-              price={8047}
+              price={8397}
               quantity={2}
-              reference={4597}
+              reference={4797}
               name="Combo Super Segunda"
               banner={ComboSuperSegunda}
             />
