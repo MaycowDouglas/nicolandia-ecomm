@@ -7,8 +7,6 @@ import Tickets from '@/components/organisms/Tickets'
 import AppleStore from '@/public/images/applestore.png'
 import BannerFeriasWeb from '@/public/images/banners/banner_ferias.jpeg'
 import BannerFeriasMobile from '@/public/images/banners/banner_ferias_mobile.jpeg'
-import BannerHorarios from '@/public/images/banners/banner_horarios_min.jpeg'
-import BannerHorariosMobile from '@/public/images/banners/banner_horarios_mobi_min.jpeg'
 import NicoCardsWeb from '@/public/images/banners/nicocards-desktop.png'
 import NicoCardsMobile from '@/public/images/banners/nicocards-mobile.png'
 import NicoAppDark from '@/public/images/brands/nicoapp-dark.svg'
@@ -20,8 +18,8 @@ import { FaChevronLeft, FaChevronRight } from 'react-icons/fa'
 import SwiperCore, { Autoplay, Navigation } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
-import BannerQuartaMaluca from '@/public/images/banners/qq-maluca.jpeg'
-import BannerQuartaMalucaMobile from '@/public/images/banners/qq-maluca-mobile.jpeg'
+// import BannerQuartaMaluca from '@/public/images/banners/qq-maluca.jpeg'
+// import BannerQuartaMalucaMobile from '@/public/images/banners/qq-maluca-mobile.jpeg'
 
 SwiperCore.use([Autoplay, Navigation])
 
@@ -58,20 +56,6 @@ export default function HomePage() {
             nextEl: '.main-swiper-next',
           }}
         >
-          <SwiperSlide>
-            <SlideImage
-              desktop={BannerHorarios}
-              mobile={BannerHorariosMobile}
-              alt="Horário da diversão para toda sua família!"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <SlideImage
-              desktop={BannerQuartaMaluca}
-              mobile={BannerQuartaMalucaMobile}
-              alt="Garanta seu passarporte de quarta ou quinta."
-            />
-          </SwiperSlide>
           <SwiperSlide>
             <SlideImage
               alt="Diversão para toda a Família!"
