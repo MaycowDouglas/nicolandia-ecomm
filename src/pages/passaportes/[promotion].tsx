@@ -63,7 +63,7 @@ export default function PassaportsPage() {
 
             <p className="text-white text-lg font-medium">
               Cansado de pegar filas? Comprando o seu passaporte você poderá adquirir sua pulseira
-              VIP presencialmente na bilheteria do nosso parque por R$50,00. Consulte nossos
+              VIP presencialmente na bilheteria do nosso parque por R$80,00. Consulte nossos
               atendentes e garanta já o seu!
             </p>
           </div>
