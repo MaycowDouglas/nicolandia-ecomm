@@ -7,8 +7,6 @@ import Tickets from '@/components/organisms/Tickets'
 import AppleStore from '@/public/images/applestore.png'
 import BannerFeriasWeb from '@/public/images/banners/banner_ferias.jpeg'
 import BannerFeriasMobile from '@/public/images/banners/banner_ferias_mobile.jpeg'
-import NicoCardsWeb from '@/public/images/banners/nicocards-desktop.png'
-import NicoCardsMobile from '@/public/images/banners/nicocards-mobile.png'
 import NicoAppDark from '@/public/images/brands/nicoapp-dark.svg'
 import GooglePlay from '@/public/images/googleplay.png'
 import Head from 'next/head'
@@ -56,13 +54,13 @@ export default function HomePage() {
             nextEl: '.main-swiper-next',
           }}
         >
-          <SwiperSlide>
-            <SlideImage
-              alt="Diversão para toda a Família!"
-              mobile={NicoCardsMobile}
-              desktop={NicoCardsWeb}
-            />
-          </SwiperSlide>
+          {/*<SwiperSlide>*/}
+          {/*  <SlideImage*/}
+          {/*    alt="Diversão para toda a Família!"*/}
+          {/*    mobile={NicoCardsMobile}*/}
+          {/*    desktop={NicoCardsWeb}*/}
+          {/*  />*/}
+          {/*</SwiperSlide>*/}
 
           <SwiperSlide>
             <SlideImage
