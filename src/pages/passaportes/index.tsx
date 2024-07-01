@@ -105,7 +105,7 @@ export default function PassaportsPage() {
                   name="Super Antecipado"
                   banner={SuperAntecipado}
                 />
-                <Ticket
+                {/*<Ticket
                   id={20}
                   price={4022}
                   quantity={1}
@@ -118,7 +118,7 @@ export default function PassaportsPage() {
                       quintas-feiras, dentro do horário de funcionamento do parque.
                     </p>
                   }
-                />
+                />*/}
               </>
             )}
 
