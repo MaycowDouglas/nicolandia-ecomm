@@ -331,9 +331,17 @@ export default function PassaportsPage() {
 
             <div className="xl:text-lg">
               <p>A compra deverá ser feita pelo titular.</p>
-              <p>Passaporte por apenas R$ 50,00 cada.</p>
+              <p>Valores Passaporte:</p>
+              <p>
+                Terça a sexta: R$ 40,00 cada
+                <br />
+                Sábado e domingo R$ 60,00 cada
+              </p>
               <p>Permitido apenas 5 passaportes por carteirinha.</p>
-              <p>Benefício válido dentro do calendário operacional do parque.</p>
+              <p>
+                Compras válidas apenas na bilheteria presencial. Benefício válido dentro do
+                calendário operacional do parque.
+              </p>
               <p>
                 <strong>
                   É proibido o ingresso e a permanência com armas de fogo dentro das dependências do
