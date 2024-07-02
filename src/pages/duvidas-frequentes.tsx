@@ -16,14 +16,14 @@ export default function FaqPage() {
       awnser:
         'Você pode desfrutar de todas as atrações quantas vezes desejar, do momento da abertura até o fechamento do parque, exceto nas seguintes atrações: tiro ao alvo, pescaria, trenzinho encantado, brinquedos operados por fichas, jogos eletrônicos e áreas de alimentação. Ao comprar dois ou mais passaportes com um único código, todos os visitantes devem estar presentes para receber as pulseiras de acesso. A entrega das pulseiras não será possível após a validação do código na bilheteria do parque. Além disso, não será permitido solicitar estornos parciais depois que alguns passaportes forem utilizados.',
     },
-    {
+    /*{
       question: 'Como funciona a "Promoção Quarta e Quinta Maluca"?',
       awnser:
         'O Passaporte Promocional "Quarta e Quinta Maluca" é exclusivo para utilização ' +
         'nas quartas e quintas-feiras, dentro do horário de funcionamento do parque.\n' +
         'Este passaporte tem validade de 30 dias a partir da data da compra.\n' +
         'Porém, é importante ressaltar que não é permitido utilizar este passaporte em outros dias da semana, como sexta-feira, sábado ou domingo.',
-    },
+    },*/
     {
       question: 'Como posso solicitar o estorno da minha compra?',
       awnser:
