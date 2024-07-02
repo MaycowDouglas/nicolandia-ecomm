@@ -121,7 +121,7 @@ export const data: AttractionProps[] = [
     name: 'Tobogã',
     image: AtractionToboga,
     category: 'familiar',
-    observation: 'Sexta dia todo. Sábado, domingo e feriados: de 11h às 12h, retorno às 14h30.',
+    observation: 'Funcionamento nos sábados, domingos e feriados: 11h às 12h. Retorno às 14h30.',
     restrictions: {
       minHeight: 120,
     },
