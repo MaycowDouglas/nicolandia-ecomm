@@ -15,7 +15,7 @@ import ComboKabum from '@/public/images/combos/combo-kabum.jpeg'
 import ComboPipoca from '@/public/images/combos/combo-pipoca.png'
 import ComboFamilia from '@/public/images/combos/combo-familia.png'
 import ComboEncantado from '@/public/images/tickets/combo-encantado.jpg'
-import ComboAntecipado from '@/public/images/combos/combo-antecipado.jpg'
+import ComboAntecipado from '@/public/images/tickets/combo-antecipado.jpg'
 import SuperAntecipado from '@/public/images/tickets/super-antecipado.jpg'
 import ComboEspetacular from '@/public/images/tickets/combo-espetacular.jpg'
 import ComboSuperSegunda from '@/public/images/tickets/combo-super-segunda.jpeg'
@@ -79,9 +79,9 @@ export default function PassaportsPage() {
                 <Ticket
                   id={7}
                   isPassport
-                  price={5747}
+                  price={5997}
                   quantity={1}
-                  reference={5747}
+                  reference={5997}
                   name="Passaporte Antecipado"
                   banner={PassaporteAntecipado}
                 />
@@ -89,9 +89,9 @@ export default function PassaportsPage() {
                 <Ticket
                   id={14}
                   isPassport
-                  price={9772}
+                  price={10197}
                   quantity={2}
-                  reference={5747}
+                  reference={5997}
                   name="Combo Antecipado"
                   banner={ComboAntecipado}
                 />
@@ -100,8 +100,8 @@ export default function PassaportsPage() {
                   id={17}
                   isPassport
                   quantity={3}
-                  price={13790}
-                  reference={5747}
+                  price={14397}
+                  reference={5997}
                   name="Super Antecipado"
                   banner={SuperAntecipado}
                 />
