@@ -313,8 +313,8 @@ export default function PassaportsPage() {
             <div className="grid grid-cols-2">
               <div>
                 <h4 className="text-xl text-custom-600 font-bold mb-1">Passaporte Mágico</h4>
-                <p>Inteira R$ 200,00</p>
-                <p>Meia R$ 100,00</p>
+                <p>Inteira R$ 240,00</p>
+                <p>Meia R$ 120,00</p>
               </div>
             </div>
           </div>
