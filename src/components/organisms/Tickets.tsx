@@ -1,7 +1,7 @@
 import Combo360 from '@/public/images/tickets/combo-360.jpg'
 import ComboLove from '@/public/images/tickets/combo-love.jpeg'
 import ComboEncantado from '@/public/images/tickets/combo-encantado.jpg'
-import ComboAntecipado from '@/public/images/combos/combo-antecipado.jpg'
+import ComboAntecipado from '@/public/images/tickets/combo-antecipado.jpg'
 import SuperAntecipado from '@/public/images/tickets/super-antecipado.jpg'
 import ComboEspetacular from '@/public/images/tickets/combo-espetacular.jpg'
 import ComboSuperSegunda from '@/public/images/tickets/combo-super-segunda.jpeg'
@@ -71,9 +71,9 @@ export default function Tickets() {
             <Ticket
               id={7}
               isPassport
-              price={5747}
               quantity={1}
-              reference={5747}
+              price={5997}
+              reference={5997}
               name="Passaporte Antecipado"
               banner={PassaporteAntecipado}
             />
@@ -83,9 +83,9 @@ export default function Tickets() {
             <Ticket
               id={14}
               isPassport
-              price={9772}
+              price={10197}
               quantity={2}
-              reference={5747}
+              reference={5997}
               name="Combo Antecipado"
               banner={ComboAntecipado}
             />
@@ -96,8 +96,8 @@ export default function Tickets() {
               id={17}
               isPassport
               quantity={3}
-              price={13790}
-              reference={5747}
+              price={14397}
+              reference={5997}
               name="Super Antecipado"
               banner={SuperAntecipado}
             />
@@ -112,8 +112,8 @@ export default function Tickets() {
               id={2}
               isPassport
               quantity={1}
-              price={6667}
-              reference={6667}
+              price={6957}
+              reference={6957}
               name="Passaporte Individual"
               banner={PassaporteIndividual}
             />
@@ -123,8 +123,8 @@ export default function Tickets() {
               id={3}
               isPassport
               quantity={2}
-              price={12762}
-              reference={5797}
+              price={13397}
+              reference={5997}
               name="Combo Encantado"
               banner={ComboEncantado}
             />
@@ -134,8 +134,8 @@ export default function Tickets() {
               id={4}
               isPassport
               quantity={3}
-              price={17592}
-              reference={6667}
+              price={18397}
+              reference={6957}
               name="Combo Espetacular"
               banner={ComboEspetacular}
             />
@@ -145,8 +145,8 @@ export default function Tickets() {
               id={18}
               isPassport
               quantity={4}
-              price={19543}
-              reference={6667}
+              price={20397}
+              reference={6957}
               name="Combo 360"
               banner={Combo360}
             />
