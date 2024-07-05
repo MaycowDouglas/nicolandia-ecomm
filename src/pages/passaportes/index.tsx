@@ -128,8 +128,8 @@ export default function PassaportsPage() {
                   id={2}
                   isPassport
                   quantity={1}
-                  price={6667}
-                  reference={6667}
+                  price={6957}
+                  reference={6957}
                   name="Passaporte Individual"
                   banner={PassaporteIndividual}
                 />
@@ -137,7 +137,7 @@ export default function PassaportsPage() {
                   id={3}
                   isPassport
                   quantity={2}
-                  price={12762}
+                  price={13397}
                   reference={6667}
                   name="Combo Encantado"
                   banner={ComboEncantado}
@@ -146,7 +146,7 @@ export default function PassaportsPage() {
                   id={4}
                   isPassport
                   quantity={3}
-                  price={17592}
+                  price={18397}
                   reference={6667}
                   name="Combo Espetacular"
                   banner={ComboEspetacular}
@@ -155,7 +155,7 @@ export default function PassaportsPage() {
                   id={18}
                   isPassport
                   quantity={4}
-                  price={19543}
+                  price={20397}
                   reference={6667}
                   name="Combo 360"
                   banner={Combo360}
