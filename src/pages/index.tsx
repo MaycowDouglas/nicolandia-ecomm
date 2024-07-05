@@ -15,7 +15,8 @@ import { useRef } from 'react'
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa'
 import SwiperCore, { Autoplay, Navigation } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
-
+import BannerTyphoon from '@/public/images/banners/banner_typhoon.jpg'
+import BannerTyphoonMobile from '@/public/images/banners/banner_typhoon_mobile.jpg'
 // import BannerQuartaMaluca from '@/public/images/banners/qq-maluca.jpeg'
 // import BannerQuartaMalucaMobile from '@/public/images/banners/qq-maluca-mobile.jpeg'
 
@@ -67,6 +68,13 @@ export default function HomePage() {
               alt="As férias chegaram!"
               desktop={BannerFeriasWeb}
               mobile={BannerFeriasMobile}
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <SlideImage
+              alt="Temporada Typhoon!"
+              desktop={BannerTyphoon}
+              mobile={BannerTyphoonMobile}
             />
           </SwiperSlide>
 
