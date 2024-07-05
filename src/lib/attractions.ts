@@ -20,6 +20,7 @@ import AtractionReinoEncantado from '@/public/images/atractions/reino-encantado.
 import AtractionRockRoll from '@/public/images/atractions/rock-roll.jpg'
 // import AtractionRollerCoaster from '@/public/images/atractions/roller-coaster.png'
 import AtractionSpook from '@/public/images/atractions/spook.jpeg'
+import AtractionTyphoon from '@/public/images/atractions/typhoon.jpg'
 import AtractionSuperFrisbee from '@/public/images/atractions/super-frisbee.jpeg'
 import AtractionTrex from '@/public/images/atractions/t-rex.jpeg'
 import AtractionTiro from '@/public/images/atractions/tiro.jpeg'
@@ -84,10 +85,11 @@ export const data: AttractionProps[] = [
     },
   },
   {
-    name: 'Super frisbee',
-    image: AtractionSuperFrisbee,
+    name: 'Typhoon',
+    image: AtractionTyphoon,
     category: 'radical',
-    observation: 'Temporariamente em manutenção',
+    observation:
+      'Está atração não é permitida para quem possui mobilidade reduzida. Não recomendada para pessoas com problemas na coluna vertebral.',
     restrictions: {
       minHeight: 140,
     },
