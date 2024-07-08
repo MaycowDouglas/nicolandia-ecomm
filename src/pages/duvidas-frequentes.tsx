@@ -47,7 +47,7 @@ export default function FaqPage() {
     {
       question: 'Aniversariante paga?',
       awnser:
-        'O aniversariante do mês correspondente, terá gratuidade no seu passaporte, desde que acompanhado de mais um pagante. O benefício será exclusivo ao passaporte aniversariante, com o acompanhante no valor de R$ 50,00. Para adquirir, será necessário a compra presencial na bilheteria do parque, mediante a apresentação de documento com foto do aniversariante e seu acompanhante.',
+        'O aniversariante do mês correspondente, terá gratuidade no seu passaporte, desde que acompanhado de mais um pagante. O benefício será exclusivo ao passaporte aniversariante, com o acompanhante no valor de R$ 40,00 nos dias de semana e R$ 60,00 aos finais de semana. Para adquirir, será necessário a compra presencial na bilheteria do parque, mediante a apresentação de documento com foto do aniversariante e seu acompanhante.',
     },
     {
       question: 'Posso realizar minha festa de aniversário no parque?',
