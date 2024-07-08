@@ -45,7 +45,7 @@ export default function Tickets() {
               quantity={1}
               price={4797}
               isSuperSegunda
-              reference={4797}
+              reference={5997}
               name="Passaporte Super Segunda"
               banner={PassaporteSuperSegunda}
             />
