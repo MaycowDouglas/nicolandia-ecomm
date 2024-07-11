@@ -4,6 +4,7 @@ import 'swiper/css/navigation'
 import Ticket from '@/components/molecules/Ticket'
 import NicoCardsWeb from '@/public/images/banners/nicocards-desktop.png'
 import NicoCardsMobile from '@/public/images/banners/nicocards-mobile.png'
+import Brb from '@/public/images/brands/brb.png'
 import Asmpf from '@/public/images/brands/asmpf.png'
 import Assof from '@/public/images/brands/assof.png'
 import Caadf from '@/public/images/brands/caadf.png'
@@ -350,8 +351,8 @@ export default function PassaportsPage() {
               </p>
             </div>
           </div>
-          <div className="flex justify-center flex-wrap gap-5">
-            <div className="w-[320px] flex flex-col items-center text-center">
+          <div className="grid grid-cols-3 items-center gap-5 sm:mt-10">
+            <div className="flex flex-col items-center text-center">
               <div className="flex min-w-fit">
                 <Image src={Oabdf} className="h-20 w-auto" alt="" />
                 <Image src={Caadf} className="h-20 w-auto" alt="" />
@@ -361,7 +362,7 @@ export default function PassaportsPage() {
                 CAA-DF
               </p>
             </div>
-            <div className="w-[320px] flex flex-col items-center text-center">
+            <div className="flex flex-col items-center text-center">
               <div className="flex min-w-fit">
                 <Image src={Sinprfdf} className="h-20 w-auto" alt="" />
               </div>
@@ -370,7 +371,7 @@ export default function PassaportsPage() {
                 para todos os associados de todos os estados.
               </p>
             </div>
-            <div className="w-[320px] flex flex-col items-center text-center">
+            <div className="flex flex-col items-center text-center">
               <div className="flex min-w-fit">
                 <Image src={Assof} className="h-20 w-auto" alt="" />
               </div>
@@ -379,12 +380,21 @@ export default function PassaportsPage() {
                 emitido pela ASOF, com validade de 30 dias e Carteira Funcional.
               </p>
             </div>
-            <div className="w-[320px] flex flex-col items-center text-center">
+            <div className="flex flex-col items-center text-center">
               <div className="flex min-w-fit">
                 <Image src={Asmpf} className="h-20 w-auto" alt="" />
               </div>
               <p className="p-3 text-lg">
                 Compra disponível na bilheteria mediante apresentação da carteira da ASMPF.
+              </p>
+            </div>
+            <div className="flex flex-col items-center text-center">
+              <div className="flex min-w-fit">
+                <Image src={Brb} className="h-20 w-auto" alt="" />
+              </div>
+              <p className="p-3 text-lg">
+                Compra disponível na bilheteria mediante apresentação do cartão BRB no nome do
+                titular com documento de identidade do mesmo.
               </p>
             </div>
           </div>
