@@ -88,7 +88,7 @@ export default function FaqPage() {
     {
       question: 'PcD / Autistas têm meia entrada?',
       awnser: [
-        'Pessoas PcD e autistas têm passe livre e acesso a pulseira vip, e é necessário estar acompanhado(a) de um responsável. O responsável deverá adquirir a pulseira por R$50,00 na bilheteria presencial do parque.',
+        'Pessoas PcD e autistas têm passe livre e acesso a pulseira vip, e é necessário estar acompanhado(a) de um responsável. O responsável deverá adquirir a pulseira no valor de R$40,00 nos dias de semana e R$ 60,00 aos finais de semana presencialmente na bilheteria do parque.',
         'Para pessoas portadoras do espectro autista, é preciso apresentar o laudo ou RG com identificação na bilheteria presencial. Válido a partir de qualquer idade.',
       ],
     },
