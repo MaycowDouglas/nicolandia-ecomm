@@ -1,11 +1,11 @@
 import Atraction360 from '@/public/images/atractions/360.png'
 // import AtractionArenaElastica from '@/public/images/atractions/arena-elastica.jpeg'
 import AtractionBrinquedao from '@/public/images/atractions/brinquedao.png'
-// import AtractionCarrossel from '@/public/images/atractions/carrossel.jpg'
+import AtractionCarrossel from '@/public/images/atractions/carrossel.jpg'
 import AtractionColossusLoop from '@/public/images/atractions/colossus-loop.jpeg'
 import AtractionCrazyDance from '@/public/images/atractions/crazy-dance.jpg'
 // import AtractionDisko from '@/public/images/atractions/disko.jpg'
-// import AtractionDropZone from '@/public/images/atractions/drop-zone.png'
+import AtractionDropZone from '@/public/images/atractions/drop-zone.png'
 import AtractionFamilySwing from '@/public/images/atractions/family-swing.png'
 import AtractionFerrysWheel from '@/public/images/atractions/wheel.jpg'
 import AtractionGrandPrix from '@/public/images/atractions/grand-prix.png'
@@ -110,15 +110,15 @@ export const data: AttractionProps[] = [
       minHeight: 130,
     },
   },
-  // {
-  //   name: 'Drop Zone',
-  //   image: AtractionDropZone,
-  //   category: 'radical',
-  //   observation: 'Está atração não é permitida para quem possui mobilidade reduzida.',
-  //   restrictions: {
-  //     minHeight: 120,
-  //   },
-  // },
+  {
+    name: 'Drop Zone',
+    image: AtractionDropZone,
+    category: 'radical',
+    observation: 'Está atração não é permitida para quem possui mobilidade reduzida.',
+    restrictions: {
+      minHeight: 120,
+    },
+  },
   {
     name: 'Tobogã',
     image: AtractionToboga,
@@ -175,16 +175,16 @@ export const data: AttractionProps[] = [
     category: 'familiar',
     observation: 'Crianças de 1.20 metros até 1.30 metros tem direito a acompanhante',
   },
-  // {
-  //   name: 'Mini Roda',
-  //   image: AtractionMiniRoda,
-  //   category: 'familiar',
-  //   restrictions: {
-  //     minHeight: 80,
-  //   },
-  //   observation:
-  //     'Visitantes com estatura entre 0,80M e 1,10M somente acompanhado por um adulto responsável. Visitantes com altura superior a 1,95m e/ou peso superir a 120kg não devem usufruir desta atração.',
-  // },
+  {
+    name: 'Mini Roda',
+    image: AtractionMiniRoda,
+    category: 'familiar',
+    restrictions: {
+      minHeight: 80,
+    },
+    observation:
+      'Visitantes com estatura entre 0,80M e 1,10M somente acompanhado por um adulto responsável. Visitantes com altura superior a 1,95m e/ou peso superir a 120kg não devem usufruir desta atração.',
+  },
   {
     name: 'Pirate Ship',
     image: AtractionPirateShip,
@@ -288,14 +288,14 @@ export const data: AttractionProps[] = [
       maxHeight: 140,
     },
   },
-  // {
-  //   name: 'Carrossel',
-  //   image: AtractionCarrossel,
-  //   category: 'childish',
-  //   restrictions: {
-  //     maxHeight: 140,
-  //   },
-  // },
+  {
+    name: 'Carrossel',
+    image: AtractionCarrossel,
+    category: 'childish',
+    restrictions: {
+      maxHeight: 140,
+    },
+  },
   {
     name: 'T-rex',
     image: AtractionTrex,
