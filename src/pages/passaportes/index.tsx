@@ -139,7 +139,7 @@ export default function PassaportsPage() {
                   isPassport
                   quantity={2}
                   price={13397}
-                  reference={6667}
+                  reference={6957}
                   name="Combo Encantado"
                   banner={ComboEncantado}
                 />
