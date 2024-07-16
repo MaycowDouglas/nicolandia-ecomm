@@ -41,7 +41,8 @@ export default function MyAccount() {
   }
 
   function showCode(code: string) {
-    setPix(`https://chart.googleapis.com/chart?cht=qr&chl=${encodeURI(code)}&chs=250x250`)
+    setPix(code)
+    // setPix(`https://chart.googleapis.com/chart?cht=qr&chl=${encodeURI(code)}&chs=250x250`)
     setPixVisible(true)
   }
 
@@ -68,14 +69,8 @@ export default function MyAccount() {
               onClick={() => setPixVisible(false)}
               className="absolute top-3 right-3 text-2xl text-slate-500 cursor-pointer"
             />
-
-            <img src={pix} alt="" />
-
-            <p className="text-center text-2xl mb-5">
-              {pix
-                .replace('https://chart.googleapis.com/chart?cht=qr&chl=', '')
-                .replace('&chs=250x250', '')}
-            </p>
+            <img src={`https://quickchart.io/qr?text=${encodeURI(pix)}&size=250`} alt={pix} />
+            <p className="text-center text-2xl mb-5">{pix}</p>
           </div>
         </>
       )}
