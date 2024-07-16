@@ -41,7 +41,8 @@ export default function MyAccount() {
   }
 
   function showCode(code: string) {
-    setPix(`https://chart.googleapis.com/chart?cht=qr&chl=${encodeURI(code)}&chs=250x250`)
+    // setPix(`https://chart.googleapis.com/chart?cht=qr&chl=${encodeURI(code)}&chs=250x250`)
+    setPix(`https://quickchart.io/qr?text=${encodeURI(code)}&size=250`)
     setPixVisible(true)
   }
 
