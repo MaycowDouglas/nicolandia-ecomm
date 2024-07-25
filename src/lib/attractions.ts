@@ -314,7 +314,7 @@ export const data: AttractionProps[] = [
   //   },
   // },
   {
-    name: 'Arena Elástica',
+    name: 'Cama Elástica',
     image: AtractionCamaElastica,
     category: 'familiar',
     alert: 'R$ 25,00 / 5 minutos',
