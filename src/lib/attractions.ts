@@ -5,7 +5,7 @@ import AtractionCarrossel from '@/public/images/atractions/carrossel.jpg'
 import AtractionColossusLoop from '@/public/images/atractions/colossus-loop.jpeg'
 import AtractionCrazyDance from '@/public/images/atractions/crazy-dance.jpg'
 // import AtractionDisko from '@/public/images/atractions/disko.jpg'
-import AtractionDropZone from '@/public/images/atractions/drop-zone.png'
+// import AtractionDropZone from '@/public/images/atractions/drop-zone.png'
 import AtractionFamilySwing from '@/public/images/atractions/family-swing.png'
 import AtractionFerrysWheel from '@/public/images/atractions/wheel.jpg'
 import AtractionGrandPrix from '@/public/images/atractions/grand-prix.png'
@@ -21,13 +21,14 @@ import AtractionRockRoll from '@/public/images/atractions/rock-roll.jpg'
 // import AtractionRollerCoaster from '@/public/images/atractions/roller-coaster.png'
 import AtractionSpook from '@/public/images/atractions/spook.jpeg'
 import AtractionTyphoon from '@/public/images/atractions/typhoon.jpg'
-import AtractionSuperFrisbee from '@/public/images/atractions/super-frisbee.jpeg'
+// import AtractionSuperFrisbee from '@/public/images/atractions/super-frisbee.jpeg'
 import AtractionTrex from '@/public/images/atractions/t-rex.jpeg'
 import AtractionTiro from '@/public/images/atractions/tiro.jpeg'
 import AtractionToboga from '@/public/images/atractions/toboga-noite.jpeg'
 import AtractionTremCavalaria from '@/public/images/atractions/trem-cavalaria.png'
+import AtractionCamaElastica from '@/public/images/atractions/cama_elastica-min.jpg'
 import AtractionTrenzinhoCircus from '@/public/images/atractions/trenzinho-circus.jpeg'
-import AtractionTrenzinhoEncantado from '@/public/images/atractions/trenzinho-encantado.png'
+// import AtractionTrenzinhoEncantado from '@/public/images/atractions/trenzinho-encantado.png'
 import AtractionTrenzinhoFazenda from '@/public/images/atractions/trenzinho-fazenda.jpeg'
 import AtractionTrenzinhoMiniBruc from '@/public/images/atractions/trenzinho-mini-bruc.png'
 import AtractionTrenzinho from '@/public/images/atractions/trenzinho.jpg'
@@ -312,6 +313,13 @@ export const data: AttractionProps[] = [
   //     maxHeight: 140,
   //   },
   // },
+  {
+    name: 'Arena Elástica',
+    image: AtractionCamaElastica,
+    category: 'familiar',
+    alert: 'R$ 25,00 / 5 minutos',
+    observation: 'Essa atração não faz parte do passaporte. Compra presencialmente no parque.',
+  },
   {
     name: 'Trem Cavalaria',
     image: AtractionTremCavalaria,
