@@ -110,15 +110,15 @@ export const data: AttractionProps[] = [
       minHeight: 130,
     },
   },
-  {
-    name: 'Drop Zone',
-    image: AtractionDropZone,
-    category: 'radical',
-    observation: 'Está atração não é permitida para quem possui mobilidade reduzida.',
-    restrictions: {
-      minHeight: 120,
-    },
-  },
+  // {
+  //   name: 'Drop Zone',
+  //   image: AtractionDropZone,
+  //   category: 'radical',
+  //   observation: 'Está atração não é permitida para quem possui mobilidade reduzida.',
+  //   restrictions: {
+  //     minHeight: 120,
+  //   },
+  // },
   {
     name: 'Tobogã',
     image: AtractionToboga,
@@ -176,7 +176,7 @@ export const data: AttractionProps[] = [
     observation: 'Crianças de 1.20 metros até 1.30 metros tem direito a acompanhante',
   },
   {
-    name: 'Mini Roda',
+    name: 'Merry Wheel', //'Mini Roda'
     image: AtractionMiniRoda,
     category: 'familiar',
     restrictions: {
@@ -271,7 +271,7 @@ export const data: AttractionProps[] = [
     observation: 'Essa atração não faz parte do passaporte. Compra presencialmente no parque.',
   },
   {
-    name: 'Trenzinho Mini Bruco',
+    name: 'Trenzinho Mini Bruc',
     image: AtractionTrenzinhoMiniBruc,
     category: 'childish',
     restrictions: {
@@ -321,15 +321,15 @@ export const data: AttractionProps[] = [
       maxHeight: 130,
     },
   },
-  {
-    name: 'Trenzinho Encantado',
-    image: AtractionTrenzinhoEncantado,
-    category: 'childish',
-    restrictions: {
-      minHeight: 80,
-      maxHeight: 130,
-    },
-  },
+  // {
+  //   name: 'Trenzinho Encantado',
+  //   image: AtractionTrenzinhoEncantado,
+  //   category: 'childish',
+  //   restrictions: {
+  //     minHeight: 80,
+  //     maxHeight: 130,
+  //   },
+  // },
   {
     name: 'Trenzinho Fazenda',
     image: AtractionTrenzinhoFazenda,
