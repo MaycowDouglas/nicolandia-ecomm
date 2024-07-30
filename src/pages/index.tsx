@@ -5,7 +5,7 @@ import SlideImage from '@/components/atoms/SlideImage'
 import Attractions from '@/components/organisms/Attractions'
 import Tickets from '@/components/organisms/Tickets'
 import AppleStore from '@/public/images/applestore.png'
-import BannerFeriasWeb from '@/public/images/banners/banner_ferias.jpg'
+import BannerFerias from '@/public/images/banners/banner_ferias.jpg'
 import BannerFeriasMobile from '@/public/images/banners/banner_ferias_mobile.jpg'
 import NicoAppDark from '@/public/images/brands/nicoapp-dark.svg'
 import GooglePlay from '@/public/images/googleplay.png'
@@ -55,18 +55,10 @@ export default function HomePage() {
             nextEl: '.main-swiper-next',
           }}
         >
-          {/*<SwiperSlide>*/}
-          {/*  <SlideImage*/}
-          {/*    alt="Diversão para toda a Família!"*/}
-          {/*    mobile={NicoCardsMobile}*/}
-          {/*    desktop={NicoCardsWeb}*/}
-          {/*  />*/}
-          {/*</SwiperSlide>*/}
-
           <SwiperSlide>
             <SlideImage
-              alt="As férias chegaram!"
-              desktop={BannerFeriasWeb}
+              alt="Férias prorrogadas!"
+              desktop={BannerFerias}
               mobile={BannerFeriasMobile}
             />
           </SwiperSlide>
