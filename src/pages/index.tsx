@@ -5,8 +5,8 @@ import SlideImage from '@/components/atoms/SlideImage'
 import Attractions from '@/components/organisms/Attractions'
 import Tickets from '@/components/organisms/Tickets'
 import AppleStore from '@/public/images/applestore.png'
-import BannerFerias from '@/public/images/banners/banner_ferias.jpg'
-import BannerFeriasMobile from '@/public/images/banners/banner_ferias_mobile.jpg'
+import BannerInstitucional from '@/public/images/banners/banner_institucional.jpg'
+import BannerInstitucionalMobile from '@/public/images/banners/banner_institucional_mobile.jpg'
 import NicoAppDark from '@/public/images/brands/nicoapp-dark.svg'
 import GooglePlay from '@/public/images/googleplay.png'
 import Head from 'next/head'
@@ -58,8 +58,8 @@ export default function HomePage() {
           <SwiperSlide>
             <SlideImage
               alt="Férias prorrogadas!"
-              desktop={BannerFerias}
-              mobile={BannerFeriasMobile}
+              desktop={BannerInstitucional}
+              mobile={BannerInstitucionalMobile}
             />
           </SwiperSlide>
           <SwiperSlide>
