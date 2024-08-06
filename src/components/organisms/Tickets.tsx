@@ -100,22 +100,22 @@ export default function Tickets() {
               banner={SuperAntecipado}
             />
           </SwiperSlide>
-          {/*<SwiperSlide>*/}
-          {/*  <Ticket*/}
-          {/*    id={20}*/}
-          {/*    quantity={1}*/}
-          {/*    price={4297}*/}
-          {/*    reference={4297}*/}
-          {/*    banner={QuartaQuintaMaluca}*/}
-          {/*    name="Quarta e Quinta Maluca"*/}
-          {/*    description={*/}
-          {/*        <p className={'mt-2'}>*/}
-          {/*            1 passaporte válido durante 30 dias, exclusivo para utilização nas quartas e*/}
-          {/*            quintas-feiras, dentro do horário de funcionamento do parque.*/}
-          {/*        </p>*/}
-          {/*    }*/}
-          {/*  />*/}
-          {/*</SwiperSlide>*/}
+          <SwiperSlide>
+            <Ticket
+              id={20}
+              quantity={1}
+              price={4297}
+              reference={4297}
+              banner={QuartaQuintaMaluca}
+              name="Quarta e Quinta Maluca"
+              description={
+                  <p className={'mt-2'}>
+                      1 passaporte válido durante 30 dias, exclusivo para utilização nas quartas e
+                      quintas-feiras, dentro do horário de funcionamento do parque.
+                  </p>
+              }
+            />
+          </SwiperSlide>
         </>
       )}
 
