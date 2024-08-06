@@ -106,20 +106,20 @@ export default function PassaportsPage() {
                   name="Super Antecipado"
                   banner={SuperAntecipado}
                 />
-                <Ticket
-                  id={20}
-                  price={4297}
-                  quantity={1}
-                  reference={4297}
-                  banner={QuartaQuintaMaluca}
-                  name="Quarta e Quinta Maluca"
-                  description={
-                    <p className={'mt-2'}>
-                      1 passaporte válido durante 30 dias, exclusivo para utilização nas quartas e
-                      quintas-feiras, dentro do horário de funcionamento do parque.
-                    </p>
-                  }
-                />
+                {/*<Ticket*/}
+                {/*  id={20}*/}
+                {/*  price={4297}*/}
+                {/*  quantity={1}*/}
+                {/*  reference={4297}*/}
+                {/*  banner={QuartaQuintaMaluca}*/}
+                {/*  name="Quarta e Quinta Maluca"*/}
+                {/*  description={*/}
+                {/*    <p className={'mt-2'}>*/}
+                {/*      1 passaporte válido durante 30 dias, exclusivo para utilização nas quartas e*/}
+                {/*      quintas-feiras, dentro do horário de funcionamento do parque.*/}
+                {/*    </p>*/}
+                {/*  }*/}
+                {/*/>*/}
               </>
             )}
 
