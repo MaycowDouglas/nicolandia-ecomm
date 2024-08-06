@@ -106,11 +106,11 @@ export default function PassaportsPage() {
                   name="Super Antecipado"
                   banner={SuperAntecipado}
                 />
-                {/*<Ticket
+                <Ticket
                   id={20}
-                  price={4022}
+                  price={4297}
                   quantity={1}
-                  reference={4022}
+                  reference={4297}
                   banner={QuartaQuintaMaluca}
                   name="Quarta e Quinta Maluca"
                   description={
@@ -119,7 +119,7 @@ export default function PassaportsPage() {
                       quintas-feiras, dentro do horário de funcionamento do parque.
                     </p>
                   }
-                />*/}
+                />
               </>
             )}
 
