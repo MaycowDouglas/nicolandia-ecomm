@@ -91,7 +91,7 @@ export default function Tickets() {
           </SwiperSlide>
           <SwiperSlide>
             <Ticket
-                id={17}
+              id={17}
               isPassport
               quantity={3}
               price={14397}
