@@ -51,7 +51,6 @@ export default function Tickets() {
               banner={PassaporteSuperSegunda}
             />
           </SwiperSlide>
-
           <SwiperSlide>
             <Ticket
               id={19}
@@ -79,7 +78,6 @@ export default function Tickets() {
               banner={PassaporteAntecipado}
             />
           </SwiperSlide>
-
           <SwiperSlide>
             <Ticket
               id={14}
@@ -91,10 +89,9 @@ export default function Tickets() {
               banner={ComboAntecipado}
             />
           </SwiperSlide>
-
           <SwiperSlide>
             <Ticket
-              id={17}
+                id={17}
               isPassport
               quantity={3}
               price={14397}
@@ -103,7 +100,6 @@ export default function Tickets() {
               banner={SuperAntecipado}
             />
           </SwiperSlide>
-
           <SwiperSlide>
             <Ticket
               id={20}
