@@ -4,26 +4,26 @@ import 'swiper/css/navigation'
 import Ticket from '@/components/molecules/Ticket'
 import NicoCardsWeb from '@/public/images/banners/nicocards-desktop.png'
 import NicoCardsMobile from '@/public/images/banners/nicocards-mobile.png'
-import Brb from '@/public/images/brands/brb.png'
 import Asmpf from '@/public/images/brands/asmpf.png'
 import Assof from '@/public/images/brands/assof.png'
+import Brb from '@/public/images/brands/brb.png'
 import Caadf from '@/public/images/brands/caadf.png'
 import Oabdf from '@/public/images/brands/oabdf.png'
 import Sinprfdf from '@/public/images/brands/sinprfdf.png'
-import Combo360 from '@/public/images/tickets/combo-360.jpg'
-import ComboLove from '@/public/images/tickets/combo-love.jpeg'
+import ComboFamilia from '@/public/images/combos/combo-familia.png'
 import ComboKabum from '@/public/images/combos/combo-kabum.jpeg'
 import ComboPipoca from '@/public/images/combos/combo-pipoca.png'
-import ComboFamilia from '@/public/images/combos/combo-familia.png'
-import ComboEncantado from '@/public/images/tickets/combo-encantado.jpg'
+import Combo360 from '@/public/images/tickets/combo-360.jpg'
 import ComboAntecipado from '@/public/images/tickets/combo-antecipado.jpg'
-import SuperAntecipado from '@/public/images/tickets/super-antecipado.jpg'
+import ComboEncantado from '@/public/images/tickets/combo-encantado.jpg'
 import ComboEspetacular from '@/public/images/tickets/combo-espetacular.jpg'
+import ComboLove from '@/public/images/tickets/combo-love.jpeg'
 import ComboSuperSegunda from '@/public/images/tickets/combo-super-segunda.jpeg'
-import QuartaQuintaMaluca from '@/public/images/tickets/quarta-quinta-maluca.jpg'
 import PassaporteAntecipado from '@/public/images/tickets/passaporte-antecipado.jpg'
 import PassaporteIndividual from '@/public/images/tickets/passaporte-individual.jpg'
 import PassaporteSuperSegunda from '@/public/images/tickets/passaporte-super-segunda.jpeg'
+import QuartaQuintaMaluca from '@/public/images/tickets/quarta-quinta-maluca.jpg'
+import SuperAntecipado from '@/public/images/tickets/super-antecipado.jpg'
 import Head from 'next/head'
 import Image from 'next/image'
 import { GoAlert } from 'react-icons/go'
@@ -113,12 +113,6 @@ export default function PassaportsPage() {
                   reference={4297}
                   banner={QuartaQuintaMaluca}
                   name="Quarta e Quinta Maluca"
-                  description={
-                    <p className={'mt-2'}>
-                      1 passaporte válido durante 30 dias, exclusivo para utilização nas quartas e
-                      quintas-feiras, dentro do horário de funcionamento do parque.
-                    </p>
-                  }
                 />
               </>
             )}

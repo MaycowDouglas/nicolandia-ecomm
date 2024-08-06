@@ -1,18 +1,18 @@
 import Combo360 from '@/public/images/tickets/combo-360.jpg'
-import ComboLove from '@/public/images/tickets/combo-love.jpeg'
-import ComboEncantado from '@/public/images/tickets/combo-encantado.jpg'
 import ComboAntecipado from '@/public/images/tickets/combo-antecipado.jpg'
-import SuperAntecipado from '@/public/images/tickets/super-antecipado.jpg'
+import ComboEncantado from '@/public/images/tickets/combo-encantado.jpg'
 import ComboEspetacular from '@/public/images/tickets/combo-espetacular.jpg'
+import ComboLove from '@/public/images/tickets/combo-love.jpeg'
 import ComboSuperSegunda from '@/public/images/tickets/combo-super-segunda.jpeg'
 import PassaporteAntecipado from '@/public/images/tickets/passaporte-antecipado.jpg'
 import PassaporteIndividual from '@/public/images/tickets/passaporte-individual.jpg'
 import PassaporteSuperSegunda from '@/public/images/tickets/passaporte-super-segunda.jpeg'
+import QuartaQuintaMaluca from '@/public/images/tickets/quarta-quinta-maluca.jpg'
+import SuperAntecipado from '@/public/images/tickets/super-antecipado.jpg'
 import SwiperCore, { Autoplay, Navigation } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
 import Ticket from '../molecules/Ticket'
-import QuartaQuintaMaluca from "@/public/images/tickets/quarta-quinta-maluca.jpg";
 
 SwiperCore.use([Autoplay, Navigation])
 
