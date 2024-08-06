@@ -103,8 +103,9 @@ export default function Tickets() {
           <SwiperSlide>
             <Ticket
               id={20}
-              price={4297}
+              isPassport
               quantity={1}
+              price={4297}
               reference={4297}
               banner={QuartaQuintaMaluca}
               name="Quarta e Quinta Maluca"
