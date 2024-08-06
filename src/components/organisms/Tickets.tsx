@@ -12,6 +12,7 @@ import SwiperCore, { Autoplay, Navigation } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
 import Ticket from '../molecules/Ticket'
+import QuartaQuintaMaluca from "@/public/images/tickets/quarta-quinta-maluca.jpg";
 
 SwiperCore.use([Autoplay, Navigation])
 
@@ -100,6 +101,17 @@ export default function Tickets() {
               reference={5997}
               name="Super Antecipado"
               banner={SuperAntecipado}
+            />
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <Ticket
+              id={20}
+              price={4297}
+              quantity={1}
+              reference={4297}
+              banner={QuartaQuintaMaluca}
+              name="Quarta e Quinta Maluca"
             />
           </SwiperSlide>
         </>
