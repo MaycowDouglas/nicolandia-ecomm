@@ -7,6 +7,8 @@ import Tickets from '@/components/organisms/Tickets'
 import AppleStore from '@/public/images/applestore.png'
 import BannerInstitucionalMobile from '@/public/images/banners/banner_institucional_mobile.jpg'
 import BannerInstitucional from '@/public/images/banners/banner_institucional.jpg'
+import BannerQuartaMalucaMobile from '@/public/images/banners/banner_qq_mobile.jpg'
+import BannerQuartaMaluca from '@/public/images/banners/banner_qq.jpg'
 import NicoAppDark from '@/public/images/brands/nicoapp-dark.svg'
 import GooglePlay from '@/public/images/googleplay.png'
 import Head from 'next/head'
@@ -15,8 +17,6 @@ import { useRef } from 'react'
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa'
 import SwiperCore, { Autoplay, Navigation } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
-// import BannerQuartaMaluca from '@/public/images/banners/qq-maluca.jpeg'
-// import BannerQuartaMalucaMobile from '@/public/images/banners/qq-maluca-mobile.jpeg'
 
 SwiperCore.use([Autoplay, Navigation])
 
@@ -58,6 +58,13 @@ export default function HomePage() {
               alt="Férias prorrogadas!"
               desktop={BannerInstitucional}
               mobile={BannerInstitucionalMobile}
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <SlideImage
+              alt="Quarta e quinta maluca!"
+              desktop={BannerQuartaMaluca}
+              mobile={BannerQuartaMalucaMobile}
             />
           </SwiperSlide>
 
