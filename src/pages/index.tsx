@@ -9,6 +9,8 @@ import BannerInstitucionalMobile from '@/public/images/banners/banner_institucio
 import BannerInstitucional from '@/public/images/banners/banner_institucional.jpg'
 import BannerQuartaMalucaMobile from '@/public/images/banners/banner_qq_mobile.jpg'
 import BannerQuartaMaluca from '@/public/images/banners/banner_qq.jpg'
+import BannerCombos from '@/public/images/banners/banner_combos.jpg'
+import BannerCombosMobile from '@/public/images/banners/banner_combos_mobile.jpg'
 import NicoAppDark from '@/public/images/brands/nicoapp-dark.svg'
 import GooglePlay from '@/public/images/googleplay.png'
 import Head from 'next/head'
@@ -65,6 +67,13 @@ export default function HomePage() {
               alt="Quarta e quinta maluca!"
               desktop={BannerQuartaMaluca}
               mobile={BannerQuartaMalucaMobile}
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <SlideImage
+              alt="Combos de agosto."
+              desktop={BannerCombos}
+              mobile={BannerCombosMobile}
             />
           </SwiperSlide>
 
