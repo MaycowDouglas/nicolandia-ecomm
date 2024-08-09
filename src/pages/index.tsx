@@ -5,14 +5,14 @@ import SlideImage from '@/components/atoms/SlideImage'
 import Attractions from '@/components/organisms/Attractions'
 import Tickets from '@/components/organisms/Tickets'
 import AppleStore from '@/public/images/applestore.png'
+import BannerCombosMobile from '@/public/images/banners/banner_combos_mobile.jpg'
+import BannerCombos from '@/public/images/banners/banner_combos.jpg'
 import BannerInstitucionalMobile from '@/public/images/banners/banner_institucional_mobile.jpg'
 import BannerInstitucional from '@/public/images/banners/banner_institucional.jpg'
+import BannerPaisMobile from '@/public/images/banners/banner_pai_mobile.jpg'
+import BannerPais from '@/public/images/banners/banner_pais.jpg'
 import BannerQuartaMalucaMobile from '@/public/images/banners/banner_qq_mobile.jpg'
 import BannerQuartaMaluca from '@/public/images/banners/banner_qq.jpg'
-import BannerCombos from '@/public/images/banners/banner_combos.jpg'
-import BannerCombosMobile from '@/public/images/banners/banner_combos_mobile.jpg'
-import BannerPais from '@/public/images/banners/banner_pais.jpg'
-import BannerPaisMobile from '@/public/images/banners/banner_pai_mobile.jpg'
 import NicoAppDark from '@/public/images/brands/nicoapp-dark.svg'
 import GooglePlay from '@/public/images/googleplay.png'
 import Head from 'next/head'
@@ -58,11 +58,7 @@ export default function HomePage() {
           }}
         >
           <SwiperSlide>
-            <SlideImage
-              alt="Dia dos pais"
-              desktop={BannerPais}
-              mobile={BannerPaisMobile}
-            />
+            <SlideImage alt="Dia dos pais" desktop={BannerPais} mobile={BannerPaisMobile} />
           </SwiperSlide>
           <SwiperSlide>
             <SlideImage
