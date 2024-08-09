@@ -11,6 +11,8 @@ import BannerQuartaMalucaMobile from '@/public/images/banners/banner_qq_mobile.j
 import BannerQuartaMaluca from '@/public/images/banners/banner_qq.jpg'
 import BannerCombos from '@/public/images/banners/banner_combos.jpg'
 import BannerCombosMobile from '@/public/images/banners/banner_combos_mobile.jpg'
+import BannerPais from '@/public/images/banners/banner_pais.jpg'
+import BannerPaisMobile from '@/public/images/banners/banner_pai_mobile.jpg'
 import NicoAppDark from '@/public/images/brands/nicoapp-dark.svg'
 import GooglePlay from '@/public/images/googleplay.png'
 import Head from 'next/head'
@@ -55,6 +57,13 @@ export default function HomePage() {
             nextEl: '.main-swiper-next',
           }}
         >
+          <SwiperSlide>
+            <SlideImage
+              alt="Dia dos pais"
+              desktop={BannerPais}
+              mobile={BannerPaisMobile}
+            />
+          </SwiperSlide>
           <SwiperSlide>
             <SlideImage
               alt="Férias prorrogadas!"
