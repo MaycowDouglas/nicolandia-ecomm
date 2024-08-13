@@ -22,6 +22,7 @@ import ComboSuperSegunda from '@/public/images/tickets/combo-super-segunda.jpeg'
 import PassaporteAntecipado from '@/public/images/tickets/passaporte-antecipado.jpg'
 import PassaporteIndividual from '@/public/images/tickets/passaporte-individual.jpg'
 import PassaporteSuperSegunda from '@/public/images/tickets/passaporte-super-segunda.jpeg'
+import QuartaQuintaMalucaCombo from '@/public/images/tickets/quarta-quinta-maluca-combo.jpg'
 import QuartaQuintaMaluca from '@/public/images/tickets/quarta-quinta-maluca.jpg'
 import SuperAntecipado from '@/public/images/tickets/super-antecipado.jpg'
 import Head from 'next/head'
@@ -78,15 +79,29 @@ export default function PassaportsPage() {
             {nowSP.getDay() >= 2 && nowSP.getDay() <= 4 && (
               <>
                 <Ticket
-                  id={20}
-                  price={6997}
+                  id={21}
+                  price={4297}
                   quantity={1}
-                  reference={6997}
+                  reference={4297}
                   banner={QuartaQuintaMaluca}
                   name="Quarta e Quinta Maluca"
                   description={
                     <p className={'mt-2'}>
                       1 passaporte válido durante 30 dias, exclusivo para utilização nas quartas e
+                      quintas-feiras, dentro do horário de funcionamento do parque.
+                    </p>
+                  }
+                />
+                <Ticket
+                  id={20}
+                  price={6997}
+                  quantity={2}
+                  reference={6997}
+                  banner={QuartaQuintaMalucaCombo}
+                  name="Quarta e Quinta Maluca"
+                  description={
+                    <p className={'mt-2'}>
+                      2 passaportes válido durante 30 dias, exclusivo para utilização nas quartas e
                       quintas-feiras, dentro do horário de funcionamento do parque.
                     </p>
                   }
