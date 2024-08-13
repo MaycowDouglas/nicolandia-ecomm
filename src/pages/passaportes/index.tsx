@@ -78,6 +78,20 @@ export default function PassaportsPage() {
             {nowSP.getDay() >= 2 && nowSP.getDay() <= 4 && (
               <>
                 <Ticket
+                  id={20}
+                  price={6997}
+                  quantity={1}
+                  reference={6997}
+                  banner={QuartaQuintaMaluca}
+                  name="Quarta e Quinta Maluca"
+                  description={
+                    <p className={'mt-2'}>
+                      1 passaporte válido durante 30 dias, exclusivo para utilização nas quartas e
+                      quintas-feiras, dentro do horário de funcionamento do parque.
+                    </p>
+                  }
+                />
+                <Ticket
                   id={7}
                   isPassport
                   price={5997}
@@ -105,20 +119,6 @@ export default function PassaportsPage() {
                   reference={5997}
                   name="Super Antecipado"
                   banner={SuperAntecipado}
-                />
-                <Ticket
-                  id={20}
-                  price={4297}
-                  quantity={1}
-                  reference={4297}
-                  banner={QuartaQuintaMaluca}
-                  name="Quarta e Quinta Maluca"
-                  description={
-                    <p className={'mt-2'}>
-                      1 passaporte válido durante 30 dias, exclusivo para utilização nas quartas e
-                      quintas-feiras, dentro do horário de funcionamento do parque.
-                    </p>
-                  }
                 />
               </>
             )}
