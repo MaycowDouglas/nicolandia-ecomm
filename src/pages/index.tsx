@@ -7,10 +7,10 @@ import Tickets from '@/components/organisms/Tickets'
 import AppleStore from '@/public/images/applestore.png'
 import BannerCombosMobile from '@/public/images/banners/banner_combos_mobile.jpg'
 import BannerCombos from '@/public/images/banners/banner_combos.jpg'
+import BannerComboQQMalucaMobile from '@/public/images/banners/banner_cqqm_mobile.jpg'
+import BannerComboQQMaluca from '@/public/images/banners/banner_cqqm.jpg'
 import BannerInstitucionalMobile from '@/public/images/banners/banner_institucional_mobile.jpg'
 import BannerInstitucional from '@/public/images/banners/banner_institucional.jpg'
-import BannerPaisMobile from '@/public/images/banners/banner_pai_mobile.jpg'
-import BannerPais from '@/public/images/banners/banner_pais.jpg'
 import BannerQuartaMalucaMobile from '@/public/images/banners/banner_qq_mobile.jpg'
 import BannerQuartaMaluca from '@/public/images/banners/banner_qq.jpg'
 import NicoAppDark from '@/public/images/brands/nicoapp-dark.svg'
@@ -57,6 +57,13 @@ export default function HomePage() {
             nextEl: '.main-swiper-next',
           }}
         >
+          <SwiperSlide>
+            <SlideImage
+              alt="Combo Quarta e Quinta Maluca"
+              desktop={BannerComboQQMaluca}
+              mobile={BannerComboQQMalucaMobile}
+            />
+          </SwiperSlide>
           <SwiperSlide>
             <SlideImage
               alt="Institucional"
