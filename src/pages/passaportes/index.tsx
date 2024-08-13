@@ -98,7 +98,7 @@ export default function PassaportsPage() {
                   quantity={2}
                   reference={6997}
                   banner={QuartaQuintaMalucaCombo}
-                  name="Quarta e Quinta Maluca"
+                  name="Combo Quarta e Quinta Maluca +"
                   description={
                     <p className={'mt-2'}>
                       2 passaportes válido durante 30 dias, exclusivo para utilização nas quartas e

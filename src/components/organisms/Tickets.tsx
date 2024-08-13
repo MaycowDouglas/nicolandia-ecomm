@@ -91,7 +91,7 @@ export default function Tickets() {
               price={6997}
               reference={4297}
               banner={QuartaQuintaMalucaCombo}
-              name="Quarta e Quinta Maluca"
+              name="Combo Quarta e Quinta Maluca +"
               description={
                 <p className={'mt-2'}>
                   2 passaportes válido durante 30 dias, exclusivo para utilização nas quartas e
