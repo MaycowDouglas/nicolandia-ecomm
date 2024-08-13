@@ -58,11 +58,8 @@ export default function HomePage() {
           }}
         >
           <SwiperSlide>
-            <SlideImage alt="Dia dos pais" desktop={BannerPais} mobile={BannerPaisMobile} />
-          </SwiperSlide>
-          <SwiperSlide>
             <SlideImage
-              alt="Férias prorrogadas!"
+              alt="Institucional"
               desktop={BannerInstitucional}
               mobile={BannerInstitucionalMobile}
             />
