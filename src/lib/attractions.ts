@@ -369,7 +369,7 @@ export const data: AttractionProps[] = [
   {
     name: 'Magic Cup',
     image: AtractionMagicCup,
-    category: 'childish',
+    category: 'familiar',
     restrictions: {
       minHeight: 80,
       maxHeight: 130,
