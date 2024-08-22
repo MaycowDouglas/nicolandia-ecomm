@@ -1,13 +1,13 @@
 import Atraction360 from '@/public/images/atractions/360.png'
 // import AtractionArenaElastica from '@/public/images/atractions/arena-elastica.jpeg'
 import AtractionBrinquedao from '@/public/images/atractions/brinquedao.png'
+// import AtractionDisko from '@/public/images/atractions/disko.jpg'
+import AtractionDropZone from '@/public/images/atractions/drop-zone.png'
+import AtractionCamaElastica from '@/public/images/atractions/cama_elastica-min.jpg'
 import AtractionCarrossel from '@/public/images/atractions/carrossel.jpg'
 import AtractionColossusLoop from '@/public/images/atractions/colossus-loop.jpeg'
 import AtractionCrazyDance from '@/public/images/atractions/crazy-dance.jpg'
-// import AtractionDisko from '@/public/images/atractions/disko.jpg'
-// import AtractionDropZone from '@/public/images/atractions/drop-zone.png'
 import AtractionFamilySwing from '@/public/images/atractions/family-swing.png'
-import AtractionFerrysWheel from '@/public/images/atractions/wheel.jpg'
 import AtractionGrandPrix from '@/public/images/atractions/grand-prix.png'
 import AtractionKabum from '@/public/images/atractions/kabum.png'
 import AtractionMagicCup from '@/public/images/atractions/magic-cup.jpg'
@@ -26,7 +26,6 @@ import AtractionTrex from '@/public/images/atractions/t-rex.jpeg'
 import AtractionTiro from '@/public/images/atractions/tiro.jpeg'
 import AtractionToboga from '@/public/images/atractions/toboga-noite.jpeg'
 import AtractionTremCavalaria from '@/public/images/atractions/trem-cavalaria.png'
-import AtractionCamaElastica from '@/public/images/atractions/cama_elastica-min.jpg'
 import AtractionTrenzinhoCircus from '@/public/images/atractions/trenzinho-circus.jpeg'
 // import AtractionTrenzinhoEncantado from '@/public/images/atractions/trenzinho-encantado.png'
 import AtractionTrenzinhoFazenda from '@/public/images/atractions/trenzinho-fazenda.jpeg'
@@ -34,6 +33,7 @@ import AtractionTrenzinhoMiniBruc from '@/public/images/atractions/trenzinho-min
 import AtractionTrenzinho from '@/public/images/atractions/trenzinho.jpg'
 // import AtractionTrenzinhoTour from '@/public/images/atractions/trenzinho-tour.jpeg'
 import AtractionWaveBlaster from '@/public/images/atractions/wave-blaster.png'
+import AtractionFerrysWheel from '@/public/images/atractions/wheel.jpg'
 import AtractionZipZap from '@/public/images/atractions/zip-zap.jpg'
 import { StaticImageData } from 'next/image'
 
@@ -111,15 +111,15 @@ export const data: AttractionProps[] = [
       minHeight: 130,
     },
   },
-  // {
-  //   name: 'Drop Zone',
-  //   image: AtractionDropZone,
-  //   category: 'radical',
-  //   observation: 'Está atração não é permitida para quem possui mobilidade reduzida.',
-  //   restrictions: {
-  //     minHeight: 120,
-  //   },
-  // },
+  {
+    name: 'Drop Zone',
+    image: AtractionDropZone,
+    category: 'radical',
+    observation: 'Está atração não é permitida para quem possui mobilidade reduzida.',
+    restrictions: {
+      minHeight: 120,
+    },
+  },
   {
     name: 'Tobogã',
     image: AtractionToboga,
