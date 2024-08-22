@@ -3,7 +3,7 @@ import ComboAntecipado from '@/public/images/tickets/combo-antecipado.jpg'
 import ComboEncantado from '@/public/images/tickets/combo-encantado.jpg'
 import ComboEspetacular from '@/public/images/tickets/combo-espetacular.jpg'
 import ComboLove from '@/public/images/tickets/combo-love.jpeg'
-import ComboSuperSegunda from '@/public/images/tickets/combo-super-segunda.jpeg'
+import ComboSuperSegunda from '@/public/images/tickets/combo-super-segunda.jpg'
 import PassaporteAntecipado from '@/public/images/tickets/passaporte-antecipado.jpg'
 import PassaporteIndividual from '@/public/images/tickets/passaporte-individual.jpg'
 import PassaporteSuperSegunda from '@/public/images/tickets/passaporte-super-segunda.jpeg'
@@ -56,9 +56,9 @@ export default function Tickets() {
             <Ticket
               id={19}
               isPassport
-              price={8397}
+              price={5994}
               quantity={2}
-              reference={4797}
+              reference={null}
               name="Combo Super Segunda"
               banner={ComboSuperSegunda}
             />
@@ -127,8 +127,8 @@ export default function Tickets() {
               id={17}
               isPassport
               quantity={3}
-              price={14397}
-              reference={5997}
+              price={11091}
+              reference={null}
               name="Super Antecipado"
               banner={SuperAntecipado}
             />
@@ -176,8 +176,8 @@ export default function Tickets() {
               id={18}
               isPassport
               quantity={4}
-              price={20397}
-              reference={6957}
+              price={14788}
+              reference={null}
               name="Combo 360"
               banner={Combo360}
             />
