@@ -69,7 +69,7 @@ export default function PassaportsPage() {
                   isPassport
                   price={5994}
                   quantity={2}
-                  reference={null}
+                  reference={5994}
                   name="Combo Super Segunda"
                   banner={ComboSuperSegunda}
                 />
@@ -131,7 +131,7 @@ export default function PassaportsPage() {
                   isPassport
                   quantity={3}
                   price={11091}
-                  reference={null}
+                  reference={11091}
                   name="Super Antecipado"
                   banner={SuperAntecipado}
                 />
@@ -172,7 +172,7 @@ export default function PassaportsPage() {
                   isPassport
                   quantity={4}
                   price={14788}
-                  reference={null}
+                  reference={14788}
                   name="Combo 360"
                   banner={Combo360}
                 />
