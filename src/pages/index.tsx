@@ -78,13 +78,6 @@ export default function HomePage() {
               mobile={BannerQuartaMalucaMobile}
             />
           </SwiperSlide>
-          <SwiperSlide>
-            <SlideImage
-              alt="Combos de agosto."
-              desktop={BannerCombos}
-              mobile={BannerCombosMobile}
-            />
-          </SwiperSlide>
 
           <div className="main-swiper-prev z-50 absolute top-0 bottom-0 left-0 px-2 flex items-center bg-black bg-opacity-30 text-white text-2xl md:text-5xl">
             <FaChevronLeft />
